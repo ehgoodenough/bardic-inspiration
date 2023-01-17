@@ -16,6 +16,7 @@
     "zip": "bestzip build.zip builds/web/*"
   },
   "dependencies": {
+    "firebase": "^9.15.0",
     "keyb": "^1.4.1",
     "preact": "^10.11.3",
     "statgrab": "^1.2.2",
