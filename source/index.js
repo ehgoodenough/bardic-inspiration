@@ -15,6 +15,7 @@ let loop = new Yaafloop(function(delta) {
 
 import Firebase from "firebase/compat/app"
 import "firebase/compat/firestore"
+import "firebase/compat/storage"
 
 const app = Firebase.initializeApp({
     "apiKey": "AIzaSyAkNK-ByqyzgufHhELPFh6e4TsoSuHvPYE",
@@ -23,22 +24,16 @@ const app = Firebase.initializeApp({
     "storageBucket": "truesight-7c04e.appspot.com",
     "messagingSenderId": "123067060171",
     "appId": "1:123067060171:web:abe3ee3e5109c97f97304e",
-    "measurementId": "G-91YL89DDY9"
+    "measurementId": "G-91YL89DDY9",
 })
 
-const database = Firebase.firestore()
+const data = Firebase.firestore()
 
-database.collection("campaigns").doc("theros").onSnapshot((doc) => {
+window.app = {}
+window.firebase = {"data": data, "files": Firebase.storage()}
+
+data.collection("campaigns").doc("theros").onSnapshot((doc) => {
     if(doc.exists == false) return
     doc = doc.data()
-    window.doc = doc
+    window.app.game = doc
 })
-
-// const database = Firebase.getFirestore(app)
-//
-// async function getCampaigns() {
-//     const campaigns = (await Firebase.getDocs(Firebase.collection(database, "campaigns"))).docs.map((doc) => doc.data())
-//     console.log(campaigns)
-// }
-//
-// getCampaigns()

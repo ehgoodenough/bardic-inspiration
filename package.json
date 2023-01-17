@@ -11,6 +11,7 @@
     "url": "https://github.com/ehgoodenough/dnd-truesight"
   },
   "scripts": {
+    "fix": "export NODE_OPTIONS=--openssl-legacy-provider",
     "build": "codeglue --stage=production",
     "start": "codeglue --stage=development --mode=server",
     "zip": "bestzip build.zip builds/web/*"
@@ -19,6 +20,7 @@
     "firebase": "^9.15.0",
     "keyb": "^1.4.1",
     "preact": "^10.11.3",
+    "shortid": "^2.2.16",
     "statgrab": "^1.2.2",
     "yaafloop": "^1.2.0"
   },
