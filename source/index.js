@@ -7,19 +7,14 @@ import Yaafloop from "yaafloop"
 
 import Mount from "views/Mount.view.js"
 
-import Model from "models/Model.js"
-const model = new Model()
-export default model
-
 let loop = new Yaafloop(function(delta) {
-    model.update(delta)
     this.mount = Preact.render(<Mount/>, document.body, this.mount)
 })
 
-import {initializeApp} from "firebase/app"
-import {getAnalytics} from "firebase/analytics"
-import {getFirestore, collection, getDocs} from "firebase/firestore/lite"
-const Firebase = {initializeApp, getAnalytics, getFirestore, getDocs, collection}
+// FIREBASE //
+
+import Firebase from "firebase/compat/app"
+import "firebase/compat/firestore"
 
 const app = Firebase.initializeApp({
     "apiKey": "AIzaSyAkNK-ByqyzgufHhELPFh6e4TsoSuHvPYE",
@@ -31,13 +26,19 @@ const app = Firebase.initializeApp({
     "measurementId": "G-91YL89DDY9"
 })
 
-const analytics = getAnalytics(app)
+const database = Firebase.firestore()
 
-const database = Firebase.getFirestore(app)
+database.collection("campaigns").doc("theros").onSnapshot((doc) => {
+    if(doc.exists == false) return
+    doc = doc.data()
+    window.doc = doc
+})
 
-async function getCampaigns() {
-    const campaigns = (await Firebase.getDocs(Firebase.collection(database, "campaigns"))).docs.map((doc) => doc.data())
-    console.log(campaigns)
-}
-
-getCampaigns()
+// const database = Firebase.getFirestore(app)
+//
+// async function getCampaigns() {
+//     const campaigns = (await Firebase.getDocs(Firebase.collection(database, "campaigns"))).docs.map((doc) => doc.data())
+//     console.log(campaigns)
+// }
+//
+// getCampaigns()
