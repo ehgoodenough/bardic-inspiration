@@ -14,10 +14,47 @@
     bottom: 0em;
     position: absolute;
 
-    .BackgroundImage {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
+    .MainSection {
+        top: 3em;
+        left: 0em;
+        right: 0em;
+        bottom: 3em;
+        position: absolute;
+
+        .Art {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .DungeonMasterScreen {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+
+            background-image: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+.UploadZone {
+    top: 4em;
+    left: 1em;
+    right: 1em;
+    bottom: 4em;
+    z-index: 9999;
+    position: absolute;
+
+    border-width: 5px;
+    border-style: dashed;
+    border-color: #FFF;
+
+    pointer-events: none;
+
+    display: none;
+    &[isDragAndDropping] {
+        display: block;
     }
 }

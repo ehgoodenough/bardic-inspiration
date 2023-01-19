@@ -1,7 +1,6 @@
 import * as Preact from "preact"
 import Shortid from "shortid"
 
-import Frame from "views/Frame.view.js"
 import "views/Mount.view.less"
 
 export default class Mount {
@@ -9,30 +8,60 @@ export default class Mount {
         if(window.app == undefined) return
         if(window.app.game == undefined) return
         return (
-            <div className="Mount">
-                <DungeonMasterScreen/>
-                <BackgroundImage/>
+            <div className="Mount" onDrop={this.onDrop} onDragOver={this.onDragOver}
+                onDragEnter={this.onDragEnter} onDragLeave={this.onDragLeave}>
+                <div class="UploadZone" isDragAndDropping={window.isDragAndDropping > 0}/>
+                <MainSection/>
             </div>
         )
     }
+    onDragEnter(event) {
+        window.isDragAndDropping = window.isDragAndDropping || 0
+        window.isDragAndDropping += 1
+    }
+    onDragLeave(event) {
+        window.isDragAndDropping = window.isDragAndDropping || 0
+        window.isDragAndDropping -= 1
+    }
+    onDragOver(event) {
+        event.preventDefault()
+    }
+    onDrop(event) {
+        event.preventDefault()
+        window.isDragAndDropping = false
+
+        let files = [...event.dataTransfer.files]
+        if(event.dataTransfer.items) {
+            files = [...event.dataTransfer.items].map((item) => {
+                if(item.kind != "file") return
+                return item.getAsFile()
+            })
+        }
+
+        files.forEach((file, index) => {
+            if(file == undefined) return
+            uploadFile("art/", file).then((url) => {
+                if(index == 0) {
+                    window.firebase.data.collection("campaigns").doc("theros").set({"art": url})
+                }
+            })
+        })
+    }
 }
 
-function BackgroundImage() {
-    return (
-        <div class="BackgroundImage" style={{
-            "background-image": "url(" + window.app.game.art + ")"
-        }}/>
-    )
-}
-
-class DungeonMasterScreen {
+class MainSection {
     render() {
         return (
-            <div class="DungeonMasterScreen">
-                <form onSubmit={this.onSubmit}>
-                    <input type="file" accept="image/png, image/jpeg" id="upload"/>
-                    <input type="submit"/>
-                </form>
+            <div class="MainSection">
+                <div class="Art" style={{
+                    "background-image": "url(" + window.app.game.art + ")"
+                }}/>
+                <div class="DungeonMasterScreen">
+                    <form onSubmit={this.onSubmit}>
+                        <input type="file" accept="image/png, image/jpeg" id="upload"/>
+                        <input type="submit"/>
+                    </form>
+                </div>
             </div>
         )
     }
@@ -40,18 +69,24 @@ class DungeonMasterScreen {
         event.preventDefault()
         const file = event.target.children["upload"].files[0]
         if(file == undefined) return
-        const filepath = "art/" + Shortid.generate() + file.name.match(/\.[0-9a-z]+$/i)
-        const uploading = window.firebase.files.ref(filepath).put(file)
+        uploadFile("art/", file)
+    }
+}
+
+function uploadFile(uploadpath, file) {
+    return new Promise(function(resolve, reject) {
+        uploadpath += Shortid.generate() + file.name.match(/\.[0-9a-z]+$/i)
+        const uploading = window.firebase.files.ref(uploadpath).put(file)
         uploading.on("state_changed", (snapshot) => {
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
             console.log("uploading... ", progress + "%")
         }, (error) => {
-            console.error(error)
+            reject(error)
         }, (done) => {
-            window.firebase.files.ref(filepath).getDownloadURL().then((url) => {
+            window.firebase.files.ref(uploadpath).getDownloadURL().then((url) => {
                 window.firebase.data.collection("art").add({"url": url})
-                window.firebase.data.collection("campaigns").doc("theros").set({"art": url})
+                resolve(url)
             })
         })
-    }
+    })
 }

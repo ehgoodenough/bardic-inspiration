@@ -11,9 +11,8 @@
     "url": "https://github.com/ehgoodenough/dnd-truesight"
   },
   "scripts": {
-    "fix": "export NODE_OPTIONS=--openssl-legacy-provider",
     "build": "codeglue --stage=production",
-    "start": "codeglue --stage=development --mode=server",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && codeglue --stage=development --mode=server",
     "zip": "bestzip build.zip builds/web/*"
   },
   "dependencies": {
