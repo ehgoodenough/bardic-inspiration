@@ -14,7 +14,7 @@ export default class Mount {
                 <div class="UploadZone" isDragAndDropping={window.isDragAndDropping > 0}/>
                 <MainScreen/>
                 <div class="DungeonMasterScreen">
-                    <ArtSelection/>
+                    <MusicSelection/>
                 </div>
             </div>
         )
@@ -71,4 +71,91 @@ class Art {
             }}/>
         )
     }
+}
+
+class MusicSelection {
+    render() {
+        return (
+            <div class="MusicSelection">
+                <audio id="youtube" controls/>
+                <input type="text" onChange={this.onChange}/>
+            </div>
+        )
+    }
+    async onChange(event) {
+        const youtubeLink = "https://www.youtube.com/watch?v=GyS6HGpCt3o"
+
+        const videoId = parseYoutubeId(youtubeLink)
+        if(videoId == undefined || videoId == "") return console.log("nope")
+
+        const cors = "https://images" + ~~(Math.random() * 33) + "-focus-opensocial.googleusercontent.com/gadgets/proxy?container=none&url="
+        const response = await fetch(cors + encodeURIComponent("https://www.youtube.com/watch?v=" + videoId))
+        if(response.ok != true) return
+        let data = await response.text()
+
+        var regex = /(?:ytplayer\.config\s*=\s*|ytInitialPlayerResponse\s?=\s?)(.+?)(?:;var|;\(function|\)?;\s*if|;\s*if|;\s*ytplayer\.|;\s*<\/script)/gmsu
+
+        data = data.split("window.getPageData")[0]
+        data = data.replace("ytInitialPlayerResponse = null", "")
+        data = data.replace("ytInitialPlayerResponse=window.ytInitialPlayerResponse", "")
+        data = data.replace("ytplayer.config={args:{raw_player_response:ytInitialPlayerResponse}};", "")
+
+        var matches = regex.exec(data)
+        data = matches && matches.length > 1 ? JSON.parse(matches[1]) : false
+
+        let streams = []
+        let result = {}
+
+        if(data.streamingData) {
+            if(data.streamingData.adaptiveFormats) {
+                streams = streams.concat(data.streamingData.adaptiveFormats)
+            }
+            if(data.streamingData.formats) {
+                streams = streams.concat(data.streamingData.formats)
+            }
+        } else {
+            return false
+        }
+
+        const itags = {
+            139: "48kbps",
+            140: "128kbps",
+            141: "256kbps",
+            249: "webm_l",
+            250: "webm_m",
+            251: "webm_h",
+        }
+
+        const audioStreams = {}
+        streams.forEach(function(stream, n) {
+            // console.log(stream)
+            if(itags[stream.itag] != undefined) {
+                audioStreams[itags[stream.itag]] = stream.url
+            }
+        })
+        // console.log(audioStreams)
+        const audioStream = audioStreams["256kbps"]
+            || audioStreams["128kbps"]
+            || audioStreams["48kbps"]
+            || audioStreams["webm_l"]
+            || audioStreams["webm_m"]
+            || audioStreams["webm_h"]
+        if(audioStream == undefined) return console.log("couldn't find a single url")
+        document.getElementById("youtube").src = audioStream
+        document.getElementById("youtube").play()
+    }
+}
+function parseYoutubeId(string) {
+    if(string == undefined) return undefined
+    if(string == "") return undefined
+
+    const matches = string.match(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/)
+    if(matches == undefined) return
+
+    const url = matches[0]
+    if(url == undefined) return
+
+    const match = url.match(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/)
+    const id = (match && match[7].length == 11) ? match[7] : undefined
+    return id
 }
