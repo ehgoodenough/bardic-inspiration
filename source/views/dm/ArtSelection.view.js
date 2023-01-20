@@ -25,11 +25,19 @@ class SelectedArt {
         if(this.props.art == undefined) return
         return (
             <div class="SelectedArt">
-                <div class="Title">{this.props.art.oldfilename}</div>
+                <input class="Title" key={this.props.art.docid} type="text" defaultValue={this.props.art.oldfilename} onChange={this.onChange}/>
                 <div class="Image" style={{"background-image": "url(" + this.props.art.url + ")"}}/>
                 <DeleteArtButton art={this.props.art}/>
             </div>
         )
+    }
+    get onChange() {
+        return (event) => {
+            console.log()
+            window.firebase.data.collection("art").doc(this.props.art.docid).update({
+                "oldfilename": event.target.value,
+            })
+        }
     }
 }
 
