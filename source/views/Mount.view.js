@@ -1,6 +1,7 @@
 import * as Preact from "preact"
-import Shortid from "shortid"
+import uploadArt from "views/functions/uploadArt.js"
 
+import ArtSelection from "views/dm/ArtSelection.view.js"
 import "views/Mount.view.less"
 
 export default class Mount {
@@ -40,10 +41,13 @@ export default class Mount {
 
         files.forEach((file, index) => {
             if(file == undefined) return
-            uploadFile("art/", file).then((url) => {
-                if(index == 0) {
-                    window.firebase.data.collection("campaigns").doc("theros").set({"art": url})
-                }
+            uploadArt(file).then((art) => {
+                if(index != 0) return
+                window.firebase.data.collection("campaigns").doc("theros").set({
+                    "arturl": art.url,
+                    "artdocid": art.docid,
+                    "artfileref": art.fileref,
+                })
             })
         })
     }
@@ -54,39 +58,12 @@ class MainSection {
         return (
             <div class="MainSection">
                 <div class="Art" style={{
-                    "background-image": "url(" + window.app.game.art + ")"
+                    "background-image": "url(" + window.app.game.arturl + ")"
                 }}/>
                 <div class="DungeonMasterScreen">
-                    <form onSubmit={this.onSubmit}>
-                        <input type="file" accept="image/png, image/jpeg" id="upload"/>
-                        <input type="submit"/>
-                    </form>
+                    <ArtSelection/>
                 </div>
             </div>
         )
     }
-    onSubmit(event) {
-        event.preventDefault()
-        const file = event.target.children["upload"].files[0]
-        if(file == undefined) return
-        uploadFile("art/", file)
-    }
-}
-
-function uploadFile(uploadpath, file) {
-    return new Promise(function(resolve, reject) {
-        uploadpath += Shortid.generate() + file.name.match(/\.[0-9a-z]+$/i)
-        const uploading = window.firebase.files.ref(uploadpath).put(file)
-        uploading.on("state_changed", (snapshot) => {
-            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-            console.log("uploading... ", progress + "%")
-        }, (error) => {
-            reject(error)
-        }, (done) => {
-            window.firebase.files.ref(uploadpath).getDownloadURL().then((url) => {
-                window.firebase.data.collection("art").add({"url": url})
-                resolve(url)
-            })
-        })
-    })
 }

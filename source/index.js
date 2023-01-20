@@ -32,8 +32,15 @@ const data = Firebase.firestore()
 window.app = {}
 window.firebase = {"data": data, "files": Firebase.storage()}
 
-data.collection("campaigns").doc("theros").onSnapshot((doc) => {
-    if(doc.exists == false) return
-    doc = doc.data()
-    window.app.game = doc
+data.collection("campaigns").doc("theros").onSnapshot((document) => {
+    if(document.exists == false) return
+    window.app.game = document.data()
+})
+
+data.collection("art").limit(25).onSnapshot((documents) => {
+    if(documents.exists == false) return
+    window.app.art = []
+    documents.forEach((document, index) => {
+        window.app.art.push(document.data())
+    })
 })
