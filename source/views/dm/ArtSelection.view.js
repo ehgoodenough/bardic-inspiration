@@ -6,12 +6,16 @@ export default class ArtSelection {
         return (
             <div class="ArtSelection">
                 <div class="SelectedArt">
-                    <img src={window.app.game.arturl}/>
+                    <img class="Image" src={window.app.game.arturl}/>
                     <DeleteArtButton artfileref={window.app.game.artfileref}
                         artdocid={window.app.game.artdocid}/>
                 </div>
+                <ArtSearch/>
                 <div class="SelectableArts">
-                    {window.app.art.map((art) => {
+                    {window.app.art.filter((art) => {
+                        if(window.app.query == undefined) return true
+                        return (art.oldfilename || "").toLowerCase().includes(window.app.query.toLowerCase())
+                    }).map((art) => {
                         return <SelectableArt art={art}/>
                     })}
                 </div>
@@ -39,6 +43,19 @@ class DeleteArtButton {
                 "artfileref": undefined,
             })
         }
+    }
+}
+
+class ArtSearch {
+    render() {
+        return (
+            <div class="Search">
+                <input type="text" onInput={this.onChange}/>
+            </div>
+        )
+    }
+    onChange(event) {
+        window.app.query = event.target.value
     }
 }
 

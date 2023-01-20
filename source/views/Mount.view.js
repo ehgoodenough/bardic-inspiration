@@ -12,7 +12,10 @@ export default class Mount {
             <div className="Mount" onDrop={this.onDrop} onDragOver={this.onDragOver}
                 onDragEnter={this.onDragEnter} onDragLeave={this.onDragLeave}>
                 <div class="UploadZone" isDragAndDropping={window.isDragAndDropping > 0}/>
-                <MainSection/>
+                <MainScreen/>
+                <div class="DungeonMasterScreen">
+                    <ArtSelection/>
+                </div>
             </div>
         )
     }
@@ -53,16 +56,13 @@ export default class Mount {
     }
 }
 
-class MainSection {
+class MainScreen {
     render() {
         return (
-            <div class="MainSection">
+            <div class="MainScreen">
                 <div class="Art" style={{
                     "background-image": "url(" + window.app.game.arturl + ")"
                 }}/>
-                <div class="DungeonMasterScreen">
-                    <ArtSelection/>
-                </div>
             </div>
         )
     }

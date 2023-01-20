@@ -37,7 +37,7 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
     window.app.game = document.data()
 })
 
-data.collection("art").limit(25).onSnapshot((documents) => {
+data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {
     if(documents.exists == false) return
     window.app.art = []
     documents.forEach((document, index) => {

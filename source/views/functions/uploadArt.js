@@ -16,7 +16,8 @@ export default function uploadArt(file) {
                     "url": url,
                     "docid": id,
                     "fileref": fileref,
-                    "name": file.name,
+                    "timestamp": Date.now(),
+                    "oldfilename": file.name,
                 }
                 window.firebase.data.collection("art").doc(id).set(art)
                 resolve(art)
