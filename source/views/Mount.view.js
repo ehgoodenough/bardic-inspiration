@@ -46,11 +46,7 @@ export default class Mount {
             if(file == undefined) return
             uploadArt(file).then((art) => {
                 if(index != 0) return
-                window.firebase.data.collection("campaigns").doc("theros").set({
-                    "arturl": art.url,
-                    "artdocid": art.docid,
-                    "artfileref": art.fileref,
-                })
+                window.firebase.data.collection("campaigns").doc("theros").set({"art": art})
             })
         })
     }
@@ -60,10 +56,19 @@ class MainScreen {
     render() {
         return (
             <div class="MainScreen">
-                <div class="Art" style={{
-                    "background-image": "url(" + window.app.game.arturl + ")"
-                }}/>
+                <Art/>
             </div>
+        )
+    }
+}
+
+class Art {
+    render() {
+        if(window.app.game.art == undefined) return
+        return (
+            <div class="Art" style={{
+                "background-image": "url(" + window.app.game.art.url + ")"
+            }}/>
         )
     }
 }

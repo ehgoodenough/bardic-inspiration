@@ -5,11 +5,7 @@ export default class ArtSelection {
         if(window.app.art == undefined) return
         return (
             <div class="ArtSelection">
-                <div class="SelectedArt">
-                    <img class="Image" src={window.app.game.arturl}/>
-                    <DeleteArtButton artfileref={window.app.game.artfileref}
-                        artdocid={window.app.game.artdocid}/>
-                </div>
+                <SelectedArt art={window.app.game.art}/>
                 <ArtSearch/>
                 <div class="SelectableArts">
                     {window.app.art.filter((art) => {
@@ -19,6 +15,19 @@ export default class ArtSelection {
                         return <SelectableArt art={art}/>
                     })}
                 </div>
+            </div>
+        )
+    }
+}
+
+class SelectedArt {
+    render() {
+        if(this.props.art == undefined) return
+        return (
+            <div class="SelectedArt">
+                <div class="Title">{this.props.art.oldfilename}</div>
+                <div class="Image" style={{"background-image": "url(" + this.props.art.url + ")"}}/>
+                <DeleteArtButton art={this.props.art}/>
             </div>
         )
     }
@@ -34,14 +43,9 @@ class DeleteArtButton {
     }
     get onClick() {
         return async (event) => {
-            console.log(this.props.artfileref, this.props.artdocid)
-            await window.firebase.data.collection("art").doc(this.props.artdocid).delete()
-            window.firebase.files.ref(this.props.artfileref).delete()
-            window.firebase.data.collection("campaigns").doc("theros").set({
-                "arturl": undefined,
-                "artdocid": undefined,
-                "artfileref": undefined,
-            })
+            console.log(this.props.art)
+            await window.firebase.data.collection("art").doc(this.props.art.docid).delete()
+            window.firebase.files.ref(this.props.art.fileref).delete()
         }
     }
 }
@@ -70,9 +74,7 @@ class SelectableArt {
     get onClick() {
         return (event) => {
             window.firebase.data.collection("campaigns").doc("theros").set({
-                "arturl": this.props.art.url,
-                "artdocid": this.props.art.docid,
-                "artfileref": this.props.art.fileref,
+                "art": this.props.art,
             })
         }
     }
@@ -92,11 +94,7 @@ class UploadForm {
         const file = event.target.children["upload"].files[0]
         if(file == undefined) return
         uploadArt(file).then((art) => {
-            window.firebase.data.collection("campaigns").doc("theros").set({
-                "arturl": art.url,
-                "artdocid": art.docid,
-                "artfileref": art.fileref,
-            })
+            window.firebase.data.collection("campaigns").doc("theros").set({"art": art})
         })
     }
 }
