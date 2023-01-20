@@ -81,7 +81,7 @@ class SelectableArt {
     }
     get onClick() {
         return (event) => {
-            window.firebase.data.collection("campaigns").doc("theros").set({
+            window.firebase.data.collection("campaigns").doc("theros").update({
                 "art": this.props.art,
             })
         }
