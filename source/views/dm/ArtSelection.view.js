@@ -5,7 +5,7 @@ export default class ArtSelection {
         if(window.app.art == undefined) return
         return (
             <div class="ArtSelection">
-                <SelectedArt art={window.app.game.art}/>
+                <SelectedArt art={window.app.campaign.art}/>
                 <ArtSearch/>
                 <div class="SelectableArts">
                     {window.app.art.filter((art) => {

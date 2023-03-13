@@ -34,7 +34,7 @@ window.firebase = {"data": data, "files": Firebase.storage()}
 
 data.collection("campaigns").doc("theros").onSnapshot((document) => {
     if(document.exists == false) return
-    window.app.game = document.data()
+    window.app.campaign = document.data()
 })
 
 data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {

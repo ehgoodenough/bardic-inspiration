@@ -2,18 +2,20 @@ import * as Preact from "preact"
 import uploadArt from "views/functions/uploadArt.js"
 
 import ArtSelection from "views/dm/ArtSelection.view.js"
+import MusicSelection from "views/dm/MusicSelection.view.js"
 import "views/Mount.view.less"
 
 export default class Mount {
     render() {
         if(window.app == undefined) return
-        if(window.app.game == undefined) return
+        if(window.app.campaign == undefined) return
         return (
             <div className="Mount" onDrop={this.onDrop} onDragOver={this.onDragOver}
                 onDragEnter={this.onDragEnter} onDragLeave={this.onDragLeave}>
                 <div class="UploadZone" isDragAndDropping={window.isDragAndDropping > 0}/>
                 <MainScreen/>
                 <div class="DungeonMasterScreen">
+                    {false && <ArtSelection/>}
                     <MusicSelection/>
                 </div>
             </div>
@@ -57,6 +59,7 @@ class MainScreen {
         return (
             <div class="MainScreen">
                 <Art/>
+                <Music/>
             </div>
         )
     }
@@ -64,85 +67,29 @@ class MainScreen {
 
 class Art {
     render() {
-        if(window.app.game.art == undefined) return
+        if(window.app.campaign.art == undefined) return
         return (
             <div class="Art" style={{
-                "background-image": "url(" + window.app.game.art.url + ")"
+                "background-image": "url(" + window.app.campaign.art.url + ")"
             }}/>
         )
     }
 }
 
-class MusicSelection {
+class Music {
     render() {
+        if(window.app.campaign.music == undefined) return
         return (
-            <div class="MusicSelection">
-                <button onClick={this.onClick}>go</button>
-                <input type="text" onChange={this.onChange}/>
-                <div id="youtube"/>
+            <div class="Music">
+                <iframe key="123" width="560" height="315" src={"https://www.youtube.com/embed/" + window.app.campaign.music.youtubeId + "?autoplay=1&rel=0&start=" + this.startTime} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         )
     }
-    onChange(event) {
-        const youtubeId = parseYoutubeId(event.target.value)
-        if(youtubeId == undefined || youtubeId == "") return
-        window.firebase.data.collection("campaigns").doc("theros").update({
-            "youtubeId": youtubeId,
-        })
-    }
-    onClick(event) {
-        window.youtube = new YT.Player("youtube", {
-            // width: "300",
-            // height: "200",
-            "width": "0",
-            "height": "0",
-            "videoId": window.app.game.youtubeId,
-            "playerVars": {
-                "autoplay": true,
-                "loop": true,
-            },
-            "events": {
-                "onReady": function(event) {
-                    // event.target.playVideo()
-                },
-                "onStateChange": function(event) {
-                    // if(event.data == YT.PlayerState.PLAYING && window.done != true) {
-                    //     console.log("Setting timer...")
-                    //     setTimeout(function() {
-                    //         window.youtube.stopVideo()
-                    //     }, 6000)
-                    //     window.done = true
-                    // }
-                }
-            }
-        })
+    get startTime() {
+        // if(window.app.campaign.music.startTime == undefined) {
+        //     return 1
+        // }
+        return 1
+        // return Math.floor((Date.now() - window.app.campaign.music.startTime) / 1000)
     }
 }
-
-class Youtube {
-    render() {
-        if(this.props.youtubeId == undefined) return
-        return (
-            <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + this.props.youtubeId + "?autoplay=1&rel=0"} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        )
-    }
-}
-
-function parseYoutubeId(string) {
-    if(string == undefined) return undefined
-    if(string == "") return undefined
-
-    const matches = string.match(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/)
-    if(matches == undefined) return
-
-    const url = matches[0]
-    if(url == undefined) return
-
-    const match = url.match(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/)
-    const id = (match && match[7].length == 11) ? match[7] : undefined
-    return id
-}
-
-// window.onYouTubeIframeAPIReady = function() {
-//     console.log("does this only work if i leave this here?")
-// }
