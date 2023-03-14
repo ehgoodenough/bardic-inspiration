@@ -35,6 +35,37 @@ window.firebase = {"data": data, "files": Firebase.storage()}
 data.collection("campaigns").doc("theros").onSnapshot((document) => {
     if(document.exists == false) return
     window.app.campaign = document.data()
+
+    if(window.youtubePlayer == undefined) {
+        window.youtubePlayer = new YT.Player("youtubePlayer2", {
+            width: "300",
+            height: "200",
+            // "width": "0",
+            // "height": "0",
+            "videoId": window.app.campaign.music.youtubeId,
+            // "playerVars": {
+            //     "autoplay": true,
+            //     "loop": true,
+            // },
+            "events": {
+                "onReady": function(event) {
+                    console.log("1", event)
+                    event.target.seekTo(Math.floor((Date.now() - window.app.campaign.music.startTime) / 1000))
+                    event.target.playVideo()
+                },
+                "onStateChange": function(event) {
+                    console.log("2", event)
+                    // if(event.data == YT.PlayerState.PLAYING && window.done != true) {
+                    //     console.log("Setting timer...")
+                    //     setTimeout(function() {
+                    //         window.youtube.stopVideo()
+                    //     }, 6000)
+                    //     window.done = true
+                    // }
+                }
+            }
+        })
+    }
 })
 
 data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {

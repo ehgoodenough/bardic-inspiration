@@ -78,18 +78,11 @@ class Art {
 
 class Music {
     render() {
-        if(window.app.campaign.music == undefined) return
-        return (
-            <div class="Music">
-                <iframe key="123" width="560" height="315" src={"https://www.youtube.com/embed/" + window.app.campaign.music.youtubeId + "?autoplay=1&rel=0&start=" + this.startTime} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        )
-    }
-    get startTime() {
-        // if(window.app.campaign.music.startTime == undefined) {
-        //     return 1
-        // }
-        return 1
-        // return Math.floor((Date.now() - window.app.campaign.music.startTime) / 1000)
+        // if(window.app.campaign.music == undefined) return
+        // return (
+        //     <div class="Music">
+        //         <iframe key="123" width="560" height="315" src={"https://www.youtube.com/embed/" + window.app.campaign.music.youtubeId + "?autoplay=1&rel=0&start=" + this.startTime} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        //     </div>
+        // )
     }
 }

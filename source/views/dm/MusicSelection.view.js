@@ -22,31 +22,6 @@ export default class MusicSelection {
                 "startTime": Date.now(),
             }
         })
-        // window.youtube = new YT.Player("youtube", {
-        //     // width: "300",
-        //     // height: "200",
-        //     "width": "0",
-        //     "height": "0",
-        //     "videoId": window.app.campaign.youtubeId,
-        //     "playerVars": {
-        //         "autoplay": true,
-        //         "loop": true,
-        //     },
-        //     "events": {
-        //         "onReady": function(event) {
-        //             // event.target.playVideo()
-        //         },
-        //         "onStateChange": function(event) {
-        //             // if(event.data == YT.PlayerState.PLAYING && window.done != true) {
-        //             //     console.log("Setting timer...")
-        //             //     setTimeout(function() {
-        //             //         window.youtube.stopVideo()
-        //             //     }, 6000)
-        //             //     window.done = true
-        //             // }
-        //         }
-        //     }
-        // })
     }
 }
 
