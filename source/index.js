@@ -42,45 +42,96 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
             window.youtubePlayer = new YT.Player("youtuber", {
                 width: "300",
                 height: "200",
-                // "width": "0",
-                // "height": "0",
                 "videoId": window.app.campaign.music.youtubeId,
-                // "playerVars": {
-                //     "autoplay": true,
-                //     "loop": true,
-                // },
+                "playerVars": {
+                    "start": getCurrentTime(window.app.campaign.music.startTime),
+                    "autoplay": window.app.campaign.music == YT.PlayerState.PLAYING,
+                },
                 "events": {
-                    "onReady": function(event) {
-                        console.log("onReady", event)
-                        event.target.seekTo(getCurrentTime(window.app.campaign.music.startTime))
-                        event.target.playVideo()
-                    },
+                    // "onReady": function(event) {
+                    //     console.log("onReady", event)
+                    //
+                    //     // if(window.app.campaign.music.isPaused === true) {
+                    //     //     event.target.seekTo(window.app.campaign.music.currentTime / 1000)
+                    //     //     event.target.pauseVideo()
+                    //     // } else if(window.app.campaign.music.isPaused !== true) {
+                    //     //     event.target.seekTo(getCurrentTime(window.app.campaign.music.startTime))
+                    //     //     event.target.playVideo()
+                    //     // }
+                    // },
                     "onStateChange": function(event) {
-                        console.log("onStateChange", event)
-                        // if(event.data == YT.PlayerState.PLAYING && window.done != true) {
-                        //     console.log("Setting timer...")
-                        //     setTimeout(function() {
-                        //         window.youtube.stopVideo()
-                        //     }, 6000)
-                        //     window.done = true
+                        // console.log("onStateChange", event)
+                        // if(event.data == YT.PlayerState.PLAYING) {
+                        //     if(window.app.campaign.music.isPaused === true) {
+                        //         window.firebase.data.collection("campaigns").doc("theros").update({
+                        //             "music": {
+                        //                 "youtubeId": window.app.campaign.music.youtubeId,
+                        //                 "isPaused": false,
+                        //                 "startTime": Date.now() - window.app.campaign.music.currentTime,
+                        //             }
+                        //         })
+                        //     }
                         // }
+                        // if(event.data == YT.PlayerState.PAUSED) {
+                        //     if(window.app.campaign.music.isPaused !== true) {
+                        //         window.firebase.data.collection("campaigns").doc("theros").update({
+                        //             "music": {
+                        //                 "youtubeId": window.app.campaign.music.youtubeId,
+                        //                 "isPaused": true,
+                        //                 "currentTime": window.youtubePlayer.getCurrentTime() * 1000,
+                        //             }
+                        //         })
+                        //     }
+                        // }
+                    },
+                    "onError": function(event) {
+                        console.log("onError", event)
                     }
                 }
             })
         } else if(window.youtubePlayer != undefined) {
-            const youtubeId = window.youtubePlayer.getVideoUrl()
-            const youtubeId1 = youtubeId.substr(youtubeId.length - 11) // parseYoutubeId(youtubeId)
-            const youtubeId2 = window.app.campaign.music.youtubeId
+            console.log(window.app.campaign.music)
 
-            if(youtubeId1 != youtubeId2) {
-                window.youtubePlayer.loadVideoById({
-                    "videoId": youtubeId2,
+            const currentYoutubeUrl = window.youtubePlayer.getVideoUrl()
+            const currentYoutubeId = currentYoutubeUrl.substr(currentYoutubeUrl.length - 11) // parseYoutubeId(youtubeId)
+            const nextYoutubeId = window.app.campaign.music.youtubeId
+            if(currentYoutubeId != nextYoutubeId) {
+                return window.youtubePlayer.loadVideoById({
+                    "videoId": nextYoutubeId,
                     "startSeconds": getCurrentTime(window.app.campaign.music.startTime),
                 })
             }
 
-            // player.getCurrentTime() // Returns the elapsed time in seconds since the video started playing.
-            // player.getDuration()
+            const currentYoutubeState = window.youtubePlayer.getPlayerState()
+            if(currentYoutubeState != window.app.campaign.music.state) {
+                if(window.app.campaign.music.state == YT.PlayerState.PLAYING) {
+                    window.youtubePlayer.seekTo(getCurrentTime(window.app.campaign.music.startTime))
+                    window.youtubePlayer.playVideo()
+                } else if(window.app.campaign.music.state == YT.PlayerState.PAUSED) {
+                    window.youtubePlayer.seekTo(window.app.campaign.music.currentTime / 1000)
+                    window.youtubePlayer.pauseVideo()
+                }
+            }
+        }
+    }
+})
+
+let ytloop = new Yaafloop(function(delta) {
+    if(window.youtubePlayer != undefined) {
+        if(window.youtubePlayer.getPlayerState instanceof Function) {
+            const state = window.youtubePlayer.getPlayerState()
+            if(window.app.campaign.music.state != state) {
+                window.app.campaign.music.state = state
+                window.firebase.data.collection("campaigns").doc("theros").update({
+                    "music": {
+                        "youtubeId": window.app.campaign.music.youtubeId,
+                        "startTime": window.app.campaign.music.startTime,
+                        "currentTime": window.youtubePlayer.getCurrentTime() * 1000,
+                        "state": state,
+                    }
+                })
+                console.log(state)
+            }
         }
     }
 })
@@ -91,6 +142,11 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
 function getCurrentTime(startTime) {
     return Math.max(0, Math.floor((Date.now() - startTime) / 1000))
 }
+
+// music.youtubeId // string
+// music.currentTime // in milliseconds, relative time
+// music.startTime // in millisconeds, epoch absolute time
+// music.isPaused // boolean
 
 data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {
     if(documents.exists == false) return
