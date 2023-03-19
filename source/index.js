@@ -16,6 +16,7 @@ let loop = new Yaafloop(function(delta) {
 import Firebase from "firebase/compat/app"
 import "firebase/compat/firestore"
 import "firebase/compat/storage"
+import parseYoutubeId from "./views/functions/parseYoutubeId.js"
 
 const app = Firebase.initializeApp({
     "apiKey": "AIzaSyAkNK-ByqyzgufHhELPFh6e4TsoSuHvPYE",
@@ -36,37 +37,60 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
     if(document.exists == false) return
     window.app.campaign = document.data()
 
-    if(window.youtubePlayer == undefined) {
-        window.youtubePlayer = new YT.Player("youtubePlayer2", {
-            width: "300",
-            height: "200",
-            // "width": "0",
-            // "height": "0",
-            "videoId": window.app.campaign.music.youtubeId,
-            // "playerVars": {
-            //     "autoplay": true,
-            //     "loop": true,
-            // },
-            "events": {
-                "onReady": function(event) {
-                    console.log("1", event)
-                    event.target.seekTo(Math.floor((Date.now() - window.app.campaign.music.startTime) / 1000))
-                    event.target.playVideo()
-                },
-                "onStateChange": function(event) {
-                    console.log("2", event)
-                    // if(event.data == YT.PlayerState.PLAYING && window.done != true) {
-                    //     console.log("Setting timer...")
-                    //     setTimeout(function() {
-                    //         window.youtube.stopVideo()
-                    //     }, 6000)
-                    //     window.done = true
-                    // }
+    if(window.app.campaign.music != undefined) {
+        if(window.youtubePlayer == undefined) {
+            window.youtubePlayer = new YT.Player("youtuber", {
+                width: "300",
+                height: "200",
+                // "width": "0",
+                // "height": "0",
+                "videoId": window.app.campaign.music.youtubeId,
+                // "playerVars": {
+                //     "autoplay": true,
+                //     "loop": true,
+                // },
+                "events": {
+                    "onReady": function(event) {
+                        console.log("onReady", event)
+                        event.target.seekTo(getCurrentTime(window.app.campaign.music.startTime))
+                        event.target.playVideo()
+                    },
+                    "onStateChange": function(event) {
+                        console.log("onStateChange", event)
+                        // if(event.data == YT.PlayerState.PLAYING && window.done != true) {
+                        //     console.log("Setting timer...")
+                        //     setTimeout(function() {
+                        //         window.youtube.stopVideo()
+                        //     }, 6000)
+                        //     window.done = true
+                        // }
+                    }
                 }
+            })
+        } else if(window.youtubePlayer != undefined) {
+            const youtubeId = window.youtubePlayer.getVideoUrl()
+            const youtubeId1 = youtubeId.substr(youtubeId.length - 11) // parseYoutubeId(youtubeId)
+            const youtubeId2 = window.app.campaign.music.youtubeId
+
+            if(youtubeId1 != youtubeId2) {
+                window.youtubePlayer.loadVideoById({
+                    "videoId": youtubeId2,
+                    "startSeconds": getCurrentTime(window.app.campaign.music.startTime),
+                })
             }
-        })
+
+            // player.getCurrentTime() // Returns the elapsed time in seconds since the video started playing.
+            // player.getDuration()
+        }
     }
 })
+
+// accepts milliseconds for start time as epoch
+// uses Date.now() to get current time as epoch
+// returns in seconds as relative time.
+function getCurrentTime(startTime) {
+    return Math.max(0, Math.floor((Date.now() - startTime) / 1000))
+}
 
 data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {
     if(documents.exists == false) return
