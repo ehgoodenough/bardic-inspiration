@@ -7,8 +7,8 @@ export default class MusicSelection {
         return (
             <div class="MusicSelection">
                 <form onSubmit={this.onSubmit}>
+                    <input name="youtube" type="text" placeholder="put your youtube url here"/>
                     <input type="submit"/>
-                    <input name="youtube" type="text"/>
                 </form>
             </div>
         )

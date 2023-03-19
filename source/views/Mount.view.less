@@ -11,10 +11,10 @@
 }
 
 .MainScreen {
-    top: 0em;
+    top: 2em;
     left: 0em;
+    right: 0em;
     bottom: 0em;
-    right: 320px;
     z-index: 100;
     overflow: hidden;
     position: absolute;
@@ -63,16 +63,37 @@
 
 .DungeonMasterScreen {
     top: 0em;
-    width: 320px;
-    background-color: #333;
+    left: 0em;
     right: 0em;
-    bottom: 0em;
+    height: 2em;
     z-index: 200;
     overflow: hidden;
     position: absolute;
+    background-color: hotpink;
 
     // background-color: rgba(0, 0, 0, 0.5);
 
+    .MusicSelection {
+        form {
+            display: flex;
+
+            input {
+                height: 2rem;
+                font: inherit;
+                font-size: 12px;
+
+                display: block;
+
+                &[type=text] {
+                    flex: 1;
+                }
+
+                &[type=submit] {
+                    padding: 0em 1em;
+                }
+            }
+        }
+    }
     .ArtSelection {
         max-width: 320px;
         height: 100%;

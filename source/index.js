@@ -45,21 +45,27 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
                 "videoId": window.app.campaign.music.youtubeId,
                 "playerVars": {
                     "start": getCurrentTime(window.app.campaign.music.startTime),
-                    "autoplay": window.app.campaign.music == YT.PlayerState.PLAYING,
+                    "autoplay": true, // window.app.campaign.music == YT.PlayerState.PLAYING,
                 },
                 "events": {
-                    // "onReady": function(event) {
-                    //     console.log("onReady", event)
-                    //
-                    //     // if(window.app.campaign.music.isPaused === true) {
-                    //     //     event.target.seekTo(window.app.campaign.music.currentTime / 1000)
-                    //     //     event.target.pauseVideo()
-                    //     // } else if(window.app.campaign.music.isPaused !== true) {
-                    //     //     event.target.seekTo(getCurrentTime(window.app.campaign.music.startTime))
-                    //     //     event.target.playVideo()
-                    //     // }
-                    // },
+                    "onReady": function(event) {
+                        console.log("onReady", event)
+                        event.target.seekTo(getCurrentTime(window.app.campaign.music.startTime))
+                        event.target.playVideo()
+
+                        // if(window.app.campaign.music.isPaused === true) {
+                        //     event.target.seekTo(window.app.campaign.music.currentTime / 1000)
+                        //     event.target.pauseVideo()
+                        // } else if(window.app.campaign.music.isPaused !== true) {
+                        //     event.target.seekTo(getCurrentTime(window.app.campaign.music.startTime))
+                        //     event.target.playVideo()
+                        // }
+                    },
                     "onStateChange": function(event) {
+                        if(event.data == YT.PlayerState.PAUSED) {
+                            event.target.seekTo(getCurrentTime(window.app.campaign.music.startTime))
+                            event.target.playVideo()
+                        }
                         // console.log("onStateChange", event)
                         // if(event.data == YT.PlayerState.PLAYING) {
                         //     if(window.app.campaign.music.isPaused === true) {
@@ -102,51 +108,52 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
                 })
             }
 
-            const currentYoutubeState = window.youtubePlayer.getPlayerState()
-            if(currentYoutubeState != window.app.campaign.music.state) {
-                if(window.app.campaign.music.state == YT.PlayerState.PLAYING) {
-                    window.youtubePlayer.seekTo(getCurrentTime(window.app.campaign.music.startTime))
-                    window.youtubePlayer.playVideo()
-                } else if(window.app.campaign.music.state == YT.PlayerState.PAUSED) {
-                    window.youtubePlayer.seekTo(window.app.campaign.music.currentTime / 1000)
-                    window.youtubePlayer.pauseVideo()
-                }
-            }
+            // const currentYoutubeState = window.youtubePlayer.getPlayerState()
+            // if(currentYoutubeState != window.app.campaign.music.state) {
+            //     if(window.app.campaign.music.state == YT.PlayerState.PLAYING) {
+            //         window.youtubePlayer.seekTo(getCurrentTime(window.app.campaign.music.startTime))
+            //         window.youtubePlayer.playVideo()
+            //     } else if(window.app.campaign.music.state == YT.PlayerState.PAUSED) {
+            //         window.youtubePlayer.seekTo(window.app.campaign.music.currentTime / 1000)
+            //         window.youtubePlayer.pauseVideo()
+            //     }
+            // }
         }
     }
 })
 
-let ytloop = new Yaafloop(function(delta) {
-    if(window.youtubePlayer != undefined) {
-        if(window.youtubePlayer.getPlayerState instanceof Function) {
-            const state = window.youtubePlayer.getPlayerState()
-            if(window.app.campaign.music.state != state) {
-                window.app.campaign.music.state = state
-                window.firebase.data.collection("campaigns").doc("theros").update({
-                    "music": {
-                        "youtubeId": window.app.campaign.music.youtubeId,
-                        "startTime": window.app.campaign.music.startTime,
-                        "currentTime": window.youtubePlayer.getCurrentTime() * 1000,
-                        "state": state,
-                    }
-                })
-                console.log(state)
-            }
-        }
-    }
-})
+// let ytloop = new Yaafloop(function(delta) {
+//     if(window.youtubePlayer != undefined) {
+//         if(window.youtubePlayer.getPlayerState instanceof Function) {
+//             const state = window.youtubePlayer.getPlayerState()
+//             if(window.app.campaign.music.state != state) {
+//                 window.app.campaign.music.state = state
+//                 window.firebase.data.collection("campaigns").doc("theros").update({
+//                     "music": {
+//                         "youtubeId": window.app.campaign.music.youtubeId,
+//                         "startTime": window.app.campaign.music.startTime,
+//                         "currentTime": window.youtubePlayer.getCurrentTime() * 1000,
+//                         "state": state,
+//                     }
+//                 })
+//                 console.log(state)
+//             }
+//         }
+//     }
+// })
+
+// the music payload
+// music.youtubeId // string
+// music.currentTime // in milliseconds, relative time
+// music.startTime // in millisconeds, epoch absolute time
+// music.isPaused // boolean
 
 // accepts milliseconds for start time as epoch
 // uses Date.now() to get current time as epoch
 // returns in seconds as relative time.
 function getCurrentTime(startTime) {
-    return Math.max(0, Math.floor((Date.now() - startTime) / 1000))
+    return Math.max(0, Math.floor((Date.now() - startTime) / 1000)) || 1
 }
-
-// music.youtubeId // string
-// music.currentTime // in milliseconds, relative time
-// music.startTime // in millisconeds, epoch absolute time
-// music.isPaused // boolean
 
 data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {
     if(documents.exists == false) return
