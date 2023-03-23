@@ -1,6 +1,7 @@
 import * as Preact from "preact"
 import Poin from "poin"
 import ShortId from "shortid"
+// import QueryString from "query-string"
 import FormatDuration from "format-duration"
 
 import parseYoutubeId from "../functions/parseYoutubeId.js"
@@ -28,14 +29,25 @@ class SubmissionForm {
     }
     onSubmit(event) {
         event.preventDefault()
-        const youtubeId = parseYoutubeId(event.target.children["youtube"].value)
+        const submittedValue = event.target.children["youtube"].value
+        const youtubeId = parseYoutubeId(submittedValue)
         if(youtubeId == undefined || youtubeId == "") return
+
+        let startTime = Date.now()
+
+        let submittedTime = (submittedValue.match(/t=([^&]*)/) || [])[1]
+        if(submittedTime != undefined) {
+            submittedTime = parseInt(submittedTime)
+            submittedTime *= 1000
+            console.log(submittedTime)
+            startTime -= submittedTime
+        }
 
         window.firebase.data.collection("campaigns").doc("theros").update({
             "music": {
                 "key": ShortId.generate(),
                 "youtubeId": youtubeId,
-                "startTime": Date.now(),
+                "startTime": startTime,
                 "state": "playing",
             }
         })

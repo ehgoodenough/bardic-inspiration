@@ -57,12 +57,12 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
             || campaign.music.key != prevcampaign.music.key) {
                 return window.youtubePlayer.loadVideoById({
                     "videoId": campaign.music.youtubeId,
-                    "startSeconds": computeCurrentTime(campaign.music) || 1,
+                    "startSeconds": Math.floor(computeCurrentTime(campaign.music)) || 1,
                 })
             }
 
             if(campaign.music.startTime != prevcampaign.music.startTime) {
-                window.youtubePlayer.seekTo(computeCurrentTime(campaign.music) || 1)
+                window.youtubePlayer.seekTo(Math.floor(computeCurrentTime(campaign.music)) || 1)
             }
 
             if(campaign.music.state != prevcampaign.music.state) {

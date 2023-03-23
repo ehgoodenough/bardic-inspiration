@@ -2,6 +2,8 @@ export default function parseYoutubeId(string) {
     if(string == undefined) return undefined
     if(string == "") return undefined
 
+    if(string.length == 11) return string
+
     const matches = string.match(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/)
     if(matches == undefined) return
 
