@@ -48,46 +48,7 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
     window.app.campaign = document.data()
 
     if(window.app.campaign.music != undefined) {
-        if(window.youtubePlayer == undefined) {
-            window.youtubePlayer = new YT.Player("youtuber", {
-                "width": "300",
-                "height": "200",
-                "videoId": window.app.campaign.music.youtubeId,
-                "playerVars": {
-                    // "controls": 0,
-                    // "fs": 0,
-                    // "disablekb": 1,
-                    "modestbranding": 1,
-                    "start": computeCurrentTime(window.app.campaign.music) || 1,
-                    "autoplay": window.app.campaign.music.state != "paused",
-                },
-                "events": {
-                    "onReady": function(event) {
-                        window.youtubePlayer.seekTo(computeCurrentTime(window.app.campaign.music) || 1)
-
-                        if(window.app.campaign.music.state == "paused") {
-                            window.youtubePlayer.pauseVideo()
-                        } else if(window.app.campaign.music.state != "paused") {
-                            window.youtubePlayer.playVideo()
-                        }
-                    },
-                    "onStateChange": function(event) {
-                        // if(event.data == YT.PlayerState.PAUSED) {
-                        //     window.youtubePlayer.seekTo(computeCurrentTime(window.app.campaign.music) || 1)
-                        //
-                        //     if(window.app.campaign.music.state == "paused") {
-                        //         window.youtubePlayer.pauseVideo()
-                        //     } else if(window.app.campaign.music.state != "paused") {
-                        //         window.youtubePlayer.playVideo()
-                        //     }
-                        // }
-                    },
-                    "onError": function(event) {
-                        console.log("onError", event)
-                    }
-                }
-            })
-        } else if(window.youtubePlayer != undefined) {
+        if(window.youtubePlayer != undefined) {
             const campaign = window.app.campaign
             const prevcampaign = window.app.prevcampaign
             console.log(campaign.music)
@@ -114,3 +75,43 @@ data.collection("campaigns").doc("theros").onSnapshot((document) => {
         }
     }
 })
+
+window.init = function() {
+    window.youtubePlayer = new YT.Player("youtuber", {
+        "width": "300",
+        "height": "200",
+        "videoId": window.app.campaign.music.youtubeId,
+        "playerVars": {
+            // "controls": 0,
+            // "fs": 0,
+            // "disablekb": 1,
+            "modestbranding": 1,
+            "start": computeCurrentTime(window.app.campaign.music) || 1,
+            "autoplay": true,
+        },
+        "events": {
+            // "onReady": function(event) {
+            //     window.youtubePlayer.playVideo()
+            //     window.youtubePlayer.seekTo(computeCurrentTime(window.app.campaign.music) || 1)
+            //
+            //     // if(window.app.campaign.music.state == "paused") {
+            //     //     window.youtubePlayer.pauseVideo()
+            //     // } else if(window.app.campaign.music.state != "paused") {
+            //     //     window.youtubePlayer.playVideo()
+            //     // }
+            // },
+            "onStateChange": function(event) {
+                if(event.data == YT.PlayerState.PAUSED
+                || event.data == YT.PlayerState.UNSTARTED) {
+                    if(window.app.campaign.music.state != "paused") {
+                        window.youtubePlayer.seekTo(computeCurrentTime(window.app.campaign.music) || 1)
+                        window.youtubePlayer.playVideo()
+                    }
+                }
+            },
+            "onError": function(event) {
+                console.log("onError", event)
+            }
+        }
+    })
+}

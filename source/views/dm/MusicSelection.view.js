@@ -36,6 +36,7 @@ class SubmissionForm {
                 "key": ShortId.generate(),
                 "youtubeId": youtubeId,
                 "startTime": Date.now(),
+                "state": "playing",
             }
         })
     }
@@ -60,6 +61,7 @@ class Controls {
         if(window.app.campaign.music.state != "paused") {
             window.firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
+                    "key": window.app.campaign.music.key,
                     "youtubeId": window.app.campaign.music.youtubeId,
                     "currentTime": Date.now() - window.app.campaign.music.startTime,
                     "state": "paused"
@@ -68,6 +70,7 @@ class Controls {
         } else if(window.app.campaign.music.state == "paused") {
             window.firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
+                    "key": window.app.campaign.music.key,
                     "youtubeId": window.app.campaign.music.youtubeId,
                     "startTime": Date.now() - window.app.campaign.music.currentTime,
                     "state": "playing"
@@ -112,8 +115,10 @@ class Timeline {
 
         window.firebase.data.collection("campaigns").doc("theros").update({
             "music": {
+                "key": window.app.campaign.music.key,
                 "youtubeId": window.app.campaign.music.youtubeId,
                 "startTime": Date.now() - time,
+                "state": "playing",
             }
         })
     }
