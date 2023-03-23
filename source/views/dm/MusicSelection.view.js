@@ -1,5 +1,10 @@
 import * as Preact from "preact"
 import Poin from "poin"
+import ShortId from "shortid"
+import FormatDuration from "format-duration"
+
+import parseYoutubeId from "../functions/parseYoutubeId.js"
+import computeCurrentTime from "../functions/computeCurrentTime.js"
 
 export default class MusicSelection {
     render() {
@@ -12,7 +17,6 @@ export default class MusicSelection {
     }
 }
 
-import parseYoutubeId from "../functions/parseYoutubeId.js"
 class SubmissionForm {
     render() {
         return (
@@ -29,6 +33,7 @@ class SubmissionForm {
 
         window.firebase.data.collection("campaigns").doc("theros").update({
             "music": {
+                "key": ShortId.generate(),
                 "youtubeId": youtubeId,
                 "startTime": Date.now(),
             }
@@ -42,26 +47,45 @@ class Controls {
             <div class="Controls">
                 <Timeline/>
                 <div class="Panel">
-                    <div class="PreviousButton">Previous</div>
-                    <div class="PlayButton">Play</div>
-                    <div class="NextButton">Next</div>
-                    <div class="VolumeButton">Volume</div>
-                    <div class="Time">{this.printedCurrentTime} / {this.printedTotalTime}</div>
+                    <div class="PreviousButton"></div>
+                    <div class="PlayButton" onClick={this.onClickPlayButton}>Play</div>
+                    <div class="NextButton"></div>
+                    <div class="VolumeButton"></div>
+                    <div class="Time">{this.getPrintedCurrentTime()} / {this.getPrintedTotalTime()}</div>
                 </div>
             </div>
         )
     }
-    get printedCurrentTime() {
+    onClickPlayButton() {
+        if(window.app.campaign.music.state != "paused") {
+            window.firebase.data.collection("campaigns").doc("theros").update({
+                "music": {
+                    "youtubeId": window.app.campaign.music.youtubeId,
+                    "currentTime": Date.now() - window.app.campaign.music.startTime,
+                    "state": "paused"
+                }
+            })
+        } else if(window.app.campaign.music.state == "paused") {
+            window.firebase.data.collection("campaigns").doc("theros").update({
+                "music": {
+                    "youtubeId": window.app.campaign.music.youtubeId,
+                    "startTime": Date.now() - window.app.campaign.music.currentTime,
+                    "state": "playing"
+                }
+            })
+        }
+    }
+    getPrintedCurrentTime() {
         if(window.youtubePlayer?.getDuration == undefined) return "0:00"
         if(window.app?.campaign?.music == undefined) return "0:00"
-        let time = Math.floor((Date.now() - window.app.campaign.music.startTime) / 1000)
+        let time = window.app.campaign.music.currentTime || (Date.now() - window.app.campaign.music.startTime)
         time = Math.max(0, time)
-        time = Math.min(time, Math.floor(window.youtubePlayer.getDuration()))
-        return time
+        time = Math.min(time, window.youtubePlayer.getDuration() * 1000)
+        return FormatDuration(time)
     }
-    get printedTotalTime() {
+    getPrintedTotalTime() {
         if(window.youtubePlayer?.getDuration == undefined) return "0:00"
-        return Math.floor(window.youtubePlayer.getDuration())
+        return FormatDuration(window.youtubePlayer.getDuration() * 1000)
     }
 }
 
@@ -75,7 +99,7 @@ class Timeline {
                 </div>
                 <div class="NextTime" style={this.getNextTimeStyle()}>
                     <div class="Timestamp">
-                        <span>5:55</span>
+                        <span>{this.getPrintedNextTimestamp()}</span>
                     </div>
                 </div>
                 <div class="TotalTime"/>
@@ -84,21 +108,29 @@ class Timeline {
     }
     onClick(event) {
         if(window.youtubePlayer?.getDuration == undefined) return
-        window.youtubePlayer.seekTo((Poin.position.x / 720) * window.youtubePlayer.getDuration())
-        // TODO: UPDATE THE START TIME ACCORDINGLY!!
+        const time = (Poin.position.x / 720) * (window.youtubePlayer.getDuration() * 1000)
+
+        window.firebase.data.collection("campaigns").doc("theros").update({
+            "music": {
+                "youtubeId": window.app.campaign.music.youtubeId,
+                "startTime": Date.now() - time,
+            }
+        })
+    }
+    getPrintedNextTimestamp() {
+        if(window.youtubePlayer?.getDuration == undefined) return
+        const duration = (Poin.position.x / 720) * (window.youtubePlayer.getDuration() * 1000)
+        return FormatDuration(duration)
     }
     getCurrentTimeStyle() {
         if(window.youtubePlayer?.getDuration == undefined) return
         return {
-            "width": (this.getCurrentTime(window.app.campaign.music) / window.youtubePlayer.getDuration()) * 100 + "%"
+            "width": (computeCurrentTime(window.app.campaign.music) / (window.youtubePlayer.getDuration()/* * 1000*/)) * 100 + "%"
         }
     }
     getNextTimeStyle() {
         return {
             "width": ((Poin.position.x / 720) * 100) + "%"
         }
-    }
-    getCurrentTime(music) {
-        return Math.max(0, (Date.now() - music.startTime) / 1000)
     }
 }

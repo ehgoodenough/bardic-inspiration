@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "firebase": "^9.15.0",
+    "format-duration": "^3.0.2",
     "keyb": "^1.4.1",
     "poin": "^2.2.0",
     "preact": "^10.11.3",
