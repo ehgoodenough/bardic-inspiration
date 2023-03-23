@@ -11,7 +11,7 @@
 }
 
 .MainScreen {
-    top: 2em;
+    top: 4em;
     left: 0em;
     right: 0em;
     bottom: 0em;
@@ -25,6 +25,7 @@
         position: absolute;
         z-index: 1000;
     }
+
     .Art {
         z-index: 5;
         width: 100%;
@@ -65,16 +66,16 @@
     top: 0em;
     left: 0em;
     right: 0em;
-    height: 2em;
+    height: 4em;
     z-index: 200;
     overflow: hidden;
     position: absolute;
-    background-color: hotpink;
 
+    background-color: hotpink;
     // background-color: rgba(0, 0, 0, 0.5);
 
     .MusicSelection {
-        form {
+        .SubmissionForm {
             display: flex;
 
             input {
@@ -93,7 +94,115 @@
                 }
             }
         }
+
+        .Controls {
+            .Timeline {
+                // left: 0em;
+                // right: 0em;
+                // bottom: 4px / -2;
+                // position: absolute;
+                height: 16px;
+                position: relative;
+
+                cursor: pointer;
+
+                .CurrentTime,
+                .NextTime,
+                .TotalTime {
+                    top: 50%;
+                    height: 4px;
+                    margin-top: 4px / -2;
+                    position: absolute;
+                    transition-duration: 0.1s;
+                    transition-property: height, margin-top;
+                    width: 100%;
+                }
+
+                &:hover {
+                    .CurrentTime,
+                    .NextTime,
+                    .TotalTime {
+                        height: 6px;
+                        margin-top: 6px / -2;
+                    }
+
+                    .CurrentTime {
+                        .Dot {
+                            opacity: 1;
+                        }
+                    }
+
+                    .NextTime {
+                        .Timestamp {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .TotalTime {
+                    z-index: 10;
+                    background-color: fadeout(#333333, 50%);
+                }
+
+                .NextTime {
+                    width: 50%;
+                    z-index: 20;
+
+                    background-color: fadeout(#999999, 50%);
+
+                    .Timestamp {
+                        top: -1.5em;
+                        width: 8em;
+                        right: 8em / -2;
+                        line-height: 1em;
+                        font-size: 0.33em;
+                        text-align: center;
+                        position: absolute;
+
+                        pointer-events: none;
+
+                        span {
+                            background-color: fadeout(#999999, 50%);
+                        }
+
+                        opacity: 0;
+                        transition-duration: 0.1s;
+                        transition-property: opacity;
+                    }
+                }
+
+                .CurrentTime {
+                    width: 0%;
+                    z-index: 30;
+
+                    background-color: #fc0404;
+
+                    .Dot {
+                        top: 50%;
+                        width: 10px;
+                        height: 10px;
+                        right: 10px / -2;
+                        margin-top: 10px / -2;
+                        margin-left: 10px / -2;
+                        position: absolute;
+
+                        border-radius: 100%;
+                        background-color: #fc0404;
+
+                        opacity: 0;
+                        transition-duration: 0.1s;
+                        transition-property: opacity;
+                    }
+                }
+            }
+
+            .Panel {
+                height: 1em;
+                display: flex;
+            }
+        }
     }
+
     .ArtSelection {
         max-width: 320px;
         height: 100%;
