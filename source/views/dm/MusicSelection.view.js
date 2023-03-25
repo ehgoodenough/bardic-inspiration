@@ -13,6 +13,7 @@ export default class MusicSelection {
         return (
             <div class="MusicSelection">
                 <SubmissionForm/>
+                <Screenshot/>
                 <Controls/>
             </div>
         )
@@ -51,6 +52,17 @@ class SubmissionForm {
                 "state": "playing",
             }
         })
+    }
+}
+
+class Screenshot {
+    render() {
+        if(Data.campaign == undefined) return
+        return (
+            <div class="Screenshot" style={{
+                "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/maxresdefault.jpg)",
+            }}/>
+        )
     }
 }
 
