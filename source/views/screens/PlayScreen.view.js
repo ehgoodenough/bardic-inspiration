@@ -4,6 +4,7 @@ import ShortId from "shortid"
 import Poin from "poin"
 
 import Data from "models/Data.js"
+import Navigation from "models/Navigation.js"
 import Youtube from "models/Youtube.js"
 import Firebase from "models/Firebase.js"
 import parseYoutubeId from "../functions/parseYoutubeId.js"
@@ -61,6 +62,7 @@ class SubmissionForm {
 class Screenshot {
     render() {
         if(Data.campaign == undefined) return
+        if(Navigation.state.isDebug == true) return
         return (
             <div class="Screenshot" onClick={this.onClick} style={{
                 "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/maxresdefault.jpg)",

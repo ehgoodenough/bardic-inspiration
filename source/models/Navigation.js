@@ -93,6 +93,10 @@ Navigation.on("/play", function(request) {
     return {"screen": "PlayScreen"}
 })
 
+Navigation.on("/play/debug", function(request) {
+    return {"screen": "PlayScreen", "isDebug": true}
+})
+
 Navigation.on("/*", function(request) {
     throw new UserError("Could not find " + request.path)
 })
