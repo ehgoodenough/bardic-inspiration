@@ -13,7 +13,7 @@
 }
 
 .MainScreen {
-    top: 4em;
+    top: 2em;
     left: 0em;
     right: 0em;
     bottom: 0em;
@@ -68,12 +68,10 @@
     top: 0em;
     left: 0em;
     right: 0em;
-    height: 4em;
+    height: 2em;
     z-index: 200;
     overflow: hidden;
     position: absolute;
-
-    background-color: hotpink;
 
     .MusicSelection {
         .SubmissionForm {
@@ -97,13 +95,19 @@
         }
 
         .Controls {
-            .Timeline {
-                position: relative;
-                height: 16px;
+            left: 0em;
+            right: 0em;
+            bottom: 0em;
+            height: 48px;
+            position: fixed;
 
+            background-color: fadeout(hotpink, 20%);
+
+            .Timeline {
+                left: 12px;
+                right: 12px;
+                height: 16px;
                 position: absolute;
-                left: 2em;
-                right: 2em;
 
                 cursor: pointer;
                 * {cursor: pointer;}
@@ -197,13 +201,31 @@
             }
 
             .Panel {
-                height: 1em;
+                left: 0em;
+                right: 0em;
+                bottom: 0em;
+                height: 36px;
                 display: flex;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: absolute;
+                align-items: center;
+                background-color: fadeout(orange, 20%);
 
                 .PlayButton {
+                    color: white;
+                    span {
+                        font-size: 30px;
+                    }
+
                     &:hover {
                         color: @youtube-red;
                     }
+                }
+
+                .Time {
+                    color: white;
+                    font-size: 12px;
                 }
             }
         }

@@ -158,7 +158,10 @@ class Timeline {
         }
     }
     getCurrentTime() {
-        return computeCurrentTime(Data.campaign.music)
+        let time = computeCurrentTime(Data.campaign.music)
+        time = Math.min(time, this.getTotalTime())
+        if(isNaN(time)) time = 0
+        return time
     }
     getTotalTime() {
         if(window.youtubePlayer?.getDuration == undefined) return 0
