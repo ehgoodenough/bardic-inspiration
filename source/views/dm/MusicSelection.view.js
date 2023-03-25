@@ -61,11 +61,11 @@ class Controls {
                 <div class="Panel">
                     <div class="PreviousButton"></div>
                     <div class="PlayButton" onClick={this.onClickPlayButton}>
-                        <span class="material-icons">{window.app.campaign.music.state == "paused" ? "pause" : "play_arrow"}</span>
+                        <span class="material-icons">{window.app.campaign.music.state == "paused" ? "play_arrow" : "pause"}</span>
                     </div>
                     <div class="NextButton"></div>
                     <div class="VolumeButton"></div>
-                    <div class="Time">{this.getPrintedCurrentTime()} / {this.getPrintedTotalTime()}</div>
+                    <div class="Time">{this.getCurrentTimeText()} / {this.getTotalTimeText()}</div>
                 </div>
             </div>
         )
@@ -91,68 +91,84 @@ class Controls {
             })
         }
     }
-    getPrintedCurrentTime() {
-        if(window.youtubePlayer?.getDuration == undefined) return "0:00"
-        if(window.app?.campaign?.music == undefined) return "0:00"
-        let time = window.app.campaign.music.currentTime || (Date.now() - window.app.campaign.music.startTime)
-        time = Math.max(0, time)
-        time = Math.min(time, window.youtubePlayer.getDuration() * 1000)
+    getCurrentTimeText() {
+        let time = this.getCurrentTime()
+        time = Math.min(time, this.getTotalTime())
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
-    getPrintedTotalTime() {
-        if(window.youtubePlayer?.getDuration == undefined) return "0:00"
-        let time = window.youtubePlayer.getDuration() * 1000
+    getTotalTimeText() {
+        let time = this.getTotalTime()
         if(isNaN(time)) time = 0
         return FormatDuration(time)
+    }
+    getCurrentTime() {
+        if(window.app?.campaign?.music == undefined) return 0
+        return computeCurrentTime(window.app.campaign.music)
+    }
+    getTotalTime() {
+        if(window.youtubePlayer?.getDuration == undefined) return 0
+        return window.youtubePlayer.getDuration() * 1000
     }
 }
 
-const hovered = {"percent": 0}
 class Timeline {
     render() {
         return (
-            <div class="Timeline" onClick={this.onClick}>
+            <div class="Timeline" id="timeline" onClick={this.onClick}>
                 <div class="CurrentTime" style={this.getCurrentTimeStyle()}>
                     <div class="Dot"/>
                 </div>
-                <div class="NextTime" style={this.getNextTimeStyle()}>
+                <div class="HoveredTime" style={this.getHoveredTimeStyle()}>
                     <div class="Timestamp">
-                        <span>{this.getPrintedNextTimestamp()}</span>
+                        <span>{this.getHoveredTimeText()}</span>
                     </div>
                 </div>
                 <div class="TotalTime"/>
             </div>
         )
     }
-    onClick(event) {
-        if(window.youtubePlayer?.getDuration == undefined) return
-        const time = (Poin.position.x / 720) * (window.youtubePlayer.getDuration() * 1000)
-
-        window.firebase.data.collection("campaigns").doc("theros").update({
-            "music": {
-                "key": window.app.campaign.music.key,
-                "youtubeId": window.app.campaign.music.youtubeId,
-                "startTime": Date.now() - time,
-                "state": "playing",
-            }
-        })
+    get onClick() {
+        return (event) => {
+            let time = this.getHoveredTime()
+            window.firebase.data.collection("campaigns").doc("theros").update({
+                "music": {
+                    "key": window.app.campaign.music.key,
+                    "youtubeId": window.app.campaign.music.youtubeId,
+                    "startTime": Date.now() - time,
+                    "state": "playing",
+                }
+            })
+        }
     }
-    getPrintedNextTimestamp() {
-        if(window.youtubePlayer?.getDuration == undefined) return
-        let time = (Poin.position.x / 720) * (window.youtubePlayer.getDuration() * 1000)
+    getHoveredTimeText() {
+        let time = this.getHoveredTime()
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
     getCurrentTimeStyle() {
-        if(window.youtubePlayer?.getDuration == undefined) return
         return {
-            "width": (computeCurrentTime(window.app.campaign.music) / (window.youtubePlayer.getDuration()/* * 1000*/)) * 100 + "%"
+            "width": (this.getCurrentTime() / this.getTotalTime()) * 100 + "%"
         }
     }
-    getNextTimeStyle() {
+    getHoveredTimeStyle() {
         return {
-            "width": ((Poin.position.x / 720) * 100) + "%"
+            "width": (this.getHoveredRelativePosition() * 100) + "%"
         }
+    }
+    getCurrentTime() {
+        return computeCurrentTime(window.app.campaign.music)
+    }
+    getTotalTime() {
+        if(window.youtubePlayer?.getDuration == undefined) return 0
+        return window.youtubePlayer.getDuration() * 1000
+    }
+    getHoveredRelativePosition() {
+        if(document.getElementById("timeline") == undefined) return 0
+        const bounds = document.getElementById("timeline").getBoundingClientRect()
+        return (Poin.position.x - bounds.x) / bounds.width
+    }
+    getHoveredTime() {
+        return this.getHoveredRelativePosition() * this.getTotalTime()
     }
 }

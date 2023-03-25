@@ -24,12 +24,12 @@ export default class PlayScreen {
                     // "fs": 0,
                     // "disablekb": 1,
                     "modestbranding": 1,
-                    "start": computeCurrentTime(window.app.campaign.music) || 1,
+                    "start": (computeCurrentTime(window.app.campaign.music) / 1000) || 1,
                     "autoplay": true,
                 },
                 "events": {
                     "onReady": (event) => {
-                        window.youtubePlayer.seekTo(computeCurrentTime(window.app.campaign.music) || 1)
+                        window.youtubePlayer.seekTo((computeCurrentTime(window.app.campaign.music) / 1000) || 1)
                         if(window.app.campaign.music.state == "paused") {
                             window.youtubePlayer.pauseVideo()
                         } else if(window.app.campaign.music.state != "paused") {
