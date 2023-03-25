@@ -39,7 +39,6 @@ class SubmissionForm {
         if(submittedTime != undefined) {
             submittedTime = parseInt(submittedTime)
             submittedTime *= 1000
-            console.log(submittedTime)
             startTime -= submittedTime
         }
 

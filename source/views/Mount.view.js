@@ -1,8 +1,10 @@
 import * as Preact from "preact"
-import uploadArt from "views/functions/uploadArt.js"
 
-import ArtSelection from "views/dm/ArtSelection.view.js"
-import MusicSelection from "views/dm/MusicSelection.view.js"
+import Navigation from "models/Navigation.js"
+
+import SplashScreen from "views/screens/SplashScreen.view.js"
+import PlayScreen from "views/screens/PlayScreen.view.js"
+
 import "views/Mount.view.less"
 
 export default class Mount {
@@ -11,10 +13,15 @@ export default class Mount {
         if(window.app.campaign == undefined) return
         return (
             <div className="Mount">
-                <div class="DungeonMasterScreen">
-                    <MusicSelection/>
-                </div>
+                {this.screen}
             </div>
         )
+    }
+    get screen() {
+        if(Navigation.state.screen == "SplashScreen") {
+            return <SplashScreen/>
+        } else if(Navigation.state.screen = "PlayScreen") {
+            return <PlayScreen/>
+        }
     }
 }

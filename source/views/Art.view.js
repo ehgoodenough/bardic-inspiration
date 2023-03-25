@@ -16,7 +16,7 @@ export default class Mount {
                 <div class="MainScreen">
                     <Art/>
                 </div>
-                <div class="DungeonMasterScreen">
+                <div class="PlayScreen">
                     <ArtSelection/>
                 </div>
             </div>
