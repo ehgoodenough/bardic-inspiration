@@ -79,16 +79,40 @@ class Controls {
                 <Timeline/>
                 <div class="Gradient"/>
                 <div class="Panel">
-                    <div class="PreviousButton"></div>
                     <div class="PlayButton" onClick={this.onClickPlayButton}>
                         <span class="material-icons">{Data.campaign.music.state == "paused" ? "play_arrow" : "pause"}</span>
                     </div>
-                    <div class="NextButton"></div>
-                    <div class="VolumeButton"></div>
+                    <div class="VolumeButton" onClick={this.onClickVolumeButton}>
+                        <span class="material-icons">{this.getVolumeIcon()}</span>
+                    </div>
                     <div class="Time">{this.getCurrentTimeText()} / {this.getTotalTimeText()}</div>
                 </div>
             </div>
         )
+    }
+    onClickVolumeButton() {
+        if(window.youtubePlayer == undefined) return
+        if(window.youtubePlayer.isMuted instanceof Function == false) return
+        if(window.youtubePlayer.unMute instanceof Function == false) return
+        if(window.youtubePlayer.mute instanceof Function == false) return
+        if(window.youtubePlayer.isMuted()) {
+            window.youtubePlayer.unMute()
+        } else {
+            window.youtubePlayer.mute()
+        }
+    }
+    getVolumeIcon() {
+        if(window.youtubePlayer == undefined) return
+        if(window.youtubePlayer.isMuted instanceof Function == false) return
+        if(window.youtubePlayer.getVolume instanceof Function == false) return
+        if(window.youtubePlayer.isMuted()) {
+            return "volume_off"
+        }
+
+        const volume = window.youtubePlayer.getVolume()
+        if(volume <= 0) return "volume_off"
+        if(volume >= 50) return "volume_up"
+        return "volume_down"
     }
     onClickPlayButton() {
         Youtube.pauseplay()

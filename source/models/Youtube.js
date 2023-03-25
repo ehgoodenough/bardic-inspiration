@@ -1,4 +1,5 @@
 import Data from "models/Data.js"
+import Firebase from "models/Firebase.js"
 import parseYoutubeId from "views/functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
