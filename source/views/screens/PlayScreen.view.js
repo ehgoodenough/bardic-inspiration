@@ -104,10 +104,13 @@ class Screenshot {
     render() {
         if(Data.campaign == undefined) return
         return (
-            <div class="Screenshot" style={{
+            <div class="Screenshot" onClick={this.onClick} style={{
                 "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/maxresdefault.jpg)",
             }}/>
         )
+    }
+    onClick() {
+        pauseplay()
     }
 }
 
@@ -130,25 +133,7 @@ class Controls {
         )
     }
     onClickPlayButton() {
-        if(Data.campaign.music.state != "paused") {
-            Firebase.data.collection("campaigns").doc("theros").update({
-                "music": {
-                    "key": Data.campaign.music.key,
-                    "youtubeId": Data.campaign.music.youtubeId,
-                    "currentTime": Date.now() - Data.campaign.music.startTime,
-                    "state": "paused"
-                }
-            })
-        } else if(Data.campaign.music.state == "paused") {
-            Firebase.data.collection("campaigns").doc("theros").update({
-                "music": {
-                    "key": Data.campaign.music.key,
-                    "youtubeId": Data.campaign.music.youtubeId,
-                    "startTime": Date.now() - Data.campaign.music.currentTime,
-                    "state": "playing"
-                }
-            })
-        }
+        pauseplay()
     }
     getCurrentTimeText() {
         let time = this.getCurrentTime()
@@ -168,6 +153,28 @@ class Controls {
     getTotalTime() {
         if(window.youtubePlayer?.getDuration == undefined) return 0
         return window.youtubePlayer.getDuration() * 1000
+    }
+}
+
+function pauseplay() {
+    if(Data.campaign.music.state != "paused") {
+        Firebase.data.collection("campaigns").doc("theros").update({
+            "music": {
+                "key": Data.campaign.music.key,
+                "youtubeId": Data.campaign.music.youtubeId,
+                "currentTime": Date.now() - Data.campaign.music.startTime,
+                "state": "paused"
+            }
+        })
+    } else if(Data.campaign.music.state == "paused") {
+        Firebase.data.collection("campaigns").doc("theros").update({
+            "music": {
+                "key": Data.campaign.music.key,
+                "youtubeId": Data.campaign.music.youtubeId,
+                "startTime": Date.now() - Data.campaign.music.currentTime,
+                "state": "playing"
+            }
+        })
     }
 }
 
