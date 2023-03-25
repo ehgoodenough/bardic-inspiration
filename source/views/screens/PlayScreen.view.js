@@ -28,26 +28,15 @@ export default class PlayScreen {
                     "autoplay": true,
                 },
                 "events": {
-                    // "onReady": function(event) {
-                    //     window.youtubePlayer.playVideo()
-                    //     window.youtubePlayer.seekTo(computeCurrentTime(window.app.campaign.music) || 1)
-                    //
-                    //     // if(window.app.campaign.music.state == "paused") {
-                    //     //     window.youtubePlayer.pauseVideo()
-                    //     // } else if(window.app.campaign.music.state != "paused") {
-                    //     //     window.youtubePlayer.playVideo()
-                    //     // }
-                    // },
-                    "onStateChange": function(event) {
-                        if(event.data == YT.PlayerState.PAUSED
-                        || event.data == YT.PlayerState.UNSTARTED) {
-                            if(window.app.campaign.music.state != "paused") {
-                                window.youtubePlayer.seekTo(computeCurrentTime(window.app.campaign.music) || 1)
-                                window.youtubePlayer.playVideo()
-                            }
+                    "onReady": (event) => {
+                        window.youtubePlayer.seekTo(computeCurrentTime(window.app.campaign.music) || 1)
+                        if(window.app.campaign.music.state == "paused") {
+                            window.youtubePlayer.pauseVideo()
+                        } else if(window.app.campaign.music.state != "paused") {
+                            window.youtubePlayer.playVideo()
                         }
                     },
-                    "onError": function(event) {
+                    "onError": (event) => {
                         console.log("onError", event)
                     }
                 }

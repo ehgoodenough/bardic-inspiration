@@ -13,9 +13,13 @@ export default class Mount {
         if(window.app.campaign == undefined) return
         return (
             <div className="Mount">
+                {this.title}
                 {this.screen}
             </div>
         )
+    }
+    get title() {
+        return <title>Bardic Inspiration</title>
     }
     get screen() {
         if(Navigation.state.screen == "SplashScreen") {

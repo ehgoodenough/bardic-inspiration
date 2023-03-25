@@ -19,6 +19,7 @@ export default class PlayScreen {
         )
     }
     onClick() {
-        Navigation.go("/play")
+        // Navigation.go("/play")
+        Navigation.run("/play")
     }
 }

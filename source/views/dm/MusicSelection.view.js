@@ -60,7 +60,9 @@ class Controls {
                 <Timeline/>
                 <div class="Panel">
                     <div class="PreviousButton"></div>
-                    <div class="PlayButton" onClick={this.onClickPlayButton}>Play</div>
+                    <div class="PlayButton" onClick={this.onClickPlayButton}>
+                        <span class="material-icons">{window.app.campaign.music.state == "paused" ? "pause" : "play_arrow"}</span>
+                    </div>
                     <div class="NextButton"></div>
                     <div class="VolumeButton"></div>
                     <div class="Time">{this.getPrintedCurrentTime()} / {this.getPrintedTotalTime()}</div>
@@ -95,11 +97,14 @@ class Controls {
         let time = window.app.campaign.music.currentTime || (Date.now() - window.app.campaign.music.startTime)
         time = Math.max(0, time)
         time = Math.min(time, window.youtubePlayer.getDuration() * 1000)
+        if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
     getPrintedTotalTime() {
         if(window.youtubePlayer?.getDuration == undefined) return "0:00"
-        return FormatDuration(window.youtubePlayer.getDuration() * 1000)
+        let time = window.youtubePlayer.getDuration() * 1000
+        if(isNaN(time)) time = 0
+        return FormatDuration(time)
     }
 }
 
@@ -135,8 +140,9 @@ class Timeline {
     }
     getPrintedNextTimestamp() {
         if(window.youtubePlayer?.getDuration == undefined) return
-        const duration = (Poin.position.x / 720) * (window.youtubePlayer.getDuration() * 1000)
-        return FormatDuration(duration)
+        let time = (Poin.position.x / 720) * (window.youtubePlayer.getDuration() * 1000)
+        if(isNaN(time)) time = 0
+        return FormatDuration(time)
     }
     getCurrentTimeStyle() {
         if(window.youtubePlayer?.getDuration == undefined) return
