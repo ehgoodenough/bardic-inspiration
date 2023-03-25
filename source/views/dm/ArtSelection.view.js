@@ -1,16 +1,18 @@
 import * as Preact from "preact"
+import Data from "models/Data.js"
+import Firebase from "models/Firebase.js"
 
 export default class ArtSelection {
     render() {
-        if(window.app.art == undefined) return
+        if(Data.art == undefined) return
         return (
             <div class="ArtSelection">
-                <SelectedArt art={window.app.campaign.art}/>
+                <SelectedArt art={Data.campaign.art}/>
                 <ArtSearch/>
                 <div class="SelectableArts">
-                    {window.app.art.filter((art) => {
-                        if(window.app.query == undefined) return true
-                        return (art.oldfilename || "").toLowerCase().includes(window.app.query.toLowerCase())
+                    {Data.art.filter((art) => {
+                        if(Data.query == undefined) return true
+                        return (art.oldfilename || "").toLowerCase().includes(Data.query.toLowerCase())
                     }).map((art) => {
                         return <SelectableArt art={art}/>
                     })}
@@ -34,7 +36,7 @@ class SelectedArt {
     get onChange() {
         return (event) => {
             console.log()
-            window.firebase.data.collection("art").doc(this.props.art.docid).update({
+            Firebase.data.collection("art").doc(this.props.art.docid).update({
                 "oldfilename": event.target.value,
             })
         }
@@ -52,8 +54,8 @@ class DeleteArtButton {
     get onClick() {
         return async (event) => {
             console.log(this.props.art)
-            await window.firebase.data.collection("art").doc(this.props.art.docid).delete()
-            window.firebase.files.ref(this.props.art.fileref).delete()
+            await Firebase.data.collection("art").doc(this.props.art.docid).delete()
+            Firebase.files.ref(this.props.art.fileref).delete()
         }
     }
 }
@@ -67,7 +69,7 @@ class ArtSearch {
         )
     }
     onChange(event) {
-        window.app.query = event.target.value
+        Data.query = event.target.value
     }
 }
 
@@ -81,7 +83,7 @@ class SelectableArt {
     }
     get onClick() {
         return (event) => {
-            window.firebase.data.collection("campaigns").doc("theros").update({
+            Firebase.data.collection("campaigns").doc("theros").update({
                 "art": this.props.art,
             })
         }
@@ -102,7 +104,7 @@ class UploadForm {
         const file = event.target.children["upload"].files[0]
         if(file == undefined) return
         uploadArt(file).then((art) => {
-            window.firebase.data.collection("campaigns").doc("theros").set({"art": art})
+            Firebase.data.collection("campaigns").doc("theros").set({"art": art})
         })
     }
 }

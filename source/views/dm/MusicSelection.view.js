@@ -1,9 +1,10 @@
 import * as Preact from "preact"
-import Poin from "poin"
-import ShortId from "shortid"
-// import QueryString from "query-string"
 import FormatDuration from "format-duration"
+import ShortId from "shortid"
+import Poin from "poin"
 
+import Data from "models/Data.js"
+import Firebase from "models/Firebase.js"
 import parseYoutubeId from "../functions/parseYoutubeId.js"
 import computeCurrentTime from "../functions/computeCurrentTime.js"
 
@@ -42,7 +43,7 @@ class SubmissionForm {
             startTime -= submittedTime
         }
 
-        window.firebase.data.collection("campaigns").doc("theros").update({
+        Firebase.data.collection("campaigns").doc("theros").update({
             "music": {
                 "key": ShortId.generate(),
                 "youtubeId": youtubeId,
@@ -61,7 +62,7 @@ class Controls {
                 <div class="Panel">
                     <div class="PreviousButton"></div>
                     <div class="PlayButton" onClick={this.onClickPlayButton}>
-                        <span class="material-icons">{window.app.campaign.music.state == "paused" ? "play_arrow" : "pause"}</span>
+                        <span class="material-icons">{Data.campaign.music.state == "paused" ? "play_arrow" : "pause"}</span>
                     </div>
                     <div class="NextButton"></div>
                     <div class="VolumeButton"></div>
@@ -71,21 +72,21 @@ class Controls {
         )
     }
     onClickPlayButton() {
-        if(window.app.campaign.music.state != "paused") {
-            window.firebase.data.collection("campaigns").doc("theros").update({
+        if(Data.campaign.music.state != "paused") {
+            Firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
-                    "key": window.app.campaign.music.key,
-                    "youtubeId": window.app.campaign.music.youtubeId,
-                    "currentTime": Date.now() - window.app.campaign.music.startTime,
+                    "key": Data.campaign.music.key,
+                    "youtubeId": Data.campaign.music.youtubeId,
+                    "currentTime": Date.now() - Data.campaign.music.startTime,
                     "state": "paused"
                 }
             })
-        } else if(window.app.campaign.music.state == "paused") {
-            window.firebase.data.collection("campaigns").doc("theros").update({
+        } else if(Data.campaign.music.state == "paused") {
+            Firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
-                    "key": window.app.campaign.music.key,
-                    "youtubeId": window.app.campaign.music.youtubeId,
-                    "startTime": Date.now() - window.app.campaign.music.currentTime,
+                    "key": Data.campaign.music.key,
+                    "youtubeId": Data.campaign.music.youtubeId,
+                    "startTime": Date.now() - Data.campaign.music.currentTime,
                     "state": "playing"
                 }
             })
@@ -103,8 +104,8 @@ class Controls {
         return FormatDuration(time)
     }
     getCurrentTime() {
-        if(window.app?.campaign?.music == undefined) return 0
-        return computeCurrentTime(window.app.campaign.music)
+        if(Data?.campaign?.music == undefined) return 0
+        return computeCurrentTime(Data.campaign.music)
     }
     getTotalTime() {
         if(window.youtubePlayer?.getDuration == undefined) return 0
@@ -131,10 +132,10 @@ class Timeline {
     get onClick() {
         return (event) => {
             let time = this.getHoveredTime()
-            window.firebase.data.collection("campaigns").doc("theros").update({
+            Firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
-                    "key": window.app.campaign.music.key,
-                    "youtubeId": window.app.campaign.music.youtubeId,
+                    "key": Data.campaign.music.key,
+                    "youtubeId": Data.campaign.music.youtubeId,
                     "startTime": Date.now() - time,
                     "state": "playing",
                 }
@@ -157,7 +158,7 @@ class Timeline {
         }
     }
     getCurrentTime() {
-        return computeCurrentTime(window.app.campaign.music)
+        return computeCurrentTime(Data.campaign.music)
     }
     getTotalTime() {
         if(window.youtubePlayer?.getDuration == undefined) return 0

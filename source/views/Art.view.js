@@ -1,4 +1,6 @@
 import * as Preact from "preact"
+import Data from "models/Data.js"
+import Firebase from "models/Firebase.js"
 import uploadArt from "views/functions/uploadArt.js"
 
 import ArtSelection from "views/dm/ArtSelection.view.js"
@@ -7,8 +9,7 @@ import "views/Mount.view.less"
 
 export default class Mount {
     render() {
-        if(window.app == undefined) return
-        if(window.app.campaign == undefined) return
+        if(Data.campaign == undefined) return
         return (
             <div className="Mount" onDrop={this.onDrop} onDragOver={this.onDragOver}
                 onDragEnter={this.onDragEnter} onDragLeave={this.onDragLeave}>
@@ -49,7 +50,7 @@ export default class Mount {
             if(file == undefined) return
             uploadArt(file).then((art) => {
                 if(index != 0) return
-                window.firebase.data.collection("campaigns").doc("theros").set({"art": art})
+                Firebase.data.collection("campaigns").doc("theros").set({"art": art})
             })
         })
     }
@@ -57,10 +58,10 @@ export default class Mount {
 
 class Art {
     render() {
-        if(window.app.campaign.art == undefined) return
+        if(Data.campaign.art == undefined) return
         return (
             <div class="Art" style={{
-                "background-image": "url(" + window.app.campaign.art.url + ")"
+                "background-image": "url(" + Data.campaign.art.url + ")"
             }}/>
         )
     }

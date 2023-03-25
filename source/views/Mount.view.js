@@ -1,5 +1,6 @@
 import * as Preact from "preact"
 
+import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
 
 import SplashScreen from "views/screens/SplashScreen.view.js"
@@ -9,8 +10,7 @@ import "views/Mount.view.less"
 
 export default class Mount {
     render() {
-        if(window.app == undefined) return
-        if(window.app.campaign == undefined) return
+        if(Data.campaign == undefined) return
         return (
             <div className="Mount">
                 {this.title}
