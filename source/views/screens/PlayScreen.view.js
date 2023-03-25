@@ -85,10 +85,25 @@ class Controls {
                     <div class="VolumeButton" onClick={this.onClickVolumeButton}>
                         <span class="material-icons">{this.getVolumeIcon()}</span>
                     </div>
+                    <div class="VolumeBar" id="volume" onMouseMove={this.onClickVolumeBar}>
+                        <div class="Bar"/>
+                        <div class="Dot" style={{
+                            "left": this.getVolumeRelativePosition() * 100 + "%"
+                        }}/>
+                    </div>
                     <div class="Time">{this.getCurrentTimeText()} / {this.getTotalTimeText()}</div>
                 </div>
             </div>
         )
+    }
+    onClickVolumeBar() {
+        if(Poin.isPressed() == false) return
+        if(document.getElementById("volume") == undefined) return
+        const bounds = document.getElementById("volume").getBoundingClientRect()
+        let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
+        if(volume < 5) volume = 0
+        if(volume > 95) volume = 100
+        window.youtubePlayer.setVolume(volume)
     }
     onClickVolumeButton() {
         if(window.youtubePlayer == undefined) return
@@ -100,6 +115,11 @@ class Controls {
         } else {
             window.youtubePlayer.mute()
         }
+    }
+    getVolumeRelativePosition() {
+        if(window.youtubePlayer == undefined) return
+        if(window.youtubePlayer.getVolume == undefined) return
+        return window.youtubePlayer.getVolume() / 100
     }
     getVolumeIcon() {
         if(window.youtubePlayer == undefined) return
