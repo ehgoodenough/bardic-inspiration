@@ -5,7 +5,7 @@ import Poin from "poin"
 
 import Data from "models/Data.js"
 import Firebase from "models/Firebase.js"
-import parseYoutubeId from "../functions/parseYoutubeId.js"
+import {parseYoutubeId} from "../functions/parseYoutubeId.js"
 import computeCurrentTime from "../functions/computeCurrentTime.js"
 
 export default class MusicSelection {

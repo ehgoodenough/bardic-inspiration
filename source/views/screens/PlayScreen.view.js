@@ -7,7 +7,7 @@ import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
 import Youtube from "models/Youtube.js"
 import Firebase from "models/Firebase.js"
-import parseYoutubeId from "../functions/parseYoutubeId.js"
+import {parseYoutubeId, parseEmbeddedStartTime} from "../functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 export default class PlayScreen {
@@ -19,9 +19,6 @@ export default class PlayScreen {
                 <SubmissionForm/>
                 <Screenshot/>
                 <Controls/>
-                <video id="asd" controls={false} autoplay={true} loop={true}>
-                    <source src={require("../../ember.mp4")} type="video/mp4"/>
-                </video>
             </div>
         )
     }
@@ -38,26 +35,44 @@ class SubmissionForm {
     }
     onSubmit(event) {
         event.preventDefault()
-        const submittedValue = event.target.children["youtube"].value
-        const youtubeId = parseYoutubeId(submittedValue)
-        if(youtubeId == undefined || youtubeId == "") return
+        let submittedValues = event.target.children["youtube"].value
+        submittedValues = submittedValues.split(",")
+        submittedValues = submittedValues.map((value) => value.trim())
 
-        let startTime = Date.now()
+        let musics = submittedValues.map((value) => {
+            return {
+                "key": ShortId.generate(),
+                "youtubeId": parseYoutubeId(value),
+                "embeddedStartTime": parseEmbeddedStartTime(value)
+            }
+        })
 
-        let submittedTime = (submittedValue.match(/t=([^&]*)/) || [])[1]
-        if(submittedTime != undefined) {
-            submittedTime = parseInt(submittedTime)
-            submittedTime *= 1000
-            startTime -= submittedTime
+        musics = musics.filter((value) => {
+            return value.youtubeId != undefined
+        })
+
+        musics.forEach((music) => {
+            Object.keys(music).forEach((key) => {
+                if(music[key] == undefined) {
+                    delete music[key]
+                }
+            })
+        })
+
+        if(musics[0] == undefined) return
+
+        if(Data.campaign.musics != undefined) {
+            musics = Data.campaign.musics.concat(musics)
         }
 
         Firebase.data.collection("campaigns").doc("theros").update({
+            "musics": Data.campaign.musics.concat(musics),
             "music": {
-                "key": ShortId.generate(),
-                "youtubeId": youtubeId,
-                "startTime": startTime,
+                "key": musics[0].key,
+                "youtubeId": musics[0].youtubeId,
+                "startTime": Date.now() - (musics[0].embeddedStartTime || 0),
                 "state": "playing",
-            }
+            },
         })
     }
 }
@@ -225,4 +240,10 @@ class Timeline {
     getHoveredTime() {
         return this.getHoveredRelativePosition() * this.getTotalTime()
     }
+}
+
+window.clearMusics = function() {
+    Firebase.data.collection("campaigns").doc("theros").update({
+        "musics": [],
+    })
 }

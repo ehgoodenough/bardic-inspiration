@@ -1,6 +1,6 @@
 import Firebase from "models/Firebase.js"
 
-import parseYoutubeId from "views/functions/parseYoutubeId.js"
+import {parseYoutubeId} from "views/functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 Firebase.data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {
@@ -15,6 +15,8 @@ Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
     if(document.exists == false) return
     Data.prevcampaign = Data.campaign
     Data.campaign = document.data()
+
+    Data.campaign.musics = Data.campaign.musics || []
 
     if(Data.campaign.music != undefined) {
         if(window.youtubePlayer != undefined) {
@@ -46,4 +48,5 @@ Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
 })
 
 const Data = {}
+window.app = {"data": Data}
 export default Data
