@@ -9,6 +9,7 @@ import Youtube from "models/Youtube.js"
 import Firebase from "models/Firebase.js"
 import {parseYoutubeId, parseEmbeddedStartTime} from "../functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
+import playlists from "playlists.json"
 
 import Controls from "views/widgets/Controls.view.js"
 
@@ -18,23 +19,50 @@ export default class EditScreen {
         Youtube.onLoad()
         return (
             <div class="EditScreen">
-                <div class="Preview">
-                    <YoutubeScreenshot youtubeId={Data.campaign.music.youtubeId} onClick={() => Youtube.pauseplay()}/>
-                    <Controls/>
+                <div class="PlayingPanel">
+                    <div class="PlayBox">
+                        <div class="YoutubeScreenshot" onClick={() => Youtube.pauseplay()} style={{
+                            "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/default.jpg)",
+                        }}/>
+                        <Controls/>
+                    </div>
+                    <Queue/>
                 </div>
-                <SubmissionForm/>
-                <MusicQueue/>
+                <div class="SearchPanel">
+                    <SubmissionForm/>
+                    <div class="Playlists">
+                        {playlists.map((playlist) => {
+                            return (
+                                <div class="Playlist">
+                                    <a class="PlaylistName" href={"https://www.youtube.com/playlist?list=" + playlist.id} target="_blank" >
+                                        {playlist.title}
+                                    </a>
+                                    <div class="Musics">
+                                        {playlist.musics.map((music) => {
+                                            return (
+                                                <div class="Music" onClick={() => {
+                                                    Firebase.data.collection("campaigns").doc("theros").update({
+                                                        "musics": Data.campaign.musics.concat({
+                                                            "key": ShortId.generate(),
+                                                            "youtubeId": music.youtubeId,
+                                                            "title": music.title,
+                                                        })
+                                                    })
+                                                }}>
+                                                    <div class="YoutubeScreenshot" style={{
+                                                        "background-image": "url(https://img.youtube.com/vi/" + music.youtubeId + "/default.jpg)",
+                                                    }}/>
+                                                    <div class="Text">{music.title || music.youtubeId}</div>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
             </div>
-        )
-    }
-}
-
-class YoutubeScreenshot {
-    render() {
-        return (
-            <div class="YoutubeScreenshot" onClick={this.props.onClick} style={{
-                "background-image": "url(https://img.youtube.com/vi/" + this.props.youtubeId + "/default.jpg)",
-            }}/>
         )
     }
 }
@@ -92,29 +120,35 @@ class SubmissionForm {
     }
 }
 
-class MusicQueue {
+class Queue {
     render() {
         if(Data.campaign == undefined) return
         if(Data.campaign.musics == undefined) return
         return (
-            <div class="MusicQueue">
+            <div class="Queue">
                 {Data.campaign.musics.map((music) => {
                     return (
-                        <QueuedMusic music={music}/>
+                        <QueuedItem music={music}/>
                     )
                 })}
-                <div class="ClearAll" onClick={() => window.clearMusics()}>Clear all?</div>
+                <div class="ClearAll" onClick={() => {
+                    Firebase.data.collection("campaigns").doc("theros").update({
+                        "musics": [],
+                    })
+                }}>Clear all?</div>
             </div>
         )
     }
 }
 
-class QueuedMusic {
+class QueuedItem {
     render() {
         return (
-            <div class="QueuedMusic" onClick={this.onClickContent} isOnDeck={this.isOnDeck}>
-                <YoutubeScreenshot youtubeId={this.props.music.youtubeId}/>
-                <div class="Text">{this.props.music.youtubeId}</div>
+            <div class="QueuedItem" onClick={this.onClickContent} isOnDeck={this.isOnDeck}>
+                <div class="YoutubeScreenshot" style={{
+                    "background-image": "url(https://img.youtube.com/vi/" + this.props.music.youtubeId + "/default.jpg)",
+                }}/>
+                <div class="Text">{this.props.music.title || this.props.music.youtubeId}</div>
                 <div class="DeleteButton" onClick={this.onClickButton}>
                     <span class="material-icons">delete</span>
                 </div>
@@ -154,10 +188,4 @@ function removeElement(array, element) {
         ...array.slice(0, index),
         ...array.slice(index + 1)
     ]
-}
-
-window.clearMusics = function() {
-    Firebase.data.collection("campaigns").doc("theros").update({
-        "musics": [],
-    })
 }

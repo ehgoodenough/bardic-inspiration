@@ -14,7 +14,8 @@
   "scripts": {
     "build": "codeglue --stage=production",
     "start": "export NODE_OPTIONS=--openssl-legacy-provider && codeglue --stage=development --mode=server",
-    "zip": "bestzip build.zip builds/web/*"
+    "zip": "bestzip build.zip builds/web/*",
+    "ytpl": "node ytpl.js > source/playlists.json"
   },
   "dependencies": {
     "firebase": "^9.15.0",
@@ -25,7 +26,8 @@
     "query-string": "^8.1.0",
     "shortid": "^2.2.16",
     "statgrab": "^1.2.2",
-    "yaafloop": "^1.2.0"
+    "yaafloop": "^1.2.0",
+    "ytpl": "^2.3.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.20.7",
