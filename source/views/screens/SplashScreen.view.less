@@ -1,0 +1,98 @@
+@import "../Styles.view.less";
+
+.SplashScreen {
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    bottom: 0em;
+    z-index: 1000;
+    position: absolute;
+
+    * {
+        cursor: pointer;
+    }
+
+    .Background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        filter: blur(0px);
+        transform: scale(1.1);
+        transform-origin: center;
+
+        background-size: cover;
+        background-position: center;
+
+        &[random="1"] {background-image: url("../../images/sea.jpg");}
+        &[random="2"] {background-image: url("../../images/forest.jpg");}
+        &[random="3"] {background-image: url("../../images/mountain.jpg");}
+
+        animation-delay: 0.5s;
+        animation-duration: 2s;
+        animation-name: splash;
+        animation-fill-mode: forwards;
+    }
+
+    .Prompt {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        transform-origin: center;
+        transition-property: transform;
+        transition-duration: 0.5s;
+
+        .Text {
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .Icon {
+            position: relative;
+
+            .shape {
+                z-index: 20;
+                font-size: 6em;
+                position: relative;
+                color: @youtube-red;
+            }
+            .fill {
+                top: 0em;
+                left: 0em;
+                right: 0em;
+                bottom: 0em;
+                margin: auto;
+                width: 50%;
+                height: 50%;
+                z-index: 10;
+                position: absolute;
+                background-color: white;
+            }
+        }
+    }
+
+    &:hover {
+        .Prompt {
+            transform: scale(1.1);
+            transition-duration: 0.1s;
+        }
+    }
+}
+
+@keyframes splash {
+    0% {
+        filter: blur(0px);
+        transform: scale(1.1);
+    }
+    100% {
+        filter: blur(2px);
+        transform: scale(1);
+    }
+}

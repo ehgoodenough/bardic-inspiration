@@ -1,0 +1,71 @@
+@import "../Styles.view.less";
+
+.EditScreen {
+    top: 0em;
+    left: 0em;
+    bottom: 0em;
+    z-index: 200;
+    width: 100%;
+    max-width: 320px;
+    position: absolute;
+    overflow: hidden;
+
+    background-color: #444;
+
+    .Preview {
+        width: 100%;
+        position: relative;
+        padding-bottom: 66%;
+
+        background-color: green;
+
+        .Screenshot {
+            top: 0em;
+            left: 0em;
+            right: 0em;
+            bottom: 0em;
+            z-index: 5;
+            position: absolute;
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .Controls {
+            z-index: 10;
+            bottom: 0em;
+            position: absolute;
+        }
+    }
+
+    .SubmissionForm {
+        display: flex;
+
+        input {
+            height: 2rem;
+            font: inherit;
+            font-size: 12px;
+
+            display: block;
+
+            &[type=text] {
+                flex: 1;
+            }
+
+            &[type=submit] {
+                padding: 0em 1em;
+            }
+        }
+    }
+
+    .MusicQueue {
+        .QueuedMusic {
+            &[isOnDeck] {
+                background-color: #777;
+            }
+            &:hover {
+                background-color: #888;
+            }
+        }
+    }
+}

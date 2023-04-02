@@ -1,0 +1,59 @@
+@import "../Styles.view.less";
+
+.PlayScreen {
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    bottom: 0em;
+    z-index: 200;
+    overflow: hidden;
+    position: absolute;
+
+    .SubmissionForm {
+        display: flex;
+
+        input {
+            height: 2rem;
+            font: inherit;
+            font-size: 12px;
+
+            display: block;
+
+            &[type=text] {
+                flex: 1;
+            }
+
+            &[type=submit] {
+                padding: 0em 1em;
+            }
+        }
+    }
+
+    .Screenshot {
+        top: 0em;
+        left: 0em;
+        right: 0em;
+        bottom: 0em;
+        z-index: 5;
+        position: absolute;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .Controls {
+        bottom: 0em;
+        z-index: 100;
+        position: fixed;
+
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.25s;
+    }
+
+    &:hover {
+        .Controls {
+            opacity: 1;
+        }
+    }
+}

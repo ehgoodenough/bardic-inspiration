@@ -48,5 +48,7 @@ Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
 })
 
 const Data = {}
-window.app = {"data": Data}
 export default Data
+
+window.truesight = window.truesight || {}
+window.truesight.data = Data

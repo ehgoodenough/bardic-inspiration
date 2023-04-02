@@ -89,6 +89,10 @@ Navigation.on("/", function(request) {
     return {"screen": "SplashScreen"}
 })
 
+Navigation.on("/edit", function(request) {
+    return {"screen": "EditScreen"}
+})
+
 Navigation.on("/play", function(request) {
     return {"screen": "PlayScreen"}
 })
