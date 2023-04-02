@@ -25,6 +25,7 @@ Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
             console.log(campaign.music)
 
             if(campaign.music.youtubeId != prevcampaign.music.youtubeId
+            || campaign.music.runkey != prevcampaign.music.runkey
             || campaign.music.key != prevcampaign.music.key) {
                 return window.youtubePlayer.loadVideoById({
                     "videoId": campaign.music.youtubeId,

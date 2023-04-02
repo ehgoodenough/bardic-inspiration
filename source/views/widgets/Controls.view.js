@@ -118,6 +118,7 @@ class Timeline {
             Firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
                     "key": Data.campaign.music.key,
+                    "runkey": Data.campaign.music.runkey,
                     "youtubeId": Data.campaign.music.youtubeId,
                     "startTime": Date.now() - time,
                     "state": "playing",

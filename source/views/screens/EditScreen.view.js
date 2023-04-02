@@ -19,7 +19,7 @@ export default class EditScreen {
         return (
             <div class="EditScreen">
                 <div class="Preview">
-                    <Screenshot/>
+                    <YoutubeScreenshot youtubeId={Data.campaign.music.youtubeId} onClick={() => Youtube.pauseplay()}/>
                     <Controls/>
                 </div>
                 <SubmissionForm/>
@@ -29,17 +29,13 @@ export default class EditScreen {
     }
 }
 
-class Screenshot {
+class YoutubeScreenshot {
     render() {
-        if(Data.campaign == undefined) return
         return (
-            <div class="Screenshot" onClick={this.onClick} style={{
-                "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/maxresdefault.jpg)",
+            <div class="YoutubeScreenshot" onClick={this.props.onClick} style={{
+                "background-image": "url(https://img.youtube.com/vi/" + this.props.youtubeId + "/default.jpg)",
             }}/>
         )
-    }
-    onClick() {
-        Youtube.pauseplay()
     }
 }
 
@@ -107,6 +103,7 @@ class MusicQueue {
                         <QueuedMusic music={music}/>
                     )
                 })}
+                <div class="ClearAll" onClick={() => window.clearMusics()}>Clear all?</div>
             </div>
         )
     }
@@ -115,20 +112,24 @@ class MusicQueue {
 class QueuedMusic {
     render() {
         return (
-            <div class="QueuedMusic" onClick={this.onClick} isOnDeck={this.isOnDeck}>
-                {this.props.music.youtubeId}
+            <div class="QueuedMusic" onClick={this.onClickContent} isOnDeck={this.isOnDeck}>
+                <YoutubeScreenshot youtubeId={this.props.music.youtubeId}/>
+                <div class="Text">{this.props.music.youtubeId}</div>
+                <div class="DeleteButton" onClick={this.onClickButton}>
+                    <span class="material-icons">delete</span>
+                </div>
             </div>
         )
     }
     get isOnDeck() {
         return Data.campaign.music.key == this.props.music.key
     }
-    get onClick() {
+    get onClickContent() {
         return (event) => {
             Firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
                     "key": this.props.music.key,
-                    "iteration": Shortid.generate(),
+                    "runkey": ShortId.generate(),
                     "youtubeId": this.props.music.youtubeId,
                     "startTime": Date.now(),
                     "state": "playing",
@@ -136,6 +137,23 @@ class QueuedMusic {
             })
         }
     }
+    get onClickButton() {
+        return (event) => {
+            event.stopPropagation()
+            Firebase.data.collection("campaigns").doc("theros").update({
+                "musics": removeElement(Data.campaign.musics, this.props.music)
+            })
+        }
+    }
+}
+
+function removeElement(array, element) {
+    const index = array.indexOf(element)
+    if(index == -1) return array
+    return [
+        ...array.slice(0, index),
+        ...array.slice(index + 1)
+    ]
 }
 
 window.clearMusics = function() {

@@ -44,12 +44,11 @@ export default new class {
 
                         if(event.data == YT.PlayerState.ENDED) {
                             if(Data.campaign.musics == undefined) return
+                            if(Data.campaign.musics.length == 0) return
                             const currentMusic = Data.campaign.musics.find((music) => {
                                 return Data.campaign.music.key == music.key
                             })
-                            if(currentMusic == undefined) return
                             const currentIndex = Data.campaign.musics.indexOf(currentMusic)
-                            if(currentIndex == -1) return
                             const nextIndex = currentIndex + 1
                             const nextMusic = Data.campaign.musics[nextIndex]
                             if(nextMusic == undefined) return
@@ -57,6 +56,7 @@ export default new class {
                             Firebase.data.collection("campaigns").doc("theros").update({
                                 "music": {
                                     "key": nextMusic.key,
+                                    "runkey": nextMusic.key,
                                     "youtubeId": nextMusic.youtubeId,
                                     "startTime": Date.now() + TIME_BETWEEN_SONGS - (nextMusic.embeddedStartTime || 0),
                                     "state": "playing",
@@ -76,6 +76,7 @@ export default new class {
             Firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
                     "key": Data.campaign.music.key,
+                    "runkey": Data.campaign.music.runkey,
                     "youtubeId": Data.campaign.music.youtubeId,
                     "currentTime": Date.now() - Data.campaign.music.startTime,
                     "state": "paused"
@@ -85,6 +86,7 @@ export default new class {
             Firebase.data.collection("campaigns").doc("theros").update({
                 "music": {
                     "key": Data.campaign.music.key,
+                    "runkey": Data.campaign.music.runkey,
                     "youtubeId": Data.campaign.music.youtubeId,
                     "startTime": Date.now() - Data.campaign.music.currentTime,
                     "state": "playing"
