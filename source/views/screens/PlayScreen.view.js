@@ -19,6 +19,9 @@ export default class PlayScreen {
                 <SubmissionForm/>
                 <Screenshot/>
                 <Controls/>
+                <video id="asd" controls={false} autoplay={true} loop={true}>
+                    <source src={require("../../ember.mp4")} type="video/mp4"/>
+                </video>
             </div>
         )
     }
