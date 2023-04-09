@@ -3,23 +3,13 @@ import Data from "models/Data.js"
 import Firebase from "models/Firebase.js"
 import uploadArt from "views/functions/uploadArt.js"
 
-import ArtSelection from "views/dm/ArtSelection.view.js"
-import MusicSelection from "views/dm/MusicSelection.view.js"
-import "views/Mount.view.less"
-
-export default class Mount {
+export default class DragAndDrop {
     render() {
-        if(Data.campaign == undefined) return
         return (
-            <div className="Mount" onDrop={this.onDrop} onDragOver={this.onDragOver}
+            <div className="DragAndDrop" onDrop={this.onDrop} onDragOver={this.onDragOver}
                 onDragEnter={this.onDragEnter} onDragLeave={this.onDragLeave}>
                 <div class="UploadZone" isDragAndDropping={window.isDragAndDropping > 0}/>
-                <div class="MainScreen">
-                    <Art/>
-                </div>
-                <div class="PlayScreen">
-                    <ArtSelection/>
-                </div>
+                {this.props.children}
             </div>
         )
     }
@@ -50,19 +40,8 @@ export default class Mount {
             if(file == undefined) return
             uploadArt(file).then((art) => {
                 if(index != 0) return
-                Firebase.data.collection("campaigns").doc("theros").set({"art": art})
+                Firebase.data.collection("campaigns").doc("theros").update({"art": art})
             })
         })
-    }
-}
-
-class Art {
-    render() {
-        if(Data.campaign.art == undefined) return
-        return (
-            <div class="Art" style={{
-                "background-image": "url(" + Data.campaign.art.url + ")"
-            }}/>
-        )
     }
 }

@@ -12,57 +12,60 @@ import computeCurrentTime from "views/functions/computeCurrentTime.js"
 import playlists from "playlists.json"
 
 import Controls from "views/widgets/Controls.view.js"
+import DragAndDrop from "views/widgets/DragAndDrop.view.js"
 
 export default class EditScreen {
     render() {
         if(Data.campaign == undefined) return
         Youtube.onLoad()
         return (
-            <div class="EditScreen">
-                <div class="PlayingPanel">
-                    <div class="PlayBox">
-                        <div class="YoutubeScreenshot" onClick={() => Youtube.pauseplay()} style={{
-                            "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/default.jpg)",
-                        }}/>
-                        <Controls/>
+            <DragAndDrop>
+                <div class="EditScreen">
+                    <div class="PlayingPanel">
+                        <div class="PlayBox">
+                            <div class="YoutubeScreenshot" onClick={() => Youtube.pauseplay()} style={{
+                                "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/default.jpg)",
+                            }}/>
+                            <Controls/>
+                        </div>
+                        <Queue/>
                     </div>
-                    <Queue/>
-                </div>
-                <div class="SearchPanel">
-                    <SubmissionForm/>
-                    <div class="Playlists">
-                        {playlists.map((playlist) => {
-                            return (
-                                <div class="Playlist">
-                                    <a class="PlaylistName" href={"https://www.youtube.com/playlist?list=" + playlist.id} target="_blank" >
-                                        {playlist.title}
-                                    </a>
-                                    <div class="Musics">
-                                        {playlist.musics.map((music) => {
-                                            return (
-                                                <div class="Music" onClick={() => {
-                                                    Firebase.data.collection("campaigns").doc("theros").update({
-                                                        "musics": Data.campaign.musics.concat({
-                                                            "key": ShortId.generate(),
-                                                            "youtubeId": music.youtubeId,
-                                                            "title": music.title,
+                    <div class="SearchPanel">
+                        <SubmissionForm/>
+                        <div class="Playlists">
+                            {playlists.map((playlist) => {
+                                return (
+                                    <div class="Playlist">
+                                        <a class="PlaylistName" href={"https://www.youtube.com/playlist?list=" + playlist.id} target="_blank" >
+                                            {playlist.title}
+                                        </a>
+                                        <div class="Musics">
+                                            {playlist.musics.map((music) => {
+                                                return (
+                                                    <div class="Music" onClick={() => {
+                                                        Firebase.data.collection("campaigns").doc("theros").update({
+                                                            "musics": Data.campaign.musics.concat({
+                                                                "key": ShortId.generate(),
+                                                                "youtubeId": music.youtubeId,
+                                                                "title": music.title,
+                                                            })
                                                         })
-                                                    })
-                                                }}>
-                                                    <div class="YoutubeScreenshot" style={{
-                                                        "background-image": "url(https://img.youtube.com/vi/" + music.youtubeId + "/default.jpg)",
-                                                    }}/>
-                                                    <div class="Text">{music.title || music.youtubeId}</div>
-                                                </div>
-                                            )
-                                        })}
+                                                    }}>
+                                                        <div class="YoutubeScreenshot" style={{
+                                                            "background-image": "url(https://img.youtube.com/vi/" + music.youtubeId + "/default.jpg)",
+                                                        }}/>
+                                                        <div class="Text">{music.title || music.youtubeId}</div>
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
                                     </div>
-                                </div>
-                            )
-                        })}
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </DragAndDrop>
         )
     }
 }

@@ -108,3 +108,72 @@ class UploadForm {
         })
     }
 }
+
+
+.ArtSelectionScreen {
+    max-width: 320px;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .SelectedArt {
+        margin-bottom: 1em;
+
+        .Title {
+            height: 1.5em;
+            padding: 0em 1em;
+            line-height: 1.5em;
+            display: block;
+            width: 100%;
+            border: none;
+
+            font: inherit;
+            font-weight: 600;
+            font-stretch: condensed;
+            background-color: white;
+        }
+        .Image {
+            width: 100%;
+            height: 10em;
+            border-radius: 4px;
+            background-size: cover;
+            background-position: center;
+        }
+        .DeleteArtButton {
+            background-color: white;
+            border-radius: 2px;
+            padding: 0.1em;
+        }
+    }
+
+    .Search {
+        padding: 0em 1em;
+
+        input {
+            width: 100%;
+            font: inherit;
+            font-size: 1.5em;
+        }
+    }
+
+    .SelectableArts {
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+        display: grid;
+        row-gap: 1em / @golden-ratio;
+        column-gap: 1em / @golden-ratio;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 3em;
+
+        .SelectableArt {
+            width: 1fr;
+            height: 3em;
+
+            border-radius: 4px;
+            background-size: cover;
+            background-position: center;
+            background-color: black;
+        }
+    }
+}

@@ -30,7 +30,7 @@ class Screenshot {
         if(Data.campaign == undefined) return
         return (
             <div class="Screenshot" onClick={this.onClick} style={{
-                "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/maxresdefault.jpg)",
+                "background-image": "url(" + Data.campaign.art.url + ")",
             }}/>
         )
     }
