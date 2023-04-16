@@ -1,18 +1,14 @@
 import * as Preact from "preact"
 import Data from "models/Data.js"
-import Youtube from "models/Youtube.js"
-import Controls from "views/widgets/Controls.view.js"
 
-import "views/screens/PlayScreen.view.less"
+import "views/screens/MapScreen.view.less"
 
-export default class PlayScreen {
+export default class MapScreen {
     render() {
         if(Data.campaign == undefined) return
-        Youtube.onLoad()
         return (
-            <div class="PlayScreen">
+            <div class="MapScreen">
                 <Screenshot/>
-                <Controls/>
             </div>
         )
     }
@@ -26,8 +22,5 @@ class Screenshot {
                 "background-image": "url(" + Data.campaign.art.url + ")",
             }}/>
         )
-    }
-    onClick() {
-        Youtube.pauseplay()
     }
 }

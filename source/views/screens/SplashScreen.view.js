@@ -3,7 +3,9 @@ import Navigation from "models/Navigation.js"
 
 const random = Math.ceil(Math.random() * 3)
 
-export default class PlayScreen {
+import "views/screens/SplashScreen.view.less"
+
+export default class SplashScreen {
     render() {
         return (
             <div class="SplashScreen" onClick={this.onClick}>

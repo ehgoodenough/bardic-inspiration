@@ -1,6 +1,6 @@
 @import "../Styles.view.less";
 
-.PlayScreen {
+.MapScreen {
     top: 0em;
     left: 0em;
     right: 0em;
@@ -8,7 +8,7 @@
     z-index: 200;
     overflow: hidden;
     position: absolute;
-    
+
     .Screenshot {
         top: 0em;
         left: 0em;
@@ -19,21 +19,7 @@
 
         background-size: cover;
         background-position: center;
-    }
 
-    .Controls {
-        bottom: 0em;
-        z-index: 100;
-        position: fixed;
-
-        opacity: 0;
-        transition-property: opacity;
-        transition-duration: 0.25s;
-    }
-
-    &:hover {
-        .Controls {
-            opacity: 1;
-        }
+        filter: blur(8px);
     }
 }

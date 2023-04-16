@@ -10,6 +10,8 @@ import Firebase from "models/Firebase.js"
 import {parseYoutubeId, parseEmbeddedStartTime} from "../functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
+import "views/widgets/Controls.view.less"
+
 export default class Controls {
     render() {
         return (

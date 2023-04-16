@@ -14,6 +14,8 @@ import playlists from "playlists.json"
 import Controls from "views/widgets/Controls.view.js"
 import DragAndDrop from "views/widgets/DragAndDrop.view.js"
 
+import "views/screens/EditScreen.view.less"
+
 export default class EditScreen {
     render() {
         if(Data.campaign == undefined) return
