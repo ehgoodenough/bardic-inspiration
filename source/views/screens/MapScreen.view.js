@@ -9,6 +9,9 @@ export default class MapScreen {
         return (
             <div class="MapScreen">
                 <Screenshot/>
+                <div class="Map" style={{
+                    "background-image": "url(" + require("images/map.png") + ")"
+                }}/>
             </div>
         )
     }
