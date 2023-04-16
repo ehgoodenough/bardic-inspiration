@@ -86,8 +86,11 @@ const Navigation = new class {
 }
 
 Navigation.on("/", function(request) {
+    return {"screen": "SplashScreen"}
+})
+
+Navigation.on("/map", function(request) {
     return {"screen": "MapScreen"}
-    // return {"screen": "SplashScreen"}
 })
 
 Navigation.on("/edit", function(request) {

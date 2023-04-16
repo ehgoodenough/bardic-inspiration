@@ -1,19 +1,15 @@
 import Poin from "poin"
 import * as Preact from "preact"
 import Data from "models/Data.js"
+import Firebase from "models/Firebase.js"
 
 import "views/screens/MapScreen.view.less"
 
-const UNITS = [
-    {
-        "name": "Cuthos",
-        "color": "yellow",
-        "position": {
-            "x": -16,
-            "y": +32,
-        }
-    }
-]
+function SYNC_DATA() {
+    Firebase.data.collection("campaigns").doc("theros").update({
+        "units": Data.campaign.units
+    })
+}
 
 export default class MapScreen {
     render() {
@@ -25,7 +21,7 @@ export default class MapScreen {
                     "background-image": "url(" + require("images/map.png") + ")"
                 }}/>
                 <div class="Units">
-                    {UNITS.map((unit) => {
+                    {Data.campaign.units && Data.campaign.units.map((unit) => {
                         return <Unit unit={unit}/>
                     })}
                 </div>
@@ -70,6 +66,8 @@ class Unit {
     get onMouseDown() {
         return (event) => {
             selectedUnit = this.props.unit
+
+            SYNC_DATA()
         }
     }
 }
@@ -85,6 +83,27 @@ window.addEventListener("mouseup", function(event) {
         selectedUnit.position.x = Poin.position.x - (window.innerWidth / 2)
         selectedUnit.position.y = Poin.position.y - (window.innerHeight / 2)
         selectedUnit = undefined
+    }
+})
+
+window.addEventListener("keydown", function(event) {
+    if(event.keyCode == 8) {
+        if(selectedUnit != undefined) {
+            Data.campaign.units.splice(Data.campaign.units.indexOf(selectedUnit, 1))
+        }
+        SYNC_DATA()
+    }
+    if(event.keyCode == 32) {
+        let value = window.prompt()
+        let name = value.split(" ")[0]
+        let color = value.split(" ")[1]
+        Data.campaign.units = Data.campaign.units || []
+        Data.campaign.units.push({
+            "name": name,
+            "color": color,
+            "position": {"x": 0, "y": 0},
+        })
+        SYNC_DATA()
     }
 })
 
