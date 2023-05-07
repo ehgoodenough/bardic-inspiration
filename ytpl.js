@@ -21,12 +21,12 @@ let playlistUrls = [
     "https://www.youtube.com/playlist?list=PLV8C9t518pCJYLKmjGEfXtx8LSAhEg87u",
     "https://www.youtube.com/playlist?list=PLV8C9t518pCJaelQO8Vl1HqnrDy-xvvRX",
     "https://www.youtube.com/playlist?list=PLV8C9t518pCIUE8Wd6xSMEj1sE85H9-Tn",
-    // "https://www.youtube.com/playlist?list=PLV8C9t518pCJ9DBoCAPteRcVfdzkx7Gx8",
-    // "https://www.youtube.com/playlist?list=PLV8C9t518pCIs5rMxc0zGFZV-0-hvP0c_",
-    // "https://www.youtube.com/playlist?list=PLV8C9t518pCL-9zXA5pjfZGlXAo90qSou",
-    // "https://www.youtube.com/playlist?list=PLV8C9t518pCL2BTTDpXnQvRufDK8dcZTw",
-    // "https://www.youtube.com/playlist?list=PLV8C9t518pCLk03um_zlF6VHTXnnCgNXu",
-    // "https://www.youtube.com/playlist?list=PLV8C9t518pCIZrVv8dtEm1RXdO-9f2p8p",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJ9DBoCAPteRcVfdzkx7Gx8",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCIs5rMxc0zGFZV-0-hvP0c_",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCL-9zXA5pjfZGlXAo90qSou",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCL2BTTDpXnQvRufDK8dcZTw",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCLk03um_zlF6VHTXnnCgNXu",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCIZrVv8dtEm1RXdO-9f2p8p",
 ]
 
 let playlists = await Promise.all(playlistUrls.map((playlistUrl) => {
