@@ -41,8 +41,8 @@ export default class Controls {
         if(document.getElementById("volume") == undefined) return
         const bounds = document.getElementById("volume").getBoundingClientRect()
         let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
-        if(volume < 5) volume = 0
-        if(volume > 95) volume = 100
+        if(volume < 1) volume = 0
+        if(volume > 99) volume = 100
         window.youtubePlayer.setVolume(volume)
     }
     onClickVolumeButton() {

@@ -33,6 +33,8 @@ let playlistUrls = [
     "https://www.youtube.com/playlist?list=PLV8C9t518pCL0epmuVHaw2QrSrf_SBGKi",
     "https://www.youtube.com/playlist?list=PLV8C9t518pCLr6cZxuSMIXWnUG9ZufxCJ",
     "https://www.youtube.com/playlist?list=PLV8C9t518pCIPyjekBKFZSpyXT8Tb00uo",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCLuYUzO8i70C85xmFAdOlHH",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCL5a7qbOqKX1NequIsmxxg8",
 ]
 
 let playlists = await Promise.all(playlistUrls.map((playlistUrl) => {
