@@ -1,6 +1,8 @@
 import ytpl from "ytpl"
 
 let playlistUrls = [
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCI_mz0XOh1abdKy1hb-zS2t",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCLzd3h0qYtynJvY7ZGvSWwN",
     "https://www.youtube.com/playlist?list=PLV8C9t518pCLP0QDw51haUYo3ejxBUGic",
     "https://www.youtube.com/playlist?list=PLV8C9t518pCL4Qe7ONLcMahStyQlUnF65",
     "https://www.youtube.com/playlist?list=PLV8C9t518pCJ971z_P8AftPnswfjTp4pC",
