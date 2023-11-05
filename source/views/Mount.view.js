@@ -5,7 +5,7 @@ import Navigation from "models/Navigation.js"
 
 import SplashScreen from "views/screens/SplashScreen.view.js"
 import PlayScreen from "views/screens/PlayScreen.view.js"
-import MapScreen from "views/screens/MapScreen.view.js"
+// import SimpleEditScreen from "views/screens/SimpleEditScreen.view.js"
 import EditScreen from "views/screens/EditScreen.view.js"
 
 import "views/Mount.view.less"
@@ -30,8 +30,8 @@ export default class Mount {
             return <PlayScreen/>
         } else if(Navigation.state.screen == "EditScreen") {
             return <EditScreen/>
-        } else if(Navigation.state.screen == "MapScreen") {
-            return <MapScreen/>
+        } else if(Navigation.state.screen == "SimpleEditScreen") {
+            // return <SimpleEditScreen/>
         }
     }
 }
