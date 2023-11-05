@@ -26,7 +26,6 @@ export default class EditScreen {
             <DragAndDrop>
                 <div class="EditScreen">
                     <PlayingSection/>
-                    <SearchSection/>
                     <LibrarySection/>
                 </div>
             </DragAndDrop>
@@ -44,6 +43,7 @@ class PlayingSection {
                     }}/>
                     <Controls/>
                 </div>
+                <SubmissionForm/>
                 <Queue/>
                 <div class="ClearButton" onClick={this.onClickClearButton}>
                     Clear All?
@@ -138,6 +138,7 @@ class SubmissionForm {
                     "musics": Data.campaign.musics.concat(videos)
                 })
             })
+            return
         }
 
         const videoId = parseYoutubeId(submittedValue)
