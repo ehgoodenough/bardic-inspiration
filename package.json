@@ -18,14 +18,17 @@
     "ytpl": "node ytpl.js > source/playlists.json"
   },
   "dependencies": {
+    "fetchquest": "^1.2.1",
     "firebase": "^9.15.0",
     "format-duration": "^3.0.2",
+    "iso8601-duration": "^2.1.1",
     "keyb": "^1.4.1",
     "poin": "^2.2.0",
     "preact": "^10.11.3",
     "query-string": "^8.1.0",
     "shortid": "^2.2.16",
     "statgrab": "^1.2.2",
+    "urrl": "^1.0.2",
     "yaafloop": "^1.2.0",
     "ytpl": "^2.3.0"
   },

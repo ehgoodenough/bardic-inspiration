@@ -3,6 +3,14 @@ import Firebase from "models/Firebase.js"
 import parseYoutubeId from "views/functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
+import Urrl from "urrl"
+import Fetchquest from "fetchquest"
+import * as iso8601 from "iso8601-duration"
+
+const YT_DATA_API_KEY = "AIzaSyBVwAxamNJ_KFWCIkLuNXK9htJylIAEmp0"
+const YT_DATA_PLAYLIST_URRL = Urrl("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults={maxResults}&playlistId={playlistId}&key={apiKey}")
+const YT_DATA_VIDEO_URRL = Urrl("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id={videoIds}&key={apiKey}")
+
 const SILENCE_VIDEO_ID = "g4mHPeMGTJM"
 const DEFAULT_VOLUME = 50
 
@@ -111,5 +119,52 @@ export default new class {
                 }
             })
         }
+    }
+    async retrievePlaylistVideos(playlistId = "PLBCF2DAC6FFB574DE") {
+        const videoIds = await this.retrievePlaylistVideoIds(playlistId)
+        const videos = await this.retrieveVideos(videoIds)
+        return videos
+    }
+    retrievePlaylistVideoIds(playlistId) {
+        return Fetchquest({
+            "method": "GET",
+            "url": YT_DATA_PLAYLIST_URRL({
+                "apiKey": YT_DATA_API_KEY,
+                "playlistId": playlistId,
+                "maxResults": 100,
+            })
+        }).then((response) => {
+            return response.items.map((item) => {
+                return item.contentDetails.videoId
+            })
+        })
+    }
+    retrieveVideos(videoIds) {
+        if(videoIds instanceof Array) {
+            videoIds = videoIds.join(",")
+            // videoIds = encodeURIComponent(videoIds)
+        }
+        return Fetchquest({
+            "method": "GET",
+            "url": YT_DATA_VIDEO_URRL({
+                "apiKey": YT_DATA_API_KEY,
+                "videoIds": videoIds
+            })
+        }).then((response) => {
+            return response.items.map((item) => {
+                return {
+                    "youtubeId": item.id,
+                    "title": item.snippet.title,
+                    // "tags": item.snippet.tags,
+                    "thumbnailUrl": item.snippet.thumbnails.maxres?.url
+                        || item.snippet.thumbnails.standard?.url
+                        || item.snippet.thumbnails.high?.url
+                        || item.snippet.thumbnails.medium?.url
+                        || item.snippet.thumbnails.default?.url,
+                    "duration": iso8601.toSeconds(iso8601.parse(item.contentDetails.duration)),
+                }
+            })
+
+        })
     }
 }
