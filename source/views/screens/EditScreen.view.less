@@ -5,16 +5,20 @@
     left: 0em;
     right: 0em;
     bottom: 0em;
-    display: flex;
     overflow: hidden;
     position: absolute;
 
-    .PlayingPanel {
+    .SectionOfScreen {
         width: 100%;
         height: 100%;
+        float: left;
         max-width: 320px;
         background-color: #444;
         margin-right: 8px;
+    }
+
+    .PlayingSection {
+        .SectionOfScreen;
 
         display: flex;
         flex-direction: column;
@@ -87,22 +91,19 @@
 
             cursor: pointer;
 
-            background-color: @red;
-            transition-duration: 0.5s;
+            color: @white;
+            background-color: @black;
+            transition-duration: 0.4s;
             transition-property: background-color;
             &:hover {
-                transition-duration: 0.25s;
-                background-color: @white;
+                transition-duration: 0.2s;
+                background-color: @red;
             }
         }
     }
 
-    .SearchPanel {
-        width: 100%;
-        height: 100%;
-        max-width: 320px;
-        background-color: #444;
-
+    .SearchSection {
+        .SectionOfScreen;
         display: flex;
         flex-direction: column;
 
@@ -125,39 +126,38 @@
                 }
             }
         }
+    }
 
-        .Playlists {
-            flex: 1;
-            overflow-y: scroll;
+    .LibrarySection {
+        .SectionOfScreen;
+    }
 
-            .Playlist {
-                .PlaylistName {
-                    display: block;
-                    color: inherit;
-                    font-weight: bold;
+    .Playlist {
+        .PlaylistName {
+            display: block;
+            color: inherit;
+            font-weight: bold;
+        }
+
+        .Musics {
+            .Music {
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    background-color: #888;
                 }
 
-                .Musics {
-                    .Music {
-                        display: flex;
-                        align-items: center;
+                .YoutubeScreenshot {
+                    width: 48px;
+                    height: 32px;
 
-                        &:hover {
-                            background-color: #888;
-                        }
-
-                        .YoutubeScreenshot {
-                            width: 48px;
-                            height: 32px;
-
-                            margin-right: 8px;
-                        }
-                        .Text {
-                            flex: 1;
-                            font-size: 0.7em;
-                            text-overflow: ellipsis;
-                        }
-                    }
+                    margin-right: 8px;
+                }
+                .Text {
+                    flex: 1;
+                    font-size: 0.7em;
+                    text-overflow: ellipsis;
                 }
             }
         }

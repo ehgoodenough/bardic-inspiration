@@ -89,12 +89,12 @@ Navigation.on("/", function(request) {
     return {"screen": "SplashScreen"}
 })
 
-Navigation.on("/map", function(request) {
-    return {"screen": "MapScreen"}
-})
-
 Navigation.on("/edit", function(request) {
     return {"screen": "EditScreen"}
+})
+
+Navigation.on("/edit/extra", function(request) {
+    return {"screen": "EditScreen", "isExtra": true}
 })
 
 Navigation.on("/play", function(request) {
@@ -102,7 +102,7 @@ Navigation.on("/play", function(request) {
 })
 
 Navigation.on("/play/debug", function(request) {
-    return {"screen": "PlayScreen", "isDebug": true}
+    return {"screen": "PlayScreen"}
 })
 
 Navigation.on("/*", function(request) {
