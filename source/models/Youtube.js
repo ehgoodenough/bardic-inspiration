@@ -3,6 +3,7 @@ import Firebase from "models/Firebase.js"
 import parseYoutubeId from "views/functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
+const SILENCE_VIDEO_ID = "g4mHPeMGTJM"
 const DEFAULT_VOLUME = 50
 
 export default new class {
@@ -11,7 +12,7 @@ export default new class {
             window.youtubePlayer = new YT.Player("youtuber", {
                 "width": "300",
                 "height": "200",
-                "videoId": Data.campaign.music.youtubeId,
+                "videoId": Data.campaign.music.youtubeId || SILENCE_VIDEO_ID,
                 "playerVars": {
                     "fs": 0,
                     "rel": 0,
@@ -24,10 +25,12 @@ export default new class {
                 "events": {
                     "onReady": (event) => {
                         window.youtubePlayer.seekTo((computeCurrentTime(Data.campaign.music) / 1000) || 1)
-                        if(Data.campaign.music.state == "paused") {
-                            window.youtubePlayer.pauseVideo()
-                        } else if(Data.campaign.music.state != "paused") {
-                            window.youtubePlayer.playVideo()
+                        if(Data.campaign.music.youtubeId != undefined) {
+                            if(Data.campaign.music.state == "paused") {
+                                window.youtubePlayer.pauseVideo()
+                            } else if(Data.campaign.music.state != "paused") {
+                                window.youtubePlayer.playVideo()
+                            }
                         }
 
                         const volume = parseInt(window.localStorage.getItem("audio-volume")) || DEFAULT_VOLUME
@@ -76,7 +79,17 @@ export default new class {
             })
         }
     }
+    stop() {
+        Firebase.data.collection("campaigns").doc("theros").update({
+            "music": {
+                "state": "paused"
+            }
+        })
+    }
     pauseplay() {
+        if(Data.campaign.music.youtubeId == undefined) {
+            return
+        }
         if(Data.campaign.music.state != "paused") {
             Firebase.data.collection("campaigns").doc("theros").update({
                 "music": {

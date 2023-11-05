@@ -32,11 +32,9 @@ export default class EditScreen {
                             <Controls/>
                         </div>
                         <Queue/>
-                        <div class="ClearButton" onClick={() => {
-                            Firebase.data.collection("campaigns").doc("theros").update({
-                                "musics": [],
-                            })
-                        }}>Clear all?</div>
+                        <div class="ClearButton" onClick={this.onClickClearButton}>
+                            Clear All?
+                        </div>
                     </div>
                     <div class="SearchPanel">
                         <SubmissionForm/>
@@ -75,6 +73,11 @@ export default class EditScreen {
                 </div>
             </DragAndDrop>
         )
+    }
+    onClickClearButton() {
+        Firebase.data.collection("campaigns").doc("theros").update({
+            "music": {"state": "paused"}, "musics": [],
+        })
     }
 }
 
@@ -155,7 +158,7 @@ class QueuedItem {
                     "background-image": "url(https://img.youtube.com/vi/" + this.props.music.youtubeId + "/default.jpg)",
                 }}/>
                 <div class="Text">{this.props.music.title || this.props.music.youtubeId}</div>
-                <div class="DeleteButton" onClick={this.onClickButton}>
+                <div class="DeleteButton" onClick={this.onClickDeleteButton}>
                     <span class="material-icons">close</span>
                 </div>
             </div>
@@ -177,12 +180,15 @@ class QueuedItem {
             })
         }
     }
-    get onClickButton() {
+    get onClickDeleteButton() {
         return (event) => {
             event.stopPropagation()
             Firebase.data.collection("campaigns").doc("theros").update({
                 "musics": removeElement(Data.campaign.musics, this.props.music)
             })
+            if(this.isOnDeck) {
+                Youtube.stop()
+            }
         }
     }
 }

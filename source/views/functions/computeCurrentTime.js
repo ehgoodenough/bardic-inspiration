@@ -2,6 +2,9 @@
 // uses Date.now() to get current time as epoch
 // returns in milliseconds as relative time duration.
 export default function computeCurrentTime(music) {
+    if(music == null) {
+        return 0
+    }
     if(music.currentTime != undefined) {
         let time = music.currentTime
         // time = Math.floor(time)

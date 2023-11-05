@@ -3,6 +3,8 @@ import Firebase from "models/Firebase.js"
 import parseYoutubeId from "views/functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
+const SILENCE_VIDEO_ID = "g4mHPeMGTJM"
+
 Firebase.data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {
     if(documents.exists == false) return
     Data.art = []
@@ -24,13 +26,17 @@ Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
             const prevcampaign = Data.prevcampaign
             console.log(campaign.music)
 
-            if(campaign.music.youtubeId != prevcampaign.music.youtubeId
-            || campaign.music.runkey != prevcampaign.music.runkey
-            || campaign.music.key != prevcampaign.music.key) {
-                return window.youtubePlayer.loadVideoById({
-                    "videoId": campaign.music.youtubeId,
-                    "startSeconds": Math.floor(computeCurrentTime(campaign.music) / 1000) || 1,
-                })
+            if(campaign.music.youtubeId != undefined
+            && campaign.music.runkey != undefined
+            && campaign.music.key != undefined) {
+                if(campaign.music.youtubeId != prevcampaign.music.youtubeId
+                || campaign.music.runkey != prevcampaign.music.runkey
+                || campaign.music.key != prevcampaign.music.key) {
+                    return window.youtubePlayer.loadVideoById({
+                        "videoId": campaign.music.youtubeId,
+                        "startSeconds": Math.floor(computeCurrentTime(campaign.music) / 1000) || 1,
+                    })
+                }
             }
 
             if(campaign.music.startTime != prevcampaign.music.startTime) {
