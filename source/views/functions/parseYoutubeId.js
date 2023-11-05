@@ -12,5 +12,6 @@ export default function parseYoutubeId(string) {
 
     const match = url.match(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/)
     const id = (match && match[7].length == 11) ? match[7] : undefined
+    
     return id
 }

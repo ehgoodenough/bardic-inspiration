@@ -8,6 +8,7 @@ import Navigation from "models/Navigation.js"
 import Youtube from "models/Youtube.js"
 import Firebase from "models/Firebase.js"
 import parseYoutubeId from "../functions/parseYoutubeId.js"
+import parseYoutubePlaylistId from "../functions/parseYoutubePlaylistId.js"
 import parseEmbeddedStartTime from "../functions/parseEmbeddedStartTime.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 import playlists from "playlists.json"
@@ -31,28 +32,30 @@ export default class EditScreen {
             </DragAndDrop>
         )
     }
+}
+
+class PlayingSection {
+    render() {
+        return (
+            <section class="PlayingSection">
+                <div class="PlayBox">
+                    <div class="YoutubeScreenshot" onClick={() => Youtube.pauseplay()} style={{
+                        "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/default.jpg)",
+                    }}/>
+                    <Controls/>
+                </div>
+                <Queue/>
+                <div class="ClearButton" onClick={this.onClickClearButton}>
+                    Clear All?
+                </div>
+            </section>
+        )
+    }
     onClickClearButton() {
         Firebase.data.collection("campaigns").doc("theros").update({
             "music": {"state": "paused"}, "musics": [],
         })
     }
-}
-
-function PlayingSection() {
-    return (
-        <section class="PlayingSection">
-            <div class="PlayBox">
-                <div class="YoutubeScreenshot" onClick={() => Youtube.pauseplay()} style={{
-                    "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/default.jpg)",
-                }}/>
-                <Controls/>
-            </div>
-            <Queue/>
-            <div class="ClearButton" onClick={this.onClickClearButton}>
-                Clear All?
-            </div>
-        </section>
-    )
 }
 
 function SearchSection() {
@@ -121,45 +124,36 @@ class SubmissionForm {
     }
     onSubmit(event) {
         event.preventDefault()
-        let submittedValues = event.target.children["youtube"].value
-        submittedValues = submittedValues.split(",")
-        submittedValues = submittedValues.map((value) => value.trim())
+        let submittedValue = event.target.children["youtube"].value.trim()
 
-        let musics = submittedValues.map((value) => {
-            return {
-                "key": ShortId.generate(),
-                "youtubeId": parseYoutubeId(value),
-                "embeddedStartTime": parseEmbeddedStartTime(value)
-            }
-        })
+        const playlistId = parseYoutubePlaylistId(submittedValue)
+        if(playlistId != undefined) {
+            // Navigation.go("/playlists/" + playlistId)
+            Youtube.retrievePlaylistVideos(playlistId).then((videos) => {
+                videos.forEach((video) => video.key = ShortId.generate())
+                videos = videos.filter((video) => video.thumbnailUrl != undefined)
 
-        musics = musics.filter((value) => {
-            return value.youtubeId != undefined
-        })
-
-        musics.forEach((music) => {
-            Object.keys(music).forEach((key) => {
-                if(music[key] == undefined) {
-                    delete music[key]
-                }
+                Data.campaign.musics = Data.campaign.musics || []
+                Firebase.data.collection("campaigns").doc("theros").update({
+                    "musics": Data.campaign.musics.concat(videos)
+                })
             })
-        })
-
-        if(musics.length <= 0) return
-
-        if(Data.campaign.musics != undefined) {
-            musics = Data.campaign.musics.concat(musics)
         }
 
-        Firebase.data.collection("campaigns").doc("theros").update({
-            "musics": musics,
-            // "music": {
-            //     "key": musics[0].key,
-            //     "youtubeId": musics[0].youtubeId,
-            //     "startTime": Date.now() - (musics[0].embeddedStartTime || 0),
-            //     "state": "playing",
-            // },
-        })
+        const videoId = parseYoutubeId(submittedValue)
+        if(videoId != undefined) {
+            // Navigation.go("/video/" + videoId)
+            Youtube.retrieveVideos(videoId).then((videos) => {
+                const video = videos[0]
+                if(video == undefined) return
+                video.key = ShortId.generate()
+
+                Data.campaign.musics = Data.campaign.musics || []
+                Firebase.data.collection("campaigns").doc("theros").update({
+                    "musics": Data.campaign.musics.concat(video)
+                })
+            })
+        }
     }
 }
 

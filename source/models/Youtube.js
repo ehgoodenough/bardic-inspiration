@@ -139,6 +139,28 @@ export default new class {
             })
         })
     }
+    retrievePlaylistVideos(playlistId) {
+        return Fetchquest({
+            "method": "GET",
+            "url": YT_DATA_PLAYLIST_URRL({
+                "apiKey": YT_DATA_API_KEY,
+                "playlistId": playlistId,
+                "maxResults": 100,
+            })
+        }).then((response) => {
+            return response.items.map((item) => {
+                return {
+                    "youtubeId": item.contentDetails.videoId,
+                    "title": item.snippet.title,
+                    "thumbnailUrl": item.snippet.thumbnails.maxres?.url
+                        || item.snippet.thumbnails.standard?.url
+                        || item.snippet.thumbnails.high?.url
+                        || item.snippet.thumbnails.medium?.url
+                        || item.snippet.thumbnails.default?.url,
+                }
+            })
+        })
+    }
     retrieveVideos(videoIds) {
         if(videoIds instanceof Array) {
             videoIds = videoIds.join(",")
@@ -155,13 +177,13 @@ export default new class {
                 return {
                     "youtubeId": item.id,
                     "title": item.snippet.title,
-                    // "tags": item.snippet.tags,
                     "thumbnailUrl": item.snippet.thumbnails.maxres?.url
                         || item.snippet.thumbnails.standard?.url
                         || item.snippet.thumbnails.high?.url
                         || item.snippet.thumbnails.medium?.url
                         || item.snippet.thumbnails.default?.url,
-                    "duration": iso8601.toSeconds(iso8601.parse(item.contentDetails.duration)),
+                    // "duration": iso8601.toSeconds(iso8601.parse(item.contentDetails.duration)),
+                    // "tags": item.snippet.tags,
                 }
             })
 
