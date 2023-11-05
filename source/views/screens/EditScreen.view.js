@@ -32,6 +32,11 @@ export default class EditScreen {
                             <Controls/>
                         </div>
                         <Queue/>
+                        <div class="ClearButton" onClick={() => {
+                            Firebase.data.collection("campaigns").doc("theros").update({
+                                "musics": [],
+                            })
+                        }}>Clear all?</div>
                     </div>
                     <div class="SearchPanel">
                         <SubmissionForm/>
@@ -137,11 +142,6 @@ class Queue {
                         <QueuedItem music={music}/>
                     )
                 })}
-                <div class="ClearAll" onClick={() => {
-                    Firebase.data.collection("campaigns").doc("theros").update({
-                        "musics": [],
-                    })
-                }}>Clear all?</div>
             </div>
         )
     }
@@ -156,7 +156,7 @@ class QueuedItem {
                 }}/>
                 <div class="Text">{this.props.music.title || this.props.music.youtubeId}</div>
                 <div class="DeleteButton" onClick={this.onClickButton}>
-                    <span class="material-icons">delete</span>
+                    <span class="material-icons">close</span>
                 </div>
             </div>
         )
