@@ -1,6 +1,6 @@
 import Firebase from "models/Firebase.js"
 
-import {parseYoutubeId} from "views/functions/parseYoutubeId.js"
+import parseYoutubeId from "views/functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 Firebase.data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapshot((documents) => {
