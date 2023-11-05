@@ -44,6 +44,7 @@ export default class Controls {
         if(volume < 1) volume = 0
         if(volume > 99) volume = 100
         window.youtubePlayer.setVolume(volume)
+        window.localStorage.setItem("audio-volume", volume)
     }
     onClickVolumeButton() {
         if(window.youtubePlayer == undefined) return

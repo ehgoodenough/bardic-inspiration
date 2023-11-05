@@ -3,6 +3,8 @@ import Firebase from "models/Firebase.js"
 import parseYoutubeId from "views/functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
+const DEFAULT_VOLUME = 50
+
 export default new class {
     onLoad() {
         if(window.youtubePlayer == undefined) {
@@ -27,6 +29,9 @@ export default new class {
                         } else if(Data.campaign.music.state != "paused") {
                             window.youtubePlayer.playVideo()
                         }
+
+                        const volume = parseInt(window.localStorage.getItem("audio-volume")) || DEFAULT_VOLUME
+                        window.youtubePlayer.setVolume(volume)
                     },
                     "onStateChange": function(event) {
                         if(event.data == YT.PlayerState.PAUSED
