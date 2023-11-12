@@ -1,7 +1,7 @@
 import YoutubePlayer from "models/YoutubePlayer.js"
 
 export default {
-    "a": new YoutubePlayer(),
-    // "b": new YoutubePlayer(),
-    // "c": new YoutubePlayer(),
+    "a": new YoutubePlayer("a"),
+    "b": new YoutubePlayer("b"),
+    // "c": new YoutubePlayer("c"),
 }

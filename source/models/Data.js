@@ -8,7 +8,7 @@ const Data = {
     }
 }
 
-const streamIds = ["a"]//, "b", "c"]
+const streamIds = ["a", "b"] //, "c"]
 streamIds.forEach((streamId) => {
     Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapshot((document) => {
         if(document.exists == false) return
