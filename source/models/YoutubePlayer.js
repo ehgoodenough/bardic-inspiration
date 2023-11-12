@@ -24,12 +24,11 @@ export default class YoutubePlayer {
                     "modestbranding": 1,
                     // "start": (computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1,
                     // "start": 0,
-                    // "autoplay": true,
+                    "autoplay": false,
                 },
                 "events": {
                     "onReady": (event) => {
                         this.player = player
-
                         const volume = parseInt(window.localStorage.getItem("audio-volume")) || DEFAULT_VOLUME
                         this.player.setVolume(volume)
                         resolve()
@@ -62,7 +61,7 @@ export default class YoutubePlayer {
                             Something.updateCurrentRun("a", {
                                 "queueId": nextMusic.queueId,
                                 "youtubeId": nextMusic.youtubeId,
-                                "startTime": Date.now() + TIME_BETWEEN_SONGS - (nextMusic.embeddedStartTime || 0),
+                                "startTime": Date.now() + TIME_BETWEEN_SONGS,
                                 "state": "playing",
                             })
                         }
@@ -109,7 +108,7 @@ export default class YoutubePlayer {
     }
     get volume() {
         if(this.player == undefined) return
-        if(this.player.getVolume instanceof Function == false) return
+        if(this.player.getVolume == undefined) return
         return this.player.getVolume()
     }
     unmute() {

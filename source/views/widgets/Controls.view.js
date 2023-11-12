@@ -17,13 +17,15 @@ import Players from "models/Players.js"
 
 export default class Controls {
     render() {
+        this.props.streamId = this.props.streamId || "a"
+        if(Players[this.props.streamId] == undefined) return
         return (
             <div class="Controls">
-                <Timeline/>
+                <Timeline streamId={this.props.streamId}/>
                 <div class="Gradient"/>
                 <div class="Panel">
                     <div class="PlayButton" onClick={this.onClickPlayButton}>
-                        <span class="material-icons">{Data.campaign.streams["a"]?.run?.state == "paused" ? "play_arrow" : "pause"}</span>
+                        <span class="material-icons">{this.isPaused ? "play_arrow" : "pause"}</span>
                     </div>
                     <div class="VolumeButton" onClick={this.onClickVolumeButton}>
                         <span class="material-icons">{this.getVolumeIcon()}</span>
@@ -40,30 +42,37 @@ export default class Controls {
             </div>
         )
     }
-    onClickVolumeBar() {
-        if(Poin.isPressed() == false) return
-        if(document.getElementById("volume") == undefined) return
-        const bounds = document.getElementById("volume").getBoundingClientRect()
-        let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
-        if(volume < 1) volume = 0
-        if(volume > 99) volume = 100
-        Players["a"].setVolume(volume)
-        window.localStorage.setItem("audio-volume", volume)
+    get isPaused() {
+        return Data.campaign.streams[this.props.streamId].run?.state == "paused"
     }
-    onClickVolumeButton() {
-        if(Players["a"].isMuted) {
-            Players["a"].unmute()
-        } else {
-            Players["a"].mute()
+    get onClickVolumeBar() {
+        return (event) => {
+            if(Poin.isPressed() == false) return
+            if(document.getElementById("volume") == undefined) return
+            const bounds = document.getElementById("volume").getBoundingClientRect()
+            let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
+            if(volume < 1) volume = 0
+            if(volume > 99) volume = 100
+            Players[this.props.streamId].setVolume(volume)
+            window.localStorage.setItem("audio-volume", volume)
+        }
+    }
+    get onClickVolumeButton() {
+        return (event) => {
+            if(Players[this.props.streamId].isMuted) {
+                Players[this.props.streamId].unmute()
+            } else {
+                Players[this.props.streamId].mute()
+            }
         }
     }
     getVolumeRelativePosition() {
-        return Players["a"].volume / 100
+        return Players[this.props.streamId].volume / 100
     }
     getVolumeIcon() {
-        if(Players["a"].isMuted) return "volume_off"
-        if(Players["a"].volume <= 0) return "volume_off"
-        if(Players["a"].volume >= 50) return "volume_up"
+        if(Players[this.props.streamId].isMuted) return "volume_off"
+        if(Players[this.props.streamId].volume <= 0) return "volume_off"
+        if(Players[this.props.streamId].volume >= 50) return "volume_up"
         return "volume_down"
     }
     onClickPlayButton() {
@@ -71,25 +80,25 @@ export default class Controls {
     }
     getCurrentTimeText() {
         let time = this.getCurrentTime()
-        time = Math.min(time, Players["a"].duration)
+        time = Math.min(time, Players[this.props.streamId].duration)
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
     getTotalTimeText() {
-        let time = Players["a"].duration
+        let time = Players[this.props.streamId].duration
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
     getCurrentTime() {
-        if(Data.campaign.streams["a"].run == undefined) return 0
-        return computeCurrentTime(Data.campaign.streams["a"].run)
+        if(Data.campaign.streams[this.props.streamId].run == undefined) return 0
+        return computeCurrentTime(Data.campaign.streams[this.props.streamId].run)
     }
 }
 
 class Timeline {
     render() {
         return (
-            <div class="Timeline" id="timeline" onClick={this.onClick}>
+            <div class="Timeline" id={"timeline-" + this.props.streamId} onClick={this.onClick}>
                 <div class="CurrentTime" style={this.getCurrentTimeStyle()}>
                     <div class="Dot"/>
                 </div>
@@ -105,10 +114,10 @@ class Timeline {
     get onClick() {
         return (event) => {
             let time = this.getHoveredTime()
-            Something.updateCurrentRun("a", {
-                "runId": Data.campaign.streams["a"].run.runId,
-                "queueId": Data.campaign.streams["a"].run.queueId,
-                "youtubeId": Data.campaign.streams["a"].run.youtubeId,
+            Something.updateCurrentRun(this.props.streamId, {
+                "runId": Data.campaign.streams[this.props.streamId].run.runId,
+                "queueId": Data.campaign.streams[this.props.streamId].run.queueId,
+                "youtubeId": Data.campaign.streams[this.props.streamId].run.youtubeId,
                 "startTime": Date.now() - time,
                 "state": "playing",
             })
@@ -121,7 +130,7 @@ class Timeline {
     }
     getCurrentTimeStyle() {
         return {
-            "width": (this.getCurrentTime() / Players["a"].duration) * 100 + "%"
+            "width": (this.getCurrentTime() / Players[this.props.streamId].duration) * 100 + "%"
         }
     }
     getHoveredTimeStyle() {
@@ -130,17 +139,18 @@ class Timeline {
         }
     }
     getCurrentTime() {
-        let time = computeCurrentTime(Data.campaign.streams["a"].run)
-        time = Math.min(time, Players["a"].duration)
+        let time = computeCurrentTime(Data.campaign.streams[this.props.streamId].run)
+        time = Math.min(time, Players[this.props.streamId].duration)
         if(isNaN(time)) time = 0
         return time
     }
     getHoveredRelativePosition() {
-        if(document.getElementById("timeline") == undefined) return 0
-        const bounds = document.getElementById("timeline").getBoundingClientRect()
+        const dom = document.getElementById("timeline-" + this.props.streamId)
+        if(dom == undefined) return 0
+        const bounds = dom.getBoundingClientRect()
         return (Poin.position.x - bounds.x) / bounds.width
     }
     getHoveredTime() {
-        return this.getHoveredRelativePosition() * Players["a"].duration
+        return this.getHoveredRelativePosition() * Players[this.props.streamId].duration
     }
 }

@@ -8,50 +8,52 @@ const Data = {
     }
 }
 
-const streamId = "a"
-Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapshot((document) => {
-    if(document.exists == false) return
-    const prevstream = Data.campaign.streams[streamId]
-    const stream = document.data()
-    Data.campaign.streams[streamId] = stream
-    console.log("theros/streams/" + streamId, stream)
+const streamIds = ["a"]//, "b", "c"]
+streamIds.forEach((streamId) => {
+    Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapshot((document) => {
+        if(document.exists == false) return
+        const prevstream = Data.campaign.streams[streamId]
+        const stream = document.data()
+        Data.campaign.streams[streamId] = stream
+        console.log("theros/streams/" + streamId, stream)
 
-    Data.campaign.streams[streamId].queue = Data.campaign.streams[streamId].queue || []
+        Data.campaign.streams[streamId].queue = Data.campaign.streams[streamId].queue || []
 
-    if(Data.campaign.streams[streamId].run != undefined) {
-        if(stream.run.youtubeId != undefined
-        && stream.run.runId != undefined
-        && stream.run.queueId != undefined) {
-            if(stream.run.youtubeId != prevstream?.run?.youtubeId
-            || stream.run.runId != prevstream?.run?.runId
-            || stream.run.queueId != prevstream?.run?.queueId) {
-                return Players[streamId].load({
-                    "youtubeId": stream.run.youtubeId,
-                    "currentTime": computeCurrentTime(stream.run),
-                }).then(async () => {
-                    if(stream.run.state == "paused") {
-                        Players[streamId].pause()
-                    } else if(stream.run.state != "paused") {
-                        Players[streamId].play()
-                    }
+        if(Data.campaign.streams[streamId].run != undefined) {
+            if(stream.run.youtubeId != undefined
+            && stream.run.runId != undefined
+            && stream.run.queueId != undefined) {
+                if(stream.run.youtubeId != prevstream?.run?.youtubeId
+                || stream.run.runId != prevstream?.run?.runId
+                || stream.run.queueId != prevstream?.run?.queueId) {
+                    return Players[streamId].load({
+                        "youtubeId": stream.run.youtubeId,
+                        "currentTime": computeCurrentTime(stream.run),
+                    }).then(async () => {
+                        if(stream.run.state == "paused") {
+                            Players[streamId].pause()
+                        } else if(stream.run.state != "paused") {
+                            Players[streamId].play()
+                        }
+                    })
+                }
+            }
+
+            if(stream.run.startTime != prevstream?.run?.startTime) {
+                Players[streamId].seek({
+                    "currentTime": computeCurrentTime(stream.run)
                 })
             }
-        }
 
-        if(stream.run.startTime != prevstream?.run?.startTime) {
-            Players[streamId].seek({
-                "currentTime": computeCurrentTime(stream.run)
-            })
-        }
-
-        if(stream.run.state != prevstream?.run?.state) {
-            if(stream.run.state == "paused") {
-                Players[streamId].pause(streamId)
-            } else if(stream.run.state != "paused") {
-                Players[streamId].play(streamId)
+            if(stream.run.state != prevstream?.run?.state) {
+                if(stream.run.state == "paused") {
+                    Players[streamId].pause(streamId)
+                } else if(stream.run.state != "paused") {
+                    Players[streamId].play(streamId)
+                }
             }
         }
-    }
+    })
 })
 
 Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {

@@ -24,8 +24,8 @@ export default class EditScreen {
         return (
             <DragAndDrop>
                 <div class="EditScreen">
-                    <AudioStreamSection streamKey={"a"}/>
-                    <AudioStreamSection streamKey={"a"}/>
+                    <AudioStreamSection streamId={"a"}/>
+                    <AudioStreamSection streamId={"b"}/>
                     <LibrarySection/>
                 </div>
             </DragAndDrop>
@@ -35,17 +35,17 @@ export default class EditScreen {
 
 class AudioStreamSection {
     render() {
-        if(Data.campaign.streams[this.props.streamKey] == undefined) return
+        if(Data.campaign.streams[this.props.streamId] == undefined) return
         return (
             <section class="AudioStreamSection">
                 <div class="PlayBox">
                     <div class="YoutubeScreenshot" onClick={() => Something.pauseplay()} style={{
-                        "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.streams["a"]?.run?.youtubeId + "/default.jpg)",
+                        "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.streams[this.props.streamId].run?.youtubeId + "/default.jpg)",
                     }}/>
-                    <Controls/>
+                    <Controls streamId={this.props.streamId}/>
                 </div>
-                <SubmissionForm/>
-                <Queue/>
+                <SubmissionForm streamId={this.props.streamId}/>
+                <Queue streamId={this.props.streamId}/>
                 <div class="ClearButton" onClick={this.onClickClearButton}>
                     Clear All?
                 </div>
@@ -53,7 +53,9 @@ class AudioStreamSection {
         )
     }
     onClickClearButton() {
-        Something.clear("a")
+        return (event) => {
+            Something.clear(this.props.streamId)
+        }
     }
 }
 
@@ -77,8 +79,8 @@ class SubmissionForm {
                 videos.forEach((video) => video.queueId = ShortId.generate())
                 videos = videos.filter((video) => video.thumbnailUrl != undefined)
 
-                Data.campaign.streams["a"].queue = Data.campaign.streams["a"].queue || []
-                Something.updateQueue("a", Data.campaign.streams["a"].queue.concat(videos))
+                Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
+                Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(videos))
             })
             return
         }
@@ -91,8 +93,16 @@ class SubmissionForm {
                 if(video == undefined) return
                 video.queueId = ShortId.generate()
 
-                Data.campaign.streams["a"].queue = Data.campaign.streams["a"].queue || []
-                Something.updateQueue("a", Data.campaign.streams["a"].queue.concat(video))
+                Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
+                Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(video))
+
+                // Something.updateQueue("b", [video])
+                // Something.updateCurrentRun("b", {
+                //     "queueId": video.queueId,
+                //     "youtubeId": video.youtubeId,
+                //     "startTime": Date.now(),
+                //     "state": "playing",
+                // })
             })
         }
     }
@@ -101,12 +111,12 @@ class SubmissionForm {
 class Queue {
     render() {
         if(Data.campaign == undefined) return
-        if(Data.campaign.streams["a"].queue == undefined) return
+        if(Data.campaign.streams[this.props.streamId].queue == undefined) return
         return (
             <div class="Queue">
-                {Data.campaign.streams["a"].queue.map((music) => {
+                {Data.campaign.streams[this.props.streamId].queue.map((music) => {
                     return (
-                        <QueuedItem music={music}/>
+                        <QueuedItem streamId={this.props.streamId} music={music}/>
                     )
                 })}
             </div>
@@ -129,11 +139,11 @@ class QueuedItem {
         )
     }
     get isOnDeck() {
-        return Data.campaign.streams["a"]?.run?.queueId == this.props.music.queueId
+        return Data.campaign.streams[this.props.streamId]?.run?.queueId == this.props.music.queueId
     }
     get onClickContent() {
         return (event) => {
-            Something.updateCurrentRun("a", {
+            Something.updateCurrentRun(this.props.streamId, {
                 "queueId": this.props.music.queueId,
                 "youtubeId": this.props.music.youtubeId,
                 "startTime": Date.now(),
@@ -144,7 +154,7 @@ class QueuedItem {
     get onClickDeleteButton() {
         return (event) => {
             event.stopPropagation()
-            Something.updateQueue("a", removeElement(Data.campaign.streams["a"].queue, this.props.music))
+            Something.updateQueue(this.props.streamId, removeElement(Data.campaign.streams[this.props.streamId].queue, this.props.music))
             if(this.isOnDeck == true) {
                 Something.stop()
             }
@@ -166,8 +176,8 @@ function LibrarySection() {
                             <div class="Musics">
                                 {playlist.musics.map((music) => {
                                     return (
-                                        <div class="a" onClick={() => {
-                                            Something.updateQueue("a", Data.campaign.streams["a"].queue.concat({
+                                        <div class="Music" onClick={() => {
+                                            Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat({
                                                 "queueId": ShortId.generate(),
                                                 "youtubeId": music.youtubeId,
                                                 "title": music.title,
