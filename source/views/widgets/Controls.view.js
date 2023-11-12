@@ -119,7 +119,7 @@ class Timeline {
     get onClick() {
         return (event) => {
             let time = this.getHoveredTime()
-            Something.updateCurrentRun("audio0", {
+            Something.updateCurrentRun("a", {
                 "runId": Data.campaign.music.runId,
                 "queueId": Data.campaign.music.queueId,
                 "youtubeId": Data.campaign.music.youtubeId,

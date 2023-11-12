@@ -5,19 +5,14 @@ export default class Something {
     static updateCurrentRun(streamId, run) {
         run.runId = run.runId || ShortId.generate()
 
-        Firebase.data.collection("campaigns").doc("theros").update({
-            "music": run
-            // TODO: put this in a stream!!
-        })
+        Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).update({run})
     }
     static updateQueue(streamId, queue) {
-        Firebase.data.collection("campaigns").doc("theros").update({
-            "musics": queue
-        })
+        Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).update({queue})
     }
     static clear(streamId) {
-        Firebase.data.collection("campaigns").doc("theros").update({
-            "music": {"state": "paused"}, "musics": [],
+        Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).update({
+            "run": {"state": "paused"}, "queue": [],
         })
     }
 }

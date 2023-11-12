@@ -70,7 +70,7 @@ export default new class {
                             const nextMusic = Data.campaign.musics[nextIndex]
                             if(nextMusic == undefined) return
                             const TIME_BETWEEN_SONGS = 500
-                            Something.updateCurrentRun("audio0", {
+                            Something.updateCurrentRun("a", {
                                 "queueId": nextMusic.queueId,
                                 "youtubeId": nextMusic.youtubeId,
                                 "startTime": Date.now() + TIME_BETWEEN_SONGS - (nextMusic.embeddedStartTime || 0),
@@ -86,7 +86,7 @@ export default new class {
         }
     }
     stop() {
-        Something.updateCurrentRun("audio0", {
+        Something.updateCurrentRun("a", {
             "state": "paused"
         })
     }
@@ -95,7 +95,7 @@ export default new class {
             return
         }
         if(Data.campaign.music.state != "paused") {
-            Something.updateCurrentRun("audio0", {
+            Something.updateCurrentRun("a", {
                 "runId": Data.campaign.music.runId,
                 "queueId": Data.campaign.music.queueId,
                 "youtubeId": Data.campaign.music.youtubeId,
@@ -103,7 +103,7 @@ export default new class {
                 "state": "paused"
             })
         } else if(Data.campaign.music.state == "paused") {
-            Something.updateCurrentRun("audio0", {
+            Something.updateCurrentRun("a", {
                 "runId": Data.campaign.music.runId,
                 "queueId": Data.campaign.music.queueId,
                 "youtubeId": Data.campaign.music.youtubeId,

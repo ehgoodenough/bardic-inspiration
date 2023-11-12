@@ -26,7 +26,7 @@ export default class EditScreen {
         return (
             <DragAndDrop>
                 <div class="EditScreen">
-                    <AudioStreamSection streamKey={"audio0"}/>
+                    <AudioStreamSection streamKey={"a"}/>
                     <LibrarySection/>
                 </div>
             </DragAndDrop>
@@ -53,7 +53,7 @@ class AudioStreamSection {
         )
     }
     onClickClearButton() {
-        Something.clear("audio0")
+        Something.clear("a")
     }
 }
 
@@ -78,7 +78,7 @@ class SubmissionForm {
                 videos = videos.filter((video) => video.thumbnailUrl != undefined)
 
                 Data.campaign.musics = Data.campaign.musics || []
-                Something.updateQueue("audio0", Data.campaign.musics.concat(videos))
+                Something.updateQueue("a", Data.campaign.musics.concat(videos))
             })
             return
         }
@@ -92,7 +92,7 @@ class SubmissionForm {
                 video.queueId = ShortId.generate()
 
                 Data.campaign.musics = Data.campaign.musics || []
-                Something.updateQueue("audio0", Data.campaign.musics.concat(video))
+                Something.updateQueue("a", Data.campaign.musics.concat(video))
             })
         }
     }
@@ -133,7 +133,7 @@ class QueuedItem {
     }
     get onClickContent() {
         return (event) => {
-            Something.updateCurrentRun("audio0", {
+            Something.updateCurrentRun("a", {
                 "queueId": this.props.music.queueId,
                 "youtubeId": this.props.music.youtubeId,
                 "startTime": Date.now(),
@@ -144,7 +144,7 @@ class QueuedItem {
     get onClickDeleteButton() {
         return (event) => {
             event.stopPropagation()
-            Something.updateQueue("audio0", removeElement(Data.campaign.musics, this.props.music))
+            Something.updateQueue("a", removeElement(Data.campaign.musics, this.props.music))
             if(this.isOnDeck) {
                 Youtube.stop()
             }
@@ -166,8 +166,8 @@ function LibrarySection() {
                             <div class="Musics">
                                 {playlist.musics.map((music) => {
                                     return (
-                                        <div class="Music" onClick={() => {
-                                            Something.updateQueue("audio0", Data.campaign.musics.concat({
+                                        <div class="a" onClick={() => {
+                                            Something.updateQueue("a", Data.campaign.musics.concat({
                                                 "queueId": ShortId.generate(),
                                                 "youtubeId": music.youtubeId,
                                                 "title": music.title,
