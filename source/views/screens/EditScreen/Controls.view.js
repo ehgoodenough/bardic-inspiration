@@ -3,18 +3,15 @@ import FormatDuration from "format-duration"
 import ShortId from "shortid"
 import Poin from "poin"
 
+import IO from "models/IO.js"
 import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
 import Something from "models/Something.js"
 import Firebase from "models/Firebase.js"
-import {parseYoutubeId, parseEmbeddedStartTime} from "../functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
-import "views/widgets/Controls.view.less"
+import "views/screens/EditScreen/Controls.view.less"
 import VolumeControls from "views/widgets/VolumeControls.view.js"
-
-import YoutubePlayer from "models/YoutubePlayer.js"
-import IO from "models/IO.js"
 
 export default class Controls {
     render() {
