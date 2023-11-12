@@ -14,16 +14,18 @@ export default new class IO {
         // this["c"] = new YoutubePlayer("c")
 
         this.volume = {
-            "level": parseInt(window.localStorage.getItem("volume.level")) || DEFAULT_VOLUME_LEVEL,
+            "level": parseFloat(window.localStorage.getItem("volume.level")) ?? DEFAULT_VOLUME_LEVEL,
             "isMuted": window.localStorage.getItem("volume.isMuted") == "true"
         }
     }
-    changeVolume(volume) {
+    updateVolume(volume) {
         this.volume = volume
+
+        window.localStorage.setItem("volume.level", this.volume.level)
+        window.localStorage.setItem("volume.isMuted", this.volume.isMuted)
 
         Object.keys(this.streams).forEach((streamId) => {
             this.streams[streamId].setVolume(Data.campaign.streams[streamId].volume)
         })
-
     }
 }

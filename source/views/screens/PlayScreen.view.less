@@ -8,7 +8,7 @@
     z-index: 200;
     overflow: hidden;
     position: absolute;
-    
+
     .Screenshot {
         top: 0em;
         left: 0em;
@@ -21,18 +21,29 @@
         background-position: center;
     }
 
-    .Controls {
-        bottom: 0em;
+    .Menu {
+        left: 0em;
+        right: 0em;
+        bottom: 1em;
         z-index: 100;
+        display: flex;
         position: fixed;
+        align-items: center;
+        justify-content: center;
 
         opacity: 0;
         transition-property: opacity;
         transition-duration: 0.25s;
+
+        .VolumeControls {
+            background-color: fadeout(#899499, 50%);
+            padding: 0.5em 2em;
+            border-radius: 2em;
+        }
     }
 
     &:hover {
-        .Controls {
+        .Menu {
             opacity: 1;
         }
     }

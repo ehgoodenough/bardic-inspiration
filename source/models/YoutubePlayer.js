@@ -103,12 +103,17 @@ export default class YoutubePlayer {
     // volume is 0 to 100
     setVolume(volume) {
         if(this.player == undefined) return
-        console.log()
-        this.player.setVolume(volume.level * IO.volume.level * 100)
+        let volumeLevel = volume.level * IO.volume.level
+        if(volumeLevel < 0.01) volumeLevel = 0
+        if(volumeLevel > 0.99) volumeLevel = 1
+        this.player.setVolume(volumeLevel * 100)
 
-        if(volume.isMuted == true) {
+        if((volume.isMuted == true || IO.volume.isMuted == true)
+        && this.player.isMuted() != true) {
             this.player.mute()
-        } else {
+        }
+        if((volume.isMuted != true && IO.volume.isMuted != true)
+        && this.player.isMuted() == true) {
             this.player.unMute()
         }
     }

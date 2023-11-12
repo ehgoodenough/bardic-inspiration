@@ -11,6 +11,7 @@ import {parseYoutubeId, parseEmbeddedStartTime} from "../functions/parseYoutubeI
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 import "views/widgets/Controls.view.less"
+import VolumeControls from "views/widgets/VolumeControls.view.js"
 
 import YoutubePlayer from "models/YoutubePlayer.js"
 import IO from "models/IO.js"
@@ -24,66 +25,39 @@ export default class Controls {
                 <Timeline streamId={this.props.streamId}/>
                 <div class="Gradient"/>
                 <div class="Panel">
-                    <div class="PlayButton" onClick={this.onClickPlayButton}>
-                        <span class="material-icons">{this.isPaused ? "play_arrow" : "pause"}</span>
-                    </div>
-                    <div class="VolumeButton" onClick={this.onClickVolumeButton}>
-                        <span class="material-icons">{this.getVolumeIcon()}</span>
-                    </div>
-                    <div class="VolumeBar" id={"volume-" + this.props.streamId} onMouseMove={this.onClickVolumeBar}>
-                        <div class="Bar"/>
-                        <div class="Dot" style={{
-                            "left": Data.campaign.streams[this.props.streamId]?.volume?.level * 100 + "%",
-                            "opacity": Data.campaign.streams[this.props.streamId]?.volume?.level == undefined ? 0 : 1,
-                        }}/>
-                    </div>
-                    <div class="Time">{this.getCurrentTimeText()} / {this.getTotalTimeText()}</div>
+                    <PlayButton streamId={this.props.streamId}/>
+                    <VolumeControls volume={Data.campaign.streams[this.props.streamId]?.volume}
+                        onUpdateVolume={(volume) => Something.updateVolume(this.props.streamId, volume)}/>
+                    <TimeText streamId={this.props.streamId}/>
                 </div>
             </div>
         )
     }
-    get isPaused() {
-        return Data.campaign.streams[this.props.streamId]?.run?.state == "paused"
+}
+
+class PlayButton {
+    render() {
+        return (
+            <div class="PlayButton" onClick={this.onClick}>
+                <span class="material-icons">{this.icon}</span>
+            </div>
+        )
     }
-    get onClickVolumeBar() {
-        return (event) => {
-            if(Poin.isPressed() == false) return
-            const dom = document.getElementById("volume-" + this.props.streamId)
-            if(dom == undefined) return
-            const bounds = dom.getBoundingClientRect()
-            let volumeLevel = ((Poin.position.x - bounds.x) / bounds.width)
-            if(volumeLevel < 0.01) volumeLevel = 0
-            if(volumeLevel > 0.99) volumeLevel = 1
-            // IO[this.props.streamId].setVolume(volume) // TODO: do this, debounce the other
-            Something.updateVolume(this.props.streamId, {
-                "level": volumeLevel
-            })
-        }
+    get icon() {
+        return Data.campaign.streams[this.props.streamId]?.run?.state == "paused" ? "play_arrow" : "pause"
     }
-    get onClickVolumeButton() {
-        return (event) => {
-            if(Data.campaign.streams[this.props.streamId]?.volume?.isMuted) {
-                Something.updateVolume(this.props.streamId, {
-                    "level": Data.campaign.streams[this.props.streamId].volume.level
-                })
-            } else {
-                Something.updateVolume(this.props.streamId, {
-                    "level": Data.campaign.streams[this.props.streamId].volume.level,
-                    "isMuted": true
-                })
-            }
-        }
-    }
-    getVolumeIcon() {
-        if(Data.campaign.streams[this.props.streamId]?.volume?.isMuted) return "volume_off"
-        if(Data.campaign.streams[this.props.streamId]?.volume?.level <= 0) return "volume_off"
-        if(Data.campaign.streams[this.props.streamId]?.volume?.level >= 50) return "volume_up"
-        return "volume_down"
-    }
-    get onClickPlayButton() {
+    get onClick() {
         return (event) => {
             Something.pauseplay(this.props.streamId)
         }
+    }
+}
+
+class TimeText {
+    render() {
+        return (
+            <div class="Time">{this.getCurrentTimeText()} / {this.getTotalTimeText()}</div>
+        )
     }
     getCurrentTimeText() {
         let time = this.getCurrentTime()
