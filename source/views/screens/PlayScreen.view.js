@@ -69,14 +69,28 @@ class Player {
         return (
             <div class="Player">
                 <div class="Name">{this.props.name}</div>
-                <button onClick={this.onClick} rollType={player?.rollType || "Flat"}>
-                    Rolled a {player?.rollValue || 0}
-                    {player?.rollValue <= 10 ? "!" : ""}
-                    {player?.rollValue == 1 ? "!!" : ""}
-                    {player?.rollValue >= 90 ? "..." : ""}
+                <button onClick={this.onClick} rollType={player?.rollType || "Flat"} key={player?.rollKey}>
+                    Rolled a
+                    <span> </span>
+                    <span class="Tens Number"
+                        key={player?.rollKey}
+                        speed={player?.rollSpeed || "fast"}
+                        value={"value" + Math.floor((player?.rollValue ?? 0) / 10)}/>
+                    <span class="Ones Number"
+                        key={player?.rollKey}
+                        speed={player?.rollSpeed || "fast"}
+                        value={"value" + Math.floor((player?.rollValue ?? 0) % 10)}/>
+                    {this.exclamation}
                 </button>
             </div>
         )
+    }
+    get exclamation() {
+        const player = window.players[this.props.playerId]
+        if(player?.rollValue == 1) return <span class="Exclamation">!!!</span>
+        if(player?.rollValue <= 10) return <span class="Exclamation">!</span>
+        if(player?.rollValue == 100) return <span class="Exclamation">💀</span>
+        if(player?.rollValue >= 90) return <span class="Exclamation">...</span>
     }
     get onClick() {
         return (event) => {
@@ -94,12 +108,14 @@ class Player {
 
             let rollValue = (tens * 10) + ones
             if(rollValue == 0) rollValue = 100
+            console.log(rollValue)
 
             Firebase.data.collection("players").doc("theros").update({
                 [this.props.playerId]: {
                     "rollValue": rollValue,
                     "rollType": rollType,
-                    "rollId": ShortId.generate()
+                    "rollId": ShortId.generate(),
+                    "rollSpeed": Math.random() < 0.5 ? "fast" : (Math.random() < 0.5 ? "medium" : "slow")
                 }
             })
 
