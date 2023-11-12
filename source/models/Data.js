@@ -10,7 +10,7 @@ const Data = {
 
 const streamIds = ["a", "b"] //, "c"]
 streamIds.forEach((streamId) => {
-    Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapshot((document) => {
+    Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapshot(async (document) => {
         if(document.exists == false) return
         const prevstream = Data.campaign.streams[streamId]
         const stream = document.data()
@@ -19,6 +19,7 @@ streamIds.forEach((streamId) => {
 
         Data.campaign.streams[streamId].queue = Data.campaign.streams[streamId].queue || []
 
+
         if(Data.campaign.streams[streamId].run != undefined) {
             if(stream.run.youtubeId != undefined
             && stream.run.runId != undefined
@@ -26,16 +27,15 @@ streamIds.forEach((streamId) => {
                 if(stream.run.youtubeId != prevstream?.run?.youtubeId
                 || stream.run.runId != prevstream?.run?.runId
                 || stream.run.queueId != prevstream?.run?.queueId) {
-                    return Players[streamId].load({
+                    await Players[streamId].load({
                         "youtubeId": stream.run.youtubeId,
                         "currentTime": computeCurrentTime(stream.run),
-                    }).then(async () => {
-                        if(stream.run.state == "paused") {
-                            Players[streamId].pause()
-                        } else if(stream.run.state != "paused") {
-                            Players[streamId].play()
-                        }
                     })
+                    if(stream.run.state == "paused") {
+                        Players[streamId].pause()
+                    } else if(stream.run.state != "paused") {
+                        Players[streamId].play()
+                    }
                 }
             }
 
@@ -52,6 +52,10 @@ streamIds.forEach((streamId) => {
                     Players[streamId].play(streamId)
                 }
             }
+        }
+
+        if(Players[streamId] != undefined) {
+            Players[streamId].setVolume(stream.volume)
         }
     })
 })

@@ -30,7 +30,6 @@ export default class YoutubePlayer {
                 "events": {
                     "onReady": (event) => {
                         this.player = player
-                        console.log("resolved!!", "youtube-" + this.streamId)
                         const volume = parseInt(window.localStorage.getItem("audio-volume")) || DEFAULT_VOLUME
                         this.player.setVolume(volume)
                         resolve()
@@ -121,6 +120,7 @@ export default class YoutubePlayer {
     }
     // volume is 0 to 100
     setVolume(volume) {
+        if(this.player == undefined) return
         this.player.setVolume(volume)
     }
 }

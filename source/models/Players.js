@@ -1,7 +1,9 @@
 import YoutubePlayer from "models/YoutubePlayer.js"
 
-export default {
-    "a": new YoutubePlayer("a"),
-    "b": new YoutubePlayer("b"),
-    // "c": new YoutubePlayer("c"),
+export default new class IO {
+    constructor() {
+        this["a"] = new YoutubePlayer("a")
+        this["b"] = new YoutubePlayer("b")
+        // this["c"] = new YoutubePlayer("c")
+    }
 }

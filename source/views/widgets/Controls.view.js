@@ -53,8 +53,9 @@ export default class Controls {
             let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
             if(volume < 1) volume = 0
             if(volume > 99) volume = 100
-            Players[this.props.streamId].setVolume(volume)
-            window.localStorage.setItem("audio-volume", volume)
+            Something.updateVolume(this.props.streamId, volume)
+            // Players[this.props.streamId].setVolume(volume)
+            // window.localStorage.setItem("audio-volume", volume)
         }
     }
     get onClickVolumeButton() {
@@ -71,8 +72,8 @@ export default class Controls {
     }
     getVolumeIcon() {
         if(Players[this.props.streamId].isMuted) return "volume_off"
-        if(Players[this.props.streamId].volume <= 0) return "volume_off"
-        if(Players[this.props.streamId].volume >= 50) return "volume_up"
+        if(Data.campaign.streams[this.props.streamId].volume <= 0) return "volume_off"
+        if(Data.campaign.streams[this.props.streamId].volume >= 50) return "volume_up"
         return "volume_down"
     }
     onClickPlayButton() {

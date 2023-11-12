@@ -52,7 +52,7 @@ class AudioStreamSection {
             </section>
         )
     }
-    onClickClearButton() {
+    get onClickClearButton() {
         return (event) => {
             Something.clear(this.props.streamId)
         }

@@ -2,6 +2,8 @@ import ShortId from "shortid"
 import Firebase from "models/Firebase.js"
 import Data from "models/Data.js"
 
+const DEFAULT_VOLUME = 50
+
 export default class Something {
     static updateCurrentRun(streamId, run) {
         run.runId = run.runId || ShortId.generate()
@@ -11,9 +13,12 @@ export default class Something {
     static updateQueue(streamId, queue) {
         Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).update({queue})
     }
+    static updateVolume(streamId, volume) {
+        Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).update({volume})
+    }
     static clear(streamId) {
         Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).update({
-            "run": {"state": "paused"}, "queue": [],
+            "run": {"state": "paused"}, "queue": [], "volume": DEFAULT_VOLUME
         })
     }
     static stop() {
