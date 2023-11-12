@@ -1,7 +1,6 @@
 import Firebase from "models/Firebase.js"
-import YoutubePlayer from "models/YoutubePlayer.js"
-import computeCurrentTime from "views/functions/computeCurrentTime.js"
 import Players from "models/Players.js"
+import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 const Data = {
     "campaign": {

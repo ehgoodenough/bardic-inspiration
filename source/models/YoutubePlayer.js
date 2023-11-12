@@ -100,6 +100,29 @@ export default class YoutubePlayer {
         if(this.player == undefined) await this.instantiate()
         this.player.playVideo()
     }
+    // returns in milliseconds
+    get duration() {
+        if(this.player.isMuted instanceof Function == false) return
+        return this.player.getDuration() * 1000
+    }
+    get isMuted() {
+        if(this.player.isMuted instanceof Function == false) return
+        return this.player.isMuted()
+    }
+    get volume() {
+        if(this.player.getVolume instanceof Function == false) return
+        return this.player.getVolume()
+    }
+    unmute() {
+        this.player.unMute()
+    }
+    mute() {
+        this.player.mute()
+    }
+    // volume is 0 to 100
+    setVolume(volume) {
+        this.player.setVolume(volume)
+    }
 }
 
 async function YoutubeIframeApiReady() {

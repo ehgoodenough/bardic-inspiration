@@ -47,36 +47,23 @@ export default class Controls {
         let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
         if(volume < 1) volume = 0
         if(volume > 99) volume = 100
-        Players["a"].player.setVolume(volume)
+        Players["a"].setVolume(volume)
         window.localStorage.setItem("audio-volume", volume)
     }
     onClickVolumeButton() {
-        if(Players["a"].player == undefined) return
-        if(Players["a"].player.isMuted instanceof Function == false) return
-        if(Players["a"].player.unMute instanceof Function == false) return
-        if(Players["a"].player.mute instanceof Function == false) return
-        if(Players["a"].player.isMuted()) {
-            Players["a"].player.unMute()
+        if(Players["a"].isMuted) {
+            Players["a"].unmute()
         } else {
-            Players["a"].player.mute()
+            Players["a"].mute()
         }
     }
     getVolumeRelativePosition() {
-        if(Players["a"].player == undefined) return
-        if(Players["a"].player.getVolume == undefined) return
-        return Players["a"].player.getVolume() / 100
+        return Players["a"].volume / 100
     }
     getVolumeIcon() {
-        if(Players["a"].player == undefined) return "volume_up"
-        if(Players["a"].player.isMuted instanceof Function == false) return "volume_up"
-        if(Players["a"].player.getVolume instanceof Function == false) return "volume_up"
-        if(Players["a"].player.isMuted()) {
-            return "volume_off"
-        }
-
-        const volume = Players["a"].player.getVolume()
-        if(volume <= 0) return "volume_off"
-        if(volume >= 50) return "volume_up"
+        if(Players["a"].isMuted) return "volume_off"
+        if(Players["a"].volume <= 0) return "volume_off"
+        if(Players["a"].volume >= 50) return "volume_up"
         return "volume_down"
     }
     onClickPlayButton() {
@@ -84,22 +71,18 @@ export default class Controls {
     }
     getCurrentTimeText() {
         let time = this.getCurrentTime()
-        time = Math.min(time, this.getTotalTime())
+        time = Math.min(time, Players["a"].duration)
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
     getTotalTimeText() {
-        let time = this.getTotalTime()
+        let time = Players["a"].duration
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
     getCurrentTime() {
         if(Data.campaign.streams["a"].run == undefined) return 0
         return computeCurrentTime(Data.campaign.streams["a"].run)
-    }
-    getTotalTime() {
-        if(Players["a"].player?.getDuration == undefined) return 0
-        return Players["a"].player.getDuration() * 1000
     }
 }
 
@@ -138,7 +121,7 @@ class Timeline {
     }
     getCurrentTimeStyle() {
         return {
-            "width": (this.getCurrentTime() / this.getTotalTime()) * 100 + "%"
+            "width": (this.getCurrentTime() / Players["a"].duration) * 100 + "%"
         }
     }
     getHoveredTimeStyle() {
@@ -148,13 +131,9 @@ class Timeline {
     }
     getCurrentTime() {
         let time = computeCurrentTime(Data.campaign.streams["a"].run)
-        time = Math.min(time, this.getTotalTime())
+        time = Math.min(time, Players["a"].duration)
         if(isNaN(time)) time = 0
         return time
-    }
-    getTotalTime() {
-        if(Players["a"].player?.getDuration == undefined) return 0
-        return Players["a"].player.getDuration() * 1000
     }
     getHoveredRelativePosition() {
         if(document.getElementById("timeline") == undefined) return 0
@@ -162,6 +141,6 @@ class Timeline {
         return (Poin.position.x - bounds.x) / bounds.width
     }
     getHoveredTime() {
-        return this.getHoveredRelativePosition() * this.getTotalTime()
+        return this.getHoveredRelativePosition() * Players["a"].duration
     }
 }
