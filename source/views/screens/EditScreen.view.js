@@ -14,6 +14,7 @@ import parseEmbeddedStartTime from "../functions/parseEmbeddedStartTime.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 import playlists from "playlists.json"
 
+import Menu from "views/widgets/Menu.view.js"
 import Controls from "views/widgets/Controls.view.js"
 import DragAndDrop from "views/widgets/DragAndDrop.view.js"
 
@@ -24,9 +25,12 @@ export default class EditScreen {
         return (
             <DragAndDrop>
                 <div class="EditScreen">
-                    <AudioStreamSection streamId={"a"}/>
-                    <AudioStreamSection streamId={"b"}/>
-                    <LibrarySection/>
+                    <div class="EditableSections">
+                        <AudioStreamSection streamId={"a"}/>
+                        <AudioStreamSection streamId={"b"}/>
+                        <LibrarySection/>
+                    </div>
+                    <Menu/>
                 </div>
             </DragAndDrop>
         )
@@ -38,12 +42,7 @@ class AudioStreamSection {
         if(Data.campaign.streams[this.props.streamId] == undefined) return
         return (
             <section class="AudioStreamSection">
-                <div class="PlayBox">
-                    <div class="YoutubeScreenshot" onClick={() => Something.pauseplay(this.props.streamId)} style={{
-                        "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.streams[this.props.streamId].run?.youtubeId + "/default.jpg)",
-                    }}/>
-                    <Controls streamId={this.props.streamId}/>
-                </div>
+                <PlayBox streamId={this.props.streamId}/>
                 <SubmissionForm streamId={this.props.streamId}/>
                 <Queue streamId={this.props.streamId}/>
                 <div class="ClearButton" onClick={this.onClickClearButton}>
@@ -59,11 +58,27 @@ class AudioStreamSection {
     }
 }
 
+class PlayBox {
+    render() {
+        return (
+            <div class="PlayBox">
+                <div class="YoutubeScreenshot" onClick={() => Something.pauseplay(this.props.streamId)} style={{
+                    "background-image": this.youtubeId ? "url(https://img.youtube.com/vi/" + this.youtubeId + "/default.jpg)" : undefined,
+                }}/>
+                <Controls streamId={this.props.streamId}/>
+            </div>
+        )
+    }
+    get youtubeId() {
+        return Data.campaign.streams[this.props.streamId].run?.youtubeId
+    }
+}
+
 class SubmissionForm {
     render() {
         return (
             <form class="SubmissionForm" onSubmit={this.onSubmit}>
-                <input name="youtube" type="text" placeholder="put your youtube url here"/>
+                <input name="youtube" type="text" placeholder="youtube video or youtube playlist url"/>
                 <input type="submit"/>
             </form>
         )

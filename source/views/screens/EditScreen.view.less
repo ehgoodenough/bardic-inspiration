@@ -8,152 +8,162 @@
     overflow: hidden;
     position: absolute;
 
-    .SectionOfScreen {
-        width: 100%;
-        height: 100%;
-        float: left;
-        max-width: 320px;
-        background-color: #444;
-        margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+
+    .Menu {
+        background-color: @red;
     }
 
-    .AudioStreamSection {
-        .SectionOfScreen;
+    .EditableSections {
+        flex: 1;
 
-        display: flex;
-        flex-direction: column;
-
-        .PlayBox {
+        .SectionOfScreen {
             width: 100%;
-            max-height: 100%;
-            position: relative;
-            padding-bottom: 66%;
-
-            .YoutubeScreenshot {
-                top: 0em;
-                left: 0em;
-                right: 0em;
-                bottom: 0em;
-                z-index: 5;
-                position: absolute;
-            }
-
-            .Controls {
-                z-index: 10;
-                bottom: 0em;
-                position: absolute;
-
-                .VolumeBar {
-                    width: 48px * 2;
-                }
-            }
+            height: 100%;
+            float: left;
+            max-width: 320px;
+            background-color: #444;
+            margin-right: 8px;
         }
 
-        .Queue {
-            flex: 1;
-            overflow-y: scroll;
+        .AudioStreamSection {
+            .SectionOfScreen;
 
-            .QueuedItem {
-                display: flex;
-                align-items: center;
+            display: flex;
+            flex-direction: column;
 
-                &[isOnDeck] {
-                    background-color: #777;
-                }
-                &:hover {
-                    background-color: #888;
-                }
+            .PlayBox {
+                width: 100%;
+                max-height: 100%;
+                position: relative;
+                padding-bottom: 66%;
 
                 .YoutubeScreenshot {
-                    width: 48px;
-                    height: 32px;
-
-                    margin-right: 8px;
+                    top: 0em;
+                    left: 0em;
+                    right: 0em;
+                    bottom: 0em;
+                    z-index: 5;
+                    position: absolute;
                 }
 
-                .Text {
-                    flex: 1;
-                    font-size: 0.7em;
-                    text-overflow: ellipsis;
-                }
+                .Controls {
+                    z-index: 10;
+                    bottom: 0em;
+                    position: absolute;
 
-                .DeleteButton {
-                    margin-top: 4px;
-                    * {cursor: pointer;}
-                    &:hover {color: @red;}
+                    .VolumeBar {
+                        width: 48px * 2;
+                    }
                 }
             }
-        }
 
-        .ClearButton {
-            padding: 0.5em;
-            text-align: center;
-
-            cursor: pointer;
-
-            color: @white;
-            background-color: @black;
-            transition-duration: 0.4s;
-            transition-property: background-color;
-            &:hover {
-                transition-duration: 0.2s;
-                background-color: @red;
-            }
-        }
-    }
-
-    .LibrarySection {
-        .SectionOfScreen;
-
-        overflow-y: scroll;
-    }
-
-    .SubmissionForm {
-        display: flex;
-
-        input {
-            height: 2rem;
-            font: inherit;
-            font-size: 12px;
-
-            display: block;
-
-            &[type=text] {
+            .Queue {
                 flex: 1;
+                overflow-y: scroll;
+
+                .QueuedItem {
+                    display: flex;
+                    align-items: center;
+
+                    &[isOnDeck] {
+                        background-color: #777;
+                    }
+                    &:hover {
+                        background-color: #888;
+                    }
+
+                    .YoutubeScreenshot {
+                        width: 48px;
+                        height: 32px;
+
+                        margin-right: 8px;
+                    }
+
+                    .Text {
+                        flex: 1;
+                        font-size: 0.7em;
+                        text-overflow: ellipsis;
+                    }
+
+                    .DeleteButton {
+                        margin-top: 4px;
+                        * {cursor: pointer;}
+                        &:hover {color: @red;}
+                    }
+                }
             }
 
-            &[type=submit] {
-                padding: 0em 1em;
-            }
-        }
-    }
+            .ClearButton {
+                padding: 0.5em;
+                text-align: center;
 
-    .Playlist {
-        .PlaylistName {
-            display: block;
-            color: inherit;
-            font-weight: bold;
-        }
+                cursor: pointer;
 
-        .Musics {
-            .Music {
-                display: flex;
-                align-items: center;
-
+                color: @white;
+                transition-duration: 0.4s;
+                transition-property: background-color;
                 &:hover {
-                    background-color: #888;
+                    transition-duration: 0.2s;
+                    background-color: @black;
                 }
+            }
+        }
 
-                .YoutubeScreenshot {
-                    width: 48px;
-                    height: 32px;
+        .LibrarySection {
+            .SectionOfScreen;
 
-                    margin-right: 8px;
-                }
-                .Text {
+            overflow-y: scroll;
+        }
+
+        .SubmissionForm {
+            display: flex;
+
+            input {
+                height: 2rem;
+                font: inherit;
+                font-size: 12px;
+
+                display: block;
+
+                &[type=text] {
                     flex: 1;
-                    font-size: 0.7em;
-                    text-overflow: ellipsis;
+                }
+
+                &[type=submit] {
+                    padding: 0em 1em;
+                }
+            }
+        }
+
+        .Playlist {
+            .PlaylistName {
+                display: block;
+                color: inherit;
+                font-weight: bold;
+            }
+
+            .Musics {
+                .Music {
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        background-color: #888;
+                    }
+
+                    .YoutubeScreenshot {
+                        width: 48px;
+                        height: 32px;
+
+                        margin-right: 8px;
+                    }
+                    .Text {
+                        flex: 1;
+                        font-size: 0.7em;
+                        text-overflow: ellipsis;
+                    }
                 }
             }
         }
@@ -163,4 +173,5 @@
 .YoutubeScreenshot {
     background-size: cover;
     background-position: center;
+    background-color: @black;
 }

@@ -29,8 +29,6 @@ export default class Mount {
             return <PlayScreen/>
         } else if(Navigation.state.screen == "EditScreen") {
             return <EditScreen/>
-        } else if(Navigation.state.screen == "SimpleEditScreen") {
-            // return <SimpleEditScreen/>
         }
     }
 }

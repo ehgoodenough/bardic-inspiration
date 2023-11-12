@@ -10,7 +10,7 @@ export default class VolumeControls {
                 <div class="VolumeButton" onClick={this.onClickVolumeButton}>
                     <span class="material-icons">{this.icon}</span>
                 </div>
-                <div class="VolumeBar" id={"volume-" + this.props.streamId} onMouseMove={this.onClickVolumeBar}>
+                <div class="VolumeBar" id={"volume-" + (this.props.id || "0")} onMouseMove={this.onClickVolumeBar}>
                     <div class="Bar"/>
                     <div class="Dot" style={{
                         "left": this.props.volume.level * 100 + "%",
@@ -42,7 +42,7 @@ export default class VolumeControls {
     get onClickVolumeBar() {
         return (event) => {
             if(Poin.isPressed() == false) return
-            const dom = document.getElementById("volume-" + this.props.streamId)
+            const dom = document.getElementById("volume-" + (this.props.id || "0"))
             if(dom == undefined) return
             const bounds = dom.getBoundingClientRect()
             let volumeLevel = ((Poin.position.x - bounds.x) / bounds.width)

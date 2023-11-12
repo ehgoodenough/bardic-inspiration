@@ -27,7 +27,8 @@ export default class Controls {
                 <div class="Panel">
                     <PlayButton streamId={this.props.streamId}/>
                     <VolumeControls volume={Data.campaign.streams[this.props.streamId]?.volume}
-                        onUpdateVolume={(volume) => Something.updateVolume(this.props.streamId, volume)}/>
+                        onUpdateVolume={(volume) => Something.updateVolume(this.props.streamId, volume)}
+                        id={this.props.streamId}/>
                     <TimeText streamId={this.props.streamId}/>
                 </div>
             </div>
