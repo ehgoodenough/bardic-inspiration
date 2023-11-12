@@ -5,6 +5,7 @@ import Poin from "poin"
 
 import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
+import Something from "models/Something.js"
 import Youtube from "models/Youtube.js"
 import Firebase from "models/Firebase.js"
 import {parseYoutubeId, parseEmbeddedStartTime} from "../functions/parseYoutubeId.js"
@@ -118,14 +119,12 @@ class Timeline {
     get onClick() {
         return (event) => {
             let time = this.getHoveredTime()
-            Firebase.data.collection("campaigns").doc("theros").update({
-                "music": {
-                    "key": Data.campaign.music.key,
-                    "runkey": Data.campaign.music.runkey,
-                    "youtubeId": Data.campaign.music.youtubeId,
-                    "startTime": Date.now() - time,
-                    "state": "playing",
-                }
+            Something.updateCurrentRun("audio0", {
+                "runId": Data.campaign.music.runId,
+                "queueId": Data.campaign.music.queueId,
+                "youtubeId": Data.campaign.music.youtubeId,
+                "startTime": Date.now() - time,
+                "state": "playing",
             })
         }
     }

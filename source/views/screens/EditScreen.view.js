@@ -5,6 +5,7 @@ import Poin from "poin"
 
 import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
+import Something from "models/Something.js"
 import Youtube from "models/Youtube.js"
 import Firebase from "models/Firebase.js"
 import parseYoutubeId from "../functions/parseYoutubeId.js"
@@ -25,7 +26,7 @@ export default class EditScreen {
         return (
             <DragAndDrop>
                 <div class="EditScreen">
-                    <PlayingSection/>
+                    <AudioStreamSection streamKey={"audio0"}/>
                     <LibrarySection/>
                 </div>
             </DragAndDrop>
@@ -33,10 +34,10 @@ export default class EditScreen {
     }
 }
 
-class PlayingSection {
+class AudioStreamSection {
     render() {
         return (
-            <section class="PlayingSection">
+            <section class="AudioStreamSection">
                 <div class="PlayBox">
                     <div class="YoutubeScreenshot" onClick={() => Youtube.pauseplay()} style={{
                         "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/default.jpg)",
@@ -52,64 +53,7 @@ class PlayingSection {
         )
     }
     onClickClearButton() {
-        Firebase.data.collection("campaigns").doc("theros").update({
-            "music": {"state": "paused"}, "musics": [],
-        })
-    }
-}
-
-function SearchSection() {
-    return (
-        <section class="SearchSection">
-            <SubmissionForm/>
-        </section>
-    )
-}
-
-function LibrarySection() {
-    if(Navigation.state.isExtra != true) return
-    return (
-        <section class="LibrarySection">
-            <Library/>
-        </section>
-    )
-}
-
-class Library {
-    render() {
-        return (
-            <div class="Library">
-                {playlists.map((playlist) => {
-                    return (
-                        <div class="Playlist">
-                            <a class="PlaylistName" href={"https://www.youtube.com/playlist?list=" + playlist.id} target="_blank" >
-                                {playlist.title}
-                            </a>
-                            <div class="Musics">
-                                {playlist.musics.map((music) => {
-                                    return (
-                                        <div class="Music" onClick={() => {
-                                            Firebase.data.collection("campaigns").doc("theros").update({
-                                                "musics": Data.campaign.musics.concat({
-                                                    "key": ShortId.generate(),
-                                                    "youtubeId": music.youtubeId,
-                                                    "title": music.title,
-                                                })
-                                            })
-                                        }}>
-                                            <div class="YoutubeScreenshot" style={{
-                                                "background-image": "url(https://img.youtube.com/vi/" + music.youtubeId + "/default.jpg)",
-                                            }}/>
-                                            <div class="Text">{music.title || music.youtubeId}</div>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    )
-                })}
-            </div>
-        )
+        Something.clear("audio0")
     }
 }
 
@@ -130,13 +74,11 @@ class SubmissionForm {
         if(playlistId != undefined) {
             // Navigation.go("/playlists/" + playlistId)
             Youtube.retrievePlaylistVideos(playlistId).then((videos) => {
-                videos.forEach((video) => video.key = ShortId.generate())
+                videos.forEach((video) => video.queueId = ShortId.generate())
                 videos = videos.filter((video) => video.thumbnailUrl != undefined)
 
                 Data.campaign.musics = Data.campaign.musics || []
-                Firebase.data.collection("campaigns").doc("theros").update({
-                    "musics": Data.campaign.musics.concat(videos)
-                })
+                Something.updateQueue("audio0", Data.campaign.musics.concat(videos))
             })
             return
         }
@@ -147,12 +89,10 @@ class SubmissionForm {
             Youtube.retrieveVideos(videoId).then((videos) => {
                 const video = videos[0]
                 if(video == undefined) return
-                video.key = ShortId.generate()
+                video.queueId = ShortId.generate()
 
                 Data.campaign.musics = Data.campaign.musics || []
-                Firebase.data.collection("campaigns").doc("theros").update({
-                    "musics": Data.campaign.musics.concat(video)
-                })
+                Something.updateQueue("audio0", Data.campaign.musics.concat(video))
             })
         }
     }
@@ -189,32 +129,64 @@ class QueuedItem {
         )
     }
     get isOnDeck() {
-        return Data.campaign.music.key == this.props.music.key
+        return Data.campaign.music.queueId == this.props.music.queueId
     }
     get onClickContent() {
         return (event) => {
-            Firebase.data.collection("campaigns").doc("theros").update({
-                "music": {
-                    "key": this.props.music.key,
-                    "runkey": ShortId.generate(),
-                    "youtubeId": this.props.music.youtubeId,
-                    "startTime": Date.now(),
-                    "state": "playing",
-                }
+            Something.updateCurrentRun("audio0", {
+                "queueId": this.props.music.queueId,
+                "youtubeId": this.props.music.youtubeId,
+                "startTime": Date.now(),
+                "state": "playing",
             })
         }
     }
     get onClickDeleteButton() {
         return (event) => {
             event.stopPropagation()
-            Firebase.data.collection("campaigns").doc("theros").update({
-                "musics": removeElement(Data.campaign.musics, this.props.music)
-            })
+            Something.updateQueue("audio0", removeElement(Data.campaign.musics, this.props.music))
             if(this.isOnDeck) {
                 Youtube.stop()
             }
         }
     }
+}
+
+function LibrarySection() {
+    if(Navigation.state.isExtra != true) return
+    return (
+        <section class="LibrarySection">
+            <div class="Library">
+                {playlists.map((playlist) => {
+                    return (
+                        <div class="Playlist">
+                            <a class="PlaylistName" href={"https://www.youtube.com/playlist?list=" + playlist.id} target="_blank" >
+                                {playlist.title}
+                            </a>
+                            <div class="Musics">
+                                {playlist.musics.map((music) => {
+                                    return (
+                                        <div class="Music" onClick={() => {
+                                            Something.updateQueue("audio0", Data.campaign.musics.concat({
+                                                "queueId": ShortId.generate(),
+                                                "youtubeId": music.youtubeId,
+                                                "title": music.title,
+                                            }))
+                                        }}>
+                                            <div class="YoutubeScreenshot" style={{
+                                                "background-image": "url(https://img.youtube.com/vi/" + music.youtubeId + "/default.jpg)",
+                                            }}/>
+                                            <div class="Text">{music.title || music.youtubeId}</div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+        </section>
+    )
 }
 
 function removeElement(array, element) {

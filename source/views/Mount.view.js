@@ -6,7 +6,6 @@ import Navigation from "models/Navigation.js"
 import SplashScreen from "views/screens/SplashScreen.view.js"
 import PlayScreen from "views/screens/PlayScreen.view.js"
 import EditScreen from "views/screens/EditScreen.view.js"
-// import SimpleEditScreen from "views/screens/SimpleEditScreen.view.js"
 
 import "views/Mount.view.less"
 

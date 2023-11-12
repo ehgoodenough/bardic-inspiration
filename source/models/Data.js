@@ -27,11 +27,11 @@ Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
             console.log(campaign.music)
 
             if(campaign.music.youtubeId != undefined
-            && campaign.music.runkey != undefined
-            && campaign.music.key != undefined) {
+            && campaign.music.runId != undefined
+            && campaign.music.queueId != undefined) {
                 if(campaign.music.youtubeId != prevcampaign.music.youtubeId
-                || campaign.music.runkey != prevcampaign.music.runkey
-                || campaign.music.key != prevcampaign.music.key) {
+                || campaign.music.runId != prevcampaign.music.runId
+                || campaign.music.queueId != prevcampaign.music.queueId) {
                     return window.youtubePlayer.loadVideoById({
                         "videoId": campaign.music.youtubeId,
                         "startSeconds": Math.floor(computeCurrentTime(campaign.music) / 1000) || 1,

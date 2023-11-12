@@ -1,5 +1,6 @@
 import Data from "models/Data.js"
 import Firebase from "models/Firebase.js"
+import Something from "models/Something.js"
 import parseYoutubeId from "views/functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
@@ -62,21 +63,18 @@ export default new class {
                             if(Data.campaign.musics == undefined) return
                             if(Data.campaign.musics.length == 0) return
                             const currentMusic = Data.campaign.musics.find((music) => {
-                                return Data.campaign.music.key == music.key
+                                return Data.campaign.music.queueId == music.queueId
                             })
                             const currentIndex = Data.campaign.musics.indexOf(currentMusic)
                             const nextIndex = currentIndex + 1
                             const nextMusic = Data.campaign.musics[nextIndex]
                             if(nextMusic == undefined) return
                             const TIME_BETWEEN_SONGS = 500
-                            Firebase.data.collection("campaigns").doc("theros").update({
-                                "music": {
-                                    "key": nextMusic.key,
-                                    "runkey": nextMusic.key,
-                                    "youtubeId": nextMusic.youtubeId,
-                                    "startTime": Date.now() + TIME_BETWEEN_SONGS - (nextMusic.embeddedStartTime || 0),
-                                    "state": "playing",
-                                }
+                            Something.updateCurrentRun("audio0", {
+                                "queueId": nextMusic.queueId,
+                                "youtubeId": nextMusic.youtubeId,
+                                "startTime": Date.now() + TIME_BETWEEN_SONGS - (nextMusic.embeddedStartTime || 0),
+                                "state": "playing",
                             })
                         }
                     },
@@ -88,10 +86,8 @@ export default new class {
         }
     }
     stop() {
-        Firebase.data.collection("campaigns").doc("theros").update({
-            "music": {
-                "state": "paused"
-            }
+        Something.updateCurrentRun("audio0", {
+            "state": "paused"
         })
     }
     pauseplay() {
@@ -99,24 +95,20 @@ export default new class {
             return
         }
         if(Data.campaign.music.state != "paused") {
-            Firebase.data.collection("campaigns").doc("theros").update({
-                "music": {
-                    "key": Data.campaign.music.key,
-                    "runkey": Data.campaign.music.runkey,
-                    "youtubeId": Data.campaign.music.youtubeId,
-                    "currentTime": Date.now() - Data.campaign.music.startTime,
-                    "state": "paused"
-                }
+            Something.updateCurrentRun("audio0", {
+                "runId": Data.campaign.music.runId,
+                "queueId": Data.campaign.music.queueId,
+                "youtubeId": Data.campaign.music.youtubeId,
+                "currentTime": Date.now() - Data.campaign.music.startTime,
+                "state": "paused"
             })
         } else if(Data.campaign.music.state == "paused") {
-            Firebase.data.collection("campaigns").doc("theros").update({
-                "music": {
-                    "key": Data.campaign.music.key,
-                    "runkey": Data.campaign.music.runkey,
-                    "youtubeId": Data.campaign.music.youtubeId,
-                    "startTime": Date.now() - Data.campaign.music.currentTime,
-                    "state": "playing"
-                }
+            Something.updateCurrentRun("audio0", {
+                "runId": Data.campaign.music.runId,
+                "queueId": Data.campaign.music.queueId,
+                "youtubeId": Data.campaign.music.youtubeId,
+                "startTime": Date.now() - Data.campaign.music.currentTime,
+                "state": "playing"
             })
         }
     }
