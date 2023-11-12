@@ -29,7 +29,8 @@ export default class Controls {
                     <div class="VolumeBar" id="volume" onMouseMove={this.onClickVolumeBar}>
                         <div class="Bar"/>
                         <div class="Dot" style={{
-                            "left": this.getVolumeRelativePosition() * 100 + "%"
+                            "left": this.getVolumeRelativePosition() * 100 + "%",
+                            "opacity": this.getVolumeRelativePosition() == undefined ? 0 : 1,
                         }}/>
                     </div>
                     <div class="Time">{this.getCurrentTimeText()} / {this.getTotalTimeText()}</div>
@@ -64,9 +65,9 @@ export default class Controls {
         return window.youtubePlayer.getVolume() / 100
     }
     getVolumeIcon() {
-        if(window.youtubePlayer == undefined) return
-        if(window.youtubePlayer.isMuted instanceof Function == false) return
-        if(window.youtubePlayer.getVolume instanceof Function == false) return
+        if(window.youtubePlayer == undefined) return "volume_up"
+        if(window.youtubePlayer.isMuted instanceof Function == false) return "volume_up"
+        if(window.youtubePlayer.getVolume instanceof Function == false) return "volume_up"
         if(window.youtubePlayer.isMuted()) {
             return "volume_off"
         }
