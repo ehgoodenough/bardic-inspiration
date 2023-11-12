@@ -19,7 +19,8 @@ import IO from "models/IO.js"
 export default class Controls {
     render() {
         this.props.streamId = this.props.streamId || "a"
-        if(IO[this.props.streamId] == undefined) return
+        if(IO.streams[this.props.streamId] == undefined) return
+        if(Data.campaign.streams[this.props.streamId].run?.youtubeId == undefined) return
         return (
             <div class="Controls">
                 <Timeline streamId={this.props.streamId}/>
@@ -62,12 +63,12 @@ class TimeText {
     }
     getCurrentTimeText() {
         let time = this.getCurrentTime()
-        time = Math.min(time, IO[this.props.streamId].duration)
+        time = Math.min(time, IO.streams[this.props.streamId].duration)
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
     getTotalTimeText() {
-        let time = IO[this.props.streamId].duration
+        let time = IO.streams[this.props.streamId].duration
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
@@ -112,7 +113,7 @@ class Timeline {
     }
     getCurrentTimeStyle() {
         return {
-            "width": (this.getCurrentTime() / IO[this.props.streamId].duration) * 100 + "%"
+            "width": (this.getCurrentTime() / IO.streams[this.props.streamId].duration) * 100 + "%"
         }
     }
     getHoveredTimeStyle() {
@@ -122,7 +123,7 @@ class Timeline {
     }
     getCurrentTime() {
         let time = computeCurrentTime(Data.campaign.streams[this.props.streamId]?.run)
-        time = Math.min(time, IO[this.props.streamId].duration)
+        time = Math.min(time, IO.streams[this.props.streamId].duration)
         if(isNaN(time)) time = 0
         return time
     }
@@ -133,6 +134,6 @@ class Timeline {
         return (Poin.position.x - bounds.x) / bounds.width
     }
     getHoveredTime() {
-        return this.getHoveredRelativePosition() * IO[this.props.streamId].duration
+        return this.getHoveredRelativePosition() * IO.streams[this.props.streamId].duration
     }
 }

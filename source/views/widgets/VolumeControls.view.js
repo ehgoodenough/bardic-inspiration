@@ -5,6 +5,7 @@ import "views/widgets/VolumeControls.view.less"
 
 export default class VolumeControls {
     render() {
+        if(this.props.volume == undefined) return
         return (
             <div class="VolumeControls">
                 <div class="VolumeButton" onClick={this.onClickVolumeButton}>

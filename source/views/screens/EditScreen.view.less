@@ -17,14 +17,20 @@
 
     .EditableSections {
         flex: 1;
+        display: flex;
+
+        overflow-y: hidden;
 
         .SectionOfScreen {
             width: 100%;
             height: 100%;
-            float: left;
-            max-width: 320px;
+            min-width: 240px;
+            max-width: 480px;
             background-color: #444;
-            margin-right: 8px;
+
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
         }
 
         .AudioStreamSection {
@@ -114,7 +120,41 @@
         .LibrarySection {
             .SectionOfScreen;
 
-            overflow-y: scroll;
+            .Playlist {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                overflow-y: scroll;
+
+                .PlaylistName {
+                    display: block;
+                    color: inherit;
+                    font-weight: bold;
+                }
+
+                .Musics {
+                    .Music {
+                        display: flex;
+                        align-items: center;
+
+                        &:hover {
+                            background-color: #888;
+                        }
+
+                        .YoutubeScreenshot {
+                            width: 48px;
+                            height: 32px;
+
+                            margin-right: 8px;
+                        }
+                        .Text {
+                            flex: 1;
+                            font-size: 0.7em;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
         }
 
         .SubmissionForm {
@@ -133,37 +173,6 @@
 
                 &[type=submit] {
                     padding: 0em 1em;
-                }
-            }
-        }
-
-        .Playlist {
-            .PlaylistName {
-                display: block;
-                color: inherit;
-                font-weight: bold;
-            }
-
-            .Musics {
-                .Music {
-                    display: flex;
-                    align-items: center;
-
-                    &:hover {
-                        background-color: #888;
-                    }
-
-                    .YoutubeScreenshot {
-                        width: 48px;
-                        height: 32px;
-
-                        margin-right: 8px;
-                    }
-                    .Text {
-                        flex: 1;
-                        font-size: 0.7em;
-                        text-overflow: ellipsis;
-                    }
                 }
             }
         }

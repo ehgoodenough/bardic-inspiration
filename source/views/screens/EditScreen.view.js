@@ -23,16 +23,15 @@ import "views/screens/EditScreen.view.less"
 export default class EditScreen {
     render() {
         return (
-            <DragAndDrop>
-                <div class="EditScreen">
-                    <div class="EditableSections">
-                        <AudioStreamSection streamId={"a"}/>
-                        <AudioStreamSection streamId={"b"}/>
-                        <LibrarySection/>
-                    </div>
-                    <Menu/>
+            <div class="EditScreen">
+                <div class="EditableSections">
+                    <AudioStreamSection streamId={"a"}/>
+                    <AudioStreamSection streamId={"b"}/>
+                    <AudioStreamSection streamId={"c"}/>
+                    <LibrarySection/>
                 </div>
-            </DragAndDrop>
+                <Menu/>
+            </div>
         )
     }
 }
@@ -183,35 +182,33 @@ function LibrarySection() {
     if(Navigation.state.isExtra != true) return
     return (
         <section class="LibrarySection">
-            <div class="Library">
-                {playlists.map((playlist) => {
-                    return (
-                        <div class="Playlist">
-                            <a class="PlaylistName" href={"https://www.youtube.com/playlist?list=" + playlist.id} target="_blank" >
-                                {playlist.title}
-                            </a>
-                            <div class="Musics">
-                                {playlist.musics.map((music) => {
-                                    return (
-                                        <div class="Music" onClick={() => {
-                                            Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat({
-                                                "queueId": ShortId.generate(),
-                                                "youtubeId": music.youtubeId,
-                                                "title": music.title,
-                                            }))
-                                        }}>
-                                            <div class="YoutubeScreenshot" style={{
-                                                "background-image": "url(https://img.youtube.com/vi/" + music.youtubeId + "/default.jpg)",
-                                            }}/>
-                                            <div class="Text">{music.title || music.youtubeId}</div>
-                                        </div>
-                                    )
-                                })}
-                            </div>
+            {playlists.map((playlist) => {
+                return (
+                    <div class="Playlist">
+                        <a class="PlaylistName" href={"https://www.youtube.com/playlist?list=" + playlist.id} target="_blank" >
+                            {playlist.title}
+                        </a>
+                        <div class="Musics">
+                            {playlist.musics.map((music) => {
+                                return (
+                                    <div class="Music" onClick={() => {
+                                        Something.updateQueue("a", (Data.campaign.streams["a"]?.queue || []).concat({
+                                            "queueId": ShortId.generate(),
+                                            "youtubeId": music.youtubeId,
+                                            "title": music.title,
+                                        }))
+                                    }}>
+                                        <div class="YoutubeScreenshot" style={{
+                                            "background-image": "url(https://img.youtube.com/vi/" + music.youtubeId + "/default.jpg)",
+                                        }}/>
+                                        <div class="Text">{music.title || music.youtubeId}</div>
+                                    </div>
+                                )
+                            })}
                         </div>
-                    )
-                })}
-            </div>
+                    </div>
+                )
+            })}
         </section>
     )
 }

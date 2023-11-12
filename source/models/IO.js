@@ -8,10 +8,8 @@ export default new class IO {
         this.streams = {
             "a": new YoutubePlayer("a"),
             "b": new YoutubePlayer("b"),
+            "c": new YoutubePlayer("c"),
         }
-        this["a"] = this.streams.a
-        this["b"] = this.streams.b
-        // this["c"] = new YoutubePlayer("c")
 
         this.volume = {
             "level": parseFloat(window.localStorage.getItem("volume.level")) ?? DEFAULT_VOLUME_LEVEL,

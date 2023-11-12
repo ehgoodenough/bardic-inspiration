@@ -8,7 +8,7 @@ const Data = {
     }
 }
 
-const streamIds = ["a", "b"] //, "c"]
+const streamIds = ["a", "b", "c"]
 streamIds.forEach((streamId) => {
     Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapshot(async (document) => {
         if(document.exists == false) return
@@ -27,36 +27,36 @@ streamIds.forEach((streamId) => {
                 if(stream.run.youtubeId != prevstream?.run?.youtubeId
                 || stream.run.runId != prevstream?.run?.runId
                 || stream.run.queueId != prevstream?.run?.queueId) {
-                    await IO[streamId].load({
+                    await IO.streams[streamId].load({
                         "youtubeId": stream.run.youtubeId,
                         "currentTime": computeCurrentTime(stream.run),
                     })
                     if(stream.run.state == "paused") {
-                        IO[streamId].pause()
+                        IO.streams[streamId].pause()
                     } else if(stream.run.state != "paused") {
-                        IO[streamId].play()
+                        IO.streams[streamId].play()
                     }
                 }
             }
 
             if(stream.run.startTime != prevstream?.run?.startTime) {
-                IO[streamId].seek({
+                IO.streams[streamId].seek({
                     "currentTime": computeCurrentTime(stream.run)
                 })
             }
 
             if(stream.run.state != prevstream?.run?.state) {
                 if(stream.run.state == "paused") {
-                    IO[streamId].pause(streamId)
+                    IO.streams[streamId].pause(streamId)
                 } else if(stream.run.state != "paused") {
-                    IO[streamId].play(streamId)
+                    IO.streams[streamId].play(streamId)
                 }
             }
         }
 
-        if(IO[streamId] != undefined
+        if(IO.streams[streamId] != undefined
         && stream.volume != undefined) {
-            IO[streamId].setVolume(stream.volume)
+            IO.streams[streamId].setVolume(stream.volume)
         }
     })
 })
