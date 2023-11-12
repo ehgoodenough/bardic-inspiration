@@ -25,6 +25,7 @@ export default class EditScreen {
             <DragAndDrop>
                 <div class="EditScreen">
                     <AudioStreamSection streamKey={"a"}/>
+                    <AudioStreamSection streamKey={"a"}/>
                     <LibrarySection/>
                 </div>
             </DragAndDrop>
@@ -34,7 +35,7 @@ export default class EditScreen {
 
 class AudioStreamSection {
     render() {
-        if(Data.campaign.streams["a"] == undefined) return
+        if(Data.campaign.streams[this.props.streamKey] == undefined) return
         return (
             <section class="AudioStreamSection">
                 <div class="PlayBox">

@@ -6,10 +6,13 @@ const SILENCE_VIDEO_ID = "g4mHPeMGTJM"
 const DEFAULT_VOLUME = 50
 
 export default class YoutubePlayer {
+    constructor() {
+        this.instantiate()
+    }
     async instantiate() {
         await YoutubeIframeApiReady()
         return new Promise((resolve, reject) => {
-            this.player = new YT.Player("youtuber", {
+            const player = new YT.Player("youtuber", {
                 "width": "300",
                 "height": "200",
                 "videoId": SILENCE_VIDEO_ID,
@@ -20,19 +23,12 @@ export default class YoutubePlayer {
                     "disablekb": 1,
                     "modestbranding": 1,
                     // "start": (computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1,
-                    "start": 0,
-                    "autoplay": true,
+                    // "start": 0,
+                    // "autoplay": true,
                 },
                 "events": {
                     "onReady": (event) => {
-                        this.player.seekTo((computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1)
-                        if(Data.campaign.streams["a"].run.youtubeId != undefined) {
-                            if(Data.campaign.streams["a"]?.run?.state == "paused") {
-                                this.player.pauseVideo()
-                            } else if(Data.campaign.streams["a"]?.run?.state != "paused") {
-                                this.player.playVideo()
-                            }
-                        }
+                        this.player = player
 
                         const volume = parseInt(window.localStorage.getItem("audio-volume")) || DEFAULT_VOLUME
                         this.player.setVolume(volume)
@@ -42,13 +38,13 @@ export default class YoutubePlayer {
                         if(event.data == YT.PlayerState.PAUSED
                         && Data.campaign.streams["a"]?.run?.state != "paused") {
                             this.player.seekTo((computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1)
-                            event.target.playVideo()
+                            this.player.playVideo()
                             return
                         }
                         if(event.data == YT.PlayerState.PLAYING
                         && Data.campaign.streams["a"]?.run?.state != "playing") {
                             this.player.seekTo((computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1)
-                            event.target.pauseVideo()
+                            this.player.pauseVideo()
                             return
                         }
 
@@ -102,14 +98,17 @@ export default class YoutubePlayer {
     }
     // returns in milliseconds
     get duration() {
+        if(this.player == undefined) return
         if(this.player.isMuted instanceof Function == false) return
         return this.player.getDuration() * 1000
     }
     get isMuted() {
+        if(this.player == undefined) return
         if(this.player.isMuted instanceof Function == false) return
         return this.player.isMuted()
     }
     get volume() {
+        if(this.player == undefined) return
         if(this.player.getVolume instanceof Function == false) return
         return this.player.getVolume()
     }

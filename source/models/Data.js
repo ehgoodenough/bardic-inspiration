@@ -28,6 +28,12 @@ Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapsh
                 return Players[streamId].load({
                     "youtubeId": stream.run.youtubeId,
                     "currentTime": computeCurrentTime(stream.run),
+                }).then(async () => {
+                    if(stream.run.state == "paused") {
+                        Players[streamId].pause()
+                    } else if(stream.run.state != "paused") {
+                        Players[streamId].play()
+                    }
                 })
             }
         }
