@@ -2,7 +2,7 @@ import ShortId from "shortid"
 import Firebase from "models/Firebase.js"
 import Data from "models/Data.js"
 
-const DEFAULT_VOLUME = 50
+const DEFAULT_VOLUME = 0.5
 
 export default class Something {
     static updateCurrentRun(streamId, run) {

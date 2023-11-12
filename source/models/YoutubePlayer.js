@@ -1,9 +1,9 @@
 import Data from "models/Data.js"
 import Something from "models/Something.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
+import IO from "models/IO.js"
 
 const SILENCE_VIDEO_ID = "g4mHPeMGTJM"
-const DEFAULT_VOLUME = 50
 
 export default class YoutubePlayer {
     constructor(streamId) {
@@ -28,7 +28,6 @@ export default class YoutubePlayer {
                 "events": {
                     "onReady": (event) => {
                         this.player = player
-                        // const volume = parseInt(window.localStorage.getItem("audio-volume")) || DEFAULT_VOLUME
                         this.setVolume(Data.campaign.streams["a"]?.volume)
                         resolve()
                     },
@@ -104,7 +103,8 @@ export default class YoutubePlayer {
     // volume is 0 to 100
     setVolume(volume) {
         if(this.player == undefined) return
-        this.player.setVolume(volume.level)
+        console.log()
+        this.player.setVolume(volume.level * IO.volume.level * 100)
 
         if(volume.isMuted == true) {
             this.player.mute()

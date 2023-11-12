@@ -1,5 +1,5 @@
 import Firebase from "models/Firebase.js"
-import Players from "models/Players.js"
+import IO from "models/IO.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 const Data = {
@@ -27,36 +27,36 @@ streamIds.forEach((streamId) => {
                 if(stream.run.youtubeId != prevstream?.run?.youtubeId
                 || stream.run.runId != prevstream?.run?.runId
                 || stream.run.queueId != prevstream?.run?.queueId) {
-                    await Players[streamId].load({
+                    await IO[streamId].load({
                         "youtubeId": stream.run.youtubeId,
                         "currentTime": computeCurrentTime(stream.run),
                     })
                     if(stream.run.state == "paused") {
-                        Players[streamId].pause()
+                        IO[streamId].pause()
                     } else if(stream.run.state != "paused") {
-                        Players[streamId].play()
+                        IO[streamId].play()
                     }
                 }
             }
 
             if(stream.run.startTime != prevstream?.run?.startTime) {
-                Players[streamId].seek({
+                IO[streamId].seek({
                     "currentTime": computeCurrentTime(stream.run)
                 })
             }
 
             if(stream.run.state != prevstream?.run?.state) {
                 if(stream.run.state == "paused") {
-                    Players[streamId].pause(streamId)
+                    IO[streamId].pause(streamId)
                 } else if(stream.run.state != "paused") {
-                    Players[streamId].play(streamId)
+                    IO[streamId].play(streamId)
                 }
             }
         }
 
-        if(Players[streamId] != undefined
+        if(IO[streamId] != undefined
         && stream.volume != undefined) {
-            Players[streamId].setVolume(stream.volume)
+            IO[streamId].setVolume(stream.volume)
         }
     })
 })

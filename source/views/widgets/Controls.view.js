@@ -13,12 +13,12 @@ import computeCurrentTime from "views/functions/computeCurrentTime.js"
 import "views/widgets/Controls.view.less"
 
 import YoutubePlayer from "models/YoutubePlayer.js"
-import Players from "models/Players.js"
+import IO from "models/IO.js"
 
 export default class Controls {
     render() {
         this.props.streamId = this.props.streamId || "a"
-        if(Players[this.props.streamId] == undefined) return
+        if(IO[this.props.streamId] == undefined) return
         return (
             <div class="Controls">
                 <Timeline streamId={this.props.streamId}/>
@@ -33,8 +33,8 @@ export default class Controls {
                     <div class="VolumeBar" id={"volume-" + this.props.streamId} onMouseMove={this.onClickVolumeBar}>
                         <div class="Bar"/>
                         <div class="Dot" style={{
-                            "left": this.getVolumeRelativePosition() * 100 + "%",
-                            "opacity": this.getVolumeRelativePosition() == undefined ? 0 : 1,
+                            "left": Data.campaign.streams[this.props.streamId]?.volume?.level * 100 + "%",
+                            "opacity": Data.campaign.streams[this.props.streamId]?.volume?.level == undefined ? 0 : 1,
                         }}/>
                     </div>
                     <div class="Time">{this.getCurrentTimeText()} / {this.getTotalTimeText()}</div>
@@ -51,10 +51,10 @@ export default class Controls {
             const dom = document.getElementById("volume-" + this.props.streamId)
             if(dom == undefined) return
             const bounds = dom.getBoundingClientRect()
-            let volumeLevel = ((Poin.position.x - bounds.x) / bounds.width) * 100
-            if(volumeLevel < 1) volumeLevel = 0
-            if(volumeLevel > 99) volumeLevel = 100
-            // Players[this.props.streamId].setVolume(volume) // TODO: do this, debounce the other
+            let volumeLevel = ((Poin.position.x - bounds.x) / bounds.width)
+            if(volumeLevel < 0.01) volumeLevel = 0
+            if(volumeLevel > 0.99) volumeLevel = 1
+            // IO[this.props.streamId].setVolume(volume) // TODO: do this, debounce the other
             Something.updateVolume(this.props.streamId, {
                 "level": volumeLevel
             })
@@ -74,9 +74,6 @@ export default class Controls {
             }
         }
     }
-    getVolumeRelativePosition() {
-        return Data.campaign.streams[this.props.streamId]?.volume?.level / 100
-    }
     getVolumeIcon() {
         if(Data.campaign.streams[this.props.streamId]?.volume?.isMuted) return "volume_off"
         if(Data.campaign.streams[this.props.streamId]?.volume?.level <= 0) return "volume_off"
@@ -90,12 +87,12 @@ export default class Controls {
     }
     getCurrentTimeText() {
         let time = this.getCurrentTime()
-        time = Math.min(time, Players[this.props.streamId].duration)
+        time = Math.min(time, IO[this.props.streamId].duration)
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
     getTotalTimeText() {
-        let time = Players[this.props.streamId].duration
+        let time = IO[this.props.streamId].duration
         if(isNaN(time)) time = 0
         return FormatDuration(time)
     }
@@ -140,7 +137,7 @@ class Timeline {
     }
     getCurrentTimeStyle() {
         return {
-            "width": (this.getCurrentTime() / Players[this.props.streamId].duration) * 100 + "%"
+            "width": (this.getCurrentTime() / IO[this.props.streamId].duration) * 100 + "%"
         }
     }
     getHoveredTimeStyle() {
@@ -150,7 +147,7 @@ class Timeline {
     }
     getCurrentTime() {
         let time = computeCurrentTime(Data.campaign.streams[this.props.streamId]?.run)
-        time = Math.min(time, Players[this.props.streamId].duration)
+        time = Math.min(time, IO[this.props.streamId].duration)
         if(isNaN(time)) time = 0
         return time
     }
@@ -161,6 +158,6 @@ class Timeline {
         return (Poin.position.x - bounds.x) / bounds.width
     }
     getHoveredTime() {
-        return this.getHoveredRelativePosition() * Players[this.props.streamId].duration
+        return this.getHoveredRelativePosition() * IO[this.props.streamId].duration
     }
 }
