@@ -97,7 +97,6 @@ export default class YoutubePlayer {
     // returns in milliseconds
     get duration() {
         if(this.player == undefined) return
-        if(this.player.isMuted instanceof Function == false) return
         return this.player.getDuration() * 1000
     }
     // volume is 0 to 100

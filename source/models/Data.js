@@ -19,23 +19,21 @@ streamIds.forEach((streamId) => {
 
         Data.campaign.streams[streamId].queue = Data.campaign.streams[streamId].queue || []
 
-
         if(Data.campaign.streams[streamId].run != undefined) {
-            if(stream.run.youtubeId != undefined
-            && stream.run.runId != undefined
-            && stream.run.queueId != undefined) {
-                if(stream.run.youtubeId != prevstream?.run?.youtubeId
-                || stream.run.runId != prevstream?.run?.runId
-                || stream.run.queueId != prevstream?.run?.queueId) {
-                    await IO.streams[streamId].load({
-                        "youtubeId": stream.run.youtubeId,
-                        "currentTime": computeCurrentTime(stream.run),
-                    })
-                    if(stream.run.state == "paused") {
-                        IO.streams[streamId].pause()
-                    } else if(stream.run.state != "paused") {
-                        IO.streams[streamId].play()
-                    }
+            if((stream.run.youtubeId != prevstream?.run?.youtubeId && stream.run.youtubeId != undefined)
+            || (stream.run.runId != prevstream?.run?.runId && stream.run.runId != undefined)
+            || (stream.run.queueId != prevstream?.run?.queueId && stream.run.queueId != undefined)
+            || (stream.run.url != prevstream?.run?.url && stream.run.url != undefined)) {
+                console.log(stream)
+                await IO.streams[streamId].load({
+                    ...stream.run,
+                    // "youtubeId": stream.run.youtubeId,
+                    "currentTime": computeCurrentTime(stream.run),
+                })
+                if(stream.run.state == "paused") {
+                    IO.streams[streamId].pause()
+                } else if(stream.run.state != "paused") {
+                    IO.streams[streamId].play()
                 }
             }
 

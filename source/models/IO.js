@@ -1,5 +1,6 @@
-import YoutubePlayer from "models/YoutubePlayer.js"
 import Data from "models/Data.js"
+import AudioPlayer from "models/AudioPlayer.js"
+import YoutubePlayer from "models/YoutubePlayer.js"
 
 const DEFAULT_VOLUME_LEVEL = 0.5
 
@@ -8,7 +9,7 @@ export default new class IO {
         this.streams = {
             "a": new YoutubePlayer("a"),
             "b": new YoutubePlayer("b"),
-            "c": new YoutubePlayer("c"),
+            "c": new AudioPlayer("c"),
         }
 
         this.volume = {
