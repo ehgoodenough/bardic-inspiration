@@ -1,10 +1,12 @@
 import Firebase from "models/Firebase.js"
 import Shortid from "shortid"
 
-export default function uploadArt(file) {
+// type = "image" or "audio"
+// file is, y'know, a file
+export default function upload(type, file) {
     return new Promise(function(resolve, reject) {
         const id = Shortid.generate()
-        const fileref = "art/" + id + file.name.match(/\.[0-9a-z]+$/i)
+        const fileref = type + "/" + id + file.name.match(/\.[0-9a-z]+$/i)
         const uploading = Firebase.files.ref(fileref).put(file)
         uploading.on("state_changed", (snapshot) => {
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
@@ -13,15 +15,16 @@ export default function uploadArt(file) {
             reject(error)
         }, (done) => {
             Firebase.files.ref(fileref).getDownloadURL().then((url) => {
-                const art = {
+                const doc = {
                     "url": url,
                     "docid": id,
                     "fileref": fileref,
                     "timestamp": Date.now(),
                     "oldfilename": file.name,
+                    "type": type,
                 }
-                Firebase.data.collection("art").doc(id).set(art)
-                resolve(art)
+                Firebase.data.collection("files").doc(id).set(doc)
+                resolve(doc)
             })
         })
     })

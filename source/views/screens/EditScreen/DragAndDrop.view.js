@@ -1,7 +1,9 @@
 import * as Preact from "preact"
 import Data from "models/Data.js"
 import Firebase from "models/Firebase.js"
-import uploadArt from "views/functions/uploadArt.js"
+import upload from "views/functions/upload.js"
+
+import "views/screens/EditScreen/DragAndDrop.view.less"
 
 export default class DragAndDrop {
     render() {
@@ -38,10 +40,14 @@ export default class DragAndDrop {
 
         files.forEach((file, index) => {
             if(file == undefined) return
-            uploadArt(file).then((art) => {
-                if(index != 0) return
-                Firebase.data.collection("campaigns").doc("theros").update({"art": art})
+            upload("audio", file).then((image) => {
+                console.log("done", image)
             })
         })
     }
 }
+
+// upload("image", file).then((image) => {
+//     if(index != 0) return
+//     Firebase.data.collection("campaigns").doc("theros").update({"art": image})
+// })

@@ -1,0 +1,44 @@
+@import "../../Styles.view.less";
+
+.EditScreen {
+    .Queue {
+        flex: 1;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+
+        .QueuedItems {
+            flex: 1;
+            .QueuedItem {
+                display: flex;
+                align-items: center;
+
+                &[isOnDeck] {
+                    background-color: #777;
+                }
+                &:hover {
+                    background-color: #888;
+                }
+
+                .YoutubeScreenshot {
+                    width: 48px;
+                    height: 32px;
+
+                    margin-right: 8px;
+                }
+
+                .Text {
+                    flex: 1;
+                    font-size: 0.7em;
+                    text-overflow: ellipsis;
+                }
+
+                .DeleteButton {
+                    margin-top: 4px;
+                    * {cursor: pointer;}
+                    &:hover {color: @red;}
+                }
+            }
+        }
+    }
+}
