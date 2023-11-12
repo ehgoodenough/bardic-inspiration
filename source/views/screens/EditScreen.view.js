@@ -21,7 +21,7 @@ import "views/screens/EditScreen.view.less"
 
 export default class EditScreen {
     render() {
-        if(Data.campaign == undefined) return
+        if(Data.campaign.streams["a"] == undefined) return
         Youtube.onLoad()
         return (
             <DragAndDrop>
@@ -36,11 +36,12 @@ export default class EditScreen {
 
 class AudioStreamSection {
     render() {
+        if(Data.campaign.streams["a"] == undefined) return
         return (
             <section class="AudioStreamSection">
                 <div class="PlayBox">
                     <div class="YoutubeScreenshot" onClick={() => Youtube.pauseplay()} style={{
-                        "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.music.youtubeId + "/default.jpg)",
+                        "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.streams["a"]?.run?.youtubeId + "/default.jpg)",
                     }}/>
                     <Controls/>
                 </div>
@@ -77,8 +78,8 @@ class SubmissionForm {
                 videos.forEach((video) => video.queueId = ShortId.generate())
                 videos = videos.filter((video) => video.thumbnailUrl != undefined)
 
-                Data.campaign.musics = Data.campaign.musics || []
-                Something.updateQueue("a", Data.campaign.musics.concat(videos))
+                Data.campaign.streams["a"].queue = Data.campaign.streams["a"].queue || []
+                Something.updateQueue("a", Data.campaign.streams["a"].queue.concat(videos))
             })
             return
         }
@@ -91,8 +92,8 @@ class SubmissionForm {
                 if(video == undefined) return
                 video.queueId = ShortId.generate()
 
-                Data.campaign.musics = Data.campaign.musics || []
-                Something.updateQueue("a", Data.campaign.musics.concat(video))
+                Data.campaign.streams["a"].queue = Data.campaign.streams["a"].queue || []
+                Something.updateQueue("a", Data.campaign.streams["a"].queue.concat(video))
             })
         }
     }
@@ -101,10 +102,10 @@ class SubmissionForm {
 class Queue {
     render() {
         if(Data.campaign == undefined) return
-        if(Data.campaign.musics == undefined) return
+        if(Data.campaign.streams["a"].queue == undefined) return
         return (
             <div class="Queue">
-                {Data.campaign.musics.map((music) => {
+                {Data.campaign.streams["a"].queue.map((music) => {
                     return (
                         <QueuedItem music={music}/>
                     )
@@ -129,7 +130,7 @@ class QueuedItem {
         )
     }
     get isOnDeck() {
-        return Data.campaign.music.queueId == this.props.music.queueId
+        return Data.campaign.streams["a"]?.run?.queueId == this.props.music.queueId
     }
     get onClickContent() {
         return (event) => {
@@ -144,7 +145,7 @@ class QueuedItem {
     get onClickDeleteButton() {
         return (event) => {
             event.stopPropagation()
-            Something.updateQueue("a", removeElement(Data.campaign.musics, this.props.music))
+            Something.updateQueue("a", removeElement(Data.campaign.streams["a"].queue, this.props.music))
             if(this.isOnDeck) {
                 Youtube.stop()
             }
@@ -167,7 +168,7 @@ function LibrarySection() {
                                 {playlist.musics.map((music) => {
                                     return (
                                         <div class="a" onClick={() => {
-                                            Something.updateQueue("a", Data.campaign.musics.concat({
+                                            Something.updateQueue("a", Data.campaign.streams["a"].queue.concat({
                                                 "queueId": ShortId.generate(),
                                                 "youtubeId": music.youtubeId,
                                                 "title": music.title,

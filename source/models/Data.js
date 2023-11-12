@@ -13,40 +13,45 @@ Firebase.data.collection("art").orderBy("timestamp", "desc").limit(25).onSnapsho
     })
 })
 
-Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
+const Data = {
+    "campaign": {
+        "streams": {}
+    }
+}
+
+const streamId = "a"
+Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapshot((document) => {
     if(document.exists == false) return
-    Data.prevcampaign = Data.campaign
-    Data.campaign = document.data()
+    const prevstream = Data.campaign.streams[streamId]
+    const stream = document.data()
+    Data.campaign.streams[streamId] = stream
+    console.log("theros/streams/" + streamId, stream)
 
-    Data.campaign.musics = Data.campaign.musics || []
+    Data.campaign.streams[streamId].queue = Data.campaign.streams[streamId].queue || []
 
-    if(Data.campaign.music != undefined) {
+    if(Data.campaign.streams[streamId].run != undefined) {
         if(window.youtubePlayer != undefined) {
-            const campaign = Data.campaign
-            const prevcampaign = Data.prevcampaign
-            console.log(campaign.music)
-
-            if(campaign.music.youtubeId != undefined
-            && campaign.music.runId != undefined
-            && campaign.music.queueId != undefined) {
-                if(campaign.music.youtubeId != prevcampaign.music.youtubeId
-                || campaign.music.runId != prevcampaign.music.runId
-                || campaign.music.queueId != prevcampaign.music.queueId) {
+            if(stream.run.youtubeId != undefined
+            && stream.run.runId != undefined
+            && stream.run.queueId != undefined) {
+                if(stream.run.youtubeId != prevstream?.run?.youtubeId
+                || stream.run.runId != prevstream?.run?.runId
+                || stream.run.queueId != prevstream?.run?.queueId) {
                     return window.youtubePlayer.loadVideoById({
-                        "videoId": campaign.music.youtubeId,
-                        "startSeconds": Math.floor(computeCurrentTime(campaign.music) / 1000) || 1,
+                        "videoId": stream?.run?.youtubeId,
+                        "startSeconds": Math.floor(computeCurrentTime(stream.run) / 1000) || 1,
                     })
                 }
             }
 
-            if(campaign.music.startTime != prevcampaign.music.startTime) {
-                window.youtubePlayer.seekTo(Math.floor(computeCurrentTime(campaign.music) / 1000) || 1)
+            if(stream?.run?.startTime != prevstream?.run?.startTime) {
+                window.youtubePlayer.seekTo(Math.floor(computeCurrentTime(stream.run) / 1000) || 1)
             }
 
-            if(campaign.music.state != prevcampaign.music.state) {
-                if(Data.campaign.music.state == "paused") {
+            if(stream?.run?.state != prevstream?.run?.state) {
+                if(stream?.run?.state == "paused") {
                     window.youtubePlayer.pauseVideo()
-                } else if(Data.campaign.music.state != "paused") {
+                } else if(stream?.run?.state != "paused") {
                     window.youtubePlayer.playVideo()
                 }
             }
@@ -54,8 +59,12 @@ Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
     }
 })
 
-const Data = {}
-export default Data
+Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
+    if(document.exists == false) return
+    Data.campaign.art = document.data().art
+})
 
 window.truesight = window.truesight || {}
 window.truesight.data = Data
+
+export default Data

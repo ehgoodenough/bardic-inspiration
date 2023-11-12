@@ -21,7 +21,7 @@ export default class Controls {
                 <div class="Gradient"/>
                 <div class="Panel">
                     <div class="PlayButton" onClick={this.onClickPlayButton}>
-                        <span class="material-icons">{Data.campaign.music.state == "paused" ? "play_arrow" : "pause"}</span>
+                        <span class="material-icons">{Data.campaign.streams["a"]?.run?.state == "paused" ? "play_arrow" : "pause"}</span>
                     </div>
                     <div class="VolumeButton" onClick={this.onClickVolumeButton}>
                         <span class="material-icons">{this.getVolumeIcon()}</span>
@@ -91,8 +91,8 @@ export default class Controls {
         return FormatDuration(time)
     }
     getCurrentTime() {
-        if(Data?.campaign?.music == undefined) return 0
-        return computeCurrentTime(Data.campaign.music)
+        if(Data.campaign.streams["a"].run == undefined) return 0
+        return computeCurrentTime(Data.campaign.streams["a"].run)
     }
     getTotalTime() {
         if(window.youtubePlayer?.getDuration == undefined) return 0
@@ -120,9 +120,9 @@ class Timeline {
         return (event) => {
             let time = this.getHoveredTime()
             Something.updateCurrentRun("a", {
-                "runId": Data.campaign.music.runId,
-                "queueId": Data.campaign.music.queueId,
-                "youtubeId": Data.campaign.music.youtubeId,
+                "runId": Data.campaign.streams["a"].run.runId,
+                "queueId": Data.campaign.streams["a"].run.queueId,
+                "youtubeId": Data.campaign.streams["a"].run.youtubeId,
                 "startTime": Date.now() - time,
                 "state": "playing",
             })
@@ -144,7 +144,7 @@ class Timeline {
         }
     }
     getCurrentTime() {
-        let time = computeCurrentTime(Data.campaign.music)
+        let time = computeCurrentTime(Data.campaign.streams["a"].run)
         time = Math.min(time, this.getTotalTime())
         if(isNaN(time)) time = 0
         return time

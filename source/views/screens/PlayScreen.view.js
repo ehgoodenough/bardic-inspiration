@@ -7,7 +7,7 @@ import "views/screens/PlayScreen.view.less"
 
 export default class PlayScreen {
     render() {
-        if(Data.campaign == undefined) return
+        if(Data.campaign.streams["a"] == undefined) return
         Youtube.onLoad()
         return (
             <div class="PlayScreen">
@@ -20,7 +20,7 @@ export default class PlayScreen {
 
 class Screenshot {
     render() {
-        if(Data.campaign == undefined) return
+        if(Data.campaign.art == undefined) return
         return (
             <div class="Screenshot" style={{
                 "background-image": "url(" + Data.campaign.art.url + ")",

@@ -17,27 +17,29 @@ const DEFAULT_VOLUME = 50
 
 export default new class {
     onLoad() {
-        if(window.youtubePlayer == undefined) {
+        if(window.youtubePlayer == undefined
+        && window.YT != undefined
+        && window.YT.Player) {
             window.youtubePlayer = new YT.Player("youtuber", {
                 "width": "300",
                 "height": "200",
-                "videoId": Data.campaign.music.youtubeId || SILENCE_VIDEO_ID,
+                "videoId": Data.campaign.streams["a"]?.run?.youtubeId || SILENCE_VIDEO_ID,
                 "playerVars": {
                     "fs": 0,
                     "rel": 0,
                     "controls": 1,
                     "disablekb": 1,
                     "modestbranding": 1,
-                    "start": (computeCurrentTime(Data.campaign.music) / 1000) || 1,
+                    "start": (computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1,
                     "autoplay": true,
                 },
                 "events": {
                     "onReady": (event) => {
-                        window.youtubePlayer.seekTo((computeCurrentTime(Data.campaign.music) / 1000) || 1)
-                        if(Data.campaign.music.youtubeId != undefined) {
-                            if(Data.campaign.music.state == "paused") {
+                        window.youtubePlayer.seekTo((computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1)
+                        if(Data.campaign.streams["a"].run.youtubeId != undefined) {
+                            if(Data.campaign.streams["a"]?.run?.state == "paused") {
                                 window.youtubePlayer.pauseVideo()
-                            } else if(Data.campaign.music.state != "paused") {
+                            } else if(Data.campaign.streams["a"]?.run?.state != "paused") {
                                 window.youtubePlayer.playVideo()
                             }
                         }
@@ -47,27 +49,27 @@ export default new class {
                     },
                     "onStateChange": function(event) {
                         if(event.data == YT.PlayerState.PAUSED
-                        && Data.campaign.music.state != "paused") {
-                            window.youtubePlayer.seekTo((computeCurrentTime(Data.campaign.music) / 1000) || 1)
+                        && Data.campaign.streams["a"]?.run?.state != "paused") {
+                            window.youtubePlayer.seekTo((computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1)
                             event.target.playVideo()
                             return
                         }
                         if(event.data == YT.PlayerState.PLAYING
-                        && Data.campaign.music.state != "playing") {
-                            window.youtubePlayer.seekTo((computeCurrentTime(Data.campaign.music) / 1000) || 1)
+                        && Data.campaign.streams["a"]?.run?.state != "playing") {
+                            window.youtubePlayer.seekTo((computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1)
                             event.target.pauseVideo()
                             return
                         }
 
                         if(event.data == YT.PlayerState.ENDED) {
-                            if(Data.campaign.musics == undefined) return
-                            if(Data.campaign.musics.length == 0) return
-                            const currentMusic = Data.campaign.musics.find((music) => {
-                                return Data.campaign.music.queueId == music.queueId
+                            if(Data.campaign.streams["a"].queue == undefined) return
+                            if(Data.campaign.streams["a"].queue.length == 0) return
+                            const currentMusic = Data.campaign.streams["a"].queue.find((music) => {
+                                return Data.campaign.streams["a"].run.queueId == music.queueId
                             })
-                            const currentIndex = Data.campaign.musics.indexOf(currentMusic)
+                            const currentIndex = Data.campaign.streams["a"].queue.indexOf(currentMusic)
                             const nextIndex = currentIndex + 1
-                            const nextMusic = Data.campaign.musics[nextIndex]
+                            const nextMusic = Data.campaign.streams["a"].queue[nextIndex]
                             if(nextMusic == undefined) return
                             const TIME_BETWEEN_SONGS = 500
                             Something.updateCurrentRun("a", {
@@ -91,23 +93,23 @@ export default new class {
         })
     }
     pauseplay() {
-        if(Data.campaign.music.youtubeId == undefined) {
+        if(Data.campaign.streams["a"].run.youtubeId == undefined) {
             return
         }
-        if(Data.campaign.music.state != "paused") {
+        if(Data.campaign.streams["a"]?.run?.state != "paused") {
             Something.updateCurrentRun("a", {
-                "runId": Data.campaign.music.runId,
-                "queueId": Data.campaign.music.queueId,
-                "youtubeId": Data.campaign.music.youtubeId,
-                "currentTime": Date.now() - Data.campaign.music.startTime,
+                "runId": Data.campaign.streams["a"].run.runId,
+                "queueId": Data.campaign.streams["a"].run.queueId,
+                "youtubeId": Data.campaign.streams["a"].run.youtubeId,
+                "currentTime": Date.now() - Data.campaign.streams["a"].run.startTime,
                 "state": "paused"
             })
-        } else if(Data.campaign.music.state == "paused") {
+        } else if(Data.campaign.streams["a"]?.run?.state == "paused") {
             Something.updateCurrentRun("a", {
-                "runId": Data.campaign.music.runId,
-                "queueId": Data.campaign.music.queueId,
-                "youtubeId": Data.campaign.music.youtubeId,
-                "startTime": Date.now() - Data.campaign.music.currentTime,
+                "runId": Data.campaign.streams["a"].run.runId,
+                "queueId": Data.campaign.streams["a"].run.queueId,
+                "youtubeId": Data.campaign.streams["a"].run.youtubeId,
+                "startTime": Date.now() - Data.campaign.streams["a"].run.currentTime,
                 "state": "playing"
             })
         }
