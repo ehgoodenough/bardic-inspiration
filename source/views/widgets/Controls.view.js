@@ -6,12 +6,14 @@ import Poin from "poin"
 import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
 import Something from "models/Something.js"
-import Youtube from "models/Youtube.js"
 import Firebase from "models/Firebase.js"
 import {parseYoutubeId, parseEmbeddedStartTime} from "../functions/parseYoutubeId.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 import "views/widgets/Controls.view.less"
+
+import YoutubePlayer from "models/YoutubePlayer.js"
+import Players from "models/Players.js"
 
 export default class Controls {
     render() {
@@ -45,40 +47,40 @@ export default class Controls {
         let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
         if(volume < 1) volume = 0
         if(volume > 99) volume = 100
-        window.youtubePlayer.setVolume(volume)
+        Players["a"].player.setVolume(volume)
         window.localStorage.setItem("audio-volume", volume)
     }
     onClickVolumeButton() {
-        if(window.youtubePlayer == undefined) return
-        if(window.youtubePlayer.isMuted instanceof Function == false) return
-        if(window.youtubePlayer.unMute instanceof Function == false) return
-        if(window.youtubePlayer.mute instanceof Function == false) return
-        if(window.youtubePlayer.isMuted()) {
-            window.youtubePlayer.unMute()
+        if(Players["a"].player == undefined) return
+        if(Players["a"].player.isMuted instanceof Function == false) return
+        if(Players["a"].player.unMute instanceof Function == false) return
+        if(Players["a"].player.mute instanceof Function == false) return
+        if(Players["a"].player.isMuted()) {
+            Players["a"].player.unMute()
         } else {
-            window.youtubePlayer.mute()
+            Players["a"].player.mute()
         }
     }
     getVolumeRelativePosition() {
-        if(window.youtubePlayer == undefined) return
-        if(window.youtubePlayer.getVolume == undefined) return
-        return window.youtubePlayer.getVolume() / 100
+        if(Players["a"].player == undefined) return
+        if(Players["a"].player.getVolume == undefined) return
+        return Players["a"].player.getVolume() / 100
     }
     getVolumeIcon() {
-        if(window.youtubePlayer == undefined) return "volume_up"
-        if(window.youtubePlayer.isMuted instanceof Function == false) return "volume_up"
-        if(window.youtubePlayer.getVolume instanceof Function == false) return "volume_up"
-        if(window.youtubePlayer.isMuted()) {
+        if(Players["a"].player == undefined) return "volume_up"
+        if(Players["a"].player.isMuted instanceof Function == false) return "volume_up"
+        if(Players["a"].player.getVolume instanceof Function == false) return "volume_up"
+        if(Players["a"].player.isMuted()) {
             return "volume_off"
         }
 
-        const volume = window.youtubePlayer.getVolume()
+        const volume = Players["a"].player.getVolume()
         if(volume <= 0) return "volume_off"
         if(volume >= 50) return "volume_up"
         return "volume_down"
     }
     onClickPlayButton() {
-        Youtube.pauseplay()
+        Something.pauseplay()
     }
     getCurrentTimeText() {
         let time = this.getCurrentTime()
@@ -96,8 +98,8 @@ export default class Controls {
         return computeCurrentTime(Data.campaign.streams["a"].run)
     }
     getTotalTime() {
-        if(window.youtubePlayer?.getDuration == undefined) return 0
-        return window.youtubePlayer.getDuration() * 1000
+        if(Players["a"].player?.getDuration == undefined) return 0
+        return Players["a"].player.getDuration() * 1000
     }
 }
 
@@ -151,8 +153,8 @@ class Timeline {
         return time
     }
     getTotalTime() {
-        if(window.youtubePlayer?.getDuration == undefined) return 0
-        return window.youtubePlayer.getDuration() * 1000
+        if(Players["a"].player?.getDuration == undefined) return 0
+        return Players["a"].player.getDuration() * 1000
     }
     getHoveredRelativePosition() {
         if(document.getElementById("timeline") == undefined) return 0

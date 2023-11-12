@@ -6,7 +6,7 @@ import Poin from "poin"
 import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
 import Something from "models/Something.js"
-import Youtube from "models/Youtube.js"
+import YoutubeData from "models/YoutubeData.js"
 import Firebase from "models/Firebase.js"
 import parseYoutubeId from "../functions/parseYoutubeId.js"
 import parseYoutubePlaylistId from "../functions/parseYoutubePlaylistId.js"
@@ -21,8 +21,6 @@ import "views/screens/EditScreen.view.less"
 
 export default class EditScreen {
     render() {
-        if(Data.campaign.streams["a"] == undefined) return
-        Youtube.onLoad()
         return (
             <DragAndDrop>
                 <div class="EditScreen">
@@ -40,7 +38,7 @@ class AudioStreamSection {
         return (
             <section class="AudioStreamSection">
                 <div class="PlayBox">
-                    <div class="YoutubeScreenshot" onClick={() => Youtube.pauseplay()} style={{
+                    <div class="YoutubeScreenshot" onClick={() => Something.pauseplay()} style={{
                         "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.streams["a"]?.run?.youtubeId + "/default.jpg)",
                     }}/>
                     <Controls/>
@@ -74,7 +72,7 @@ class SubmissionForm {
         const playlistId = parseYoutubePlaylistId(submittedValue)
         if(playlistId != undefined) {
             // Navigation.go("/playlists/" + playlistId)
-            Youtube.retrievePlaylistVideos(playlistId).then((videos) => {
+            YoutubeData.retrievePlaylistVideos(playlistId).then((videos) => {
                 videos.forEach((video) => video.queueId = ShortId.generate())
                 videos = videos.filter((video) => video.thumbnailUrl != undefined)
 
@@ -87,7 +85,7 @@ class SubmissionForm {
         const videoId = parseYoutubeId(submittedValue)
         if(videoId != undefined) {
             // Navigation.go("/video/" + videoId)
-            Youtube.retrieveVideos(videoId).then((videos) => {
+            YoutubeData.retrieveVideos(videoId).then((videos) => {
                 const video = videos[0]
                 if(video == undefined) return
                 video.queueId = ShortId.generate()
@@ -146,8 +144,8 @@ class QueuedItem {
         return (event) => {
             event.stopPropagation()
             Something.updateQueue("a", removeElement(Data.campaign.streams["a"].queue, this.props.music))
-            if(this.isOnDeck) {
-                Youtube.stop()
+            if(this.isOnDeck == true) {
+                Something.stop()
             }
         }
     }
