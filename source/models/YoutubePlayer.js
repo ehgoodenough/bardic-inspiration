@@ -103,6 +103,7 @@ export default class YoutubePlayer {
     // volume is 0 to 100
     setVolume(volume) {
         if(this.player == undefined) return
+        volume = volume || {"level": 0}
         let volumeLevel = volume.level * IO.volume.level
         if(volumeLevel < 0.01) volumeLevel = 0
         if(volumeLevel > 0.99) volumeLevel = 1

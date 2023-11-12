@@ -20,7 +20,7 @@ export default function upload(type, file) {
                     "docid": id,
                     "fileref": fileref,
                     "timestamp": Date.now(),
-                    "oldfilename": file.name,
+                    "filename": file.name,
                     "type": type,
                 }
                 Firebase.data.collection("files").doc(id).set(doc)

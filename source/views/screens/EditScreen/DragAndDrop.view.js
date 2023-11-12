@@ -1,5 +1,7 @@
 import * as Preact from "preact"
+import ShortId from "shortid"
 import Data from "models/Data.js"
+import Something from "models/Something.js"
 import Firebase from "models/Firebase.js"
 import upload from "views/functions/upload.js"
 
@@ -7,6 +9,7 @@ import "views/screens/EditScreen/DragAndDrop.view.less"
 
 export default class DragAndDrop {
     render() {
+        if(this.props.streamId != "c") return
         return (
             <div className="DragAndDrop" onDrop={this.onDrop} onDragOver={this.onDragOver}
                 onDragEnter={this.onDragEnter} onDragLeave={this.onDragLeave}>
@@ -26,24 +29,33 @@ export default class DragAndDrop {
     onDragOver(event) {
         event.preventDefault()
     }
-    onDrop(event) {
-        event.preventDefault()
-        window.isDragAndDropping = false
+    get onDrop() {
+        return async (event) => {
+            event.preventDefault()
+            window.isDragAndDropping = false
 
-        let files = [...event.dataTransfer.files]
-        if(event.dataTransfer.items) {
-            files = [...event.dataTransfer.items].map((item) => {
-                if(item.kind != "file") return
-                return item.getAsFile()
+            let files = [...event.dataTransfer.files]
+            if(event.dataTransfer.items != undefined) {
+                files = [...event.dataTransfer.items].map((item) => {
+                    if(item.kind != "file") return
+                    return item.getAsFile()
+                })
+            }
+
+            files = files.filter((file) => !!file)
+            files = await Promise.all(files.map((file, index) => upload("audio", file)))
+            files = files.map((file) => {
+                return {
+                    "title": file.filename,
+                    "queueId": ShortId.generate(),
+                    "url": file.url,
+                    // "fileref": file.fileref,
+                    // "thumbnailUrl": "???"
+                }
             })
+            console.log(files)
+            Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(files))
         }
-
-        files.forEach((file, index) => {
-            if(file == undefined) return
-            upload("audio", file).then((image) => {
-                console.log("done", image)
-            })
-        })
     }
 }
 
