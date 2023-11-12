@@ -49,12 +49,17 @@ export default class DragAndDrop {
                     "title": file.filename,
                     "queueId": ShortId.generate(),
                     "url": file.url,
+                    "sourceValue": file.url,
+                    "sourceType": "url",
                     // "fileref": file.fileref,
                     // "thumbnailUrl": "???"
                 }
             })
-            console.log(files)
-            Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(files))
+            Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
+            Something.updateQueue(this.props.streamId, [
+                ...Data.campaign.streams[this.props.streamId].queue,
+                ...files
+            ])
         }
     }
 }

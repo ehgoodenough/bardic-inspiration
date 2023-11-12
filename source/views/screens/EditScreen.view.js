@@ -52,8 +52,8 @@ class AudioStreamSection {
 class ClearButton {
     render() {
         if(Data.campaign.streams[this.props.streamId] == undefined) return
-        if(Data.campaign.streams[this.props.streamId].run == undefined) return
-        if(Data.campaign.streams[this.props.streamId].run.youtubeId == undefined) return
+        if(Data.campaign.streams[this.props.streamId].queue == undefined) return
+        if(Data.campaign.streams[this.props.streamId].queue.length == 0) return
         return (
             <div class="ClearButton" onClick={this.onClick}>
                 Clear All?
@@ -101,11 +101,18 @@ class SubmissionForm {
             if(playlistId != undefined) {
                 // Navigation.go("/playlists/" + playlistId)
                 YoutubeData.retrievePlaylistVideos(playlistId).then((videos) => {
-                    videos.forEach((video) => video.queueId = ShortId.generate())
                     videos = videos.filter((video) => video.thumbnailUrl != undefined)
+                    videos.forEach((video) => {
+                        video.sourceType = "youtube"
+                        video.sourceValue = video.youtubeId
+                        video.queueId = ShortId.generate()
+                    })
 
                     Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
-                    Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(videos))
+                    Something.updateQueue(this.props.streamId, [
+                        ...Data.campaign.streams[this.props.streamId].queue,
+                        ...videos
+                    ])
                 })
                 return
             }
@@ -117,17 +124,14 @@ class SubmissionForm {
                     const video = videos[0]
                     if(video == undefined) return
                     video.queueId = ShortId.generate()
+                    video.sourceType = "youtube"
+                    video.sourceValue = video.youtubeId
 
                     Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
-                    Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(video))
-
-                    // Something.updateQueue("b", [video])
-                    // Something.updateCurrentRun("b", {
-                    //     "queueId": video.queueId,
-                    //     "youtubeId": video.youtubeId,
-                    //     "startTime": Date.now(),
-                    //     "state": "playing",
-                    // })
+                    Something.updateQueue(this.props.streamId, [
+                        ...Data.campaign.streams[this.props.streamId].queue,
+                        ...videos
+                    ])
                 })
             }
         }

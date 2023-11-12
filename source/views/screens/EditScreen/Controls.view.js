@@ -95,9 +95,10 @@ class Timeline {
         return (event) => {
             let time = this.getHoveredTime()
             Something.updateCurrentRun(this.props.streamId, {
-                "runId": Data.campaign.streams[this.props.streamId].run.runId,
-                "queueId": Data.campaign.streams[this.props.streamId].run.queueId,
-                "youtubeId": Data.campaign.streams[this.props.streamId].run.youtubeId,
+                ...Data.campaign.streams[this.props.streamId].run,
+                // "runId": Data.campaign.streams[this.props.streamId].run.runId,
+                // "queueId": Data.campaign.streams[this.props.streamId].run.queueId,
+                // "youtubeId": Data.campaign.streams[this.props.streamId].run.youtubeId,
                 "startTime": Date.now() - time,
                 "state": "playing",
             })
