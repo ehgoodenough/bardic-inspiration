@@ -39,11 +39,10 @@ class AudioStreamSection {
             <section class="AudioStreamSection">
                 <PlayBox streamId={this.props.streamId}/>
                 <SubmissionForm streamId={this.props.streamId}/>
-                <div class="Queue">
-                    <DragAndDrop streamId={this.props.streamId}/>
+                <DragAndDrop streamId={this.props.streamId}>
                     <QueuedItems streamId={this.props.streamId}/>
                     <ClearButton streamId={this.props.streamId}/>
-                </div>
+                </DragAndDrop>
             </section>
         )
     }

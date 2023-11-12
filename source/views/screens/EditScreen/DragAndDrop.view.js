@@ -9,22 +9,27 @@ import "views/screens/EditScreen/DragAndDrop.view.less"
 
 export default class DragAndDrop {
     render() {
-        if(this.props.streamId != "c") return
         return (
-            <div className="DragAndDrop" onDrop={this.onDrop} onDragOver={this.onDragOver}
+            <div className="Queue DragAndDrop" onDrop={this.onDrop} onDragOver={this.onDragOver}
                 onDragEnter={this.onDragEnter} onDragLeave={this.onDragLeave}>
-                <div class="UploadZone" isDragAndDropping={window.isDragAndDropping > 0}/>
+                <div class="UploadZone" isDragAndDropping={window.isDragAndDropping > 0} streamId={this.props.streamId}/>
                 {this.props.children}
             </div>
         )
     }
-    onDragEnter(event) {
-        window.isDragAndDropping = window.isDragAndDropping || 0
-        window.isDragAndDropping += 1
+    get onDragEnter() {
+        return (event) => {
+            if(this.props.streamId != "c") return
+            window.isDragAndDropping = window.isDragAndDropping || 0
+            window.isDragAndDropping += 1
+        }
     }
-    onDragLeave(event) {
-        window.isDragAndDropping = window.isDragAndDropping || 0
-        window.isDragAndDropping -= 1
+    get onDragLeave() {
+        return (event) => {
+            if(this.props.streamId != "c") return
+            window.isDragAndDropping = window.isDragAndDropping || 0
+            window.isDragAndDropping -= 1
+        }
     }
     onDragOver(event) {
         event.preventDefault()
@@ -32,6 +37,7 @@ export default class DragAndDrop {
     get onDrop() {
         return async (event) => {
             event.preventDefault()
+            if(this.props.streamId != "c") return
             window.isDragAndDropping = false
 
             let files = [...event.dataTransfer.files]
