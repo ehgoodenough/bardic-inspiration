@@ -94,6 +94,7 @@ class Timeline {
     get onClick() {
         return (event) => {
             let time = this.getHoveredTime()
+            delete Data.campaign.streams[this.props.streamId].run.currentTime
             Something.updateCurrentRun(this.props.streamId, {
                 ...Data.campaign.streams[this.props.streamId].run,
                 // "runId": Data.campaign.streams[this.props.streamId].run.runId,
