@@ -8,7 +8,6 @@ const DEFAULT_VOLUME = 50
 export default class YoutubePlayer {
     constructor(streamId) {
         this.streamId = streamId
-        // this.instantiate()
     }
     async instantiate() {
         await YoutubeIframeApiReady()
@@ -24,14 +23,13 @@ export default class YoutubePlayer {
                     "disablekb": 1,
                     "modestbranding": 1,
                     "start": (computeCurrentTime(Data.campaign.streams[this.streamId]?.run) / 1000) || 1,
-                    // "start": 0,
                     "autoplay": false,
                 },
                 "events": {
                     "onReady": (event) => {
                         this.player = player
-                        const volume = parseInt(window.localStorage.getItem("audio-volume")) || DEFAULT_VOLUME
-                        this.player.setVolume(volume)
+                        // const volume = parseInt(window.localStorage.getItem("audio-volume")) || DEFAULT_VOLUME
+                        this.setVolume(Data.campaign.streams["a"]?.volume)
                         resolve()
                     },
                     "onError": (event) => {
@@ -103,26 +101,16 @@ export default class YoutubePlayer {
         if(this.player.isMuted instanceof Function == false) return
         return this.player.getDuration() * 1000
     }
-    get isMuted() {
-        if(this.player == undefined) return
-        if(this.player.isMuted instanceof Function == false) return
-        return this.player.isMuted()
-    }
-    get volume() {
-        if(this.player == undefined) return
-        if(this.player.getVolume == undefined) return
-        return this.player.getVolume()
-    }
-    unmute() {
-        this.player.unMute()
-    }
-    mute() {
-        this.player.mute()
-    }
     // volume is 0 to 100
     setVolume(volume) {
         if(this.player == undefined) return
-        this.player.setVolume(volume)
+        this.player.setVolume(volume.level)
+
+        if(volume.isMuted == true) {
+            this.player.mute()
+        } else {
+            this.player.unMute()
+        }
     }
 }
 

@@ -51,30 +51,36 @@ export default class Controls {
             const dom = document.getElementById("volume-" + this.props.streamId)
             if(dom == undefined) return
             const bounds = dom.getBoundingClientRect()
-            let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
-            if(volume < 1) volume = 0
-            if(volume > 99) volume = 100
-            Something.updateVolume(this.props.streamId, volume)
-            // Players[this.props.streamId].setVolume(volume)
-            // window.localStorage.setItem("audio-volume", volume)
+            let volumeLevel = ((Poin.position.x - bounds.x) / bounds.width) * 100
+            if(volumeLevel < 1) volumeLevel = 0
+            if(volumeLevel > 99) volumeLevel = 100
+            // Players[this.props.streamId].setVolume(volume) // TODO: do this, debounce the other
+            Something.updateVolume(this.props.streamId, {
+                "level": volumeLevel
+            })
         }
     }
     get onClickVolumeButton() {
         return (event) => {
-            if(Players[this.props.streamId].isMuted) {
-                Players[this.props.streamId].unmute()
+            if(Data.campaign.streams[this.props.streamId]?.volume?.isMuted) {
+                Something.updateVolume(this.props.streamId, {
+                    "level": Data.campaign.streams[this.props.streamId].volume.level
+                })
             } else {
-                Players[this.props.streamId].mute()
+                Something.updateVolume(this.props.streamId, {
+                    "level": Data.campaign.streams[this.props.streamId].volume.level,
+                    "isMuted": true
+                })
             }
         }
     }
     getVolumeRelativePosition() {
-        return Players[this.props.streamId].volume / 100
+        return Data.campaign.streams[this.props.streamId]?.volume?.level / 100
     }
     getVolumeIcon() {
-        if(Players[this.props.streamId].isMuted) return "volume_off"
-        if(Data.campaign.streams[this.props.streamId]?.volume <= 0) return "volume_off"
-        if(Data.campaign.streams[this.props.streamId]?.volume >= 50) return "volume_up"
+        if(Data.campaign.streams[this.props.streamId]?.volume?.isMuted) return "volume_off"
+        if(Data.campaign.streams[this.props.streamId]?.volume?.level <= 0) return "volume_off"
+        if(Data.campaign.streams[this.props.streamId]?.volume?.level >= 50) return "volume_up"
         return "volume_down"
     }
     get onClickPlayButton() {

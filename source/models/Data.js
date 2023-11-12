@@ -54,7 +54,8 @@ streamIds.forEach((streamId) => {
             }
         }
 
-        if(Players[streamId] != undefined) {
+        if(Players[streamId] != undefined
+        && stream.volume != undefined) {
             Players[streamId].setVolume(stream.volume)
         }
     })

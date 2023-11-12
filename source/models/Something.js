@@ -18,7 +18,7 @@ export default class Something {
     }
     static clear(streamId) {
         Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).update({
-            "run": {"state": "paused"}, "queue": [], "volume": DEFAULT_VOLUME
+            "run": {"state": "paused"}, "queue": [], "volume": {"level": DEFAULT_VOLUME}
         })
     }
     static stop(streamId) {
