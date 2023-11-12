@@ -1,13 +1,15 @@
 import IO from "models/IO.js"
+import Data from "models/Data.js"
 
 export default class AudioPlayer {
     constructor(streamId) {
         this.streamId = streamId
         this.audio = new Audio()
     }
-    async load({url, currentTime}) {
+    load({url, currentTime}) {
         this.audio.pause()
         this.audio = new Audio(url)
+        this.setVolume(Data.campaign.streams[this.streamId].volume)
         this.audio.autoplay = true
         // console.log(this.audio)
         // await new Promise((resolve) => {
@@ -18,13 +20,13 @@ export default class AudioPlayer {
         // VOLUME?
         // EVENT LISTENERS?
     }
-    async seek({currentTime}) {
-        this.audio.currentTime = Math.floor(currentTime / 1000) || 1
+    seek({currentTime}) {
+        this.audio.currentTime = Math.floor(currentTime / 1000) || 0.1
     }
-    async pause() {
+    pause() {
         this.audio.pause()
     }
-    async play() {
+    play() {
         this.audio.play()
     }
     // returns in milliseconds

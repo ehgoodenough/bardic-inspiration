@@ -17,7 +17,7 @@ export default class Controls {
     render() {
         this.props.streamId = this.props.streamId || "a"
         if(IO.streams[this.props.streamId] == undefined) return
-        if(Data.campaign.streams[this.props.streamId].run?.youtubeId == undefined) return
+        if(Data.campaign.streams[this.props.streamId].run?.runId == undefined) return
         return (
             <div class="Controls">
                 <Timeline streamId={this.props.streamId}/>
