@@ -23,7 +23,7 @@ export default class YoutubePlayer {
                     "controls": 1,
                     "disablekb": 1,
                     "modestbranding": 1,
-                    // "start": (computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1,
+                    "start": (computeCurrentTime(Data.campaign.streams[this.streamId]?.run) / 1000) || 1,
                     // "start": 0,
                     "autoplay": false,
                 },
@@ -34,42 +34,43 @@ export default class YoutubePlayer {
                         this.player.setVolume(volume)
                         resolve()
                     },
+                    "onError": (event) => {
+                        console.log("onError", event)
+                        reject(event)
+                    },
                     "onStateChange": (event) => {
                         if(event.data == YT.PlayerState.PAUSED
-                        && Data.campaign.streams["a"]?.run?.state != "paused") {
-                            this.player.seekTo((computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1)
-                            this.player.playVideo()
+                        && Data.campaign.streams[this.streamId]?.run?.state != "paused") {
+                            this.seek(computeCurrentTime(Data.campaign.streams["a"].run))
+                            this.play()
                             return
                         }
                         if(event.data == YT.PlayerState.PLAYING
-                        && Data.campaign.streams["a"]?.run?.state != "playing") {
-                            this.player.seekTo((computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1)
-                            this.player.pauseVideo()
+                        && Data.campaign.streams[this.streamId]?.run?.state != "playing") {
+                            this.seek(computeCurrentTime(Data.campaign.streams["a"].run))
+                            this.pause()
                             return
                         }
 
                         if(event.data == YT.PlayerState.ENDED) {
-                            if(Data.campaign.streams["a"].queue == undefined) return
-                            if(Data.campaign.streams["a"].queue.length == 0) return
-                            const currentMusic = Data.campaign.streams["a"].queue.find((music) => {
-                                return Data.campaign.streams["a"].run.queueId == music.queueId
+                            // if(this.streamdId != "a") return
+                            if(Data.campaign.streams[this.streamId].queue == undefined) return
+                            if(Data.campaign.streams[this.streamId].queue.length == 0) return
+                            const currentMusic = Data.campaign.streams[this.streamId].queue.find((music) => {
+                                return Data.campaign.streams[this.streamId].run.queueId == music.queueId
                             })
-                            const currentIndex = Data.campaign.streams["a"].queue.indexOf(currentMusic)
+                            const currentIndex = Data.campaign.streams[this.streamId].queue.indexOf(currentMusic)
                             const nextIndex = currentIndex + 1
-                            const nextMusic = Data.campaign.streams["a"].queue[nextIndex]
+                            const nextMusic = Data.campaign.streams[this.streamId].queue[nextIndex]
                             if(nextMusic == undefined) return
                             const TIME_BETWEEN_SONGS = 500
-                            Something.updateCurrentRun("a", {
+                            Something.updateCurrentRun(this.streamId, {
                                 "queueId": nextMusic.queueId,
                                 "youtubeId": nextMusic.youtubeId,
                                 "startTime": Date.now() + TIME_BETWEEN_SONGS,
                                 "state": "playing",
                             })
                         }
-                    },
-                    "onError": (event) => {
-                        reject(event)
-                        console.log("onError", event)
                     }
                 }
             })

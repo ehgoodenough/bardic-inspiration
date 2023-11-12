@@ -39,7 +39,7 @@ class AudioStreamSection {
         return (
             <section class="AudioStreamSection">
                 <div class="PlayBox">
-                    <div class="YoutubeScreenshot" onClick={() => Something.pauseplay()} style={{
+                    <div class="YoutubeScreenshot" onClick={() => Something.pauseplay(this.props.streamId)} style={{
                         "background-image": "url(https://img.youtube.com/vi/" + Data.campaign.streams[this.props.streamId].run?.youtubeId + "/default.jpg)",
                     }}/>
                     <Controls streamId={this.props.streamId}/>
@@ -158,7 +158,7 @@ class QueuedItem {
             event.stopPropagation()
             Something.updateQueue(this.props.streamId, removeElement(Data.campaign.streams[this.props.streamId].queue, this.props.music))
             if(this.isOnDeck == true) {
-                Something.stop()
+                Something.stop(this.props.streamId)
             }
         }
     }

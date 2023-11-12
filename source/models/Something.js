@@ -21,29 +21,29 @@ export default class Something {
             "run": {"state": "paused"}, "queue": [], "volume": DEFAULT_VOLUME
         })
     }
-    static stop() {
-        Something.updateCurrentRun("a", {
+    static stop(streamId) {
+        Something.updateCurrentRun(streamId, {
             "state": "paused"
         })
     }
-    static pauseplay() {
-        if(Data.campaign.streams["a"].run.youtubeId == undefined) {
+    static pauseplay(streamId) {
+        if(Data.campaign.streams[streamId].run.youtubeId == undefined) {
             return
         }
-        if(Data.campaign.streams["a"]?.run?.state != "paused") {
-            Something.updateCurrentRun("a", {
-                "runId": Data.campaign.streams["a"].run.runId,
-                "queueId": Data.campaign.streams["a"].run.queueId,
-                "youtubeId": Data.campaign.streams["a"].run.youtubeId,
-                "currentTime": Date.now() - Data.campaign.streams["a"].run.startTime,
+        if(Data.campaign.streams[streamId]?.run?.state != "paused") {
+            Something.updateCurrentRun(streamId, {
+                "runId": Data.campaign.streams[streamId].run.runId,
+                "queueId": Data.campaign.streams[streamId].run.queueId,
+                "youtubeId": Data.campaign.streams[streamId].run.youtubeId,
+                "currentTime": Date.now() - Data.campaign.streams[streamId].run.startTime,
                 "state": "paused"
             })
-        } else if(Data.campaign.streams["a"]?.run?.state == "paused") {
-            Something.updateCurrentRun("a", {
-                "runId": Data.campaign.streams["a"].run.runId,
-                "queueId": Data.campaign.streams["a"].run.queueId,
-                "youtubeId": Data.campaign.streams["a"].run.youtubeId,
-                "startTime": Date.now() - Data.campaign.streams["a"].run.currentTime,
+        } else if(Data.campaign.streams[streamId]?.run?.state == "paused") {
+            Something.updateCurrentRun(streamId, {
+                "runId": Data.campaign.streams[streamId].run.runId,
+                "queueId": Data.campaign.streams[streamId].run.queueId,
+                "youtubeId": Data.campaign.streams[streamId].run.youtubeId,
+                "startTime": Date.now() - Data.campaign.streams[streamId].run.currentTime,
                 "state": "playing"
             })
         }

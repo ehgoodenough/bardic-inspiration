@@ -30,7 +30,7 @@ export default class Controls {
                     <div class="VolumeButton" onClick={this.onClickVolumeButton}>
                         <span class="material-icons">{this.getVolumeIcon()}</span>
                     </div>
-                    <div class="VolumeBar" id="volume" onMouseMove={this.onClickVolumeBar}>
+                    <div class="VolumeBar" id={"volume-" + this.props.streamId} onMouseMove={this.onClickVolumeBar}>
                         <div class="Bar"/>
                         <div class="Dot" style={{
                             "left": this.getVolumeRelativePosition() * 100 + "%",
@@ -43,13 +43,14 @@ export default class Controls {
         )
     }
     get isPaused() {
-        return Data.campaign.streams[this.props.streamId].run?.state == "paused"
+        return Data.campaign.streams[this.props.streamId]?.run?.state == "paused"
     }
     get onClickVolumeBar() {
         return (event) => {
             if(Poin.isPressed() == false) return
-            if(document.getElementById("volume") == undefined) return
-            const bounds = document.getElementById("volume").getBoundingClientRect()
+            const dom = document.getElementById("volume-" + this.props.streamId)
+            if(dom == undefined) return
+            const bounds = dom.getBoundingClientRect()
             let volume = ((Poin.position.x - bounds.x) / bounds.width) * 100
             if(volume < 1) volume = 0
             if(volume > 99) volume = 100
@@ -72,12 +73,14 @@ export default class Controls {
     }
     getVolumeIcon() {
         if(Players[this.props.streamId].isMuted) return "volume_off"
-        if(Data.campaign.streams[this.props.streamId].volume <= 0) return "volume_off"
-        if(Data.campaign.streams[this.props.streamId].volume >= 50) return "volume_up"
+        if(Data.campaign.streams[this.props.streamId]?.volume <= 0) return "volume_off"
+        if(Data.campaign.streams[this.props.streamId]?.volume >= 50) return "volume_up"
         return "volume_down"
     }
-    onClickPlayButton() {
-        Something.pauseplay()
+    get onClickPlayButton() {
+        return (event) => {
+            Something.pauseplay(this.props.streamId)
+        }
     }
     getCurrentTimeText() {
         let time = this.getCurrentTime()
@@ -91,8 +94,8 @@ export default class Controls {
         return FormatDuration(time)
     }
     getCurrentTime() {
-        if(Data.campaign.streams[this.props.streamId].run == undefined) return 0
-        return computeCurrentTime(Data.campaign.streams[this.props.streamId].run)
+        if(Data.campaign.streams[this.props.streamId]?.run == undefined) return 0
+        return computeCurrentTime(Data.campaign.streams[this.props.streamId]?.run)
     }
 }
 
@@ -140,7 +143,7 @@ class Timeline {
         }
     }
     getCurrentTime() {
-        let time = computeCurrentTime(Data.campaign.streams[this.props.streamId].run)
+        let time = computeCurrentTime(Data.campaign.streams[this.props.streamId]?.run)
         time = Math.min(time, Players[this.props.streamId].duration)
         if(isNaN(time)) time = 0
         return time
