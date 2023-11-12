@@ -13,8 +13,6 @@ export default class YoutubePlayer {
     async instantiate() {
         await YoutubeIframeApiReady()
         return new Promise((resolve, reject) => {
-            return
-            console.log("go", "youtube-" + this.streamId)
             const player = new YT.Player("youtube-" + this.streamId, {
                 "width": "300",
                 "height": "200",
@@ -144,45 +142,4 @@ window.onYouTubeIframeAPIReady = function() {
     if(YoutubeIframeApiReady.callbacks instanceof Array) {
         YoutubeIframeApiReady.callbacks.forEach((callback) => callback())
     }
-
-    const a = new YT.Player("youtube-a", {
-        "width": "300",
-        "height": "200",
-        "videoId": SILENCE_VIDEO_ID,
-        "playerVars": {
-            "fs": 0,
-            "rel": 0,
-            "controls": 1,
-            "disablekb": 1,
-            "modestbranding": 1,
-            // "start": (computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1,
-            // "start": 0,
-            "autoplay": true,
-        },
-        "events": {
-            "onReady": (event) => {
-                console.log("a")
-            }
-        }
-    })
-    const b = new YT.Player("youtube-b", {
-        "width": "300",
-        "height": "200",
-        "videoId": SILENCE_VIDEO_ID,
-        "playerVars": {
-            "fs": 0,
-            "rel": 0,
-            "controls": 1,
-            "disablekb": 1,
-            "modestbranding": 1,
-            // "start": (computeCurrentTime(Data.campaign.streams["a"].run) / 1000) || 1,
-            // "start": 0,
-            "autoplay": true,
-        },
-        "events": {
-            "onReady": (event) => {
-                console.log("b")
-            }
-        }
-    })
 }

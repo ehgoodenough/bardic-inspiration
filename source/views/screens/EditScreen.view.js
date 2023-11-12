@@ -68,42 +68,44 @@ class SubmissionForm {
             </form>
         )
     }
-    onSubmit(event) {
-        event.preventDefault()
-        let submittedValue = event.target.children["youtube"].value.trim()
+    get onSubmit() {
+        return (event) => {
+            event.preventDefault()
+            let submittedValue = event.target.children["youtube"].value.trim()
 
-        const playlistId = parseYoutubePlaylistId(submittedValue)
-        if(playlistId != undefined) {
-            // Navigation.go("/playlists/" + playlistId)
-            YoutubeData.retrievePlaylistVideos(playlistId).then((videos) => {
-                videos.forEach((video) => video.queueId = ShortId.generate())
-                videos = videos.filter((video) => video.thumbnailUrl != undefined)
+            const playlistId = parseYoutubePlaylistId(submittedValue)
+            if(playlistId != undefined) {
+                // Navigation.go("/playlists/" + playlistId)
+                YoutubeData.retrievePlaylistVideos(playlistId).then((videos) => {
+                    videos.forEach((video) => video.queueId = ShortId.generate())
+                    videos = videos.filter((video) => video.thumbnailUrl != undefined)
 
-                Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
-                Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(videos))
-            })
-            return
-        }
+                    Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
+                    Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(videos))
+                })
+                return
+            }
 
-        const videoId = parseYoutubeId(submittedValue)
-        if(videoId != undefined) {
-            // Navigation.go("/video/" + videoId)
-            YoutubeData.retrieveVideos(videoId).then((videos) => {
-                const video = videos[0]
-                if(video == undefined) return
-                video.queueId = ShortId.generate()
+            const videoId = parseYoutubeId(submittedValue)
+            if(videoId != undefined) {
+                // Navigation.go("/video/" + videoId)
+                YoutubeData.retrieveVideos(videoId).then((videos) => {
+                    const video = videos[0]
+                    if(video == undefined) return
+                    video.queueId = ShortId.generate()
 
-                Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
-                Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(video))
+                    Data.campaign.streams[this.props.streamId].queue = Data.campaign.streams[this.props.streamId].queue || []
+                    Something.updateQueue(this.props.streamId, Data.campaign.streams[this.props.streamId].queue.concat(video))
 
-                // Something.updateQueue("b", [video])
-                // Something.updateCurrentRun("b", {
-                //     "queueId": video.queueId,
-                //     "youtubeId": video.youtubeId,
-                //     "startTime": Date.now(),
-                //     "state": "playing",
-                // })
-            })
+                    // Something.updateQueue("b", [video])
+                    // Something.updateCurrentRun("b", {
+                    //     "queueId": video.queueId,
+                    //     "youtubeId": video.youtubeId,
+                    //     "startTime": Date.now(),
+                    //     "state": "playing",
+                    // })
+                })
+            }
         }
     }
 }
