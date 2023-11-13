@@ -23,6 +23,7 @@
     "format-duration": "^3.0.2",
     "iso8601-duration": "^2.1.1",
     "keyb": "^1.4.1",
+    "node-fetch": "^3.3.2",
     "poin": "^2.2.0",
     "preact": "^10.11.3",
     "query-string": "^8.1.0",
