@@ -1,5 +1,6 @@
 import * as Preact from "preact"
 import Data from "models/Data.js"
+import Navigation from "models/Navigation.js"
 
 import "views/screens/PlayScreen.view.less"
 import Menu from "views/widgets/Menu.view.js"
@@ -9,22 +10,8 @@ export default class PlayScreen {
         return (
             <div class="PlayScreen">
                 <Screenshot/>
-                <Players/>
+                {Navigation.state.hasRollerWidget ? <RollerWidget/> : undefined}
                 <Menu/>
-                <div class="RollOptions">
-                    <label class="Disadvantage">
-                        <input type="radio" name="rollType" value="Disadvantage"/>
-                        Disadvantage
-                    </label>
-                    <label class="Advantage">
-                        <input type="radio" name="rollType" value="Advantage"/>
-                        Advantage
-                    </label>
-                    <label class="Flat">
-                        <input id="flat" type="radio" name="rollType" value="Flat" defaultChecked={true}/>
-                        Flat
-                    </label>
-                </div>
             </div>
         )
     }
@@ -48,6 +35,30 @@ Firebase.data.collection("players").doc("theros").onSnapshot((document) => {
     window.players = document.data()
 })
 
+class RollerWidget {
+    render() {
+        return (
+            <div class="RollerWidget">
+                <Players/>
+                <div class="RollOptions">
+                    <label class="Disadvantage">
+                        <input type="radio" name="rollType" value="Disadvantage"/>
+                        Disadvantage
+                    </label>
+                    <label class="Advantage">
+                        <input type="radio" name="rollType" value="Advantage"/>
+                        Advantage
+                    </label>
+                    <label class="Flat">
+                        <input id="flat" type="radio" name="rollType" value="Flat" defaultChecked={true}/>
+                        Flat
+                    </label>
+                </div>
+            </div>
+        )
+    }
+}
+
 class Players {
     render() {
         if(window.players == undefined) return
@@ -55,8 +66,7 @@ class Players {
             <div class="Players">
                 <Player name="Alex" playerId="0"/>
                 <Player name="Andrew" playerId="1"/>
-                <Player name="Becker" playerId="2"/>
-                <Player name="Nico" playerId="3"/>
+                <Player name="Justin" playerId="2"/>
             </div>
         )
     }

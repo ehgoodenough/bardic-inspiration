@@ -101,6 +101,10 @@ Navigation.on("/play", function(request) {
     return {"screen": "PlayScreen"}
 })
 
+Navigation.on("/play/roller", function(request) {
+    return {"screen": "PlayScreen", "hasRollerWidget": true}
+})
+
 Navigation.on("/play/debug", function(request) {
     return {"screen": "PlayScreen"}
 })
