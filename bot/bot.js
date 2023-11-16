@@ -41,6 +41,14 @@ async function retrieveCharacter({characterId}) {
             }
         }),
         "coinpurse": data.currencies,
+
+        // level, list of classes (by name)
+        // adversity tokens
+
+        // skills!!!
+        // skills, saving throws, initiative, perceptions, ac. senses+movement types/speeds.
+        // actions, damage.
+        // roll any dice
     }
     console.log(character)
 }
