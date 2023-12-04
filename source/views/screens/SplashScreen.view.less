@@ -45,17 +45,20 @@
         flex-direction: column;
         text-align: center;
 
-        transform-origin: center;
-        transition-property: transform;
-        transition-duration: 0.5s;
-
         .Text {
             color: white;
+            font-family: draconis;
+            font-size: 2em;
+            line-height: 1em;
             text-shadow: 1px 1px 2px black;
         }
 
         .Icon {
             position: relative;
+
+            transform-origin: center;
+            transition-property: transform;
+            transition-duration: 0.5s;
 
             .shape {
                 z-index: 20;
@@ -80,8 +83,10 @@
 
     &:hover {
         .Prompt {
-            transform: scale(1.1);
-            transition-duration: 0.1s;
+            .Icon {
+                transform: scale(1.1);
+                transition-duration: 0.1s;
+            }
         }
     }
 }

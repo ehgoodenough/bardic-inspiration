@@ -12,7 +12,7 @@ export default class SplashScreen {
                 <div class="Background" random={random}/>
                 <div class="Prompt">
                     <div class="Text">
-                        Welcome to<br/>Bardic Inspiration
+                        Bardic<br/>Inspiration
                     </div>
                     <div class="Icon">
                         <div class="fill"/>
@@ -23,6 +23,6 @@ export default class SplashScreen {
         )
     }
     onClick() {
-        Navigation.go("/play")
+        Navigation.go("/campaigns/theros")
     }
 }

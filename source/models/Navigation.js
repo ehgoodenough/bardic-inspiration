@@ -1,3 +1,6 @@
+
+import Data from "models/Data.js"
+
 if(typeof window != "undefined") {
     window.setTimeout(() => {
         Navigation.run(window.location.hash)
@@ -89,24 +92,24 @@ Navigation.on("/", function(request) {
     return {"screen": "SplashScreen"}
 })
 
-Navigation.on("/edit", function(request) {
+Navigation.on("/campaigns/:campaignKey/dashboard", function(request) {
+    Data.load(request.wildcards.campaignKey)
     return {"screen": "EditScreen"}
 })
 
-Navigation.on("/edit/extra", function(request) {
+Navigation.on("/campaigns/:campaignKey/dashboard/extra", function(request) {
+    Data.load(request.wildcards.campaignKey)
     return {"screen": "EditScreen", "isExtra": true}
 })
 
-Navigation.on("/play", function(request) {
+Navigation.on("/campaigns/:campaignKey", function(request) {
+    Data.load(request.wildcards.campaignKey)
     return {"screen": "PlayScreen"}
 })
 
-Navigation.on("/play/roller", function(request) {
+Navigation.on("/campaigns/:campaignKey/roller", function(request) {
+    Data.load(request.wildcards.campaignKey)
     return {"screen": "PlayScreen", "hasRollerWidget": true}
-})
-
-Navigation.on("/play/debug", function(request) {
-    return {"screen": "PlayScreen"}
 })
 
 Navigation.on("/*", function(request) {
