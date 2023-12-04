@@ -23,7 +23,6 @@ export default class SplashScreen {
         )
     }
     onClick() {
-        // Navigation.go("/play")
-        Navigation.run("/play")
+        Navigation.go("/play")
     }
 }

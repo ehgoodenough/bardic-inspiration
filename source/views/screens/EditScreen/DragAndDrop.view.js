@@ -72,5 +72,5 @@ export default class DragAndDrop {
 
 // upload("image", file).then((image) => {
 //     if(index != 0) return
-//     Firebase.data.collection("campaigns").doc("theros").update({"art": image})
+//     Firebase.data.collection("campaigns").doc(Data.campaign.key).update({"art": image})
 // })

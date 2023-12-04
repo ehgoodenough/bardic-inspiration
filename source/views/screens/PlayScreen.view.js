@@ -1,12 +1,21 @@
 import * as Preact from "preact"
+import ShortId from "shortid"
+
 import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
 
-import "views/screens/PlayScreen.view.less"
 import Menu from "views/widgets/Menu.view.js"
+import SplashScreen from "views/screens/SplashScreen.view.js"
+import "views/screens/PlayScreen.view.less"
+
 
 export default class PlayScreen {
     render() {
+        if(window.hasClicked != true) {
+            return (
+                <SplashScreen/>
+            )
+        }
         return (
             <div class="PlayScreen">
                 <Screenshot/>
@@ -27,13 +36,6 @@ class Screenshot {
         )
     }
 }
-
-import ShortId from "shortid"
-import Firebase from "models/Firebase.js"
-Firebase.data.collection("players").doc("theros").onSnapshot((document) => {
-    if(document.exists == false) return
-    window.players = document.data()
-})
 
 class RollerWidget {
     render() {
@@ -120,7 +122,7 @@ class Player {
             if(rollValue == 0) rollValue = 100
             console.log(rollValue)
 
-            Firebase.data.collection("players").doc("theros").update({
+            Firebase.data.collection("players").doc(Data.campaign.key).update({
                 [this.props.playerId]: {
                     "rollValue": rollValue,
                     "rollType": rollType,
@@ -139,7 +141,8 @@ class Player {
 }
 
 window.resetAll = function() {
-    Firebase.data.collection("players").doc("theros").update({
+    if(Data.campaign.key == undefined) return
+    Firebase.data.collection("players").doc(Data.campaign.key).update({
         0: {},
         1: {},
         2: {},

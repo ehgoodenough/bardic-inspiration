@@ -4,18 +4,24 @@ import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 const Data = {
     "campaign": {
+        "key": "theros",
         "streams": {}
     }
 }
 
+Firebase.data.collection("players").doc(Data.campaign.key).onSnapshot((document) => {
+    if(document.exists == false) return
+    window.players = document.data()
+})
+
 const streamIds = ["a", "b", "c"]
 streamIds.forEach((streamId) => {
-    Firebase.data.collection("campaigns").doc("theros/streams/" + streamId).onSnapshot(async (document) => {
+    Firebase.data.collection("campaigns").doc(Data.campaign.key + "/streams/" + streamId).onSnapshot(async (document) => {
         if(document.exists == false) return
         const prevstream = Data.campaign.streams[streamId]
         const stream = document.data()
         Data.campaign.streams[streamId] = stream
-        console.log("theros/streams/" + streamId, stream)
+        console.log(Data.campaign.key + "/streams/" + streamId, stream)
 
         Data.campaign.streams[streamId].queue = Data.campaign.streams[streamId].queue || []
 
@@ -59,7 +65,7 @@ streamIds.forEach((streamId) => {
     })
 })
 
-Firebase.data.collection("campaigns").doc("theros").onSnapshot((document) => {
+Firebase.data.collection("campaigns").doc(Data.campaign.key).onSnapshot((document) => {
     if(document.exists == false) return
     Data.campaign.art = document.data().art
 })
