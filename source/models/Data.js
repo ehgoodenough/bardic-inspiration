@@ -9,6 +9,8 @@ const Data = {
 }
 
 Data.load = function(campaignKey) {
+    if(campaignKey == "theros") campaignKey = "andrew"
+    if(campaignKey == "cthulu") campaignKey = "theros"
     if(Data.campaign.key == campaignKey) return
     Data.campaign.key = campaignKey
 
