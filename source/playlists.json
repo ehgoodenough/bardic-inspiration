@@ -34,6 +34,12 @@
                 "duration": 215000
             },
             {
+                "youtubeId": "D08N6djtXZQ",
+                "title": "Blumenkranz -Karaoke Version",
+                "thumbnailUrl": "https://i.ytimg.com/vi/D08N6djtXZQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBhq_2mQ-ecqnsfgifr19ReZ7uOAg",
+                "duration": 259000
+            },
+            {
                 "youtubeId": "7ryzRsoJ8gY",
                 "title": "mabanua - MEGALOBOX (The theme of MEGALOBOX) [Official Audio]",
                 "thumbnailUrl": "https://i.ytimg.com/vi/7ryzRsoJ8gY/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZCBkKGQwDw==&rs=AOn4CLAyJOVgoZP3tfwaoV1XW43zY19SuA",
@@ -164,12 +170,6 @@
                 "title": "Klagmar's Top VGM #2,189 - Hyrule Warriors Legends - Title & Dragon",
                 "thumbnailUrl": "https://i.ytimg.com/vi/ukEAC1NBJJw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBLP081MdNw0MzqmIeocwpFlU1JAA",
                 "duration": 211000
-            },
-            {
-                "youtubeId": "g2aa5aFABis",
-                "title": "Ishukan Communication (Instrumental) - Choro-gonzu ~ Ending Season 1 Miss Kobayashi's Dragon Maid",
-                "thumbnailUrl": "https://i.ytimg.com/vi/g2aa5aFABis/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AeYCgALgA4oCDAgAEAEYciBhKD8wDw==&rs=AOn4CLDP6njRLfuRSKL6p29yFJKIoX0Okw",
-                "duration": 243000
             },
             {
                 "youtubeId": "g3oNkz3Ifx4",
@@ -384,7 +384,7 @@
             {
                 "youtubeId": "cw11meDvtLw",
                 "title": "Bensound - Elevator Bossa Nova",
-                "thumbnailUrl": "https://i.ytimg.com/vi/cw11meDvtLw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCrn1t2OvpJhqz-rW_bcrjzsjV5Zw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/cw11meDvtLw/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYHyBXKH8wDw==&rs=AOn4CLD4FULHAe4h5uu01XWWTa-oYezk3g",
                 "duration": 260000
             },
             {
@@ -464,6 +464,24 @@
                 "title": "Adventure Time: Fionna and Cake Soundtrack | Fionna and Cake Fight Back - Amanda Jones | WaterTower",
                 "thumbnailUrl": "https://i.ytimg.com/vi/rF6rmveAhd0/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYVCBlKGUwDw==&rs=AOn4CLCTKjwHhlEQNAUNU08kYeejSm8jXA",
                 "duration": 82000
+            },
+            {
+                "youtubeId": "hN75tM7cfYA",
+                "title": "Shantae and the Pirate's Curse - Rottytops [Remix]",
+                "thumbnailUrl": "https://i.ytimg.com/vi/hN75tM7cfYA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBHNrT_NhpYcKQ9393e8fGfaOUq7g",
+                "duration": 150000
+            },
+            {
+                "youtubeId": "KSwseTd00wY",
+                "title": "Piranha Plants on Parade - Super Mario Bros. Wonder Remix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/KSwseTd00wY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAKt1AyzVi4J9lS-2i7DK390xusyw",
+                "duration": 211000
+            },
+            {
+                "youtubeId": "VtLaUwpS-Pk",
+                "title": "Piranha Plants on Parade (NEW REMIX) - Super Mario Bros. Wonder | Super Smash Bros. Ultimate",
+                "thumbnailUrl": "https://i.ytimg.com/vi/VtLaUwpS-Pk/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYMSBlKDgwDw==&rs=AOn4CLBbFW5NDVKQmG8Lef4_yVH92uaPSg",
+                "duration": 129000
             }
         ]
     },
@@ -752,6 +770,36 @@
                 "title": "One Piece 🏴‍☠️ Lofi HipHop |best calm and relaxing Mix | Lofi Culture One Piece ⚓️",
                 "thumbnailUrl": "https://i.ytimg.com/vi/hVu5_LL7iHk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDBK9yVj_JN6cHWuXlKp7IJHhs--A",
                 "duration": 4296000
+            },
+            {
+                "youtubeId": "1-M5Ls_NoJY",
+                "title": "The Lofi Roman Empire - Music Of Ancient Rome | sleep, study, meditation",
+                "thumbnailUrl": "https://i.ytimg.com/vi/1-M5Ls_NoJY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC9EajJnp5_rz2J708u5qDDMSzVVA",
+                "duration": 4870000
+            },
+            {
+                "youtubeId": "ESb3ad-1lJE",
+                "title": "Minecraft LoFi: Laid back lutes for leading the charge",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ESb3ad-1lJE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDixXH-a54dltPLzGSLYK9pet8Plg",
+                "duration": 3600000
+            },
+            {
+                "youtubeId": "ag5hTtwmVZo",
+                "title": "Bad Batch (Star Wars Lofi) ▸ Helynt Remix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ag5hTtwmVZo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAr3kcT5uziBVNS4RiWwGgUJPdOzA",
+                "duration": 152000
+            },
+            {
+                "youtubeId": "jdcUFwsza0c",
+                "title": "Legend of Zelda: Twilight Princess ▸ Jokabi Lo-fi Remix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/jdcUFwsza0c/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDQBvfJSKb3Nw3_9IOtUY8FUu5x-w",
+                "duration": 146000
+            },
+            {
+                "youtubeId": "85SBiK-Sk_0",
+                "title": "Avatar & Chill ~ The Last Airbender Lofi 🔥🪨🌊💨",
+                "thumbnailUrl": "https://i.ytimg.com/vi/85SBiK-Sk_0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDgpaJmVvKvz1GfjtqDJmdPvKGrkA",
+                "duration": 2362000
             }
         ]
     },
@@ -802,6 +850,12 @@
                 "duration": 247000
             },
             {
+                "youtubeId": "PCAL1PtWpLQ",
+                "title": "Butterfly (Instrumental)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/PCAL1PtWpLQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBflXduZEkB95KJxtCEnCKroEhwWw",
+                "duration": 221000
+            },
+            {
                 "youtubeId": "FPjJW5iTFN0",
                 "title": "Caravan Palace - Beatophone",
                 "thumbnailUrl": "https://i.ytimg.com/vi/FPjJW5iTFN0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBGGOeuS-OuNiXXSflmuVu3wqUHxQ",
@@ -816,7 +870,7 @@
             {
                 "youtubeId": "Xx4L78jm8wk",
                 "title": "Caravan Palace - Suzy",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Xx4L78jm8wk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC7l8MDMpDnUznXOxvVEtC91fWpig",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Xx4L78jm8wk/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYfyAaKBowDw==&rs=AOn4CLA4gDlwR-FjZkx6Hma01qjcPHXlXg",
                 "duration": 253000
             },
             {
@@ -1028,6 +1082,12 @@
                 "title": "Welcome / Elevator (From \"Trivia Murder Party 2\")",
                 "thumbnailUrl": "https://i.ytimg.com/vi/Hucq7nGNi94/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLClT3ttZltGiPpl92Ev3iwuKNtAIA",
                 "duration": 75000
+            },
+            {
+                "youtubeId": "h0iYM5r47Co",
+                "title": "Amphibia Theme (Electro-Swing Remix)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/h0iYM5r47Co/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDPVaGTvZm-T9I3TnCAvXmFj8yrnQ",
+                "duration": 131000
             }
         ]
     },
@@ -1050,7 +1110,7 @@
             {
                 "youtubeId": "_2B5BiZt6HI",
                 "title": "Gurren Lagann OST Disc 1 - 04 - Boota Dreams of Spirals! / Butamogura ha Rasen no Yume wo Miru ka?..",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_2B5BiZt6HI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDlgWTneHPINf9lSEfcdkziQKYFpQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_2B5BiZt6HI/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA4KEMwDw==&rs=AOn4CLCm8K_K2zFiGHP7LIUrjzTNC-C9qg",
                 "duration": 183000
             },
             {
@@ -1104,7 +1164,7 @@
             {
                 "youtubeId": "_TUTmtEq36M",
                 "title": "Skullgirls OST #03 - Pedestrians Crossing",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_TUTmtEq36M/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLApVAlnJZ2ceB6DiLHzrdgv0RsrSw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_TUTmtEq36M/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA4KF0wDw==&rs=AOn4CLDpvaq6Gm0TE2XWR35OjSgvlhX8KA",
                 "duration": 215000
             },
             {
@@ -1252,22 +1312,22 @@
         "title": "D&D - Happy Town",
         "musics": [
             {
-                "youtubeId": "exDcam6hcv0",
-                "title": "The Lord of the Rings: The Fellowship of the Ring CR - 05. Flaming Red Hair",
-                "thumbnailUrl": "https://i.ytimg.com/vi/exDcam6hcv0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAO0Ep3Iu7eEVgqLDfdlW-RIHB-Ow",
-                "duration": 162000
-            },
-            {
-                "youtubeId": "KMSyUFf9scM",
-                "title": "Galerie Miiverse - The Legend of Zelda Tri Force Heroes OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/KMSyUFf9scM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDimCGY-151wrDxNA61DxFPhbQeGg",
-                "duration": 76000
-            },
-            {
                 "youtubeId": "zHvOPjAfyng",
                 "title": "A Walk in the Shire (Extended) - The Hobbit (2003) Complete Soundtrack",
                 "thumbnailUrl": "https://i.ytimg.com/vi/zHvOPjAfyng/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB1NJQ2vPv8rmXA6P9jDlCtbd_sZg",
                 "duration": 199000
+            },
+            {
+                "youtubeId": "unwK1X_TGsc",
+                "title": "Two Hornpipes (Tortuga)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/unwK1X_TGsc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCpFLdjZKqKNcdjKi9IHFd_hLAQdA",
+                "duration": 75000
+            },
+            {
+                "youtubeId": "exDcam6hcv0",
+                "title": "The Lord of the Rings: The Fellowship of the Ring CR - 05. Flaming Red Hair",
+                "thumbnailUrl": "https://i.ytimg.com/vi/exDcam6hcv0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAO0Ep3Iu7eEVgqLDfdlW-RIHB-Ow",
+                "duration": 162000
             },
             {
                 "youtubeId": "HR4aGGPVS8E",
@@ -1276,10 +1336,34 @@
                 "duration": 240000
             },
             {
+                "youtubeId": "n7sDUAALYSM",
+                "title": "Stardew Valley OST - Summer (Tropicala)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/n7sDUAALYSM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDjhPUBUkT1LAmmUeNMfaa7p5rkrA",
+                "duration": 205000
+            },
+            {
+                "youtubeId": "k0nqXeM-sns",
+                "title": "Stardew Valley OST - Summer (Nature's Crescendo)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/k0nqXeM-sns/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCVDz6284EoV5uYpYZfw_plUCDrxA",
+                "duration": 211000
+            },
+            {
+                "youtubeId": "FrwGamDEt8U",
+                "title": "Better When I'm Dancin' (Instrumental Version)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/FrwGamDEt8U/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB-H5VUOGvE7IRG7a-wZ9MKCdN70w",
+                "duration": 179000
+            },
+            {
                 "youtubeId": "XouGQoIqBh8",
                 "title": "Windfall Island (Wind Waker Cover by ROZEN) - Ballads of Hyrule II",
                 "thumbnailUrl": "https://i.ytimg.com/vi/XouGQoIqBh8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AdQGgALgA4oCDAgAEAEYQSBkKGUwDw==&rs=AOn4CLDhKvKyohoumG864xGY0YA-cI6_2g",
                 "duration": 134000
+            },
+            {
+                "youtubeId": "KMSyUFf9scM",
+                "title": "Galerie Miiverse - The Legend of Zelda Tri Force Heroes OST",
+                "thumbnailUrl": "https://i.ytimg.com/vi/KMSyUFf9scM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDimCGY-151wrDxNA61DxFPhbQeGg",
+                "duration": 76000
             },
             {
                 "youtubeId": "9Mi7NUIpLA8",
@@ -1300,28 +1384,10 @@
                 "duration": 72000
             },
             {
-                "youtubeId": "n7sDUAALYSM",
-                "title": "Stardew Valley OST - Summer (Tropicala)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/n7sDUAALYSM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDjhPUBUkT1LAmmUeNMfaa7p5rkrA",
-                "duration": 205000
-            },
-            {
-                "youtubeId": "k0nqXeM-sns",
-                "title": "Stardew Valley OST - Summer (Nature's Crescendo)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/k0nqXeM-sns/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCVDz6284EoV5uYpYZfw_plUCDrxA",
-                "duration": 211000
-            },
-            {
                 "youtubeId": "zaQffIhk2Z8",
                 "title": "Donkey Kong Country 2 - Snakey Chantey | Orchestral Remix",
                 "thumbnailUrl": "https://i.ytimg.com/vi/zaQffIhk2Z8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAls7b2oCOkBAapQxio4sx6BWRcbw",
                 "duration": 153000
-            },
-            {
-                "youtubeId": "FrwGamDEt8U",
-                "title": "Better When I'm Dancin' (Instrumental Version)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/FrwGamDEt8U/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB-H5VUOGvE7IRG7a-wZ9MKCdN70w",
-                "duration": 179000
             }
         ]
     },
@@ -1330,16 +1396,58 @@
         "title": "D&D - Somber Quiet",
         "musics": [
             {
-                "youtubeId": "6NxMLYhBI_A",
-                "title": "Billie Eilish - What Was I Made For (Instrumental)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/6NxMLYhBI_A/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYXCBlKDkwDw==&rs=AOn4CLAcx0scxUEoyl67SwPKaJtjiqflTw",
-                "duration": 223000
+                "youtubeId": "iwHHagLkmtE",
+                "title": "Demon Slayer Movie OST: Rengoku's Last Smile (Sad Theme)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/iwHHagLkmtE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD8s3Ip6k0TEy0IzPIIK_5V5SNmCg",
+                "duration": 207000
+            },
+            {
+                "youtubeId": "yJzxJk33ZAQ",
+                "title": "My Name Is Kino Loy",
+                "thumbnailUrl": "https://i.ytimg.com/vi/yJzxJk33ZAQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBCQrPH4CZwflt-VtuiT8OwFaZmCA",
+                "duration": 256000
+            },
+            {
+                "youtubeId": "O6A6_VdKU1w",
+                "title": "Path of the Wind 風の通り道 - My Neighbor Totoro となりのトトロ ㅣ ERHU & PIANO COVER 이웃집 토토로 OST",
+                "thumbnailUrl": "https://i.ytimg.com/vi/O6A6_VdKU1w/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBRoLrdeR_FlJgsZ5J9hBT0yeIL6g",
+                "duration": 222000
+            },
+            {
+                "youtubeId": "RlbUo27wbB0",
+                "title": "Our Theme - An Undertale Orchestration (100,000 SUB SPECIAL)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/RlbUo27wbB0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBtlwen3iXDTVWnCWkAj2unMptgkg",
+                "duration": 300000
+            },
+            {
+                "youtubeId": "53tW43gG-5M",
+                "title": "(1 hour) The Legend of Ashitaka - Princess Mononoke OST (Lull and Relax Arranged)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/53tW43gG-5M/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBaKFEwDw==&rs=AOn4CLC3bp3geausuidoPQnIEz_aIdrv5Q",
+                "duration": 3761000
+            },
+            {
+                "youtubeId": "ibqB1zfru74",
+                "title": "Petite Princess Yucie OST - 06 \"Legend Of The Eternal Tiara\"",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ibqB1zfru74/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA-PO8ITG-7FLYrr6CUQLhVzqpfKg",
+                "duration": 199000
+            },
+            {
+                "youtubeId": "j9zIeQizeL4",
+                "title": "Stoick's Ship (How To Train Your Dragon) | EPIC CINEMATIC VERSION",
+                "thumbnailUrl": "https://i.ytimg.com/vi/j9zIeQizeL4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCwmNXkp6Roa4ZxkJ7rshLXwzqc6Q",
+                "duration": 221000
             },
             {
                 "youtubeId": "bM9fl-7U5yI",
                 "title": "Beach House • Space Song (CC) 🎤 [Karaoke] [Instrumental Lyrics]",
                 "thumbnailUrl": "https://i.ytimg.com/vi/bM9fl-7U5yI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD4o6se34D6ro47z86dZBl2VXBeqQ",
                 "duration": 322000
+            },
+            {
+                "youtubeId": "d8mbWh0em08",
+                "title": "Eda's Requiem and Raine's Rhapsody (Epic Orchestral Cover)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/d8mbWh0em08/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCvIyjdnHSHnG02acHDQN6aEMnETA",
+                "duration": 133000
             },
             {
                 "youtubeId": "Dk7HDPxTeuQ",
@@ -1350,7 +1458,7 @@
             {
                 "youtubeId": "-9Do--Q97lQ",
                 "title": "Emotional OST of the Day No. 60: Tengen Toppa Gurren Lagann - ''Omae no XXX de...''",
-                "thumbnailUrl": "https://i.ytimg.com/vi/-9Do--Q97lQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAGOCEROFAkxXvH9unVccumQGQhaw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/-9Do--Q97lQ/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBVKFgwDw==&rs=AOn4CLCzaqvuG37dZ1YJt43ZB7itRAajDA",
                 "duration": 78000
             },
             {
@@ -1364,24 +1472,6 @@
                 "title": "Petrichor - At the End of Times, Nothing [HD]",
                 "thumbnailUrl": "https://i.ytimg.com/vi/xDaG_tT3TBk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCShc06CYpsGqHFxeGEZq3-_pX6gQ",
                 "duration": 222000
-            },
-            {
-                "youtubeId": "j9zIeQizeL4",
-                "title": "Stoick's Ship (How To Train Your Dragon) | EPIC CINEMATIC VERSION",
-                "thumbnailUrl": "https://i.ytimg.com/vi/j9zIeQizeL4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCwmNXkp6Roa4ZxkJ7rshLXwzqc6Q",
-                "duration": 221000
-            },
-            {
-                "youtubeId": "d8mbWh0em08",
-                "title": "Eda's Requiem and Raine's Rhapsody (Epic Orchestral Cover)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/d8mbWh0em08/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCvIyjdnHSHnG02acHDQN6aEMnETA",
-                "duration": 133000
-            },
-            {
-                "youtubeId": "RlbUo27wbB0",
-                "title": "Our Theme - An Undertale Orchestration (100,000 SUB SPECIAL)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/RlbUo27wbB0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBtlwen3iXDTVWnCWkAj2unMptgkg",
-                "duration": 300000
             },
             {
                 "youtubeId": "YuczKdFAcCc",
@@ -1410,7 +1500,7 @@
             {
                 "youtubeId": "d1QkVMo0_5c",
                 "title": "Still Alive (Instrumental) - Mirror's Edge [music]",
-                "thumbnailUrl": "https://i.ytimg.com/vi/d1QkVMo0_5c/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCIQFQ4SAFF7xhv6DDWlvBDd2HstA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/d1QkVMo0_5c/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYfyATKBMwDw==&rs=AOn4CLBrKNnmSp2ahYj3-fV6RY_bKMhxqQ",
                 "duration": 270000
             },
             {
@@ -1424,24 +1514,6 @@
                 "title": "CASTLE IN THE SKY -  Main Theme (Piano Cover)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/MBi-FhTV8aQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC36Itlcqj5xZUSzfx7-dZieMLuLA",
                 "duration": 271000
-            },
-            {
-                "youtubeId": "iwHHagLkmtE",
-                "title": "Demon Slayer Movie OST: Rengoku's Last Smile (Sad Theme)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/iwHHagLkmtE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD8s3Ip6k0TEy0IzPIIK_5V5SNmCg",
-                "duration": 207000
-            },
-            {
-                "youtubeId": "ibqB1zfru74",
-                "title": "Petite Princess Yucie OST - 06 \"Legend Of The Eternal Tiara\"",
-                "thumbnailUrl": "https://i.ytimg.com/vi/ibqB1zfru74/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA-PO8ITG-7FLYrr6CUQLhVzqpfKg",
-                "duration": 199000
-            },
-            {
-                "youtubeId": "yJzxJk33ZAQ",
-                "title": "My Name Is Kino Loy",
-                "thumbnailUrl": "https://i.ytimg.com/vi/yJzxJk33ZAQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBCQrPH4CZwflt-VtuiT8OwFaZmCA",
-                "duration": 256000
             },
             {
                 "youtubeId": "9AfYK1fKngU",
@@ -1570,12 +1642,6 @@
                 "duration": 158000
             },
             {
-                "youtubeId": "O6A6_VdKU1w",
-                "title": "Path of the Wind 風の通り道 - My Neighbor Totoro となりのトトロ ㅣ ERHU & PIANO COVER 이웃집 토토로 OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/O6A6_VdKU1w/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBRoLrdeR_FlJgsZ5J9hBT0yeIL6g",
-                "duration": 222000
-            },
-            {
                 "youtubeId": "izQsgE0L450",
                 "title": "Samuel Barber - Adagio for Strings",
                 "thumbnailUrl": "https://i.ytimg.com/vi/izQsgE0L450/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDRUhlimlrU_FyFzEkdifZbhCEpXw",
@@ -1620,7 +1686,7 @@
             {
                 "youtubeId": "Zmd2nbHP5kQ",
                 "title": "10 - Farewell, Traveller - Tower of Heaven Original Soundtrack",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Zmd2nbHP5kQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAtholHwL_lSmckhxqEsYBwk0kEHw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Zmd2nbHP5kQ/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYWyBlKBQwDw==&rs=AOn4CLCLtsRyi7JstFJtEqRqA66FXZVQwQ",
                 "duration": 82000
             },
             {
@@ -1726,12 +1792,6 @@
                 "duration": 4785000
             },
             {
-                "youtubeId": "53tW43gG-5M",
-                "title": "(1 hour) The Legend of Ashitaka - Princess Mononoke OST (Lull and Relax Arranged)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/53tW43gG-5M/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBaKFEwDw==&rs=AOn4CLC3bp3geausuidoPQnIEz_aIdrv5Q",
-                "duration": 3761000
-            },
-            {
                 "youtubeId": "kpYy47Sl-vI",
                 "title": "The BEST Studio Ghibli Music on Violin",
                 "thumbnailUrl": "https://i.ytimg.com/vi/kpYy47Sl-vI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAujSf4bqlFb3-EQpDno114yxKrHQ",
@@ -1790,6 +1850,24 @@
                 "title": "In Loving Memory of Allie",
                 "thumbnailUrl": "https://i.ytimg.com/vi/IuDImesXIxg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCjp_OL1XuEwdZmuyUnINBHjIshXw",
                 "duration": 131000
+            },
+            {
+                "youtubeId": "qUG6ten-2WI",
+                "title": "The Avatar's Love -  Aang & Katara Theme | Avatar: The Last Airbender | Erhu cover by Eliott Tordo",
+                "thumbnailUrl": "https://i.ytimg.com/vi/qUG6ten-2WI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCcpHlO11G2b6IKrUWvsydNbKGuJg",
+                "duration": 149000
+            },
+            {
+                "youtubeId": "CzYusW3f0fI",
+                "title": "Thalassophobia (Deep sea ambient music)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/CzYusW3f0fI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCeWFY8Ns6EvX_euHMTalrOiMci8w",
+                "duration": 3328000
+            },
+            {
+                "youtubeId": "5yw--_BjepA",
+                "title": "Gladiator - Now We Are Free | EPIC THEME",
+                "thumbnailUrl": "https://i.ytimg.com/vi/5yw--_BjepA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAlPaPTJ6Rvjz5GrrmzeNG0JcpFag",
+                "duration": 264000
             }
         ]
     },
@@ -1797,6 +1875,60 @@
         "playlistId": "PLV8C9t518pCIQI83Emr6gLntePk57OYH1",
         "title": "D&D - Peaceful Little Town",
         "musics": [
+            {
+                "youtubeId": "KMOeC-Qqen8",
+                "title": "[Animation] bees performing chocobo theme",
+                "thumbnailUrl": "https://i.ytimg.com/vi/KMOeC-Qqen8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBEom3tv907A0wnEgFkWR4SwR0JNQ",
+                "duration": 47000
+            },
+            {
+                "youtubeId": "KSwseTd00wY",
+                "title": "Piranha Plants on Parade - Super Mario Bros. Wonder Remix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/KSwseTd00wY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAKt1AyzVi4J9lS-2i7DK390xusyw",
+                "duration": 211000
+            },
+            {
+                "youtubeId": "_ouXET8zNI8",
+                "title": "Nichijou OST - Koigokoro wa Dangan mo Yawarakakusuru",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_ouXET8zNI8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYUSBlKDIwDw==&rs=AOn4CLCLzPkPsQcc4sP0jNfvcrZZGPRxnQ",
+                "duration": 86000
+            },
+            {
+                "youtubeId": "b9sbCfgUD-w",
+                "title": "Chocobo & Chill",
+                "thumbnailUrl": "https://i.ytimg.com/vi/b9sbCfgUD-w/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDVejktqSC2czZTn58ZpwwF6ImARA",
+                "duration": 2481000
+            },
+            {
+                "youtubeId": "rPoDOJ2rDUA",
+                "title": "🎵 Settlers of Catan Music - Atmospheric Background Soundtrack for playing the Catan Board Game",
+                "thumbnailUrl": "https://i.ytimg.com/vi/rPoDOJ2rDUA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDQgVnTxAIy5FYj_Dp7nV8gx0Dolw",
+                "duration": 4244000
+            },
+            {
+                "youtubeId": "_oMxgd792Fw",
+                "title": "OCR00925: Final Fantasy IV A Chocobo's Mystic Life OC ReMix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_oMxgd792Fw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDJIJmBnRxdaaYSEjqJguhVPciLCQ",
+                "duration": 168000
+            },
+            {
+                "youtubeId": "IY6AuPiD3P4",
+                "title": "Final Fantasy VII - Farm Boy",
+                "thumbnailUrl": "https://i.ytimg.com/vi/IY6AuPiD3P4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAvVT9PQIh66tjnLOa_xyplh5O7yw",
+                "duration": 172000
+            },
+            {
+                "youtubeId": "7JT_AXb9tqI",
+                "title": "OC ReMix #1504: Final Fantasy Adventure 'Chocobo!' [Birth & Theme of Chocobo] by Big Giant Circles",
+                "thumbnailUrl": "https://i.ytimg.com/vi/7JT_AXb9tqI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDKP7_EIAgTP4HbZn-GVcprCLwJCA",
+                "duration": 200000
+            },
+            {
+                "youtubeId": "KpxkASIV9rs",
+                "title": "Planet Mermaid Resort",
+                "thumbnailUrl": "https://i.ytimg.com/vi/KpxkASIV9rs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCsGL00-pMws9F5QTe23ErPjz4Jgw",
+                "duration": 144000
+            },
             {
                 "youtubeId": "Wk0IFByeH1M",
                 "title": "Zelda OoT \"Malon's Song\" Celtic Vocal Cover (with lyrics)",
@@ -1874,12 +2006,6 @@
                 "title": "Mabe Village - The Legend of Zelda: Link's Awakening | Piano Cover",
                 "thumbnailUrl": "https://i.ytimg.com/vi/fe2wAahCdcc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDR7hbG3eE4r9Xtaq76pcayV4rKEw",
                 "duration": 172000
-            },
-            {
-                "youtubeId": "KpxkASIV9rs",
-                "title": "Planet Mermaid Resort",
-                "thumbnailUrl": "https://i.ytimg.com/vi/KpxkASIV9rs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCsGL00-pMws9F5QTe23ErPjz4Jgw",
-                "duration": 144000
             },
             {
                 "youtubeId": "Qd96mpRuHtQ",
@@ -1996,12 +2122,6 @@
                 "duration": 246000
             },
             {
-                "youtubeId": "rPoDOJ2rDUA",
-                "title": "🎵 Settlers of Catan Music - Atmospheric Background Soundtrack for playing the Catan Board Game",
-                "thumbnailUrl": "https://i.ytimg.com/vi/rPoDOJ2rDUA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDQgVnTxAIy5FYj_Dp7nV8gx0Dolw",
-                "duration": 4244000
-            },
-            {
                 "youtubeId": "Ms3xkkcReuE",
                 "title": "The Score of Catan (Full Song)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/Ms3xkkcReuE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAdNhhe9K93Nkx1nm14-C4vKbuy2w",
@@ -2015,9 +2135,81 @@
             },
             {
                 "youtubeId": "5ej0x2t2CYY",
-                "title": "Super Mario Bros. Wonder - Overworld (?) [Remix]",
+                "title": "Super Mario Bros. Wonder - Overworld [Remix]",
                 "thumbnailUrl": "https://i.ytimg.com/vi/5ej0x2t2CYY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDSc-ccNq95Sfit_sgErLINOmiJQA",
                 "duration": 278000
+            },
+            {
+                "youtubeId": "WpwSVOuKF-4",
+                "title": "Zombie (Medieval Version)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/WpwSVOuKF-4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDHPNsp7RkD42Uq-4emKRmQnBS1tg",
+                "duration": 231000
+            },
+            {
+                "youtubeId": "8u9ZC8WLIiU",
+                "title": "Festival Town | D&D/TTRPG Music | 1 Hour",
+                "thumbnailUrl": "https://i.ytimg.com/vi/8u9ZC8WLIiU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBZKE0wDw==&rs=AOn4CLBbt8XlLuoMkDe261eFpJUTU-EsTA",
+                "duration": 3739000
+            },
+            {
+                "youtubeId": "0X0sLw63KLU",
+                "title": "Kingdom Dance (From \"Tangled\"/Score)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/0X0sLw63KLU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBFdts0FNkTkCfrus7L0MN9wLa9hA",
+                "duration": 141000
+            },
+            {
+                "youtubeId": "3X_xammncfQ",
+                "title": "The Witcher 2 Soundtrack - A Watering Hole in the Harbor",
+                "thumbnailUrl": "https://i.ytimg.com/vi/3X_xammncfQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDyvbhcR4IrW4-kQd0JVGfqIx32Ig",
+                "duration": 160000
+            },
+            {
+                "youtubeId": "4sg16oRIGFE",
+                "title": "Firefly OST - 23. River's Dance",
+                "thumbnailUrl": "https://i.ytimg.com/vi/4sg16oRIGFE/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ad4DgALgA4oCDAgAEAEYciBQKDowDw==&rs=AOn4CLCv2ldwsSZmblFjk8k7Lv7XyulukQ",
+                "duration": 113000
+            },
+            {
+                "youtubeId": "QjpTGEwUQk8",
+                "title": "Brave OST - 04 - Fate and Destiny",
+                "thumbnailUrl": "https://i.ytimg.com/vi/QjpTGEwUQk8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA1VVjXfHMFVdG-pcYO4XawoLnGAA",
+                "duration": 258000
+            },
+            {
+                "youtubeId": "d7ivDOUeIK0",
+                "title": "The Witcher 3: Wild Hunt Soundtrack - A Story You Won't Believe (Gwent / Tavern)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/d7ivDOUeIK0/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBWKE8wDw==&rs=AOn4CLBf9Ad2jYo6wtRqTa08FMbxugw8ow",
+                "duration": 99000
+            },
+            {
+                "youtubeId": "exDcam6hcv0",
+                "title": "The Lord of the Rings: The Fellowship of the Ring CR - 05. Flaming Red Hair",
+                "thumbnailUrl": "https://i.ytimg.com/vi/exDcam6hcv0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAO0Ep3Iu7eEVgqLDfdlW-RIHB-Ow",
+                "duration": 162000
+            },
+            {
+                "youtubeId": "fCSZG6e9ljA",
+                "title": "Stardew Valley OC ReMix by RebeccaETripp: \"Autumn Delights\" [Fall (The Smell of Mushroom)] (#4248)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/fCSZG6e9ljA/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4OgAK4CIoCDAgAEAEYfyA3KBgwDw==&rs=AOn4CLD9ugNN_9LY2ZOTrBxTY25FRG1IsA",
+                "duration": 229000
+            },
+            {
+                "youtubeId": "EvWyMn70UCY",
+                "title": "Lord of the Rings | Winter in the Shire Music & Ambience with @ASMRWeekly",
+                "thumbnailUrl": "https://i.ytimg.com/vi/EvWyMn70UCY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDYi9yM7UPGewf5bmRzIKdE6H_3iw",
+                "duration": 10801000
+            },
+            {
+                "youtubeId": "saYCZ9jzLEA",
+                "title": "FFXIV OST Titania Theme ( What Angel Wakes Me )",
+                "thumbnailUrl": "https://i.ytimg.com/vi/saYCZ9jzLEA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCsm9fxTycgmVw6VW_IIBA87meydw",
+                "duration": 534000
+            },
+            {
+                "youtubeId": "nghTrcPBp3s",
+                "title": "Yoshi's Story: Theme",
+                "thumbnailUrl": "https://i.ytimg.com/vi/nghTrcPBp3s/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYciBGKDgwDw==&rs=AOn4CLCDU6ZsdkFb2QK6ujP4SZ6aMjmZ0w",
+                "duration": 76000
             }
         ]
     },
@@ -2026,16 +2218,28 @@
         "title": "D&D - Optimistic Overworld",
         "musics": [
             {
-                "youtubeId": "98b6i7758WY",
-                "title": "Watching And Dreaming (Epic Version) | The Owl House (Luz’s Transformation Music)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/98b6i7758WY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD45ZoFnZMWJrj4iQqB7oRhhDzNgw",
-                "duration": 311000
+                "youtubeId": "7hihvC9zaQY",
+                "title": "Travel Oregon - Only Slightly Exaggerated",
+                "thumbnailUrl": "https://i.ytimg.com/vi/7hihvC9zaQY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAuQvxQIrCTl0qJE-QzCNjzr6frpQ",
+                "duration": 111000
             },
             {
-                "youtubeId": "Wtc5glDZ8wA",
-                "title": "Shroudbroken (Original Game Soundtrack)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Wtc5glDZ8wA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAsXKr9eXR9SocQAUicp5RlLhCpPg",
-                "duration": 169000
+                "youtubeId": "YVtrB8k6iK4",
+                "title": "Forbidden Friendship (How To Train Your Dragon) | EPIC CINEMATIC VERSION",
+                "thumbnailUrl": "https://i.ytimg.com/vi/YVtrB8k6iK4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAfUGWb-RgzC27CwAkj6opR_G7bJA",
+                "duration": 189000
+            },
+            {
+                "youtubeId": "LN6kPEqq5mY",
+                "title": "Not So Romantic Flight - Epic Majestic Orchestral",
+                "thumbnailUrl": "https://i.ytimg.com/vi/LN6kPEqq5mY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBiHHn0UV01dUUUQT8ilE6YRH2f3Q",
+                "duration": 199000
+            },
+            {
+                "youtubeId": "h8T4akr_-B8",
+                "title": "How to Train Your Dragon | Soundtrack Medley (feat. Where No One Goes [Film Version])",
+                "thumbnailUrl": "https://i.ytimg.com/vi/h8T4akr_-B8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDK6jksAArpbP-aaarR5MzwTW-eEg",
+                "duration": 2886000
             },
             {
                 "youtubeId": "SuX1SXRzQy4",
@@ -2116,9 +2320,15 @@
                 "duration": 156000
             },
             {
+                "youtubeId": "tv9SdT-Ipa4",
+                "title": "Strong Desire",
+                "thumbnailUrl": "https://i.ytimg.com/vi/tv9SdT-Ipa4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAToFXZJ7af15v8ATqcqqWZyj1mCQ",
+                "duration": 138000
+            },
+            {
                 "youtubeId": "zHnQ_m7eWDw",
                 "title": "Fire Emblem Fates OST ~Resolve (Dark)~ Prepare for Battle: Nohr",
-                "thumbnailUrl": "https://i.ytimg.com/vi/zHnQ_m7eWDw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDsHPICiLJw48HNkAMT-lUY_aID5A",
+                "thumbnailUrl": "https://i.ytimg.com/vi/zHnQ_m7eWDw/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBeKFYwDw==&rs=AOn4CLCTAg2jl0ObViC2WFQMu8hrC958KQ",
                 "duration": 307000
             },
             {
@@ -2130,7 +2340,7 @@
             {
                 "youtubeId": "_YjwXKqDOYw",
                 "title": "Punch Brothers - Squirrel of Possibility",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_YjwXKqDOYw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBACgmRSnjHJPXqGyHZmXz7vTnXxA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_YjwXKqDOYw/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYFyBnKHIwDw==&rs=AOn4CLCAFRnSjW3rBgfq95dCI96mODHOeA",
                 "duration": 169000
             },
             {
@@ -2142,7 +2352,7 @@
             {
                 "youtubeId": "Z7klyQsmVa8",
                 "title": "Gurren Lagann OST Disc 1 - 07 - Drill to Heaven with Your XXX!! -First Time Outside Version- / Om...",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Z7klyQsmVa8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA_J7lL7Yzq7VVlPdLW4Raqdjrhug",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Z7klyQsmVa8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA4KEMwDw==&rs=AOn4CLCDbrpqRNCwU437-vAUOSzUi7xCvA",
                 "duration": 138000
             },
             {
@@ -2200,18 +2410,6 @@
                 "duration": 191000
             },
             {
-                "youtubeId": "5eTXcbrx9Cc",
-                "title": "Where No One Goes [Deluxe Reprise]",
-                "thumbnailUrl": "https://i.ytimg.com/vi/5eTXcbrx9Cc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAlbA_ep5JSfpVnRhIj4eTipXnT2A",
-                "duration": 228000
-            },
-            {
-                "youtubeId": "YVtrB8k6iK4",
-                "title": "Forbidden Friendship (How To Train Your Dragon) | EPIC CINEMATIC VERSION",
-                "thumbnailUrl": "https://i.ytimg.com/vi/YVtrB8k6iK4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAfUGWb-RgzC27CwAkj6opR_G7bJA",
-                "duration": 189000
-            },
-            {
                 "youtubeId": "3MwX5CHG6WE",
                 "title": "How To Train Your Dragon Theme - Epic Orchestra Remix",
                 "thumbnailUrl": "https://i.ytimg.com/vi/3MwX5CHG6WE/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBHKEMwDw==&rs=AOn4CLBdZubkJJlKHfU5Jn76rAMDXYQbpg",
@@ -2234,12 +2432,6 @@
                 "title": "Dungeons and Dragons Adventure Music | \"Land of Lore\" | Travel Theme",
                 "thumbnailUrl": "https://i.ytimg.com/vi/TLriq2U_OYU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYTyBlKDQwDw==&rs=AOn4CLBfo92Hnz6-yiUNSLBZsJaofReFqA",
                 "duration": 182000
-            },
-            {
-                "youtubeId": "lXYCqSF4weo",
-                "title": "Pathfinder: Kingmaker - Celtic Style Barbarian Music Mix - Fantasy RPG & DnD Primal Adventure Music",
-                "thumbnailUrl": "https://i.ytimg.com/vi/lXYCqSF4weo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCdyYEJtmxXTB4P55T7h0a1pkYOmA",
-                "duration": 365000
             },
             {
                 "youtubeId": "juQzyXGDeD8",
@@ -2268,7 +2460,7 @@
             {
                 "youtubeId": "1jIOpuqRhEg",
                 "title": "One Piece - Music & Song Collection 1 - To the Grand Line",
-                "thumbnailUrl": "https://i.ytimg.com/vi/1jIOpuqRhEg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBa2muwjV_W-VHfkGqyAB9LtYOAAQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/1jIOpuqRhEg/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ab4CgALwAYoCDAgAEAEYZSBgKEwwDw==&rs=AOn4CLAjoQ8tzabzTwDHQCQkBAL-W4-pQA",
                 "duration": 225000
             },
             {
@@ -2288,12 +2480,6 @@
                 "title": "29 Bows/Exit from Wicked",
                 "thumbnailUrl": "https://i.ytimg.com/vi/2cpmazd6558/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDpZJe9rhphRs1lQ-9kbbkYZUr7Lw",
                 "duration": 170000
-            },
-            {
-                "youtubeId": "7hihvC9zaQY",
-                "title": "Travel Oregon - Only Slightly Exaggerated",
-                "thumbnailUrl": "https://i.ytimg.com/vi/7hihvC9zaQY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAuQvxQIrCTl0qJE-QzCNjzr6frpQ",
-                "duration": 111000
             },
             {
                 "youtubeId": "MafGRDnRFRA",
@@ -2338,6 +2524,12 @@
                 "duration": 225000
             },
             {
+                "youtubeId": "G0LQ3TjaN9s",
+                "title": "Wayfarer's Journey - Adventure/Folk Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/G0LQ3TjaN9s/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBvrf_jp2NXKP019-NSqu_6hfgqzA",
+                "duration": 231000
+            },
+            {
                 "youtubeId": "4iBFXxX3lBo",
                 "title": "The Owl House: Titan Luz Theme (I'm Back!) | EPIC EXTENDED VERSION",
                 "thumbnailUrl": "https://i.ytimg.com/vi/4iBFXxX3lBo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD7I1SVtNQIimZI5R_lEnJ-7ioTdQ",
@@ -2360,6 +2552,48 @@
                 "title": "I'm Gonna Be King Of The Pirates / We Are!",
                 "thumbnailUrl": "https://i.ytimg.com/vi/94w9FF2hQUs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBxkZ11Fy8IIwhH8s26X2gRHbt4Hw",
                 "duration": 267000
+            },
+            {
+                "youtubeId": "T3FFGQvXfi0",
+                "title": "How To Train Your Dragon 3 - Official Trailer Music | Brand X Music - Serenity",
+                "thumbnailUrl": "https://i.ytimg.com/vi/T3FFGQvXfi0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDfkr6p-wheMIMjTKOrUUP0hEipmA",
+                "duration": 156000
+            },
+            {
+                "youtubeId": "EbRcBM26zG8",
+                "title": "A Link to the Past: Epilogue ~ Beautiful Hyrule Orchestral Arrangement",
+                "thumbnailUrl": "https://i.ytimg.com/vi/EbRcBM26zG8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB1n2g56S0eSCbhDfRRn0FB2CxffQ",
+                "duration": 236000
+            },
+            {
+                "youtubeId": "t2XMqTA2jno",
+                "title": "Anne's Theme - Epic Orchestral Cover [ Kāru & @Kalamity_Music ]",
+                "thumbnailUrl": "https://i.ytimg.com/vi/t2XMqTA2jno/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAa9PtGqydFL8ncHdOtBuw13qKdTA",
+                "duration": 327000
+            },
+            {
+                "youtubeId": "R0j2o9DyI04",
+                "title": "Acoustic Folk Music - Appalachian Trail - Guitar & Banjo Autumn Music Mix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/R0j2o9DyI04/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDR7XTQv4GLXFoAUgOnxCeX4mnwWQ",
+                "duration": 3715000
+            },
+            {
+                "youtubeId": "98b6i7758WY",
+                "title": "Watching And Dreaming (Epic Version) | The Owl House (Luz’s Transformation Music)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/98b6i7758WY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD45ZoFnZMWJrj4iQqB7oRhhDzNgw",
+                "duration": 311000
+            },
+            {
+                "youtubeId": "Wtc5glDZ8wA",
+                "title": "Shroudbroken (Original Game Soundtrack)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Wtc5glDZ8wA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAsXKr9eXR9SocQAUicp5RlLhCpPg",
+                "duration": 169000
+            },
+            {
+                "youtubeId": "lXYCqSF4weo",
+                "title": "Pathfinder: Kingmaker - Celtic Style Barbarian Music Mix - Fantasy RPG & DnD Primal Adventure Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/lXYCqSF4weo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCdyYEJtmxXTB4P55T7h0a1pkYOmA",
+                "duration": 365000
             }
         ]
     },
@@ -2394,7 +2628,7 @@
             {
                 "youtubeId": "cgXGfYsz0k8",
                 "title": "My Shot [Rise Up Remix] (Karaoke/Instrumental) - The Hamilton Mixtape",
-                "thumbnailUrl": "https://i.ytimg.com/vi/cgXGfYsz0k8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC1NT5jcKaV4ubfr0wqgrCATu-XWg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/cgXGfYsz0k8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLCMLbXjIVOtrpHgO05I1GkKAFe54A",
                 "duration": 273000
             },
             {
@@ -2562,7 +2796,7 @@
             {
                 "youtubeId": "cTpcW603Ds0",
                 "title": "Final Fantasy I ost - Game Over",
-                "thumbnailUrl": "https://i.ytimg.com/vi/cTpcW603Ds0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCvtEFQSeC-qaOWadICRNHBPB3Exw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/cTpcW603Ds0/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLDpHVCI7LqEqV7y937P4td8BzB6Vg",
                 "duration": 56000
             },
             {
@@ -2676,7 +2910,7 @@
             {
                 "youtubeId": "4DuHmfq7t_I",
                 "title": "Twilight Princess OST-Trailer Music",
-                "thumbnailUrl": "https://i.ytimg.com/vi/4DuHmfq7t_I/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB1KehDi1LS1lqSdZ8laKevtrJuIw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/4DuHmfq7t_I/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ab4HgALQBYoCDAgAEAEYZSBeKEYwDw==&rs=AOn4CLDvMS1PhDH0ny-8Hhp1eoQyUyG-xg",
                 "duration": 127000
             },
             {
@@ -2688,7 +2922,7 @@
             {
                 "youtubeId": "aBmjFrx3Tr0",
                 "title": "Loch Lomond (Accompaniment & Lyrics)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/aBmjFrx3Tr0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCMMDMYsmtIZW1vBe88pkoBenLDkw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/aBmjFrx3Tr0/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA6KEgwDw==&rs=AOn4CLBwy2QVV77ed1Q6jWNP_maPK9DEKA",
                 "duration": 238000
             },
             {
@@ -3222,7 +3456,7 @@
             {
                 "youtubeId": "_0L5kf0DdAk",
                 "title": "Pillars of Eternity Soundtrack - The Endless Paths I",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_0L5kf0DdAk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDMt7HduYfl5Hw9NqkpuYZaKHKAiA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_0L5kf0DdAk/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYMSBjKGUwDw==&rs=AOn4CLBQWjZm30SlHx8AaPdMAgsO3aESYA",
                 "duration": 153000
             },
             {
@@ -3240,13 +3474,13 @@
             {
                 "youtubeId": "dyWVZxnpnPo",
                 "title": "D&D Official Roleplaying Soundtrack - Craft of the Wizard",
-                "thumbnailUrl": "https://i.ytimg.com/vi/dyWVZxnpnPo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDov419UoSpiWQTmUl9OHLWSyP2Qw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/dyWVZxnpnPo/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ab4CgALwAYoCDAgAEAEYXCBQKGUwDw==&rs=AOn4CLD--IDJt29ihnqpmpcN7LVt7_pphA",
                 "duration": 204000
             },
             {
                 "youtubeId": "dyWVZxnpnPo",
                 "title": "D&D Official Roleplaying Soundtrack - Craft of the Wizard",
-                "thumbnailUrl": "https://i.ytimg.com/vi/dyWVZxnpnPo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDov419UoSpiWQTmUl9OHLWSyP2Qw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/dyWVZxnpnPo/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ab4CgALwAYoCDAgAEAEYXCBQKGUwDw==&rs=AOn4CLD--IDJt29ihnqpmpcN7LVt7_pphA",
                 "duration": 204000
             },
             {
@@ -3257,7 +3491,7 @@
             },
             {
                 "youtubeId": "oZOLnp5yQ4Y",
-                "title": "Puss in Boots: Death Theme Whistle | EPIC VERSION (The Last Wish Soundtrack)",
+                "title": "Puss in Boots 2: Death Whistle Theme | EPIC VERSION (The Last Wish Soundtrack)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/oZOLnp5yQ4Y/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD9SxOiSlVcspITafG2IV9dajTZ8w",
                 "duration": 350000
             },
@@ -3273,12 +3507,6 @@
         "playlistId": "PLV8C9t518pCKAKuh-e4jUrbMNLh8Lcpfz",
         "title": "D&D - Podari - Let's Fucking Go",
         "musics": [
-            {
-                "youtubeId": "LOiDmOV5EaI",
-                "title": "Dragón ball kai opening 1 instrumental",
-                "thumbnailUrl": "https://i.ytimg.com/vi/LOiDmOV5EaI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDaKXLWsFWgDTjcDFspQb8he4AVnA",
-                "duration": 86000
-            },
             {
                 "youtubeId": "sA7qYWH-UvU",
                 "title": "Shingeki no Kyojin | Linked Horizon -  紅蓮の弓矢 | Opening 1 | Lyrics",
@@ -3299,7 +3527,7 @@
             },
             {
                 "youtubeId": "rW7OB_HDCGQ",
-                "title": "One Punch Man OST -1080p- Seigi Shikkou (Original)",
+                "title": "One Punch Man OST - Seigi Shikkou (Original)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/rW7OB_HDCGQ/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBbKFUwDw==&rs=AOn4CLCj0PVjMWcwIHMZ243TjxIaww-8Zw",
                 "duration": 112000
             },
@@ -3312,7 +3540,7 @@
             {
                 "youtubeId": "_PvR39VWkLQ",
                 "title": "Kill La Kill - Ambiguous (Instrumental)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_PvR39VWkLQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBkvH4RSvnwmOmelwcyCqMideZjzQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_PvR39VWkLQ/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyAuKC8wDw==&rs=AOn4CLDTboTcjAfAjwGOalKSAuTQeTQSNQ",
                 "duration": 270000
             },
             {
@@ -3400,6 +3628,12 @@
                 "duration": 269000
             },
             {
+                "youtubeId": "ATS78TYGHLA",
+                "title": "Before My Body is Dry -Karaoke Version",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ATS78TYGHLA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAyJtNPbIpcrxYv6PE6gMGnWUhsOA",
+                "duration": 249000
+            },
+            {
                 "youtubeId": "GChbMAAHIJs",
                 "title": "Gurren Lagann OST Disc 2 - 08 - Spin, Spin, Spin, Spi!? / Mawatte Mawatte Mawatte Mawaa!? / ...",
                 "thumbnailUrl": "https://i.ytimg.com/vi/GChbMAAHIJs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBouffZtJXNBSPWobW7QVgA0URTxw",
@@ -3467,7 +3701,7 @@
             },
             {
                 "youtubeId": "lM3DfSxWRYY",
-                "title": "One Punch Man OST -1080p- Inferiority (Original)",
+                "title": "One Punch Man OST - Inferiority (Original)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/lM3DfSxWRYY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLChs1iEedGk9JtYXNCt6WL5judrxg",
                 "duration": 109000
             },
@@ -3578,6 +3812,12 @@
                 "title": "【ニコカラ】勇者王誕生!(off vocal)/遠藤正明",
                 "thumbnailUrl": "https://i.ytimg.com/vi/rmSyCCULevs/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyBXKBMwDw==&rs=AOn4CLCH4yu3jqI9fwuIqCIbBufmzP-rhg",
                 "duration": 236000
+            },
+            {
+                "youtubeId": "LOiDmOV5EaI",
+                "title": "Dragón ball kai opening 1 instrumental",
+                "thumbnailUrl": "https://i.ytimg.com/vi/LOiDmOV5EaI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDaKXLWsFWgDTjcDFspQb8he4AVnA",
+                "duration": 86000
             }
         ]
     },
@@ -3585,6 +3825,18 @@
         "playlistId": "PLV8C9t518pCJ7Ymh3qHv5iqha9F-3n2J7",
         "title": "D&D - Victory",
         "musics": [
+            {
+                "youtubeId": "GCodx-yXph8",
+                "title": "Ending Theme",
+                "thumbnailUrl": "https://i.ytimg.com/vi/GCodx-yXph8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB2Cvus3BaWzR1qKwgJfK6WEJGnbw",
+                "duration": 188000
+            },
+            {
+                "youtubeId": "LRIQ7__4vv4",
+                "title": "プロメア Promare - Inferno (Instrumental)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/LRIQ7__4vv4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB1sL-vviOtH1yYUE_RAAkvsXLCRg",
+                "duration": 236000
+            },
             {
                 "youtubeId": "HMY4q8K33ZQ",
                 "title": "The Owl House - Watching and Dreaming - Ending Credits Theme",
@@ -3602,12 +3854,6 @@
                 "title": "[Karaoke] \"Zankoku na Tenshi no TE-ZE\" by Takahashi Youko",
                 "thumbnailUrl": "https://i.ytimg.com/vi/9uCwsMWMny0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAUSH5e5DW9grnU_etOUsen_wvjeQ",
                 "duration": 249000
-            },
-            {
-                "youtubeId": "LRIQ7__4vv4",
-                "title": "プロメア Promare - Inferno (Instrumental)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/LRIQ7__4vv4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB1sL-vviOtH1yYUE_RAAkvsXLCRg",
-                "duration": 236000
             },
             {
                 "youtubeId": "tA-frKY2zJA",
@@ -3632,12 +3878,6 @@
                 "title": "Gladiator - Now We Are Free | EPIC THEME",
                 "thumbnailUrl": "https://i.ytimg.com/vi/5yw--_BjepA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAlPaPTJ6Rvjz5GrrmzeNG0JcpFag",
                 "duration": 264000
-            },
-            {
-                "youtubeId": "GCodx-yXph8",
-                "title": "Ending Theme",
-                "thumbnailUrl": "https://i.ytimg.com/vi/GCodx-yXph8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB2Cvus3BaWzR1qKwgJfK6WEJGnbw",
-                "duration": 188000
             },
             {
                 "youtubeId": "lP9lYTs00lc",
@@ -3762,7 +4002,7 @@
             {
                 "youtubeId": "5tp8iVL9LPc",
                 "title": "SmK - Memory of a Melody",
-                "thumbnailUrl": "https://i.ytimg.com/vi/5tp8iVL9LPc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAeHbun4tXaI6yy4VSnmCukA6TvXQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/5tp8iVL9LPc/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYPyBRKHIwDw==&rs=AOn4CLD4IugMeUcQCgX-RbQcMSrx8mu1yA",
                 "duration": 295000
             },
             {
@@ -3804,7 +4044,7 @@
             {
                 "youtubeId": "_2sQKNGcp2I",
                 "title": "Legend of Zelda, The (NES) Music - Ending Theme",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_2sQKNGcp2I/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBfLVEw4preQRQ2juTgfvNjHKpLFw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_2sQKNGcp2I/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ad4CgAKgAooCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLD-T_wtH_XXE5PRme0tt8zzFmvW8A",
                 "duration": 181000
             },
             {
@@ -3818,6 +4058,18 @@
                 "title": "Now We Are Free",
                 "thumbnailUrl": "https://i.ytimg.com/vi/ghxzLw2wRis/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB2Z4r8CCWS1O2FZi5NLOUoFHXlAQ",
                 "duration": 255000
+            },
+            {
+                "youtubeId": "_YEMpGbN6zk",
+                "title": "Super Smash Bros Ult. OC ReMix by General Grunt & co.: \"Crocodile Kroctoberfest (Prost Mix)\" (#4489)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_YEMpGbN6zk/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZCBlKBswDw==&rs=AOn4CLA_n6gWWnQ8wUb87lSZVW2hGC4NcQ",
+                "duration": 134000
+            },
+            {
+                "youtubeId": "FbLIz-vhSWo",
+                "title": "All Star - Epic Orchestral Cover [ Kāru ]",
+                "thumbnailUrl": "https://i.ytimg.com/vi/FbLIz-vhSWo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD2dRNFrXXnHIRyofOmpQ_PKd1gXA",
+                "duration": 305000
             }
         ]
     },
@@ -3826,16 +4078,52 @@
         "title": "D&D - Theros - Darkish Forest",
         "musics": [
             {
-                "youtubeId": "gokhBJWSjeM",
-                "title": "The Witcher 3: Wild Hunt OST - The Fields of Ard Skellig",
-                "thumbnailUrl": "https://i.ytimg.com/vi/gokhBJWSjeM/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZiBmKGYwDw==&rs=AOn4CLB12DBCcyNyfOhWmvWkR-V0kRFvrA",
-                "duration": 190000
+                "youtubeId": "brO4I2O6Ths",
+                "title": "Starlight Waltz",
+                "thumbnailUrl": "https://i.ytimg.com/vi/brO4I2O6Ths/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBl9g8JK6NurNsExgBa-RijENRlBg",
+                "duration": 144000
+            },
+            {
+                "youtubeId": "idOmc35hlhU",
+                "title": "Stardew Valley OST - Fall (Raven's Descent)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/idOmc35hlhU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBU7-__uql9u5oDyIcVnTTOOcKyMQ",
+                "duration": 173000
             },
             {
                 "youtubeId": "qgUBNeGLPWs",
                 "title": "Whimsical Fantasy Music: \"Fantasy Journey\" by Crypt of Insomnia",
                 "thumbnailUrl": "https://i.ytimg.com/vi/qgUBNeGLPWs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA1wfgwR2kWDTLWybAYrqMbin0-lA",
                 "duration": 141000
+            },
+            {
+                "youtubeId": "ictmv9TbGJU",
+                "title": "Pokémon Super Mystery Dungeon OST - Foreboding Forest",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ictmv9TbGJU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDCgsDoVXj2AP8yTWcWqe9LaBbUYg",
+                "duration": 242000
+            },
+            {
+                "youtubeId": "N9Clmr94zGY",
+                "title": "Sacred Grove - The Legend of Zelda: Twilight Princess",
+                "thumbnailUrl": "https://i.ytimg.com/vi/N9Clmr94zGY/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4OgAK4CIoCDAgAEAEYfyApKBMwDw==&rs=AOn4CLCaWtjJtZb3Nr5Ja1ZD7jBFcu3k8Q",
+                "duration": 181000
+            },
+            {
+                "youtubeId": "saYCZ9jzLEA",
+                "title": "FFXIV OST Titania Theme ( What Angel Wakes Me )",
+                "thumbnailUrl": "https://i.ytimg.com/vi/saYCZ9jzLEA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCsm9fxTycgmVw6VW_IIBA87meydw",
+                "duration": 534000
+            },
+            {
+                "youtubeId": "x5l4Cc9TCC8",
+                "title": "A new Adventure - Fantasy Music Mix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/x5l4Cc9TCC8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDYpOp8P8Teqw0iDS_g4xzet4NHwQ",
+                "duration": 3602000
+            },
+            {
+                "youtubeId": "gokhBJWSjeM",
+                "title": "The Witcher 3: Wild Hunt OST - The Fields of Ard Skellig",
+                "thumbnailUrl": "https://i.ytimg.com/vi/gokhBJWSjeM/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZiBmKGYwDw==&rs=AOn4CLB12DBCcyNyfOhWmvWkR-V0kRFvrA",
+                "duration": 190000
             },
             {
                 "youtubeId": "aVFlL4Hk6ik",
@@ -3856,34 +4144,10 @@
                 "duration": 399000
             },
             {
-                "youtubeId": "x5l4Cc9TCC8",
-                "title": "A new Adventure - Fantasy Music Mix",
-                "thumbnailUrl": "https://i.ytimg.com/vi/x5l4Cc9TCC8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDYpOp8P8Teqw0iDS_g4xzet4NHwQ",
-                "duration": 3602000
-            },
-            {
-                "youtubeId": "N9Clmr94zGY",
-                "title": "Sacred Grove - The Legend of Zelda: Twilight Princess",
-                "thumbnailUrl": "https://i.ytimg.com/vi/N9Clmr94zGY/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4OgAK4CIoCDAgAEAEYfyApKBMwDw==&rs=AOn4CLCaWtjJtZb3Nr5Ja1ZD7jBFcu3k8Q",
-                "duration": 181000
-            },
-            {
                 "youtubeId": "QVYwqQVcB8U",
                 "title": "The Lord of the Rings: The Forest of Fangorn Ambience & Music",
                 "thumbnailUrl": "https://i.ytimg.com/vi/QVYwqQVcB8U/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCYg0vHAh4W7uCZku6dfMS3FYzizA",
                 "duration": 11422000
-            },
-            {
-                "youtubeId": "idOmc35hlhU",
-                "title": "Stardew Valley OST - Fall (Raven's Descent)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/idOmc35hlhU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBU7-__uql9u5oDyIcVnTTOOcKyMQ",
-                "duration": 173000
-            },
-            {
-                "youtubeId": "ictmv9TbGJU",
-                "title": "Pokémon Super Mystery Dungeon OST - Foreboding Forest",
-                "thumbnailUrl": "https://i.ytimg.com/vi/ictmv9TbGJU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDCgsDoVXj2AP8yTWcWqe9LaBbUYg",
-                "duration": 242000
             },
             {
                 "youtubeId": "92At2Eoj-co",
@@ -4036,22 +4300,22 @@
                 "duration": 193000
             },
             {
-                "youtubeId": "saYCZ9jzLEA",
-                "title": "FFXIV OST Titania Theme ( What Angel Wakes Me )",
-                "thumbnailUrl": "https://i.ytimg.com/vi/saYCZ9jzLEA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCsm9fxTycgmVw6VW_IIBA87meydw",
-                "duration": 534000
-            },
-            {
                 "youtubeId": "zfAP3Gukkdk",
                 "title": "Wight Winter - Music of Arc 3",
                 "thumbnailUrl": "https://i.ytimg.com/vi/zfAP3Gukkdk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBSx-ailmO7bs_YL10_V62rNeu2Pw",
                 "duration": 1164000
             },
             {
-                "youtubeId": "brO4I2O6Ths",
-                "title": "Starlight Waltz",
-                "thumbnailUrl": "https://i.ytimg.com/vi/brO4I2O6Ths/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBl9g8JK6NurNsExgBa-RijENRlBg",
-                "duration": 144000
+                "youtubeId": "7VNVX8v7dkY",
+                "title": "Celeste OC ReMix by RebeccaETripp: \"Courage in the Dark\" [Resurrections] (#4468)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/7VNVX8v7dkY/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYLyBEKH8wDw==&rs=AOn4CLCJxqHXbee1FiSLpjyXn0zp2ESOfA",
+                "duration": 249000
+            },
+            {
+                "youtubeId": "ztP1RknUpd4",
+                "title": "Preparing for a Quest - Fantasy Tavern Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ztP1RknUpd4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBw7_YPrWU9Txas0ZBafsR-8-ejsA",
+                "duration": 3602000
             }
         ]
     },
@@ -4097,7 +4361,7 @@
             },
             {
                 "youtubeId": "3Fbu52eARrU",
-                "title": "Ninja Gaiden ReMix by Vijay van der Weijden: \"The Cost of Vengeance\" [multiple] (#3604)",
+                "title": "Ninja Gaiden ReMix by Vijay van der Weijden: \"The Cost of Vengeance\" [A Decision] (#3604)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/3Fbu52eARrU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCcrO0eg9Sewus3uyQanik9XxE7pA",
                 "duration": 290000
             },
@@ -4216,12 +4480,6 @@
                 "duration": 231000
             },
             {
-                "youtubeId": "FgaOFVuf1q0",
-                "title": "Rowdy Saloon Ambience | Ragtime Piano I Bar Ambience",
-                "thumbnailUrl": "https://i.ytimg.com/vi/FgaOFVuf1q0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA4QIIokdzu_92GAb44quYGr00ORg",
-                "duration": 4173000
-            },
-            {
                 "youtubeId": "MjH3hZnospE",
                 "title": "Red Dead Redemption 2 - Gambling Riverboat Ambiance (chips, piano, talking)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/MjH3hZnospE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCHy7dkxlmADVtK_VyPC2TL1Y9K7Q",
@@ -4264,16 +4522,16 @@
                 "duration": 3752000
             },
             {
-                "youtubeId": "XMIhX69bXVs",
-                "title": "The Wildaback - The Seeker's Guide to Twisted Taverns OST (Music by John Theodore)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/XMIhX69bXVs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCQwp-nJp8gFFOHZvmH7c5XSQymhw",
-                "duration": 186000
-            },
-            {
                 "youtubeId": "1McPiczNkGg",
                 "title": "JoJo's Bizarre Adventure: Steel Ball Run OST: Main Theme ~ Johnny's Theme | Fan Made",
                 "thumbnailUrl": "https://i.ytimg.com/vi/1McPiczNkGg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCqIHow-HdSwxEeQn8EHhEYnTfp7A",
                 "duration": 283000
+            },
+            {
+                "youtubeId": "XMIhX69bXVs",
+                "title": "The Wildaback - The Seeker's Guide to Twisted Taverns OST (Music by John Theodore)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/XMIhX69bXVs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCQwp-nJp8gFFOHZvmH7c5XSQymhw",
+                "duration": 186000
             },
             {
                 "youtubeId": "WR7fwMM5ccc",
@@ -4290,7 +4548,7 @@
             {
                 "youtubeId": "jxPAVXVak_U",
                 "title": "America Ambient - Valley Forge (Civilization 6 OST)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/jxPAVXVak_U/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDR55BH-ABUcMZszSI2WinNREU2oA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/jxPAVXVak_U/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBbKEswDw==&rs=AOn4CLCxdf7-mts2IITFDwSfjXECTLmD_Q",
                 "duration": 244000
             },
             {
@@ -4538,6 +4796,132 @@
                 "title": "Zoro vs Mihawk (feat. Marcin) | One Piece | Official Soundtrack | Netflix",
                 "thumbnailUrl": "https://i.ytimg.com/vi/-7ZjJvzTimk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC0dke99GPuRMl5vgKaCwztHEImWw",
                 "duration": 193000
+            },
+            {
+                "youtubeId": "JNOAFGIkGoc",
+                "title": "The Adventure Zone: The Eleventh Hour OST - Roswell",
+                "thumbnailUrl": "https://i.ytimg.com/vi/JNOAFGIkGoc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBayyqf_qdktvQVY1ZFyX5BhH94cw",
+                "duration": 73000
+            },
+            {
+                "youtubeId": "VGulFjXmFdw",
+                "title": "Hearthstone: Ashes of Outland - Demon Hunter Prologue Menu",
+                "thumbnailUrl": "https://i.ytimg.com/vi/VGulFjXmFdw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCh0yCD4ZAYxnRNyx8d3bmGlQfTlQ",
+                "duration": 58000
+            },
+            {
+                "youtubeId": "Gt1nkTjNQhM",
+                "title": "Hearthstone: Ashes of Outland - Hellfire Peninsula (Store Music)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Gt1nkTjNQhM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD9fpMmiTSqC0QOaCmR6dreorpl2g",
+                "duration": 184000
+            },
+            {
+                "youtubeId": "DV0KMLQOYzE",
+                "title": "Hearthstone: Ashes of Outland - Outland Boss",
+                "thumbnailUrl": "https://i.ytimg.com/vi/DV0KMLQOYzE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDOcpsQBBc9wNTTP7gEWXC3fPPZoA",
+                "duration": 150000
+            },
+            {
+                "youtubeId": "uit-IYHEoUU",
+                "title": "Hearthstone: Ashes of Outland - Demon Hunter",
+                "thumbnailUrl": "https://i.ytimg.com/vi/uit-IYHEoUU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBkOg6ZHi3wo0oZR0fkPx4l_K5KOw",
+                "duration": 152000
+            },
+            {
+                "youtubeId": "23yQdLtP7GI",
+                "title": "The Secret of Monkey Island Opening Theme (feat. DiscoCactus)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/23yQdLtP7GI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCXR64uo94U03vU_7ZtchA_3PKHaA",
+                "duration": 296000
+            },
+            {
+                "youtubeId": "Wro0VE6i-XM",
+                "title": "Game of Thrones Theme - Western Cover",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Wro0VE6i-XM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDUq4BvI4LirDHsqjo5NTCRrltfBA",
+                "duration": 109000
+            },
+            {
+                "youtubeId": "jvipPYFebWc",
+                "title": "Lindsey Stirling - Roundtable Rival (Official Music Video)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/jvipPYFebWc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAc9Pnjjz0GxsSfw-Iye1v0XxirIQ",
+                "duration": 219000
+            },
+            {
+                "youtubeId": "7o0-vYD1clg",
+                "title": "Wild Iron (Wild Western cowboy metal)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/7o0-vYD1clg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB_QTns_bHdk2NQ0LesK52BeHnJOA",
+                "duration": 305000
+            },
+            {
+                "youtubeId": "PYI09PMNazw",
+                "title": "The Ecstasy of Gold - Ennio Morricone ( The Good, the Bad and the Ugly ) [High Quality Audio]",
+                "thumbnailUrl": "https://i.ytimg.com/vi/PYI09PMNazw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBGfvMFB5l_slYq5qfoKHdZ2Cacvg",
+                "duration": 201000
+            },
+            {
+                "youtubeId": "VJSLx5hFIeA",
+                "title": "Saloon Showdown (Spaghetti Western metal)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/VJSLx5hFIeA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBG4pi51N-VsWADPqDIHJG0aoHFzw",
+                "duration": 326000
+            },
+            {
+                "youtubeId": "G0LQ3TjaN9s",
+                "title": "Wayfarer's Journey - Adventure/Folk Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/G0LQ3TjaN9s/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBvrf_jp2NXKP019-NSqu_6hfgqzA",
+                "duration": 231000
+            },
+            {
+                "youtubeId": "R0j2o9DyI04",
+                "title": "Acoustic Folk Music - Appalachian Trail - Guitar & Banjo Autumn Music Mix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/R0j2o9DyI04/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDR7XTQv4GLXFoAUgOnxCeX4mnwWQ",
+                "duration": 3715000
+            },
+            {
+                "youtubeId": "g24XKCQ1DkA",
+                "title": "Wind",
+                "thumbnailUrl": "https://i.ytimg.com/vi/g24XKCQ1DkA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDWVWITvmCyYKbobYBak17mMpjyWA",
+                "duration": 115000
+            },
+            {
+                "youtubeId": "7FXGN-_3CMs",
+                "title": "Blinded By The Light",
+                "thumbnailUrl": "https://i.ytimg.com/vi/7FXGN-_3CMs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCtb8WrjgDnD34EMw9a3f7DuyCXeA",
+                "duration": 86000
+            },
+            {
+                "youtubeId": "GR0XFRvpCKs",
+                "title": "38 Baldur's Gate 3 Original Soundtrack - Old Time Battles   Part II",
+                "thumbnailUrl": "https://i.ytimg.com/vi/GR0XFRvpCKs/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYHyBSKH8wDw==&rs=AOn4CLDwo1v6Y6CMCsoxdcrYCag-HS-xBA",
+                "duration": 198000
+            },
+            {
+                "youtubeId": "OMeK3A1Fo6U",
+                "title": "05 Baldur's Gate 3 Original Soundtrack - Nine Blades",
+                "thumbnailUrl": "https://i.ytimg.com/vi/OMeK3A1Fo6U/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYHyBQKH8wDw==&rs=AOn4CLBBHji20k9fgrgDq1sX2Q1gj8rV4w",
+                "duration": 290000
+            },
+            {
+                "youtubeId": "YR_wIb_n4ZU",
+                "title": "Outer Wilds OST - Travelers (All Instruments Join)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/YR_wIb_n4ZU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AdQGgALgA4oCDAgAEAEYfyBJKCUwDw==&rs=AOn4CLBWJLXsjgcgns96zUvc6NxLb20khw",
+                "duration": 252000
+            },
+            {
+                "youtubeId": "h-AxhdeJQQ8",
+                "title": "Hearthstone Showdown in the Badlands OST",
+                "thumbnailUrl": "https://i.ytimg.com/vi/h-AxhdeJQQ8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyAvKB0wDw==&rs=AOn4CLAurorX5RQfDT2MxP8-_3zjTiroHw",
+                "duration": 558000
+            },
+            {
+                "youtubeId": "B1i4UgkC_kI",
+                "title": "Ennio Marricone - Ecstasy of Gold (Remix) Featured in Modelo",
+                "thumbnailUrl": "https://i.ytimg.com/vi/B1i4UgkC_kI/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ab4HgALQBYoCDAgAEAEYfyBBKC0wDw==&rs=AOn4CLAYWoz9u3Zw5jy4ei6_lXtmzBTkGw",
+                "duration": 199000
+            },
+            {
+                "youtubeId": "ajM4vYCZMZk",
+                "title": "Ennio Morricone - The Ecstasy of Gold - Theremin & Voice",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ajM4vYCZMZk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAqGxn5qy8ONkB1XOBR292OttPOKA",
+                "duration": 168000
             }
         ]
     },
@@ -4861,7 +5245,7 @@
                 "youtubeId": "5Gp8-LiiiEo",
                 "title": "Link is Awake (Zelda: Link's Awakening) | Classical Guitar Cover",
                 "thumbnailUrl": "https://i.ytimg.com/vi/5Gp8-LiiiEo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA3IFttNjoRnjw67esnTwKzdpB_sA",
-                "duration": 139000
+                "duration": 118000
             },
             {
                 "youtubeId": "lfOe-loqr_U",
@@ -5010,7 +5394,7 @@
             {
                 "youtubeId": "-1cnqPXlrOw",
                 "title": "Magic Sword - Retrogram",
-                "thumbnailUrl": "https://i.ytimg.com/vi/-1cnqPXlrOw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBBZgJ0x159Q24Olq11mJ0cTLN5_g",
+                "thumbnailUrl": "https://i.ytimg.com/vi/-1cnqPXlrOw/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLBzX1rK_CNTrs0JFif3ecJpNHYB0Q",
                 "duration": 311000
             },
             {
@@ -5034,13 +5418,13 @@
             {
                 "youtubeId": "Zdl8xGqb12w",
                 "title": "Magic Sword - Memories In Shadow",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Zdl8xGqb12w/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDBny-Ja03FfJZjxQM0M94E4Diisg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Zdl8xGqb12w/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLDLylZ8FwKUuH5DvbUlqOD8QEa_tg",
                 "duration": 264000
             },
             {
                 "youtubeId": "0ydV1pWvQNg",
                 "title": "Magic Sword - Reflection",
-                "thumbnailUrl": "https://i.ytimg.com/vi/0ydV1pWvQNg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBJcE89pBaFAhGEBc8xWxB7Un21jQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/0ydV1pWvQNg/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLDFRAPSstODmbd1nbtVzhjX3y_gcQ",
                 "duration": 201000
             },
             {
@@ -5058,7 +5442,7 @@
             {
                 "youtubeId": "YBIPVsoqr_Y",
                 "title": "Klaypex - Hit Me",
-                "thumbnailUrl": "https://i.ytimg.com/vi/YBIPVsoqr_Y/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDya3mnLW7RvIFWvQK0vYblXIBVxQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/YBIPVsoqr_Y/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyAzKD8wDw==&rs=AOn4CLD2mIEe4m_YMr02HWcRmRVO3DI2Gw",
                 "duration": 249000
             },
             {
@@ -5112,7 +5496,7 @@
             {
                 "youtubeId": "Y46QKkIjZwc",
                 "title": "06 - Luna Ascension - Tower of Heaven Original Soundtrack",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Y46QKkIjZwc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDofKlWm4J7wZYV_3au-vNmpSaSQw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Y46QKkIjZwc/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYWyBlKBQwDw==&rs=AOn4CLDkVE-r5kpT1NkC_Iy0X15r5DBHhg",
                 "duration": 99000
             },
             {
@@ -5264,6 +5648,12 @@
                 "title": "Spider-man atsv: New Prowler x Prowler theme",
                 "thumbnailUrl": "https://i.ytimg.com/vi/4nfweTR0v94/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYMCBUKHIwDw==&rs=AOn4CLAUy9cY8hkQ6uPC_3jvBgJQ53-mIQ",
                 "duration": 202000
+            },
+            {
+                "youtubeId": "d3clrkLNTSA",
+                "title": "2049",
+                "thumbnailUrl": "https://i.ytimg.com/vi/d3clrkLNTSA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDhBOBOEuVhLVM3pLkSWMa41Cdisw",
+                "duration": 218000
             }
         ]
     },
@@ -5412,7 +5802,7 @@
             {
                 "youtubeId": "aIrleDwa3dM",
                 "title": "TheFatRat - Monody (Instrumental)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/aIrleDwa3dM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB75Wc1bGgv11egxN6nF7PQ-Ogibg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/aIrleDwa3dM/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYSSBhKGUwDw==&rs=AOn4CLBw0SUItBgHpoX33N4W34CSjiOwZA",
                 "duration": 291000
             },
             {
@@ -5470,12 +5860,6 @@
         "title": "D&D - EDM - Happy",
         "musics": [
             {
-                "youtubeId": "WpupTfqFSjo",
-                "title": "Nibbs' Character Theme [Chiptune Cover] from Awesomenauts | Mandrew Music",
-                "thumbnailUrl": "https://i.ytimg.com/vi/WpupTfqFSjo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAEfJnd2AestKvuCcJVoMaQYwHwuA",
-                "duration": 158000
-            },
-            {
                 "youtubeId": "NzwqseL0rV0",
                 "title": "TWRP - Starlight Brigade (Filtered Instrumental)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/NzwqseL0rV0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDd6lZsNo0yltNnBNbzBrWHyZDcPg",
@@ -5502,7 +5886,7 @@
             {
                 "youtubeId": "aIrleDwa3dM",
                 "title": "TheFatRat - Monody (Instrumental)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/aIrleDwa3dM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB75Wc1bGgv11egxN6nF7PQ-Ogibg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/aIrleDwa3dM/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYSSBhKGUwDw==&rs=AOn4CLBw0SUItBgHpoX33N4W34CSjiOwZA",
                 "duration": 291000
             },
             {
@@ -5568,7 +5952,7 @@
             {
                 "youtubeId": "3ktruM3lkLo",
                 "title": "RhythmVox - Childhood",
-                "thumbnailUrl": "https://i.ytimg.com/vi/3ktruM3lkLo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAduRpNyaCNoLBzG84kmpZJiPkkbA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/3ktruM3lkLo/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AagDgALwAYoCDAgAEAEYRiBYKGUwDw==&rs=AOn4CLC-P4OBl0rVDBUIEoeCN34wS_zpMg",
                 "duration": 222000
             },
             {
@@ -5636,6 +6020,18 @@
                 "title": "TAKE ON ME ▸ Pete Frogs' Sega Genesis remix",
                 "thumbnailUrl": "https://i.ytimg.com/vi/Es7ikpzReHI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCWkT0lnOcD3LcCmWkK97p1koWiPA",
                 "duration": 179000
+            },
+            {
+                "youtubeId": "94E-qYyKF48",
+                "title": "Mario Kart 64 - Rainbow Road [Remix]",
+                "thumbnailUrl": "https://i.ytimg.com/vi/94E-qYyKF48/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCQHuQutV0n1jOaunWsGpK5FKVgdQ",
+                "duration": 265000
+            },
+            {
+                "youtubeId": "1RiaSfzxS90",
+                "title": "TheFatRat - Fire [Chapter 8]",
+                "thumbnailUrl": "https://i.ytimg.com/vi/1RiaSfzxS90/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBfWWqVdfVHTNmJ1VU841K2JL_dvw",
+                "duration": 210000
             }
         ]
     },
@@ -6030,7 +6426,7 @@
             {
                 "youtubeId": "dEHFleNshBU",
                 "title": "Dark Pirate Music: The Pirates Are Back [Maurice Lessing]",
-                "thumbnailUrl": "https://i.ytimg.com/vi/dEHFleNshBU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAa3at7wTIUCctBFqtLasYn7p7WtA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/dEHFleNshBU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYViBXKGUwDw==&rs=AOn4CLC-Vj6G7OFv0XGIdsSWf-vgS9ilXQ",
                 "duration": 299000
             },
             {
@@ -6156,7 +6552,7 @@
             {
                 "youtubeId": "bDtBSbOba6s",
                 "title": "Monster Hunter OST - Water Arena Battle Theme",
-                "thumbnailUrl": "https://i.ytimg.com/vi/bDtBSbOba6s/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCtK_UT4kFmHqFF7CWwOiXCFFsi2w",
+                "thumbnailUrl": "https://i.ytimg.com/vi/bDtBSbOba6s/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYZSBaKEowDw==&rs=AOn4CLDQ_TpiZpMkeMWY3caPj7-16ozDOA",
                 "duration": 156000
             },
             {
@@ -6222,7 +6618,7 @@
             {
                 "youtubeId": "45YbWPmTMdA",
                 "title": "Darkest Dungeon OST - Bloodletting (hallway version)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/45YbWPmTMdA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCAIxy3KUnjJY1TtKv1N7LWMCdaBw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/45YbWPmTMdA/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLCWfFQT_9mQ4j-ta1DXqGmJ9rC-pQ",
                 "duration": 831000
             },
             {
@@ -6312,7 +6708,7 @@
             {
                 "youtubeId": "1nY1puvqp_A",
                 "title": "Castlevania: Symphony of the Night music -- Dance of Pales",
-                "thumbnailUrl": "https://i.ytimg.com/vi/1nY1puvqp_A/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA9CXVfaR7Alge6SGOG8DKpyMXysw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/1nY1puvqp_A/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYZSBgKFUwDw==&rs=AOn4CLDsEAsB1ECjzta2aA5f3pA_ZMN1lg",
                 "duration": 430000
             },
             {
@@ -6348,7 +6744,7 @@
             {
                 "youtubeId": "abVgFC4ejs4",
                 "title": "Princess Tutu - Konzert 1 - 23 - Kurumi Wari Ningyo Ashi Fue no Odori",
-                "thumbnailUrl": "https://i.ytimg.com/vi/abVgFC4ejs4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDSOHz8THMJqH5eOQmtN00jJnOLIw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/abVgFC4ejs4/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYZSBGKEEwDw==&rs=AOn4CLAqq_vX9YzXBj9BRO45yvqZEbDwSg",
                 "duration": 143000
             },
             {
@@ -6402,7 +6798,7 @@
             {
                 "youtubeId": "-hBbSo5jyY4",
                 "title": "In The Halls Of The King (Pridemoor Keep) - Shovel Knight: Specter of Torment OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/-hBbSo5jyY4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDpwH5mEdXpzHP9E3DCzToMDYiH2Q",
+                "thumbnailUrl": "https://i.ytimg.com/vi/-hBbSo5jyY4/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyAnKCQwDw==&rs=AOn4CLDKHyyIXHElCtqdKXZqnnACWIBZLg",
                 "duration": 225000
             },
             {
@@ -6782,6 +7178,48 @@
                 "title": "Fantasy Heist Mission Briefing | Keys from the Golden Vault | Carillon | TTRPG DnD Music",
                 "thumbnailUrl": "https://i.ytimg.com/vi/VTZKmUewhhw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLASDGJjokoRACG2J8gJ5n5dlbFXfQ",
                 "duration": 105000
+            },
+            {
+                "youtubeId": "xQ8OoszufAU",
+                "title": "Hearthstone: The Boomsday Project - Wind 'Em Up",
+                "thumbnailUrl": "https://i.ytimg.com/vi/xQ8OoszufAU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCG41TO1iOBJ9iEIobbyNRFTbd0tg",
+                "duration": 187000
+            },
+            {
+                "youtubeId": "Y-_9aZxpd0w",
+                "title": "Hearthstone: The Boomsday Project - Boomsday Boss",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Y-_9aZxpd0w/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBg1ojLHhum3il1WLTis8Trprm-ZQ",
+                "duration": 155000
+            },
+            {
+                "youtubeId": "Rmi03oHRgqc",
+                "title": "Hearthstone: Rise of Shadows - Big League Evil (Store Music)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Rmi03oHRgqc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCWYzWUfvajXF4BLHUOk1BnB9Kw1g",
+                "duration": 184000
+            },
+            {
+                "youtubeId": "jSj4f3J_Pvw",
+                "title": "Hearthstone: Rise of Shadows - Machinations",
+                "thumbnailUrl": "https://i.ytimg.com/vi/jSj4f3J_Pvw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLACpwqdAll8Tdh4jWtzyCRFwdaYwQ",
+                "duration": 185000
+            },
+            {
+                "youtubeId": "sS7CwUVrFLI",
+                "title": "Hearthstone: Rise of Shadows - Infiltrators",
+                "thumbnailUrl": "https://i.ytimg.com/vi/sS7CwUVrFLI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDKyaBTNSKii7182rUyE-k7tlE3DQ",
+                "duration": 184000
+            },
+            {
+                "youtubeId": "zGj-vDeZhNQ",
+                "title": "Hearthstone: Rise of Shadows - Overview",
+                "thumbnailUrl": "https://i.ytimg.com/vi/zGj-vDeZhNQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDTDnoP0_Ut5TE1KOWquXkXL8t4fQ",
+                "duration": 64000
+            },
+            {
+                "youtubeId": "O5wrtLhBIvk",
+                "title": "Hearthstone: Mean Streets of Gadgetzan - New Store Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/O5wrtLhBIvk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAEX4nwXl35R5-OG84fPlK9K08vfw",
+                "duration": 87000
             }
         ]
     },
@@ -6810,7 +7248,7 @@
             {
                 "youtubeId": "cM5sj4fcT7o",
                 "title": "DISHONORED - 05 Daud Encounter",
-                "thumbnailUrl": "https://i.ytimg.com/vi/cM5sj4fcT7o/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD2CL0FpkQix4pDDccqk3S9WABFAA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/cM5sj4fcT7o/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBbKEUwDw==&rs=AOn4CLCv3W4DVVxduI2rygorQOZUksscvA",
                 "duration": 73000
             },
             {
@@ -6846,7 +7284,7 @@
             {
                 "youtubeId": "_ZarIb0-Xq0",
                 "title": "Sherlock Holmes OST - 02 Is It Poison, Nanny ?",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_ZarIb0-Xq0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAMqbsli7Nx3jiKAK0k8te8UYiFFA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_ZarIb0-Xq0/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALoAooCDAgAEAEYQiBgKGUwDw==&rs=AOn4CLAI3zcE2mG3Dx3jj2hrviBKbgUc4w",
                 "duration": 175000
             },
             {
@@ -6929,19 +7367,19 @@
             },
             {
                 "youtubeId": "A75Bhbhm0Os",
-                "title": "Bloodborne OST - The Night Unfurls",
+                "title": "The Night Unfurls",
                 "thumbnailUrl": "https://i.ytimg.com/vi/A75Bhbhm0Os/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYOSBdKHIwDw==&rs=AOn4CLALq86hD9ECXlgx9WsITRUkjnn_EQ",
                 "duration": 128000
             },
             {
                 "youtubeId": "1EISe-WdZYE",
-                "title": "Bloodborne - Hunter's Dream",
+                "title": "Hunter's Dream",
                 "thumbnailUrl": "https://i.ytimg.com/vi/1EISe-WdZYE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBSrd-TIeAtZmGzLcw-tJviODy86A",
                 "duration": 214000
             },
             {
                 "youtubeId": "tf-sLzzPiAU",
-                "title": "Bloodborne OST - Moonlit Melody",
+                "title": "Moonlit Melody",
                 "thumbnailUrl": "https://i.ytimg.com/vi/tf-sLzzPiAU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYOSBdKHIwDw==&rs=AOn4CLBVKTgcbnPm1jZdhuOpPqkwaWIVwQ",
                 "duration": 212000
             },
@@ -7056,7 +7494,7 @@
             {
                 "youtubeId": "_TUTmtEq36M",
                 "title": "Skullgirls OST #03 - Pedestrians Crossing",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_TUTmtEq36M/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLApVAlnJZ2ceB6DiLHzrdgv0RsrSw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_TUTmtEq36M/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA4KF0wDw==&rs=AOn4CLDpvaq6Gm0TE2XWR35OjSgvlhX8KA",
                 "duration": 215000
             },
             {
@@ -7092,7 +7530,7 @@
             {
                 "youtubeId": "_2B5BiZt6HI",
                 "title": "Gurren Lagann OST Disc 1 - 04 - Boota Dreams of Spirals! / Butamogura ha Rasen no Yume wo Miru ka?..",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_2B5BiZt6HI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDlgWTneHPINf9lSEfcdkziQKYFpQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_2B5BiZt6HI/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA4KEMwDw==&rs=AOn4CLCm8K_K2zFiGHP7LIUrjzTNC-C9qg",
                 "duration": 183000
             },
             {
@@ -7136,12 +7574,6 @@
                 "title": "Grand Prix (Opening) - ARMS (OST)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/Xwe__z5AgkM/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYPiBlKGMwDw==&rs=AOn4CLDoFP1NV31QlfnMckscvgrS9elVLw",
                 "duration": 35000
-            },
-            {
-                "youtubeId": "gcM2Yw75UKk",
-                "title": "Happy Little Workers - Splatoon 2 OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/gcM2Yw75UKk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBE777K1sYT369yr_MEgE3pqa0WUw",
-                "duration": 114000
             },
             {
                 "youtubeId": "MFfgon_zVHs",
@@ -7354,24 +7786,6 @@
                 "duration": 36118000
             },
             {
-                "youtubeId": "xT4ash5lBGQ",
-                "title": "Opening - Splatoon 2 OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/xT4ash5lBGQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCxEDzUR99Q9nAgjCm6SRVp2e3HTQ",
-                "duration": 22000
-            },
-            {
-                "youtubeId": "VRWDzdnWesw",
-                "title": "Undertow - Splatoon 2 OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/VRWDzdnWesw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAWDkPPBuPRexxM8mJqsmB-hBGtGg",
-                "duration": 177000
-            },
-            {
-                "youtubeId": "qa1gqRXM77s",
-                "title": "Now or Never! - Splatoon 2 OST [WET FLOOR]",
-                "thumbnailUrl": "https://i.ytimg.com/vi/qa1gqRXM77s/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDqLGfdZTT5dOK4xJsRKXvYYE-aIg",
-                "duration": 66000
-            },
-            {
                 "youtubeId": "BMSi3Ccix9o",
                 "title": "#8 regret (Dedf1sh) | Splatoon 2: Octo Expansion Music Extended",
                 "thumbnailUrl": "https://i.ytimg.com/vi/BMSi3Ccix9o/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLChp8QRFkE5AZb7mCkLfS8rif6Crw",
@@ -7400,36 +7814,6 @@
                 "title": "Splatoon 3 OST - Not Bad (Do Better)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/aTx_wfBIi3o/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYPyAoKH8wDw==&rs=AOn4CLDX8BMpQeVpoyIZIFNIzCKu025lMw",
                 "duration": 90000
-            },
-            {
-                "youtubeId": "0UGATSdaz_0",
-                "title": "Ink Another Day - Splatoon 2 OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/0UGATSdaz_0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBa9tnlCn9v3XwwdChWtE14anm03Q",
-                "duration": 95000
-            },
-            {
-                "youtubeId": "tfSRgLRr8_E",
-                "title": "New You - Splatoon 2 OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/tfSRgLRr8_E/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAHHskpJqY39hsW-cQdcz2rvC-qbg",
-                "duration": 166000
-            },
-            {
-                "youtubeId": "eYh13wqIOjs",
-                "title": "Tutorial - Splatoon 2 OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/eYh13wqIOjs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBM7R0SBHc_AoIP3ldW6SOtISrOgA",
-                "duration": 190000
-            },
-            {
-                "youtubeId": "4BtGJXg1wpI",
-                "title": "Inkopolis News - Splatoon 2 OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/4BtGJXg1wpI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAj-XxYGEIopWVCG-ifsJJNVzFSyg",
-                "duration": 86000
-            },
-            {
-                "youtubeId": "VqeonlvGaCA",
-                "title": "#5 thirsty - Splatoon 2: Octo Expansion OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/VqeonlvGaCA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB9ZNI02QLfL3gmWNtZYjZ_tIrWYA",
-                "duration": 139000
             },
             {
                 "youtubeId": "XuZJ-Td1D94",
@@ -7472,6 +7856,78 @@
                 "title": "Mewmore // Professor Layton's Theme (Professor Layton and the Curious Village Remix)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/Gafc5QoUvIg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDAJ6CtOcLDMCYKtTF_tP814IzrEg",
                 "duration": 194000
+            },
+            {
+                "youtubeId": "ZIFiS1-LvFE",
+                "title": "Get Me Something",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ZIFiS1-LvFE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDZ3jM3fdwhuqANu6urxbXmGrI3rQ",
+                "duration": 121000
+            },
+            {
+                "youtubeId": "ApgsclAxCSM",
+                "title": "Things on My Mind",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ApgsclAxCSM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDQA9ffM1BCiZB1PNlzaVNfafIV6w",
+                "duration": 137000
+            },
+            {
+                "youtubeId": "7uJZhevbXeo",
+                "title": "Mustard's Theme - Pokémon Sword and Shield OST (Gamerip)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/7uJZhevbXeo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDq-fDQZQm3BEfumlHF_Aak0AQw1Q",
+                "duration": 129000
+            },
+            {
+                "youtubeId": "p0Mn4iUB0as",
+                "title": "Look Alive, Sunshine - My Chemical Romance (Instrumental)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/p0Mn4iUB0as/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYciBCKC0wDw==&rs=AOn4CLBLChFQwaAmxZy8TJzoZBUr8Kvw-w",
+                "duration": 35000
+            },
+            {
+                "youtubeId": "VNLmdb9fyDw",
+                "title": "MTGA OST - Kaladesh Remastered Soundtrack - 1/2",
+                "thumbnailUrl": "https://i.ytimg.com/vi/VNLmdb9fyDw/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ab4MgAKEB4oCDAgAEAEYciBEKD8wDw==&rs=AOn4CLBkAHQu2OBGoeXj8pJgY1Tc3ErHOw",
+                "duration": 264000
+            },
+            {
+                "youtubeId": "i5PZl8zqm3E",
+                "title": "MTGA OST - Kaladesh Remastered Soundtrack - 2/2",
+                "thumbnailUrl": "https://i.ytimg.com/vi/i5PZl8zqm3E/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AdQGgALgA4oCDAgAEAEYZSBQKE8wDw==&rs=AOn4CLD_lQvWpLV3okc6-h2qaI0skiiajA",
+                "duration": 250000
+            },
+            {
+                "youtubeId": "EA9GnGwYTJg",
+                "title": "Giorno's Theme (Jay D Remix)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/EA9GnGwYTJg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA4r-hZMBDJhElgSOosnpYc5Xbb3g",
+                "duration": 151000
+            },
+            {
+                "youtubeId": "r4LPlG9pb2A",
+                "title": "Moo Moo Meadows 🐮REMIX🐮 (Mario Kart Wii)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/r4LPlG9pb2A/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCJilkNIUxuFUyfQ5_T42WuJiSFxQ",
+                "duration": 143000
+            },
+            {
+                "youtubeId": "qm8HOzaAykQ",
+                "title": "ARMS Official Soundtrack: Springtron's Theme",
+                "thumbnailUrl": "https://i.ytimg.com/vi/qm8HOzaAykQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC3ZoTFFbFDkGIol6xfswV00Hb5VA",
+                "duration": 180000
+            },
+            {
+                "youtubeId": "SzSBaYubCqE",
+                "title": "Superfly - Kakusei (Promare movie soundtrack) [with lyrics]",
+                "thumbnailUrl": "https://i.ytimg.com/vi/SzSBaYubCqE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLATnnrv6YEHPA8C6JoAFMfUyuE8CA",
+                "duration": 256000
+            },
+            {
+                "youtubeId": "n8QNubHonME",
+                "title": "Stressed Out Official Instrumental",
+                "thumbnailUrl": "https://i.ytimg.com/vi/n8QNubHonME/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAtJFxjqWMty5--DgmysCgLgVTydA",
+                "duration": 204000
+            },
+            {
+                "youtubeId": "zhIScvlFn2w",
+                "title": "Soda City Funk",
+                "thumbnailUrl": "https://i.ytimg.com/vi/zhIScvlFn2w/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZCA_KGUwDw==&rs=AOn4CLDpu2kAYpnZBE4kNetISFrjrcru6g",
+                "duration": 175000
             }
         ]
     },
@@ -7508,12 +7964,6 @@
                 "title": "The Witcher -- OST 06 'Last Battle'",
                 "thumbnailUrl": "https://i.ytimg.com/vi/JMx84oOrCNc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDNiIpRsKY5QXUKflPa4sdB48P8vA",
                 "duration": 73000
-            },
-            {
-                "youtubeId": "wSAp991JIVs",
-                "title": "Kill la Kill/キルラキル [Satsuki Kiryuin Theme | Kiryuu G@ KiLL]",
-                "thumbnailUrl": "https://i.ytimg.com/vi/wSAp991JIVs/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYLyBQKH8wDw==&rs=AOn4CLBCzvw_uMfmyg5Co0CRpDh0JzIBAg",
-                "duration": 278000
             },
             {
                 "youtubeId": "JFDY-RFV_OM",
@@ -7554,7 +8004,7 @@
             {
                 "youtubeId": "2FnOoc028ik",
                 "title": "The Witcher 3: Wild Hunt - Blood on the Cobblestones",
-                "thumbnailUrl": "https://i.ytimg.com/vi/2FnOoc028ik/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAI5aTMiePzuZeNhyvZXKZjfI0Lsg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/2FnOoc028ik/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBbKEswDw==&rs=AOn4CLBTQg5Hyv1EKD-ZIETU3AfoUTUKiQ",
                 "duration": 123000
             },
             {
@@ -8200,6 +8650,12 @@
                 "duration": 243000
             },
             {
+                "youtubeId": "D_2bluVPsb0",
+                "title": "Duel of the Fates",
+                "thumbnailUrl": "https://i.ytimg.com/vi/D_2bluVPsb0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCFlD8KAduuAhHWO9xYR8hkukK5pg",
+                "duration": 255000
+            },
+            {
                 "youtubeId": "UjBTtNU27Ec",
                 "title": "09 Gods & Glory (Hollow Knight: Gods & Nightmares)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/UjBTtNU27Ec/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBREHT_TuUop4_oB8C523SIDpCvdQ",
@@ -8274,7 +8730,7 @@
             {
                 "youtubeId": "45YbWPmTMdA",
                 "title": "Darkest Dungeon OST - Bloodletting (hallway version)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/45YbWPmTMdA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCAIxy3KUnjJY1TtKv1N7LWMCdaBw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/45YbWPmTMdA/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBlKGUwDw==&rs=AOn4CLCWfFQT_9mQ4j-ta1DXqGmJ9rC-pQ",
                 "duration": 831000
             },
             {
@@ -8340,7 +8796,7 @@
             {
                 "youtubeId": "bMOa3rjtHkE",
                 "title": "Final Fantasy III - The Decisive Battle (SNES)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/bMOa3rjtHkE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAtPh_sKdnNsg_pMuUJCFVnHzyFCA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/bMOa3rjtHkE/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYciA5KF4wDw==&rs=AOn4CLCVbgEykh0gUEHPwqFxvOFBiFg1HQ",
                 "duration": 117000
             },
             {
@@ -8442,7 +8898,7 @@
             {
                 "youtubeId": "0ly8Q3MieZk",
                 "title": "[Top 100 RPG Battle]#45 Fire Emblem: Mystery of the Emblem",
-                "thumbnailUrl": "https://i.ytimg.com/vi/0ly8Q3MieZk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA_JdQi-qi6nyV5gAI3KWCkNcLGqQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/0ly8Q3MieZk/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYTSBlKEYwDw==&rs=AOn4CLD0sH6_QQC_fhEhVBDvpZlvBdLDPQ",
                 "duration": 75000
             },
             {
@@ -8478,7 +8934,7 @@
             {
                 "youtubeId": "zHnQ_m7eWDw",
                 "title": "Fire Emblem Fates OST ~Resolve (Dark)~ Prepare for Battle: Nohr",
-                "thumbnailUrl": "https://i.ytimg.com/vi/zHnQ_m7eWDw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDsHPICiLJw48HNkAMT-lUY_aID5A",
+                "thumbnailUrl": "https://i.ytimg.com/vi/zHnQ_m7eWDw/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBeKFYwDw==&rs=AOn4CLCTAg2jl0ObViC2WFQMu8hrC958KQ",
                 "duration": 307000
             },
             {
@@ -8622,7 +9078,7 @@
             {
                 "youtubeId": "52wByO_SFxA",
                 "title": "Star Wars Episode III - The Immolation Scene",
-                "thumbnailUrl": "https://i.ytimg.com/vi/52wByO_SFxA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLArfY6FX1qEzBzWlEYC_hLsUtNZHQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/52wByO_SFxA/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYfyBBKCswDw==&rs=AOn4CLADjNB4td2saTcLFyB4vnHK40lcqA",
                 "duration": 169000
             },
             {
@@ -8651,7 +9107,7 @@
             },
             {
                 "youtubeId": "oZOLnp5yQ4Y",
-                "title": "Puss in Boots: Death Theme Whistle | EPIC VERSION (The Last Wish Soundtrack)",
+                "title": "Puss in Boots 2: Death Whistle Theme | EPIC VERSION (The Last Wish Soundtrack)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/oZOLnp5yQ4Y/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD9SxOiSlVcspITafG2IV9dajTZ8w",
                 "duration": 350000
             },
@@ -8670,7 +9126,7 @@
             {
                 "youtubeId": "dQ--n4nGgFo",
                 "title": "Fate - Dungeon 1",
-                "thumbnailUrl": "https://i.ytimg.com/vi/dQ--n4nGgFo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBf6pQvrraeIUGhhHN5_wx_mLCtgg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/dQ--n4nGgFo/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYXSBdKF0wDw==&rs=AOn4CLBVjBJ8IGHmNeqMOkMUPV8_4l8UHA",
                 "duration": 289000
             },
             {
@@ -8692,16 +9148,46 @@
                 "duration": 176000
             },
             {
-                "youtubeId": "XdwrdI1uo9U",
-                "title": "sounds of eldrazi titans",
-                "thumbnailUrl": "https://i.ytimg.com/vi/XdwrdI1uo9U/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ac4FgAKEB4oCDAgAEAEYNCBNKHIwDw==&rs=AOn4CLDDF4Rnmu-cn2pL3MqBlg8rl7lapw",
-                "duration": 222000
+                "youtubeId": "jv3u0k2RYDU",
+                "title": "Music for a Wicked Revenge - Royal Blood",
+                "thumbnailUrl": "https://i.ytimg.com/vi/jv3u0k2RYDU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZCBkKGQwDw==&rs=AOn4CLB1VwxF2zpeXpE38olaMX2rtOQHkA",
+                "duration": 264000
+            },
+            {
+                "youtubeId": "JGKJCUV2VIY",
+                "title": "A Soundtrack for the Anti Hero - Music for Pure Vengeance",
+                "thumbnailUrl": "https://i.ytimg.com/vi/JGKJCUV2VIY/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyATKCUwDw==&rs=AOn4CLCV2FdDWc0Z4SVLEDaeKgD55T7dOw",
+                "duration": 4690000
+            },
+            {
+                "youtubeId": "cjU7FhVpVEQ",
+                "title": "GODSLAYER | 1 HOUR of Epic Dark Sinister Dramatic Intense Action Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/cjU7FhVpVEQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAZsFPh6vSvveJWxYMQR6rGIwBmPQ",
+                "duration": 3649000
+            },
+            {
+                "youtubeId": "6U8K6SPPNLA",
+                "title": "ARISE - Villain Antihero Music | Powerful Dramatic Music - Epic Music Mix - Secession Studios",
+                "thumbnailUrl": "https://i.ytimg.com/vi/6U8K6SPPNLA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC2txj2KP5jOQ1TMKj6S-LShGJ79w",
+                "duration": 1846000
+            },
+            {
+                "youtubeId": "xoNfsj0tHbM",
+                "title": "EPIC Instrumental Ruthlessness 2-6-21",
+                "thumbnailUrl": "https://i.ytimg.com/vi/xoNfsj0tHbM/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AYwCgALgA4oCDAgAEAEYWyBbKFswDw==&rs=AOn4CLB_R2nuT-F1zvqaUJguBl4aPPmc_w",
+                "duration": 57000
+            },
+            {
+                "youtubeId": "wUaU5d9xERE",
+                "title": "For Whom the Bell Tolls | Blue Eye Samurai | Official Soundtrack | Netflix",
+                "thumbnailUrl": "https://i.ytimg.com/vi/wUaU5d9xERE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDW_Mmi4iry_jJgn7HTK5lX8KSvaA",
+                "duration": 315000
             }
         ]
     },
     {
         "playlistId": "PLV8C9t518pCL0epmuVHaw2QrSrf_SBGKi",
-        "title": "dnd - war - quiet",
+        "title": "dnd - War Quiet",
         "musics": [
             {
                 "youtubeId": "2Ni4EQeANXk",
@@ -8785,7 +9271,7 @@
     },
     {
         "playlistId": "PLV8C9t518pCLr6cZxuSMIXWnUG9ZufxCJ",
-        "title": "D&D - Theros - Fun Whimsy Forest",
+        "title": "D&D - Theros - Lightish Forest",
         "musics": [
             {
                 "youtubeId": "L2bDS_6sWtI",
@@ -8794,22 +9280,28 @@
                 "duration": 317000
             },
             {
+                "youtubeId": "cFC6v1UrPn8",
+                "title": "Lord of The Rings: The Shire Theme (Concerning Hobbits) | EPIC VERSION",
+                "thumbnailUrl": "https://i.ytimg.com/vi/cFC6v1UrPn8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLATo1PX3q39K6iL0dLWqVg_DCwYsA",
+                "duration": 321000
+            },
+            {
                 "youtubeId": "YtTp67sPgZk",
                 "title": "Rivendell",
                 "thumbnailUrl": "https://i.ytimg.com/vi/YtTp67sPgZk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDGvcaQl72e_LwabY9vTCdERIeOXg",
                 "duration": 207000
             },
             {
-                "youtubeId": "qfObTX0VjMk",
-                "title": "The Legend of Zelda: Spirit Tracks Soundtrack - 135. Credits",
-                "thumbnailUrl": "https://i.ytimg.com/vi/qfObTX0VjMk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDa28DDdYqycE4MDrL8EACkkoUKHw",
-                "duration": 214000
-            },
-            {
                 "youtubeId": "Mlc_6BChL4g",
                 "title": "little witch in the woods ~ a cottagecore chillhop lofi mix ~ [stardew valley, harvest moon]",
                 "thumbnailUrl": "https://i.ytimg.com/vi/Mlc_6BChL4g/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAbgcw5D76Aznzq5Ii_L76obW2niw",
                 "duration": 1063000
+            },
+            {
+                "youtubeId": "qfObTX0VjMk",
+                "title": "The Legend of Zelda: Spirit Tracks Soundtrack - 135. Credits",
+                "thumbnailUrl": "https://i.ytimg.com/vi/qfObTX0VjMk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDa28DDdYqycE4MDrL8EACkkoUKHw",
+                "duration": 214000
             },
             {
                 "youtubeId": "nL-c6SuyG8A",
@@ -8870,12 +9362,6 @@
                 "title": "Pokemon B/W - Lostlorn Forest / Abundant Shrine (Music)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/urOM0NBGH0g/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAkCKID4rwIzhMzs0OwEQ6xOMStYg",
                 "duration": 129000
-            },
-            {
-                "youtubeId": "cFC6v1UrPn8",
-                "title": "Lord of The Rings: The Shire Theme (Concerning Hobbits) | EPIC VERSION",
-                "thumbnailUrl": "https://i.ytimg.com/vi/cFC6v1UrPn8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLATo1PX3q39K6iL0dLWqVg_DCwYsA",
-                "duration": 321000
             },
             {
                 "youtubeId": "5k2xoAL_pMk",
@@ -9058,10 +9544,100 @@
         "title": "D&D - Dark Sun - Blood Pump",
         "musics": [
             {
+                "youtubeId": "zdECN7LI4q8",
+                "title": "Mad Max: Fury Road - Blood Bag / Doof Warrior (cover by Andrew Karelin)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/zdECN7LI4q8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCbqAVjbm42jNhYe_1yRD0AcqG-gg",
+                "duration": 123000
+            },
+            {
+                "youtubeId": "5LMZYnOml54",
+                "title": "Pyre Original Soundtrack - Thrash Pack",
+                "thumbnailUrl": "https://i.ytimg.com/vi/5LMZYnOml54/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBdKEQwDw==&rs=AOn4CLADyYMZIvqcEICP30y239J65CWGEg",
+                "duration": 238000
+            },
+            {
+                "youtubeId": "yqwkXj3vJQM",
+                "title": "OC ReMix #2070: Mega Man 2 'Dokuta Wairi, Rival to the Light' [Dr. Wily Stage 1] by Juan Medrano",
+                "thumbnailUrl": "https://i.ytimg.com/vi/yqwkXj3vJQM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAuVvX_tdxfne4o2xwmAiCzyn7V9w",
+                "duration": 293000
+            },
+            {
+                "youtubeId": "q657rEkgfKs",
+                "title": "Doom - At Doom's Gate E1M1 remake by Andrew Hulshult",
+                "thumbnailUrl": "https://i.ytimg.com/vi/q657rEkgfKs/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA-KDAwDw==&rs=AOn4CLDl52ucERcoiopVwZ2LXkqJhkQCsw",
+                "duration": 199000
+            },
+            {
+                "youtubeId": "x67yutunzhU",
+                "title": "Royalty Free DOOM Style Metal Instrumental - ABSOLUTE POWER - DOWNLOAD",
+                "thumbnailUrl": "https://i.ytimg.com/vi/x67yutunzhU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBV8EJ0Nv4weMIpOdylbytzeWrtXw",
+                "duration": 379000
+            },
+            {
+                "youtubeId": "JbvzHcJi1l8",
+                "title": "Mad Max: Fury Road | Spikey Cars",
+                "thumbnailUrl": "https://i.ytimg.com/vi/JbvzHcJi1l8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCHkevlvO3psWd1jyFJPgxgRVdcMQ",
+                "duration": 251000
+            },
+            {
+                "youtubeId": "8dUMpcuyg0w",
+                "title": "Mad Max: Fury Road - Chapter Doof (cover by Andrew Karelin)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/8dUMpcuyg0w/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCCjptJlG6tPXR7nZL6x2JDTkQ-1A",
+                "duration": 418000
+            },
+            {
+                "youtubeId": "bxqfH3Klipk",
+                "title": "E1M1 (At Dooms Gate)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/bxqfH3Klipk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDmaSYjEcZ-mX1XQf6TtgrDENg2GQ",
+                "duration": 376000
+            },
+            {
+                "youtubeId": "bJtaJjB_uCI",
+                "title": "The Slayer's Army - A Doom Eternal Orchestration",
+                "thumbnailUrl": "https://i.ytimg.com/vi/bJtaJjB_uCI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDsMFTPVTHKCs0NtRAJUDnG0dpBEQ",
+                "duration": 356000
+            },
+            {
+                "youtubeId": "LCIY41hopq4",
+                "title": "Mad Max - Brothers In Arms \"Epic Rock\" Cover (Little V)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/LCIY41hopq4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBgw5a8xqQhKlT4E8c5X-dGk5Hyhw",
+                "duration": 269000
+            },
+            {
+                "youtubeId": "ZAsB1X14tHY",
+                "title": "Shingekin no Kyojin OST CD1   04  立body機motion",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ZAsB1X14tHY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDlsrlJXTAMgVAuNehwcCgyOYLEoA",
+                "duration": 343000
+            },
+            {
+                "youtubeId": "GChbMAAHIJs",
+                "title": "Gurren Lagann OST Disc 2 - 08 - Spin, Spin, Spin, Spi!? / Mawatte Mawatte Mawatte Mawaa!? / ...",
+                "thumbnailUrl": "https://i.ytimg.com/vi/GChbMAAHIJs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBouffZtJXNBSPWobW7QVgA0URTxw",
+                "duration": 186000
+            },
+            {
+                "youtubeId": "6GdsJbqV7ps",
+                "title": "Mad Max: Fury Road | Claw Trucks",
+                "thumbnailUrl": "https://i.ytimg.com/vi/6GdsJbqV7ps/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAiCkXJYIoF2RVsUqaYW22TkQPPpw",
+                "duration": 351000
+            },
+            {
+                "youtubeId": "gXKmg-QCkAs",
+                "title": "Mad Max: Fury Road | Storm Is Coming",
+                "thumbnailUrl": "https://i.ytimg.com/vi/gXKmg-QCkAs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAgCaQv_HIPp7nZU-zzxiN1Vfe8bQ",
+                "duration": 381000
+            },
+            {
                 "youtubeId": "gH_Dbza9hf0",
                 "title": "Gloryhammer - Universe on Fire (Karaoke)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/gH_Dbza9hf0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCrJyhEWwOpusZzaA9OSrExRA2Bmg",
                 "duration": 250000
+            },
+            {
+                "youtubeId": "y6qcJbqkK_A",
+                "title": "Goblin Slayer MAIN THEME HQ Metal Cover",
+                "thumbnailUrl": "https://i.ytimg.com/vi/y6qcJbqkK_A/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDyFGM10xpMljS7uADB823R-Apnlw",
+                "duration": 199000
             },
             {
                 "youtubeId": "Bi4sJXqNDoA",
@@ -9082,117 +9658,9 @@
                 "duration": 292000
             },
             {
-                "youtubeId": "AkTche1J7O0",
-                "title": "Gurren Lagann OST Disc 2 - 21 - The Blue Monday E'r'ectrical Parade",
-                "thumbnailUrl": "https://i.ytimg.com/vi/AkTche1J7O0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAzoOigFW5m_q-CV30Y-D4Or26p9w",
-                "duration": 290000
-            },
-            {
-                "youtubeId": "GChbMAAHIJs",
-                "title": "Gurren Lagann OST Disc 2 - 08 - Spin, Spin, Spin, Spi!? / Mawatte Mawatte Mawatte Mawaa!? / ...",
-                "thumbnailUrl": "https://i.ytimg.com/vi/GChbMAAHIJs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBouffZtJXNBSPWobW7QVgA0URTxw",
-                "duration": 186000
-            },
-            {
-                "youtubeId": "8aQSl-s_jqM",
-                "title": "Gurren Lagann OST Disc 2 - 06 - BafBaf! Burning Like that... Likable? / BafBaf! Sonna ni Moeru ...",
-                "thumbnailUrl": "https://i.ytimg.com/vi/8aQSl-s_jqM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAowtVxeEd-ekstuRcY6Zfn9a4m9g",
-                "duration": 337000
-            },
-            {
-                "youtubeId": "ZAsB1X14tHY",
-                "title": "Shingekin no Kyojin OST CD1   04  立body機motion",
-                "thumbnailUrl": "https://i.ytimg.com/vi/ZAsB1X14tHY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDlsrlJXTAMgVAuNehwcCgyOYLEoA",
-                "duration": 343000
-            },
-            {
-                "youtubeId": "4PuP7IkpRLU",
-                "title": "05.  Counterattack Mankind - High Quality",
-                "thumbnailUrl": "https://i.ytimg.com/vi/4PuP7IkpRLU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBZKFcwDw==&rs=AOn4CLCJBgUiStGpVKBQTeox9yMNpSCYAQ",
-                "duration": 367000
-            },
-            {
-                "youtubeId": "gXKmg-QCkAs",
-                "title": "Mad Max: Fury Road | Storm Is Coming",
-                "thumbnailUrl": "https://i.ytimg.com/vi/gXKmg-QCkAs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAgCaQv_HIPp7nZU-zzxiN1Vfe8bQ",
-                "duration": 381000
-            },
-            {
-                "youtubeId": "6GdsJbqV7ps",
-                "title": "Mad Max: Fury Road | Claw Trucks",
-                "thumbnailUrl": "https://i.ytimg.com/vi/6GdsJbqV7ps/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAiCkXJYIoF2RVsUqaYW22TkQPPpw",
-                "duration": 351000
-            },
-            {
-                "youtubeId": "LCIY41hopq4",
-                "title": "Mad Max - Brothers In Arms \"Epic Rock\" Cover (Little V)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/LCIY41hopq4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBgw5a8xqQhKlT4E8c5X-dGk5Hyhw",
-                "duration": 269000
-            },
-            {
-                "youtubeId": "JbvzHcJi1l8",
-                "title": "Mad Max: Fury Road | Spikey Cars",
-                "thumbnailUrl": "https://i.ytimg.com/vi/JbvzHcJi1l8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCHkevlvO3psWd1jyFJPgxgRVdcMQ",
-                "duration": 251000
-            },
-            {
-                "youtubeId": "zdECN7LI4q8",
-                "title": "Mad Max: Fury Road - Blood Bag / Doof Warrior (cover by Andrew Karelin)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/zdECN7LI4q8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCbqAVjbm42jNhYe_1yRD0AcqG-gg",
-                "duration": 123000
-            },
-            {
-                "youtubeId": "8dUMpcuyg0w",
-                "title": "Mad Max: Fury Road - Chapter Doof (cover by Andrew Karelin)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/8dUMpcuyg0w/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCCjptJlG6tPXR7nZL6x2JDTkQ-1A",
-                "duration": 418000
-            },
-            {
-                "youtubeId": "bxqfH3Klipk",
-                "title": "E1M1 (At Dooms Gate)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/bxqfH3Klipk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDmaSYjEcZ-mX1XQf6TtgrDENg2GQ",
-                "duration": 376000
-            },
-            {
-                "youtubeId": "q657rEkgfKs",
-                "title": "Doom - At Doom's Gate E1M1 remake by Andrew Hulshult",
-                "thumbnailUrl": "https://i.ytimg.com/vi/q657rEkgfKs/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA-KDAwDw==&rs=AOn4CLDl52ucERcoiopVwZ2LXkqJhkQCsw",
-                "duration": 199000
-            },
-            {
-                "youtubeId": "5LMZYnOml54",
-                "title": "Pyre Original Soundtrack - Thrash Pack",
-                "thumbnailUrl": "https://i.ytimg.com/vi/5LMZYnOml54/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDixttOY327-Zb8TBMWazhoAGLZ6g",
-                "duration": 238000
-            },
-            {
-                "youtubeId": "yqwkXj3vJQM",
-                "title": "OC ReMix #2070: Mega Man 2 'Dokuta Wairi, Rival to the Light' [Dr. Wily Stage 1] by Juan Medrano",
-                "thumbnailUrl": "https://i.ytimg.com/vi/yqwkXj3vJQM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAuVvX_tdxfne4o2xwmAiCzyn7V9w",
-                "duration": 293000
-            },
-            {
-                "youtubeId": "1vU7XqToZso",
-                "title": "Pacific Rim OST Soundtrack - 01 -  MAIN THEME by Ramin Djawadi",
-                "thumbnailUrl": "https://i.ytimg.com/vi/1vU7XqToZso/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYTiBfKGUwDw==&rs=AOn4CLDp5zUl27pl43K6MlQ87TzHuPqBLg",
-                "duration": 295000
-            },
-            {
-                "youtubeId": "r_gWkxmzcpc",
-                "title": "Metroid : Ending Theme (Metroid Metal / CarboHydroM & Wild_Cat cover)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/r_gWkxmzcpc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBuQVhHbWimZExRM1PUACAs_Y-ZsA",
-                "duration": 226000
-            },
-            {
-                "youtubeId": "_m80HDybpIo",
-                "title": "Metroid Metal - 14 Theme (Varia Suite)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_m80HDybpIo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCDIgN9XjmFWSHLl5SwLpnnqPty6A",
-                "duration": 175000
-            },
-            {
                 "youtubeId": "cMJz7rXEOe8",
                 "title": "Metroid Metal - 03 Brinstar (Varia Suite)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/cMJz7rXEOe8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB-ry7u1EjXbL5jh61zW3gxEI90AQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/cMJz7rXEOe8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4CgAKgAooCDAgAEAEYZSBiKDYwDw==&rs=AOn4CLCcGStgD86yVt1oYVLWxq3yOSbTCg",
                 "duration": 158000
             },
             {
@@ -9218,12 +9686,6 @@
                 "title": "Metroid Metal - 12 Maridia & Escape (Varia Suite)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/1OK09_eyiQs/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBfXOubidlkrNk3mTyRA6KYZNMtJQ",
                 "duration": 288000
-            },
-            {
-                "youtubeId": "A_ndaumP7zE",
-                "title": "Spinning, Spinning, Spinning, Spiii!? - Gurren Lagann OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/A_ndaumP7zE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCaFWuY4q1dN3fLiAep3bsBCyV3sg",
-                "duration": 177000
             },
             {
                 "youtubeId": "tnU7zf9YVoA",
@@ -9272,12 +9734,6 @@
                 "title": "Chill Touch - The Divine Forgemaster - Pantheon",
                 "thumbnailUrl": "https://i.ytimg.com/vi/6dobAWPnWnM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAndUAToW7QH8DPEY_Fp6aOITfcOw",
                 "duration": 371000
-            },
-            {
-                "youtubeId": "lBdnti4_UUg",
-                "title": "Berserk - My Brother (Extended) (Definitive Version)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/lBdnti4_UUg/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyATKBMwDw==&rs=AOn4CLD1fOxrMkmN_cftV76umUIoWhMUHQ",
-                "duration": 394000
             },
             {
                 "youtubeId": "WqyH5TSOWo8",
@@ -9364,16 +9820,154 @@
                 "duration": 181000
             },
             {
+                "youtubeId": "58PCM-x7jlg",
+                "title": "Doom Style Industrial Metal - Torn Flesh // Royalty Free No Copyright Background Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/58PCM-x7jlg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA5dQ43cgHLY5igYYoa8sNoKctYlA",
+                "duration": 235000
+            },
+            {
+                "youtubeId": "Pe4AJkoYEeQ",
+                "title": "Death/Thrash Metal Riffs - Fight Like Hell // Royalty Free No Copyright Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Pe4AJkoYEeQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB36aMClIdF6M6JPvIy5ijS8TjWKQ",
+                "duration": 174000
+            },
+            {
+                "youtubeId": "YsZ20cRvvKU",
+                "title": "Cyberpunk Industrial Synth Metal - Burn Them All // Royalty Free No Copyright Background Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/YsZ20cRvvKU/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAhpse3hC1InV3sVXSMsG1gUASEag",
+                "duration": 272000
+            },
+            {
+                "youtubeId": "Z7viyHYsrnQ",
+                "title": "Industrial Metal Darksynth Mix - Doom Hunter // Royalty Free Copyright Safe Music",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Z7viyHYsrnQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLASy8otzQPlTSYFpfOuishm-8MjkA",
+                "duration": 4114000
+            },
+            {
+                "youtubeId": "wNsDhWUEKHE",
+                "title": "Royalty Free DOOM Style Metal Instrumental - UNLEASHED - DOWNLOAD",
+                "thumbnailUrl": "https://i.ytimg.com/vi/wNsDhWUEKHE/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4AdQGgALgA4oCDAgAEAEYfyAjKCQwDw==&rs=AOn4CLB7LlE-KfjXx8CEMU6x246toEW4Ww",
+                "duration": 203000
+            },
+            {
+                "youtubeId": "i0XOYj6lqNw",
+                "title": "Royalty Free Doom-Style Metal Instrumental - FIRST STRIKE - DOWNLOAD",
+                "thumbnailUrl": "https://i.ytimg.com/vi/i0XOYj6lqNw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCVF1h9mbKzcSttOjm3XjmuKtAMyw",
+                "duration": 258000
+            },
+            {
+                "youtubeId": "lBdnti4_UUg",
+                "title": "Berserk - My Brother (Extended) (Definitive Version)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/lBdnti4_UUg/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyATKBMwDw==&rs=AOn4CLD1fOxrMkmN_cftV76umUIoWhMUHQ",
+                "duration": 394000
+            },
+            {
+                "youtubeId": "_m80HDybpIo",
+                "title": "Metroid Metal - 14 Theme (Varia Suite)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_m80HDybpIo/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4CgAKgAooCDAgAEAEYZSBiKDYwDw==&rs=AOn4CLAgdt76zm36BZPs6eOtMLDYbuGezA",
+                "duration": 175000
+            },
+            {
+                "youtubeId": "1vU7XqToZso",
+                "title": "Pacific Rim OST Soundtrack - 01 -  MAIN THEME by Ramin Djawadi",
+                "thumbnailUrl": "https://i.ytimg.com/vi/1vU7XqToZso/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYTiBfKGUwDw==&rs=AOn4CLDp5zUl27pl43K6MlQ87TzHuPqBLg",
+                "duration": 295000
+            },
+            {
+                "youtubeId": "8aQSl-s_jqM",
+                "title": "Gurren Lagann OST Disc 2 - 06 - BafBaf! Burning Like that... Likable? / BafBaf! Sonna ni Moeru ...",
+                "thumbnailUrl": "https://i.ytimg.com/vi/8aQSl-s_jqM/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAowtVxeEd-ekstuRcY6Zfn9a4m9g",
+                "duration": 337000
+            },
+            {
+                "youtubeId": "A_ndaumP7zE",
+                "title": "Spinning, Spinning, Spinning, Spiii!? - Gurren Lagann OST",
+                "thumbnailUrl": "https://i.ytimg.com/vi/A_ndaumP7zE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCaFWuY4q1dN3fLiAep3bsBCyV3sg",
+                "duration": 177000
+            },
+            {
+                "youtubeId": "YOmAVOGW5Ak",
+                "title": "Megalo Box Theme Song - MEGALOBOX by mabanua / メガロボクス Main OST",
+                "thumbnailUrl": "https://i.ytimg.com/vi/YOmAVOGW5Ak/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBYakMna2TiihtXWd6ctoajELP4Ow",
+                "duration": 127000
+            },
+            {
+                "youtubeId": "r_gWkxmzcpc",
+                "title": "Metroid : Ending Theme (Metroid Metal / CarboHydroM & Wild_Cat cover)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/r_gWkxmzcpc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBuQVhHbWimZExRM1PUACAs_Y-ZsA",
+                "duration": 226000
+            },
+            {
+                "youtubeId": "AkTche1J7O0",
+                "title": "Gurren Lagann OST Disc 2 - 21 - The Blue Monday E'r'ectrical Parade",
+                "thumbnailUrl": "https://i.ytimg.com/vi/AkTche1J7O0/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAzoOigFW5m_q-CV30Y-D4Or26p9w",
+                "duration": 290000
+            },
+            {
                 "youtubeId": "opvSPnf8sHg",
                 "title": "In The Blood - A Hades Orchestration",
                 "thumbnailUrl": "https://i.ytimg.com/vi/opvSPnf8sHg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA8V4QxEJvcIQ-iWP1ie5Z3nVQuYg",
                 "duration": 324000
             },
             {
-                "youtubeId": "bJtaJjB_uCI",
-                "title": "The Slayer's Army - A Doom Eternal Orchestration",
-                "thumbnailUrl": "https://i.ytimg.com/vi/bJtaJjB_uCI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDsMFTPVTHKCs0NtRAJUDnG0dpBEQ",
-                "duration": 356000
+                "youtubeId": "4PuP7IkpRLU",
+                "title": "05.  Counterattack Mankind - High Quality",
+                "thumbnailUrl": "https://i.ytimg.com/vi/4PuP7IkpRLU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBZKFcwDw==&rs=AOn4CLCJBgUiStGpVKBQTeox9yMNpSCYAQ",
+                "duration": 367000
+            },
+            {
+                "youtubeId": "fWhETAWu0ek",
+                "title": "6 Hours of Metal, No Vocals - Gaming / Workout / Motivation",
+                "thumbnailUrl": "https://i.ytimg.com/vi/fWhETAWu0ek/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYUCBlKEswDw==&rs=AOn4CLDDQbHptGNzs77CjNRxjuPsCottew",
+                "duration": 22532000
+            },
+            {
+                "youtubeId": "QHRuTYtSbJQ",
+                "title": "Mick Gordon - 11. BFG Division",
+                "thumbnailUrl": "https://i.ytimg.com/vi/QHRuTYtSbJQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBIkKFV1xtXy-IKVEWb01ItwXiaBg",
+                "duration": 507000
+            },
+            {
+                "youtubeId": "VYVFXYEm_Mw",
+                "title": "Mick Gordon - 08. Flesh & Metal",
+                "thumbnailUrl": "https://i.ytimg.com/vi/VYVFXYEm_Mw/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYciBfKEYwDw==&rs=AOn4CLAVb6heELRGEfUdPrjUUNHvLvjbeQ",
+                "duration": 423000
+            },
+            {
+                "youtubeId": "8oVUDA7WmAQ",
+                "title": "Terraria Calamity Mod Music - \"Blood Coagulant\" (featuring SixteenInMono) - Theme of The Perforators",
+                "thumbnailUrl": "https://i.ytimg.com/vi/8oVUDA7WmAQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCyNexkRFYrzEFOddPZgRXgklkJFA",
+                "duration": 333000
+            },
+            {
+                "youtubeId": "RL_6vJ4wvXU",
+                "title": "Alec Koff - Demigods (Epic Orchestral Metal)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/RL_6vJ4wvXU/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYciBDKDEwDw==&rs=AOn4CLCZhQlWPgkv6h1HYCZiXad3cVvM0A",
+                "duration": 150000
+            },
+            {
+                "youtubeId": "1NbQFGnQaCE",
+                "title": "Terraria Calamity Mod Music - \"The Filthy Mind\" (featuring SixteenInMono) - Theme of The Hive Mind",
+                "thumbnailUrl": "https://i.ytimg.com/vi/1NbQFGnQaCE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC4RF3UjXseWwfwGu-Y1eoAPB27WQ",
+                "duration": 279000
+            },
+            {
+                "youtubeId": "pSclJ-tjkYg",
+                "title": "Terraria Calamity Mod Music - \"Open Frenzy\" - Theme of Ravager",
+                "thumbnailUrl": "https://i.ytimg.com/vi/pSclJ-tjkYg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCanP5I8oPlsE0BO54PUt_Uz_SNww",
+                "duration": 343000
+            },
+            {
+                "youtubeId": "jH9mpWDiLpc",
+                "title": "Monster Hunter: World - Arch Tempered Nergigante Theme 【Intense Symphonic Metal Cover】",
+                "thumbnailUrl": "https://i.ytimg.com/vi/jH9mpWDiLpc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAdq1RPlmgEY-VxLeGI_9CzgCFHPw",
+                "duration": 397000
+            },
+            {
+                "youtubeId": "esofirhSD-o",
+                "title": "Undertale - Battle Against a True Hero 【Intense Symphonic Metal Cover】",
+                "thumbnailUrl": "https://i.ytimg.com/vi/esofirhSD-o/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD92eoTL6FdWlsYsh3wxcMBfDziYg",
+                "duration": 318000
             }
         ]
     },
@@ -9540,7 +10134,7 @@
             {
                 "youtubeId": "_0L5kf0DdAk",
                 "title": "Pillars of Eternity Soundtrack - The Endless Paths I",
-                "thumbnailUrl": "https://i.ytimg.com/vi/_0L5kf0DdAk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDMt7HduYfl5Hw9NqkpuYZaKHKAiA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/_0L5kf0DdAk/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYMSBjKGUwDw==&rs=AOn4CLBQWjZm30SlHx8AaPdMAgsO3aESYA",
                 "duration": 153000
             },
             {
@@ -9618,13 +10212,13 @@
             {
                 "youtubeId": "5j579anvNQA",
                 "title": "D&D Official Roleplaying Soundtrack - Chant",
-                "thumbnailUrl": "https://i.ytimg.com/vi/5j579anvNQA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBYhZYhB3tVOW-zFhB9pTZc5UpnJA",
+                "thumbnailUrl": "https://i.ytimg.com/vi/5j579anvNQA/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ab4CgALwAYoCDAgAEAEYZSBLKEEwDw==&rs=AOn4CLCLTWq5-U-KptzRxt2N8tFkrv3f2g",
                 "duration": 12000
             },
             {
                 "youtubeId": "dyWVZxnpnPo",
                 "title": "D&D Official Roleplaying Soundtrack - Craft of the Wizard",
-                "thumbnailUrl": "https://i.ytimg.com/vi/dyWVZxnpnPo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDov419UoSpiWQTmUl9OHLWSyP2Qw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/dyWVZxnpnPo/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Ab4CgALwAYoCDAgAEAEYXCBQKGUwDw==&rs=AOn4CLD--IDJt29ihnqpmpcN7LVt7_pphA",
                 "duration": 204000
             },
             {
@@ -9750,7 +10344,7 @@
             {
                 "youtubeId": "0ly8Q3MieZk",
                 "title": "[Top 100 RPG Battle]#45 Fire Emblem: Mystery of the Emblem",
-                "thumbnailUrl": "https://i.ytimg.com/vi/0ly8Q3MieZk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA_JdQi-qi6nyV5gAI3KWCkNcLGqQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/0ly8Q3MieZk/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYTSBlKEYwDw==&rs=AOn4CLD0sH6_QQC_fhEhVBDvpZlvBdLDPQ",
                 "duration": 75000
             },
             {
@@ -9956,6 +10550,18 @@
                 "title": "You woke up as a cat (playlist)",
                 "thumbnailUrl": "https://i.ytimg.com/vi/hnAq7CB_ito/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBlKFswDw==&rs=AOn4CLAER2UO-hK5F6BjUCcmue2nPzk3-Q",
                 "duration": 1401000
+            },
+            {
+                "youtubeId": "FzkSgenMkuY",
+                "title": "Borislav Slavov - Baldur's Gate 3 OST - Underdark Theme 2",
+                "thumbnailUrl": "https://i.ytimg.com/vi/FzkSgenMkuY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLD8Gp2Iy7cWuZGL-UV5iX9vs3_8ew",
+                "duration": 257000
+            },
+            {
+                "youtubeId": "9FSwjzIssmE",
+                "title": "The Dungeon's Onions (Old School Dungeon Synth 2001)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/9FSwjzIssmE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC01ZA26AB06H94Vzca9wpd__apDg",
+                "duration": 1851000
             }
         ]
     },
@@ -10026,7 +10632,7 @@
             {
                 "youtubeId": "1nY1puvqp_A",
                 "title": "Castlevania: Symphony of the Night music -- Dance of Pales",
-                "thumbnailUrl": "https://i.ytimg.com/vi/1nY1puvqp_A/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA9CXVfaR7Alge6SGOG8DKpyMXysw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/1nY1puvqp_A/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYZSBgKFUwDw==&rs=AOn4CLDsEAsB1ECjzta2aA5f3pA_ZMN1lg",
                 "duration": 430000
             },
             {
@@ -10062,7 +10668,7 @@
             {
                 "youtubeId": "abVgFC4ejs4",
                 "title": "Princess Tutu - Konzert 1 - 23 - Kurumi Wari Ningyo Ashi Fue no Odori",
-                "thumbnailUrl": "https://i.ytimg.com/vi/abVgFC4ejs4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDSOHz8THMJqH5eOQmtN00jJnOLIw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/abVgFC4ejs4/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4EgALgA4oCDAgAEAEYZSBGKEEwDw==&rs=AOn4CLAqq_vX9YzXBj9BRO45yvqZEbDwSg",
                 "duration": 143000
             },
             {
@@ -10116,7 +10722,7 @@
             {
                 "youtubeId": "-hBbSo5jyY4",
                 "title": "In The Halls Of The King (Pridemoor Keep) - Shovel Knight: Specter of Torment OST",
-                "thumbnailUrl": "https://i.ytimg.com/vi/-hBbSo5jyY4/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDpwH5mEdXpzHP9E3DCzToMDYiH2Q",
+                "thumbnailUrl": "https://i.ytimg.com/vi/-hBbSo5jyY4/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyAnKCQwDw==&rs=AOn4CLDKHyyIXHElCtqdKXZqnnACWIBZLg",
                 "duration": 225000
             },
             {
@@ -10302,7 +10908,7 @@
             {
                 "youtubeId": "Yy7NVfkEsvQ",
                 "title": "Dual Destinies OST: 1-07 Phoenix Wright ~ Objection! 2013",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Yy7NVfkEsvQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCk9Pm0-6wx7qIKlT2PNHJUO3jdyg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Yy7NVfkEsvQ/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYMiBKKH8wDw==&rs=AOn4CLCWX4nOLWhRN99kwU7G0wBzCc2B6A",
                 "duration": 143000
             },
             {
@@ -10334,6 +10940,30 @@
                 "title": "Baccano! Original Soundtrack - 12 Yurumikatta Kannou no Dance",
                 "thumbnailUrl": "https://i.ytimg.com/vi/aOYA5zb6dbA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDp7jG1Gc42oJViVq4HMSbGqyA5Eg",
                 "duration": 128000
+            },
+            {
+                "youtubeId": "e-QiKy-iEkQ",
+                "title": "13 | Objection! [2015] (Dai Gyakuten Saiban Soundtrack)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/e-QiKy-iEkQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAkfx9cRZp-8N42712asKR6s1HEyw",
+                "duration": 125000
+            },
+            {
+                "youtubeId": "9SxIJ7hXVsw",
+                "title": "01 | Naruhodou Ryuunosuke ~ Prelude of an Adventure (Dai Gyakuten Saiban Soundtrack)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/9SxIJ7hXVsw/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBVPs_2M5TwgmW_75EI9EpIooUyVQ",
+                "duration": 132000
+            },
+            {
+                "youtubeId": "QV1B7oDbC-k",
+                "title": "Pursuit ~ Cornering Together﻿ - Ace Attorney 6 : Spirit Of Justice OST",
+                "thumbnailUrl": "https://i.ytimg.com/vi/QV1B7oDbC-k/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCQLFk-eam_NDD_UyT5UYaX9wFpcw",
+                "duration": 164000
+            },
+            {
+                "youtubeId": "8dXAEZ_9l-k",
+                "title": "Chrono Trigger - The Trial (Orchestral Remix)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/8dXAEZ_9l-k/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA1HrV4Lc9LNBOy1vcCSKa0jQsi8Q",
+                "duration": 221000
             }
         ]
     },
@@ -10398,7 +11028,7 @@
             {
                 "youtubeId": "Yy7NVfkEsvQ",
                 "title": "Dual Destinies OST: 1-07 Phoenix Wright ~ Objection! 2013",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Yy7NVfkEsvQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCk9Pm0-6wx7qIKlT2PNHJUO3jdyg",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Yy7NVfkEsvQ/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYMiBKKH8wDw==&rs=AOn4CLCWX4nOLWhRN99kwU7G0wBzCc2B6A",
                 "duration": 143000
             },
             {
@@ -10434,7 +11064,7 @@
             {
                 "youtubeId": "Z7klyQsmVa8",
                 "title": "Gurren Lagann OST Disc 1 - 07 - Drill to Heaven with Your XXX!! -First Time Outside Version- / Om...",
-                "thumbnailUrl": "https://i.ytimg.com/vi/Z7klyQsmVa8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA_J7lL7Yzq7VVlPdLW4Raqdjrhug",
+                "thumbnailUrl": "https://i.ytimg.com/vi/Z7klyQsmVa8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYfyA4KEMwDw==&rs=AOn4CLCDbrpqRNCwU437-vAUOSzUi7xCvA",
                 "duration": 138000
             },
             {
@@ -10470,7 +11100,7 @@
             {
                 "youtubeId": "42FvH5cpOJ8",
                 "title": "The Witcher 3: Wild Hunt OST All Soundtrack - City of Intrigues",
-                "thumbnailUrl": "https://i.ytimg.com/vi/42FvH5cpOJ8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAbialroQuoZpZtTb02rOEBuk713w",
+                "thumbnailUrl": "https://i.ytimg.com/vi/42FvH5cpOJ8/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYRiBXKHIwDw==&rs=AOn4CLA0azjeMhIYLOI0bDN0HkESdmJdSg",
                 "duration": 127000
             },
             {
@@ -10482,7 +11112,7 @@
             {
                 "youtubeId": "2iWJk1VygxQ",
                 "title": "The Witcher 3: Wild Hunt OST All Soundtrack - The Hunt is Coming",
-                "thumbnailUrl": "https://i.ytimg.com/vi/2iWJk1VygxQ/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCryBO8J9dvRjnBdAHOdIYAc5tmiw",
+                "thumbnailUrl": "https://i.ytimg.com/vi/2iWJk1VygxQ/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYRiBXKHIwDw==&rs=AOn4CLDi72LT7wGfEDTsRY_pgXBjjfZe2Q",
                 "duration": 126000
             },
             {
@@ -10494,7 +11124,7 @@
             {
                 "youtubeId": "ZmLvX-oIwSI",
                 "title": "Two Steps From Hell - El Dorado (Skyworld)(Epic Orchestral Hybrid)",
-                "thumbnailUrl": "https://i.ytimg.com/vi/ZmLvX-oIwSI/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDGucnUPdTCxgCAqAqcYCfTsGQyRQ",
+                "thumbnailUrl": "https://i.ytimg.com/vi/ZmLvX-oIwSI/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYZSBcKFIwDw==&rs=AOn4CLDoPRc-yIPk74qhqmgBujMfTYivBA",
                 "duration": 255000
             },
             {
@@ -10616,6 +11246,12 @@
                 "title": "Dark Winter Dream | RPG Ambient Music | Fantasy Mystical Background Music | DnD",
                 "thumbnailUrl": "https://i.ytimg.com/vi/1-xCaqi1Y6k/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYSiBEKGUwDw==&rs=AOn4CLAOSLvY5sVUkKRWHtObbcoFb8Eocg",
                 "duration": 1719000
+            },
+            {
+                "youtubeId": "I6rufOlNyYM",
+                "title": "Gris - Original Game Soundtrack (full ost official video)",
+                "thumbnailUrl": "https://i.ytimg.com/vi/I6rufOlNyYM/hqdefault.jpg?sqp=-oaymwE9CNACELwBSFryq4qpAy8IARUAAAAAGAElAADIQj0AgKJDeAHwAQH4Af4JgALQBYoCDAgAEAEYLiBMKH8wDw==&rs=AOn4CLCh2w-ijHgrf-ZTwrE40UH_o7moXQ",
+                "duration": 4769000
             }
         ]
     }
