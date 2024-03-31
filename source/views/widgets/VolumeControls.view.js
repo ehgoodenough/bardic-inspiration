@@ -11,7 +11,9 @@ export default class VolumeControls {
                 <div class="VolumeButton" onClick={this.onClickVolumeButton}>
                     <span class="material-icons">{this.icon}</span>
                 </div>
-                <div class="VolumeBar" id={"volume-" + (this.props.id || "0")} onMouseMove={this.onClickVolumeBar}>
+                <div class="VolumeBar" id={"volume-" + (this.props.id || "0")}
+                    onMouseMove={this.onClickVolumeBar}
+                    onTouchMove={this.onClickVolumeBar}>
                     <div class="Bar"/>
                     <div class="Dot" style={{
                         "left": this.props.volume.level * 100 + "%",

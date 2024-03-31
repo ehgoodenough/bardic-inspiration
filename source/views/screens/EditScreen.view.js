@@ -22,8 +22,6 @@ export default class EditScreen {
             <div class="EditScreen">
                 <div class="EditableSections">
                     <AudioStreamSection streamId={"a"}/>
-                    <AudioStreamSection streamId={"b"}/>
-                    <AudioStreamSection streamId={"c"}/>
                     <LibrarySection/>
                 </div>
                 <Menu/>
@@ -139,7 +137,7 @@ class SubmissionForm {
 
 class LibrarySection {
     render() {
-        if(Navigation.state.isExtra != true) return
+        // if(Navigation.state.isExtra != true) return
         return (
             <section class="LibrarySection">
                 {playlists.map((playlist) => {
