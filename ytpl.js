@@ -1,7 +1,7 @@
-import ytpl from "ytpl"
-import ytdl from "ytdl-core"
 import fs from "fs"
 import path from "path"
+import ytpl from "ytpl"
+import ytdl from "ytdl-core"
 
 let playlistUrls = [
     "https://www.youtube.com/playlist?list=PLV8C9t518pCJq5EMcfJFUYfx7oEVDdRPV", // optimistic overworld
@@ -32,7 +32,6 @@ let playlistUrls = [
     "https://www.youtube.com/playlist?list=PLV8C9t518pCJaelQO8Vl1HqnrDy-xvvRX", // edm combat
 ]
 
-let musics = {}
 let playlists = await Promise.all(playlistUrls.map((playlistUrl) => {
     return ytpl(playlistUrl)
 }))
@@ -42,7 +41,6 @@ playlists = playlists.map((playlist) => {
         "playlistId": playlist.id,
         "title": playlist.title,
         "musics": playlist.items.map((music) => {
-            musics[music.id] = {"id": music.id}
             return {
                 "youtubeId": music.id,
                 "title": music.title,
@@ -53,39 +51,4 @@ playlists = playlists.map((playlist) => {
     }
 })
 
-// console.log(JSON.stringify(playlists, null, 4))
-
-musics = Object.values(musics)
-for(const music of musics) {
-    process.stdout.write(music.id)
-    const filepath = path.resolve("./source/music/" + music.id + ".mp3")
-    if(fs.existsSync(filepath)) {
-        process.stdout.write(" - already downloaded\n")
-        continue
-    }
-    try {
-        const stream = ytdl("http://www.youtube.com/watch?v=" + music.id, {"filter": "audio"})
-        stream.on("error", (error) => console.error(error))
-        // stream.on("info", (info) => console.log(info))
-        stream.on("progress", (chunkLength, currentBytes, totalBytes) => {
-            process.stdout.clearLine()
-            process.stdout.cursorTo(0)
-            process.stdout.write(music.id)
-            process.stdout.write(" - " + Math.floor((currentBytes / totalBytes) * 100) + "%")
-        })
-        await toFinish(stream.pipe(fs.createWriteStream(filepath)))
-    } catch(error) {
-        console.error(error)
-    }
-    process.stdout.clearLine()
-    process.stdout.cursorTo(0)
-    process.stdout.write(music.id)
-    process.stdout.write(" - downloaded\n")
-}
-
-function toFinish(stream) {
-    return new Promise((resolve, reject) => {
-        stream.on("finish", resolve)
-        stream.on("error", reject)
-    })
-}
+fs.writeFileSync(path.resolve("./source/playlists.json"), JSON.stringify(playlists, null, 4))

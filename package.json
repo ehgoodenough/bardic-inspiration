@@ -38,6 +38,7 @@
     "@babel/plugin-transform-react-jsx": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
     "bestzip": "^2.2.1",
-    "codeglue": "^1.9.4"
+    "codeglue": "^1.9.4",
+    "express": "^4.19.2"
   }
 }
