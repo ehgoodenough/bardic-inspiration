@@ -9,3 +9,5 @@ builds
 .DS_Store
 # *.log
 ._*
+
+source/music

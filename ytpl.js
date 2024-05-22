@@ -1,50 +1,38 @@
 import ytpl from "ytpl"
+import ytdl from "ytdl-core"
+import fs from "fs"
+import path from "path"
 
 let playlistUrls = [
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCI_mz0XOh1abdKy1hb-zS2t",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLzd3h0qYtynJvY7ZGvSWwN",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLP0QDw51haUYo3ejxBUGic",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCL4Qe7ONLcMahStyQlUnF65",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJ971z_P8AftPnswfjTp4pC",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLk5FQ49Zxkd3zO-mwkISLg",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCK5neTfe-vosWJtfvC_nZ6M",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLyWc9EN0uhUT5SCo4iCC-M",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIQI83Emr6gLntePk57OYH1",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJq5EMcfJFUYfx7oEVDdRPV",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLJVekMt-g8kIx4-4mibhDm",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJXjNed2p60cLVcWXDQCeQ6",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCKAKuh-e4jUrbMNLh8Lcpfz",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJ7Ymh3qHv5iqha9F-3n2J7",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCKUyv6nH6e6-8ki3aj_CUzD",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIXlZj1-Hqn4LMK_JjPVutV",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCK8wM8cEV3RAmk-BJae0PEQ",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIMtFs25DMY2h3GN6I2OKV2",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJYLKmjGEfXtx8LSAhEg87u",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJaelQO8Vl1HqnrDy-xvvRX",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIUE8Wd6xSMEj1sE85H9-Tn",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJ9DBoCAPteRcVfdzkx7Gx8",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIs5rMxc0zGFZV-0-hvP0c_",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCL-9zXA5pjfZGlXAo90qSou",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCL2BTTDpXnQvRufDK8dcZTw",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLk03um_zlF6VHTXnnCgNXu",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIZrVv8dtEm1RXdO-9f2p8p",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJK9v2PRNKae-eDarx7XKjM",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJVX2o3tmvpYJhWADDl2DnG",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCInIaeVhXxFiHdcVctaDDqB",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJKX2IUbhzpPjOcp-6N1UIK",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLmTO_i-VqU_dFDjsJePSFa",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCL0epmuVHaw2QrSrf_SBGKi",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLr6cZxuSMIXWnUG9ZufxCJ",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIPyjekBKFZSpyXT8Tb00uo",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCLuYUzO8i70C85xmFAdOlHH",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCL5a7qbOqKX1NequIsmxxg8",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIs5rMxc0zGFZV-0-hvP0c_",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCJl6_PJBbhFV4akh2dMCiwx",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCKgIR5T_ChCRnC__fWDyTHT",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCIkl0z1WJljWEuAxYMrog_f",
-    "https://www.youtube.com/playlist?list=PLV8C9t518pCL8KQgMauDq5KJNulYWqKGC",
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJq5EMcfJFUYfx7oEVDdRPV", // optimistic overworld
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCLr6cZxuSMIXWnUG9ZufxCJ", // light forest
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCKUyv6nH6e6-8ki3aj_CUzD", // dark forest
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCK5neTfe-vosWJtfvC_nZ6M", // happy town
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCIQI83Emr6gLntePk57OYH1", // peaceful town
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCI_mz0XOh1abdKy1hb-zS2t", // characters
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCKAKuh-e4jUrbMNLh8Lcpfz", // let's fucking go
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCLyWc9EN0uhUT5SCo4iCC-M", // somber quiet
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCKBC3Bdw8Z2TjfghORHvCyS", // final stand
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJ7Ymh3qHv5iqha9F-3n2J7", // victory
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJXjNed2p60cLVcWXDQCeQ6", // ominous
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCKZorxgoRyg-bKOnMOrvuVw", // low-level battle
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJ1pywyJTOiKnSYveduHruI", // moderate battle
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJVX2o3tmvpYJhWADDl2DnG", // dangerous battle
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCKLk4N3v9p0_CZgfmC5EPN9", // horror battle
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCLtVFvndmg8ZRUunVJhTLo3", // magic school
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCKdZpR2SJMFndeA1DxcgaWP", // wild west trails
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCIZrVv8dtEm1RXdO-9f2p8p", // cool urban
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCLhTTHl8BKgS4p6gTbHOnRN", // space victory
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCLE68djTZXEcFUCAM8iAAvn", // space chill
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJJYaBrAM0e9y5qWTS9Ic7i", // space stealth
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJW0z3qtum98ySN7hxc33Kc", // space western
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCIrwBr4OYIjitXdm5C5q_bD", // space planning
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJYLKmjGEfXtx8LSAhEg87u", // edm ominous
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCIMtFs25DMY2h3GN6I2OKV2", // edm quiet
+    "https://www.youtube.com/playlist?list=PLV8C9t518pCJaelQO8Vl1HqnrDy-xvvRX", // edm combat
 ]
 
+let musics = {}
 let playlists = await Promise.all(playlistUrls.map((playlistUrl) => {
     return ytpl(playlistUrl)
 }))
@@ -54,6 +42,7 @@ playlists = playlists.map((playlist) => {
         "playlistId": playlist.id,
         "title": playlist.title,
         "musics": playlist.items.map((music) => {
+            musics[music.id] = {"id": music.id}
             return {
                 "youtubeId": music.id,
                 "title": music.title,
@@ -64,4 +53,39 @@ playlists = playlists.map((playlist) => {
     }
 })
 
-console.log(JSON.stringify(playlists, null, 4))
+// console.log(JSON.stringify(playlists, null, 4))
+
+musics = Object.values(musics)
+for(const music of musics) {
+    process.stdout.write(music.id)
+    const filepath = path.resolve("./source/music/" + music.id + ".mp3")
+    if(fs.existsSync(filepath)) {
+        process.stdout.write(" - already downloaded\n")
+        continue
+    }
+    try {
+        const stream = ytdl("http://www.youtube.com/watch?v=" + music.id, {"filter": "audio"})
+        stream.on("error", (error) => console.error(error))
+        // stream.on("info", (info) => console.log(info))
+        stream.on("progress", (chunkLength, currentBytes, totalBytes) => {
+            process.stdout.clearLine()
+            process.stdout.cursorTo(0)
+            process.stdout.write(music.id)
+            process.stdout.write(" - " + Math.floor((currentBytes / totalBytes) * 100) + "%")
+        })
+        await toFinish(stream.pipe(fs.createWriteStream(filepath)))
+    } catch(error) {
+        console.error(error)
+    }
+    process.stdout.clearLine()
+    process.stdout.cursorTo(0)
+    process.stdout.write(music.id)
+    process.stdout.write(" - downloaded\n")
+}
+
+function toFinish(stream) {
+    return new Promise((resolve, reject) => {
+        stream.on("finish", resolve)
+        stream.on("error", reject)
+    })
+}

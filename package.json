@@ -31,6 +31,7 @@
     "statgrab": "^1.2.2",
     "urrl": "^1.0.2",
     "yaafloop": "^1.2.0",
+    "ytdl-core": "^4.11.5",
     "ytpl": "^2.3.0"
   },
   "devDependencies": {
