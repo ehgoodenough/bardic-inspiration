@@ -143,31 +143,26 @@ class LibrarySection {
                 {playlists.map((playlist) => {
                     return (
                         <div class="Playlist">
-                            <a class="PlaylistName" href={"https://www.youtube.com/playlist?list=" + playlist.id} target="_blank" >
+                            <a class="PlaylistName" onClick={this.onClick(playlist)}>
                                 {playlist.title}
                             </a>
-                            <div class="Musics">
-                                {playlist.musics.map((music) => {
-                                    return (
-                                        <div class="Music" onClick={() => {
-                                            Something.updateQueue("a", (Data.campaign.streams["a"]?.queue || []).concat({
-                                                "queueId": ShortId.generate(),
-                                                "youtubeId": music.youtubeId,
-                                                "title": music.title,
-                                            }))
-                                        }}>
-                                            <div class="YoutubeScreenshot" style={{
-                                                "background-image": "url(https://img.youtube.com/vi/" + music.youtubeId + "/default.jpg)",
-                                            }}/>
-                                            <div class="Text">{music.title || music.youtubeId}</div>
-                                        </div>
-                                    )
-                                })}
-                            </div>
                         </div>
                     )
                 })}
             </section>
         )
+    }
+    onClick(playlist) {
+        return (event) => {
+            console.log(playlist)
+            Something.updateQueue("a", (Data.campaign.streams["a"]?.queue || []).concat(
+                playlist.musics.map((music) => {
+                    return {
+                        "queueId": ShortId.generate(),
+                        ...music,
+                    }
+                })
+            ))
+        }
     }
 }
