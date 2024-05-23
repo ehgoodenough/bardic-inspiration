@@ -32,7 +32,11 @@ export default class EditScreen {
 
 class AudioStreamSection {
     render() {
-        if(Data.campaign.streams[this.props.streamId] == undefined) return
+        if(Data.campaign.streams[this.props.streamId] == undefined) {
+            return (
+                <section class="AudioStreamSection"/>
+            )
+        }
         return (
             <section class="AudioStreamSection">
                 <PlayBox streamId={this.props.streamId}/>

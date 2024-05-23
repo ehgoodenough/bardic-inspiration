@@ -37,19 +37,22 @@ export default class YoutubePlayer {
                     },
                     "onStateChange": (event) => {
                         if(event.data == YT.PlayerState.PAUSED
-                        && Data.campaign.streams[this.streamId]?.run?.state != "paused") {
+                        && Data.campaign.streams[this.streamId]?.run?.state != "paused"
+                        && Data.campaign.streams[this.streamId]?.run?.youtubeId == this.youtubeId) {
                             this.seek(computeCurrentTime(Data.campaign.streams["a"].run))
                             this.play()
                             return
                         }
                         if(event.data == YT.PlayerState.PLAYING
-                        && Data.campaign.streams[this.streamId]?.run?.state != "playing") {
+                        && Data.campaign.streams[this.streamId]?.run?.state != "playing"
+                        && Data.campaign.streams[this.streamId]?.run?.youtubeId == this.youtubeId) {
                             this.seek(computeCurrentTime(Data.campaign.streams["a"].run))
                             this.pause()
                             return
                         }
 
-                        if(event.data == YT.PlayerState.ENDED) {
+                        if(event.data == YT.PlayerState.ENDED
+                        && Data.campaign.streams[this.streamId]?.run?.youtubeId == this.youtubeId) {
                             // if(this.streamdId != "a") return
                             if(Data.campaign.streams[this.streamId].queue == undefined) return
                             if(Data.campaign.streams[this.streamId].queue.length == 0) return
@@ -81,6 +84,7 @@ export default class YoutubePlayer {
             "videoId": youtubeId,
             "startSeconds": Math.floor(currentTime / 1000) || 1,
         })
+        this.youtubeId = youtubeId
     }
     async seek({currentTime}) {
         if(this.player == undefined) await this.instantiate()

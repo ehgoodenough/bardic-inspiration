@@ -17,6 +17,10 @@ export default class AudioPlayer {
                 return
             }
         }
+
+        console.log("LOADING!!")
+
+        this.backupYoutubePlayer.pause()
         if(this.audio != undefined) this.audio.pause()
         this.audio = new Audio(run.url)
 
@@ -27,7 +31,10 @@ export default class AudioPlayer {
             }
         })
 
-        this.audio.addEventListener("loadstart", (event) => {
+        this.audio.addEventListener("canPlay", (event) => {
+            if(event.canPlayed) return
+            event.canPlayed = true
+
             this.audio.autoplay = true
             this.audio.currentTime = Math.floor(run.currentTime / 1000) || 0.1
 
@@ -73,9 +80,7 @@ export default class AudioPlayer {
     }
     pause() {
         this.backupYoutubePlayer.pause()
-        if(this.audio != undefined) {
-            this.audio.pause()
-        }
+        this.audio.pause()
     }
     play() {
         if(this.audio == undefined) return this.backupYoutubePlayer.play()
