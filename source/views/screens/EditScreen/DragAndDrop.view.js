@@ -2,7 +2,6 @@ import * as Preact from "preact"
 import ShortId from "shortid"
 import Data from "models/Data.js"
 import Something from "models/Something.js"
-import Firebase from "models/Firebase.js"
 import upload from "views/functions/upload.js"
 
 import "views/screens/EditScreen/DragAndDrop.view.less"

@@ -12,7 +12,6 @@ import playlists from "playlists.json"
 
 import Menu from "views/widgets/Menu.view.js"
 import QueuedItems from "views/screens/EditScreen/QueuedItems.view.js"
-import DragAndDrop from "views/screens/EditScreen/DragAndDrop.view.js"
 import Controls from "views/screens/EditScreen/Controls.view.js"
 import "views/screens/EditScreen.view.less"
 
@@ -41,10 +40,10 @@ class AudioStreamSection {
             <section class="AudioStreamSection">
                 <PlayBox streamId={this.props.streamId}/>
                 <SubmissionForm streamId={this.props.streamId}/>
-                <DragAndDrop streamId={this.props.streamId}>
+                <div class="Queue">
                     <QueuedItems streamId={this.props.streamId}/>
                     <ClearButton streamId={this.props.streamId}/>
-                </DragAndDrop>
+                </div>
             </section>
         )
     }

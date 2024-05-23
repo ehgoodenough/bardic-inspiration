@@ -1,6 +1,6 @@
 // DATA: HOLDS ALL THE DATA THAT SHOULD BE PERFORMED
 
-import Firebase from "models/Firebase.js"
+// import Firebase from "models/Firebase.js"
 import IO from "models/io/IO.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 

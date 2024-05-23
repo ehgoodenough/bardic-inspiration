@@ -1,7 +1,7 @@
 // SOMETHING - THIS COULD LIKELY BE MERGED WITH DATA
 
 import ShortId from "shortid"
-import Firebase from "models/Firebase.js"
+// import Firebase from "models/Firebase.js"
 import Data from "models/Data.js"
 import IO from "models/io/IO.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"

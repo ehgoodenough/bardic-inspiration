@@ -7,7 +7,6 @@ import IO from "models/io/IO.js"
 import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
 import Something from "models/Something.js"
-import Firebase from "models/Firebase.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 import "views/screens/EditScreen/Controls.view.less"
