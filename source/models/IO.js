@@ -7,9 +7,9 @@ const DEFAULT_VOLUME_LEVEL = 0.5
 export default new class IO {
     constructor() {
         this.streams = {
-            "a": new YoutubePlayer("a"),
-            "b": new YoutubePlayer("b"),
-            "c": new AudioPlayer("c"),
+            "a": new AudioPlayer("a"),
+            // "b": new YoutubePlayer("b"),
+            // "c": new AudioPlayer("c"),
         }
 
         this.volume = {

@@ -14,14 +14,14 @@ Data.load = function(campaignKey) {
     if(Data.campaign.key == campaignKey) return
     Data.campaign.key = campaignKey
 
-    const streamIds = ["a", "b", "c"]
+    const streamIds = ["a"]
     streamIds.forEach((streamId) => {
         Firebase.data.collection("campaigns").doc(Data.campaign.key + "/streams/" + streamId).onSnapshot(async (document) => {
             if(document.exists == false) return
             const prevstream = Data.campaign.streams[streamId]
             const stream = document.data()
             Data.campaign.streams[streamId] = stream
-            console.log(Data.campaign.key + "/streams/" + streamId, stream)
+            // console.log(Data.campaign.key + "/streams/" + streamId, stream)
 
             Data.campaign.streams[streamId].queue = Data.campaign.streams[streamId].queue || []
 
@@ -30,7 +30,7 @@ Data.load = function(campaignKey) {
                 || (stream.run.runId != prevstream?.run?.runId && stream.run.runId != undefined)
                 || (stream.run.queueId != prevstream?.run?.queueId && stream.run.queueId != undefined)
                 || (stream.run.url != prevstream?.run?.url && stream.run.url != undefined)) {
-                    console.log(stream)
+                    // console.log(stream)
                     await IO.streams[streamId].load({
                         ...stream.run,
                         // "youtubeId": stream.run.youtubeId,
