@@ -10,6 +10,16 @@ const DEFAULT_VOLUME = 0.5
 const deepcopy = (json) => JSON.parse(JSON.stringify(json))
 
 export default class Something {
+    static load(streamId) {
+        try {
+            const data = window.localStorage.getItem("data.campaigns[theros].streams[" + streamId + "]")
+            if(data == undefined) throw new Error("Nothing found.")
+            Data.campaign.streams[streamId] = JSON.parse(data)
+        } catch(error) {
+            console.log("Could not find or parse data.campaigns[theros].streams[" + streamId + "]", error)
+        }
+        Something.syncIO(streamId)
+    }
     static updateCurrentRun(streamId, run) {
         Data.campaign.streams[streamId + "-previous"] = deepcopy(Data.campaign.streams[streamId])
         run.runId = run.runId || ShortId.generate()
@@ -44,7 +54,8 @@ export default class Something {
     static async syncIO(streamId) {
         const stream = Data.campaign.streams[streamId]
         const prevstream = Data.campaign.streams[streamId + "-previous"]
-        if(Data.campaign.streams[streamId].run != undefined) {
+        window.localStorage.setItem("data.campaigns[theros].streams[" + streamId + "]", JSON.stringify(stream))
+        if(Data.campaign?.streams[streamId]?.run != undefined) {
             if((stream.run.youtubeId != prevstream?.run?.youtubeId && stream.run.youtubeId != undefined)
             || (stream.run.runId != prevstream?.run?.runId && stream.run.runId != undefined)
             || (stream.run.queueId != prevstream?.run?.queueId && stream.run.queueId != undefined)

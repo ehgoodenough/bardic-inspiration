@@ -1,5 +1,6 @@
+// NAVIGATION - HANDLES ALL VIEW ROUTING
 
-import Data from "models/Data.js"
+import Something from "models/Something.js"
 
 if(typeof window != "undefined") {
     window.setTimeout(() => {
@@ -93,22 +94,22 @@ Navigation.on("/", function(request) {
 })
 
 Navigation.on("/campaigns/:campaignKey/dashboard", function(request) {
-    Data.load(request.wildcards.campaignKey)
+    Something.load("a", request.wildcards.campaignKey)
     return {"screen": "EditScreen"}
 })
 
 Navigation.on("/campaigns/:campaignKey/dashboard/extra", function(request) {
-    Data.load(request.wildcards.campaignKey)
+    Something.load("a", request.wildcards.campaignKey)
     return {"screen": "EditScreen", "isExtra": true}
 })
 
 Navigation.on("/campaigns/:campaignKey", function(request) {
-    Data.load(request.wildcards.campaignKey)
+    Something.load("a", request.wildcards.campaignKey)
     return {"screen": "PlayScreen"}
 })
 
 Navigation.on("/campaigns/:campaignKey/roller", function(request) {
-    Data.load(request.wildcards.campaignKey)
+    Something.load("a", request.wildcards.campaignKey)
     return {"screen": "PlayScreen", "hasRollerWidget": true}
 })
 
