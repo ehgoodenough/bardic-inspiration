@@ -18,8 +18,6 @@ export default class AudioPlayer {
             }
         }
 
-        console.log("LOADING!!")
-
         this.backupYoutubePlayer.pause()
         if(this.audio != undefined) this.audio.pause()
         this.audio = new Audio(run.url)

@@ -6,13 +6,19 @@ import computeCurrentTime from "views/functions/computeCurrentTime.js"
 
 const Data = {
     "campaign": {
-        "streams": {}
+        "streams": {
+            "a": {
+                "queue": [],
+                "run": {},
+                "volume": {"level": 0.5}
+            }
+        }
     }
 }
 
 Data.load = function(campaignKey) {
+    return
     if(campaignKey == "theros") campaignKey = "andrew"
-    if(campaignKey == "cthulu") campaignKey = "theros"
     if(Data.campaign.key == campaignKey) return
     Data.campaign.key = campaignKey
 
@@ -86,7 +92,7 @@ Data.load = function(campaignKey) {
     })
 }
 
-window.truesight = window.truesight || {}
-window.truesight.data = Data
+window.bardic = window.bardic || {}
+window.bardic.data = Data
 
 export default Data

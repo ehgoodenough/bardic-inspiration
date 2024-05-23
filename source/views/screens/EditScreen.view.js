@@ -158,7 +158,6 @@ class LibrarySection {
     }
     onClick(playlist) {
         return (event) => {
-            console.log(playlist)
             Something.updateQueue("a", (Data.campaign.streams["a"]?.queue || []).concat(
                 playlist.musics.map((music) => {
                     return {

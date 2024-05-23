@@ -124,7 +124,7 @@ Navigation.onError = function(request) {
     return {"screen": "ErrorScreen", "message": "Something went wrong!!"}
 }
 
-window.truesight = window.truesight || {}
-window.truesight.navigation = window.truesight.navigation || Navigation
+window.bardic = window.bardic || {}
+window.bardic.navigation = window.bardic.navigation || Navigation
 
 export default Navigation
