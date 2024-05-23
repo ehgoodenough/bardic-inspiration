@@ -3,7 +3,7 @@ import * as Preact from "preact"
 import "views/widgets/Menu.view.less"
 import VolumeControls from "views/widgets/VolumeControls.view.js"
 
-import IO from "models/IO.js"
+import IO from "models/io/IO.js"
 
 export default class Menu {
     render() {

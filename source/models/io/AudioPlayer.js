@@ -1,8 +1,8 @@
-import IO from "models/IO.js"
+import IO from "models/io/IO.js"
 import Data from "models/Data.js"
 import Something from "models/Something.js"
 
-import YoutubePlayer from "models/YoutubePlayer.js"
+import YoutubePlayer from "models/io/YoutubePlayer.js"
 
 export default class AudioPlayer {
     constructor(streamId) {

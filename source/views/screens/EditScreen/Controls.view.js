@@ -3,7 +3,7 @@ import FormatDuration from "format-duration"
 import ShortId from "shortid"
 import Poin from "poin"
 
-import IO from "models/IO.js"
+import IO from "models/io/IO.js"
 import Data from "models/Data.js"
 import Navigation from "models/Navigation.js"
 import Something from "models/Something.js"

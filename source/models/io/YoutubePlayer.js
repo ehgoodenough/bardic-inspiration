@@ -1,7 +1,7 @@
 import Data from "models/Data.js"
 import Something from "models/Something.js"
 import computeCurrentTime from "views/functions/computeCurrentTime.js"
-import IO from "models/IO.js"
+import IO from "models/io/IO.js"
 
 const SILENCE_VIDEO_ID = "g4mHPeMGTJM"
 

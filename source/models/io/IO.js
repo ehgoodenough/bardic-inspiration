@@ -1,5 +1,7 @@
+// IO: HOLDS THE MODELS THAT PERFORM THE ACTUAL MUSIC
+
 import Data from "models/Data.js"
-import AudioPlayer from "models/AudioPlayer.js"
+import AudioPlayer from "models/io/AudioPlayer.js"
 
 const DEFAULT_VOLUME_LEVEL = 0.5
 
